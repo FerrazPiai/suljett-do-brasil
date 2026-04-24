@@ -1,0 +1,2292 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Impressoras CIJ Hitachi | Codificação Industrial | Suljett do Brasil</title>
+<meta name="description" content="Distribuidora oficial Hitachi no Sul e Nordeste do Brasil. Impressoras CIJ, insumos originais e assistência técnica especializada para linhas de produção contínua. Fale com um especialista." />
+<meta property="og:title" content="Suljett do Brasil — Codificação industrial que não para" />
+<meta property="og:description" content="Equipamentos Hitachi com 15 anos de durabilidade, insumos originais e suporte técnico 24h. A solução completa para quem não pode parar a produção." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+/* =============================================================
+   SULJETT — HOME · PRECISION INDUSTRIAL
+   ============================================================= */
+
+/* ─── Tokens ──────────────────────────────────────────────── */
+:root {
+  --sj-red:       #CC1A1A;
+  --sj-red-dark:  #A01010;
+  --sj-red-glow:  rgba(204, 26, 26, 0.35);
+  --steel-950:    #0A0F1A;
+  --steel-900:    #111827;
+  --steel-800:    #1A2535;
+  --steel-700:    #243045;
+  --steel-600:    #2F3E58;
+  --steel-500:    #4B6280;
+  --steel-400:    #6B7E98;
+  --steel-300:    #8DA0B8;
+  --steel-200:    #B7C4D5;
+  --steel-100:    #E8EDF5;
+  --steel-50:     #F4F6FA;
+  --ink-950:      #080C12;
+  --ink-800:      #1B2332;
+  --ink-600:      #374151;
+  --ink-400:      #6B7483;
+  --pure-white:   #FFFFFF;
+
+  --font-display: 'Manrope', system-ui, sans-serif;
+
+  --text-hero:  clamp(2.75rem, 9.5vh, 7rem);
+  --text-h1:    clamp(2.25rem, 4.4vw, 3.75rem);
+  --text-h2:    clamp(1.75rem, 3vw, 2.5rem);
+  --text-body:  1rem;
+  --text-mono:  0.8125rem;
+
+  --container:       1280px;
+  --gutter-mobile:   20px;
+  --gutter-desktop:  48px;
+
+  --ease-mechanical: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-snap:       cubic-bezier(0.87, 0, 0.13, 1);
+  --ease-reveal:     cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth:     cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  /* Theme — Light default */
+  --bg:            #ffffff;
+  --bg-alt:        var(--steel-50);
+  --bg-elev:       #ffffff;
+  --fg:            var(--ink-950);
+  --fg-body:       var(--ink-600);
+  --fg-mute:       var(--ink-400);
+  --border:        #E4E8F0;
+  --border-strong: #C9D2E0;
+  --header-bg:     rgba(255, 255, 255, 0.0);
+  --header-bg-scr: rgba(255, 255, 255, 0.92);
+  --header-border: rgba(10, 15, 26, 0.08);
+  --header-fg:     var(--ink-600);
+  --header-fg-h:   var(--ink-950);
+  --logo-text:     var(--ink-950);
+  --card-bg:       #ffffff;
+  --card-border:   #E4E8F0;
+  --card-shadow:   0 1px 2px rgba(10,15,26,.04), 0 12px 32px rgba(10,15,26,.06);
+}
+
+/* Hero is always dark — it has the video */
+/* When the page is in light mode, only dark-flagged sections stay dark */
+
+[data-theme="dark"] {
+  --bg:            var(--steel-950);
+  --bg-alt:        var(--steel-900);
+  --bg-elev:       var(--steel-900);
+  --fg:            var(--pure-white);
+  --fg-body:       var(--steel-200);
+  --fg-mute:       var(--steel-400);
+  --border:        var(--steel-800);
+  --border-strong: var(--steel-700);
+  --header-bg:     rgba(10, 15, 26, 0.0);
+  --header-bg-scr: rgba(10, 15, 26, 0.85);
+  --header-border: rgba(255, 255, 255, 0.08);
+  --header-fg:     var(--steel-300);
+  --header-fg-h:   var(--pure-white);
+  --logo-text:     #ffffff;
+  --card-bg:       var(--steel-900);
+  --card-border:   var(--steel-700);
+  --card-shadow:   0 1px 2px rgba(0,0,0,.4), 0 18px 48px rgba(0,0,0,.35);
+}
+
+/* ─── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+body {
+  font-family: var(--font-display);
+  font-size: var(--text-body);
+  color: var(--fg-body);
+  background: var(--bg);
+  line-height: 1.55;
+  overflow-x: hidden;
+  transition: background-color .45s var(--ease-smooth), color .45s var(--ease-smooth);
+}
+img, svg, video { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+ul, ol { list-style: none; }
+h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 700; line-height: 1.1; color: var(--fg); letter-spacing: -0.01em; }
+::selection { background: var(--sj-red); color: #fff; }
+:focus-visible { outline: 2px solid var(--sj-red); outline-offset: 3px; border-radius: 2px; }
+
+.mono { font-family: var(--font-display); font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.72em; }
+.container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter-mobile); }
+@media (min-width: 768px) { .container { padding-inline: var(--gutter-desktop); } }
+
+.h-display { font-size: var(--text-h1); font-weight: 800; line-height: 1.04; letter-spacing: -0.02em; padding-bottom: 0.15em; }
+.h-medium  { font-size: var(--text-h2); font-weight: 700; letter-spacing: -0.015em; padding-bottom: 0.12em; }
+.lead { font-size: clamp(1rem, 1.25vw, 1.125rem); line-height: 1.65; max-width: 60ch; }
+.eyebrow { display: inline-block; font-size: 0.75rem; letter-spacing: 0.22em; color: var(--sj-red); text-transform: uppercase; font-weight: 500; }
+.accent { color: var(--sj-red); }
+.steel-300 { color: var(--steel-300); }
+.ink-600   { color: var(--ink-600); }
+.muted     { color: var(--fg-mute); }
+
+/* ─── Reveal system ───────────────────────────────────────── */
+.reveal, .reveal-up { opacity: 0; will-change: opacity, transform; }
+.reveal-up { transform: translateY(28px); }
+/* word-mask container */
+.w-mask { display: inline-block; overflow: hidden; vertical-align: baseline; line-height: 1.18; padding-bottom: 0.04em; }
+.w-inner { display: inline-block; will-change: transform; transform: translateY(110%); transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+.w-mask.is-in .w-inner { transform: translateY(0); }
+/* keep .accent red inside masks */
+.w-mask .accent, .w-inner .accent { color: var(--sj-red); }
+.reveal.is-in, .reveal-up.is-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .9s var(--ease-reveal), transform .9s var(--ease-reveal);
+}
+
+/* ─── Badges ──────────────────────────────────────────────── */
+.badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.05);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+.badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sj-red); }
+
+/* ─── Buttons ─────────────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  font-family: var(--font-display); font-weight: 700; font-size: 0.9375rem;
+  padding: 0.75rem 1.25rem; border-radius: 4px; white-space: nowrap;
+  transition: transform var(--ease-mechanical) 150ms, background-color var(--ease-mechanical) 150ms, box-shadow var(--ease-mechanical) 150ms, color var(--ease-mechanical) 150ms, border-color var(--ease-mechanical) 150ms;
+  position: relative;
+}
+.btn--cta { background: var(--sj-red); color: #fff; box-shadow: 0 6px 16px rgba(204,26,26,.25); }
+.btn--cta:hover { background: var(--sj-red-dark); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(204,26,26,.45); }
+.btn--ghost { color: #fff; border-bottom: 1px solid rgba(255,255,255,.25); padding: 0.75rem 0.1rem; border-radius: 0; }
+.btn--ghost:hover { border-color: #fff; gap: .75rem; }
+.btn--ghost-dark { color: var(--fg); border-bottom: 1px solid var(--border-strong); border-radius: 0; padding: 0.75rem 0.1rem; }
+.btn--ghost-dark:hover { border-color: var(--sj-red); color: var(--sj-red); gap: .75rem; }
+.btn--outline-light { color: #fff; border: 1px solid var(--steel-700); background: rgba(255,255,255,.02); }
+.btn--outline-light:hover { border-color: var(--sj-red); color: #fff; background: rgba(204,26,26,.12); transform: translateY(-2px); }
+.btn--lg { padding: 1rem 1.75rem; font-size: 1rem; }
+.btn--full { width: 100%; }
+.btn-arrow { transition: transform var(--ease-mechanical) 150ms; }
+.btn:hover .btn-arrow { transform: translateX(4px); }
+
+/* ─── Header ──────────────────────────────────────────────── */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  transition: background-color .35s var(--ease-smooth), backdrop-filter .35s var(--ease-smooth), border-color .35s var(--ease-smooth), transform .4s var(--ease-mechanical);
+  border-bottom: 1px solid transparent;
+}
+.site-header.is-hidden { transform: translateY(-110%); }
+/* Over hero, always transparent w/ white text */
+.site-header { background: transparent; color: #fff; }
+.site-header .logo-text { fill: #fff; }
+.site-header .logo-mark { fill: #8DA0B8; }
+.site-header .nav-link { color: rgba(255,255,255,.78); }
+.site-header .nav-link:hover { color: #fff; }
+.site-header .theme-toggle { color: rgba(255,255,255,.78); }
+.site-header .theme-toggle:hover { color: #fff; }
+
+/* Scrolled */
+.site-header.is-scrolled {
+  background: var(--header-bg-scr);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom-color: var(--header-border);
+  color: var(--header-fg);
+}
+.site-header.is-scrolled .logo-text { fill: var(--logo-text); }
+.site-header.is-scrolled .nav-link { color: var(--header-fg); }
+.site-header.is-scrolled .nav-link:hover { color: var(--header-fg-h); }
+.site-header.is-scrolled .theme-toggle { color: var(--header-fg); }
+
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; height: 72px; }
+.logo { flex-shrink: 0; display: flex; align-items: center; }
+.logo-img { height: 38px; width: auto; display: block; }
+/* Over the dark hero, isolate the logo on a subtle light chip so the black text reads */
+.site-header:not(.is-scrolled) .logo {
+  padding: 5px 10px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 6px;
+  box-shadow: 0 1px 0 rgba(255,255,255,.08), 0 8px 24px rgba(0,0,0,.2);
+}
+.site-header.is-scrolled .logo { padding: 0; background: transparent; box-shadow: none; }
+[data-theme="dark"] .site-header.is-scrolled .logo {
+  padding: 5px 10px; background: rgba(255,255,255,0.92); border-radius: 6px;
+}
+
+.nav-links { display: none; align-items: center; gap: 0.15rem; }
+@media (min-width: 1024px) { .nav-links { display: flex; } }
+.nav-link { display: inline-flex; align-items: center; gap: 4px; padding: 0.5rem 0.9rem; font-size: 0.9375rem; font-weight: 600; transition: color .15s var(--ease-smooth); border-radius: 4px; }
+.nav-link--dropdown .chev { transition: transform .2s var(--ease-mechanical); }
+.has-dropdown { position: relative; }
+.has-dropdown.is-open .chev { transform: rotate(180deg); }
+
+.mega-menu {
+  position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%) translateY(-4px);
+  width: 620px; max-width: calc(100vw - 40px);
+  background: var(--mega-bg, #ffffff);
+  color: var(--mega-fg, var(--ink-950));
+  border: 1px solid var(--mega-border, var(--border));
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 1.5rem;
+  opacity: 0; pointer-events: none; transition: opacity .25s var(--ease-smooth), transform .25s var(--ease-mechanical);
+  box-shadow: 0 1px 2px rgba(10,15,26,.04), 0 20px 48px rgba(10,15,26,.12);
+}
+[data-theme="dark"] .mega-menu {
+  --mega-bg: var(--steel-900);
+  --mega-fg: #fff;
+  --mega-border: var(--steel-700);
+  --mega-item-hover: var(--steel-800);
+  --mega-label: var(--steel-400);
+  --mega-em: var(--steel-400);
+  box-shadow: 0 24px 64px rgba(0,0,0,.55);
+}
+.mega-menu {
+  --mega-bg: #ffffff;
+  --mega-fg: var(--ink-950);
+  --mega-border: var(--border);
+  --mega-item-hover: var(--steel-50);
+  --mega-label: var(--ink-400);
+  --mega-em: var(--ink-400);
+}
+.has-dropdown.is-open .mega-menu { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+.mega-col { display: flex; flex-direction: column; gap: 0.25rem; }
+.mega-label { font-family: var(--font-display); font-size: 0.6875rem; letter-spacing: 0.18em; color: var(--mega-label); text-transform: uppercase; padding: 0.25rem 0.625rem 0.625rem; font-weight: 600; }
+.mega-label--second { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px dashed var(--mega-border); }
+.mega-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0.75rem; border-radius: 8px; transition: background-color .15s var(--ease-smooth), transform .2s var(--ease-mechanical); }
+.mega-item strong { display: block; color: var(--mega-fg); font-size: 0.9375rem; font-weight: 600; letter-spacing: -0.005em; }
+.mega-item em { display: block; font-style: normal; color: var(--mega-em); font-size: 0.75rem; margin-top: 2px; font-family: var(--font-display); }
+.mega-item:hover { background: var(--mega-item-hover); transform: translateX(2px); }
+.mega-item--featured { background: linear-gradient(135deg, rgba(204,26,26,.08), rgba(204,26,26,0)); border: 1px solid rgba(204,26,26,.2); flex-direction: row; align-items: center; padding: 0.875rem 0.875rem; }
+.mega-item--featured strong { font-size: 1rem; }
+.mega-item--featured:hover { background: linear-gradient(135deg, rgba(204,26,26,.14), rgba(204,26,26,.02)); border-color: rgba(204,26,26,.4); }
+.mega-item--featured em { font-family: var(--font-display); }
+.mega-star { color: var(--sj-red); font-size: 1.05rem; line-height: 1; margin-top: 2px; }
+.mega-badge { margin-left: auto; align-self: center; font-family: var(--font-display); font-size: 0.625rem; letter-spacing: 0.14em; color: var(--sj-red); background: rgba(204,26,26,.1); border: 1px solid rgba(204,26,26,.3); padding: 0.2rem 0.4rem; border-radius: 3px; }
+.mega-item--accent strong { color: var(--sj-red); }
+
+.nav-actions { display: flex; align-items: center; gap: 0.5rem; }
+.theme-toggle { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 4px; border: 1px solid transparent; transition: border-color .15s var(--ease-smooth), background-color .15s var(--ease-smooth); }
+.theme-toggle:hover { border-color: currentColor; background: rgba(255,255,255,.04); }
+.theme-toggle .ic-sun, .theme-toggle .ic-moon { position: absolute; transition: opacity .2s var(--ease-smooth), transform .25s var(--ease-mechanical); }
+.theme-toggle { position: relative; }
+[data-theme="dark"] .theme-toggle .ic-sun  { opacity: 1; transform: rotate(0); }
+[data-theme="dark"] .theme-toggle .ic-moon { opacity: 0; transform: rotate(-90deg); }
+[data-theme="light"] .theme-toggle .ic-sun  { opacity: 0; transform: rotate(90deg); }
+[data-theme="light"] .theme-toggle .ic-moon { opacity: 1; transform: rotate(0); }
+
+.site-header .btn--cta { display: none; }
+@media (min-width: 768px) { .site-header .btn--cta { display: inline-flex; padding: 0.625rem 1.1rem; } }
+
+.btn-hamburger { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; padding: 0.5rem; }
+@media (min-width: 1024px) { .btn-hamburger { display: none; } }
+.btn-hamburger span { display: block; height: 2px; background: currentColor; border-radius: 1px; transition: transform .35s var(--ease-mechanical), opacity .35s var(--ease-mechanical); }
+.btn-hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.btn-hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.btn-hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu { position: fixed; inset: 0; z-index: 99; background: var(--steel-950); padding: 96px 24px 24px; display: none; overflow-y: auto; }
+.mobile-menu.is-open { display: block; }
+.mobile-menu-inner { display: flex; flex-direction: column; gap: 0.125rem; }
+.mobile-menu a { display: flex; align-items: center; gap: 0.5rem; color: var(--steel-300); padding: 0.875rem 0; border-bottom: 1px solid var(--steel-800); font-weight: 600; font-size: 1.125rem; }
+.mobile-menu a:hover { color: #fff; }
+
+/* ─── HERO ────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  background: var(--steel-950);
+  color: #fff;
+  display: flex; align-items: center;
+  overflow: hidden;
+  padding-top: 80px;
+}
+.hero-video-wrap { position: absolute; inset: 0; z-index: 0; }
+.hero-video { width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0.55; transform: scale(1.02); animation: heroKenBurns 22s ease-in-out infinite alternate; }
+@keyframes heroKenBurns { from { transform: scale(1.02); } to { transform: scale(1.1); } }
+.hero-overlay {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(at 75% 100%, rgba(204,26,26,.18) 0%, transparent 55%),
+    linear-gradient(105deg, rgba(10,15,26,.92) 0%, rgba(10,15,26,.72) 45%, rgba(10,15,26,.55) 100%);
+}
+.hero-grid-lines { display: none; }
+
+.hero > .container.hero-content { max-width: none; padding-inline: var(--gutter-mobile); }
+@media (min-width: 768px) { .hero > .container.hero-content { padding-inline: clamp(1.5rem, 4vw, 3.5rem); } }
+.hero-content { position: relative; z-index: 2; width: 100%; display: flex; flex-direction: column; gap: 3rem; align-items: flex-start; padding-block: 4rem 7rem; }
+@media (min-width: 1024px) {
+  .hero-content { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 3rem; align-items: center; padding-block: 5rem 6rem; }
+}
+.hero-figure { display: none; position: relative; z-index: 2; justify-self: end; width: 100%; max-width: 720px; aspect-ratio: 1 / 1; margin-right: -2%; }
+.hero-figure::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 62%, rgba(204,26,26,.32) 0%, rgba(204,26,26,.1) 36%, transparent 66%),
+    radial-gradient(ellipse at 50% 55%, rgba(141,160,184,.18) 0%, transparent 68%);
+  filter: blur(6px);
+  pointer-events: none;
+}
+.hero-figure::after {
+  content: "";
+  position: absolute; inset: 8%;
+  border: 1px solid rgba(204,26,26,.28);
+  border-radius: 50%;
+  border-style: dashed;
+  animation: spin 60s linear infinite;
+  pointer-events: none;
+}
+.hero-figure-img {
+  position: relative; z-index: 2;
+  width: 100%; height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 40px 80px rgba(0,0,0,.7)) drop-shadow(0 0 60px rgba(204,26,26,.2));
+  animation: heroFloat 5s ease-in-out infinite;
+}
+.hero-figure-tag {
+  position: absolute; bottom: 4%; left: 6%; z-index: 3;
+  display: inline-flex; flex-direction: column; gap: 0.1rem;
+  padding: 0.6rem 0.9rem;
+  background: rgba(10, 15, 26, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,.08);
+  border-left: 2px solid var(--sj-red);
+  border-radius: 2px;
+}
+.hero-figure-tag .hft-k { font-size: 0.625rem; letter-spacing: 0.22em; color: var(--sj-red); font-family: var(--font-mono); }
+.hero-figure-tag .hft-n { font-family: var(--font-display); font-weight: 700; color: #fff; font-size: 0.9375rem; letter-spacing: -0.005em; }
+.hero-figure-tag .hft-s { font-size: 0.625rem; letter-spacing: 0.08em; color: var(--steel-400); font-family: var(--font-mono); }
+@keyframes heroFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@media (min-width: 1024px) { .hero-figure { display: block; } }
+.hero-inner { display: flex; flex-direction: column; gap: 1.5rem; max-width: 780px; }
+
+.hero-title {
+  font-size: var(--text-hero); font-weight: 800; line-height: 1.02;
+  color: #fff; letter-spacing: -0.035em; text-wrap: balance;
+}
+.hero-title .line { display: block; overflow: hidden; padding-bottom: 0.04em; }
+.hero-title .word { display: inline-block; will-change: transform; }
+.hero-title .accent { color: var(--sj-red); position: relative; }
+.hero-title .accent::after {
+  content: ""; display: block; height: 3px; width: 0;
+  background: var(--sj-red); margin-top: 0.12em;
+  transition: width 1.2s var(--ease-reveal) 1.4s;
+}
+.hero.is-loaded .hero-title .accent::after { width: 100%; }
+
+.hero-sub { color: var(--steel-200); font-size: clamp(1rem, 1.3vw, 1.125rem); line-height: 1.65; max-width: 56ch; }
+.hero-ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; }
+.hero-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1.5rem; padding-top: 1.5rem; margin-top: 0.5rem; border-top: 1px solid rgba(255,255,255,.08); max-width: 620px; }
+@media (min-width: 768px) { .hero-specs { grid-template-columns: repeat(4, auto); } }
+.hero-specs li { font-family: var(--font-display); font-size: 0.75rem; color: var(--steel-300); letter-spacing: 0.06em; text-transform: uppercase; display: flex; align-items: center; gap: 0.4rem; }
+.hero-specs .ar { color: var(--sj-red); }
+
+.hero-readout { display: none !important; }
+
+/* ─── Hero Product Showcase (substitui o readout) ────────── */
+.hero-product { position: relative; display: flex; flex-direction: column; gap: 1.25rem; opacity: 0; transform: translateY(12px); }
+.hero.is-loaded .hero-product { animation: fadeIn 1.1s var(--ease-reveal) 1.1s forwards; }
+.hero-product-stage {
+  position: relative; aspect-ratio: 1 / 1; width: 100%; max-width: 380px;
+  display: flex; align-items: center; justify-content: center;
+  background: radial-gradient(ellipse at 50% 65%, rgba(204,26,26,.22) 0%, transparent 55%);
+}
+.hero-product-ring { position: absolute; inset: 6%; border: 1px solid rgba(255,255,255,.08); border-radius: 50%; }
+.hero-product-ring--2 { inset: 18%; border-color: rgba(204,26,26,.25); border-style: dashed; animation: spin 42s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.hero-product-img { position: relative; z-index: 2; width: 82%; height: 82%; object-fit: contain; filter: drop-shadow(0 30px 60px rgba(0,0,0,.65)) drop-shadow(0 0 40px rgba(204,26,26,.15)); transform-origin: center; }
+.hero-product-glow { position: absolute; bottom: 8%; left: 50%; transform: translateX(-50%); width: 60%; height: 20px; background: radial-gradient(ellipse, rgba(204,26,26,.5), transparent 70%); filter: blur(12px); }
+.hero-product-cap { display: flex; flex-direction: column; gap: 0.2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.08); }
+.hero-product-tag { font-size: 0.625rem; letter-spacing: 0.22em; color: var(--sj-red); }
+.hero-product-name { font-family: var(--font-display); font-weight: 700; color: #fff; font-size: 1.0625rem; letter-spacing: -0.005em; }
+.hero-product-sub { font-size: 0.6875rem; color: var(--steel-400); letter-spacing: 0.08em; }
+.hero-product-bullets { display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.6875rem; color: var(--steel-300); letter-spacing: 0.04em; }
+.hero-product-bullets li { display: flex; gap: 0.6rem; align-items: baseline; }
+.hpb-k { color: var(--sj-red); font-weight: 600; letter-spacing: 0.1em; }
+@media (max-width: 1023px) { .hero-product { max-width: 320px; margin: 0 auto; } .hero-product-ring { display: none; } }
+
+/* ─── Intro overlay (icomat / thelinestudio style) ────────── */
+.intro-curtain { position: fixed; inset: 0; z-index: 9999; background: #05080F; display: flex; align-items: center; justify-content: center; pointer-events: all; overflow: hidden; }
+.intro-curtain.is-out { pointer-events: none; }
+.intro-inner { position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem; }
+.intro-mark { font-family: var(--font-display); font-weight: 800; letter-spacing: -0.04em; color: #fff; font-size: clamp(3rem, 9vw, 8rem); line-height: 1; display: flex; gap: 0.02em; }
+.intro-mark span { display: inline-block; opacity: 0; transform: translateY(110%); }
+.intro-dot { color: var(--sj-red); }
+/* Intro logo image variant */
+.intro-logo-wrap {
+  width: clamp(220px, 36vw, 460px);
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.5);
+  opacity: 0; transform: translateY(20px) scale(0.96);
+}
+.intro-logo-img { display: block; width: 100%; height: auto; }
+.intro-meta { position: absolute; left: 2rem; right: 2rem; bottom: 2rem; display: flex; justify-content: space-between; align-items: end; font-family: var(--font-display); font-size: 0.6875rem; letter-spacing: 0.2em; color: var(--steel-400); text-transform: uppercase; }
+.intro-meta .left, .intro-meta .right { opacity: 0; }
+.intro-counter { position: absolute; top: 2rem; right: 2rem; font-family: var(--font-display); font-size: 0.75rem; letter-spacing: 0.22em; color: var(--steel-400); opacity: 0; }
+.intro-counter b { color: #fff; font-weight: 500; }
+.intro-bar { position: absolute; bottom: 0; left: 0; height: 2px; width: 0; background: var(--sj-red); }
+.intro-tag { font-family: var(--font-display); font-size: 0.6875rem; letter-spacing: 0.3em; color: var(--steel-400); text-transform: uppercase; opacity: 0; }
+.intro-sweep { position: absolute; inset: 0; background: #05080F; transform-origin: top; will-change: transform; }
+body.no-scroll { overflow: hidden; }
+@keyframes fadeIn { to { opacity: 1; } }
+@media (max-width: 1023px) { .hero-readout { display: none; } }
+.readout-head { display: flex; align-items: center; gap: 0.5rem; color: var(--steel-400); font-size: 0.6875rem; letter-spacing: 0.14em; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,.08); margin-bottom: 0.25rem; }
+.rdot { width: 6px; height: 6px; border-radius: 50%; background: #00D18F; box-shadow: 0 0 8px rgba(0,209,143,.8); animation: pulse-green 1.6s ease-in-out infinite; }
+@keyframes pulse-green { 50% { opacity: 0.4; } }
+.readout-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.3rem 0; border-bottom: 1px dashed rgba(255,255,255,.04); }
+.readout-row:last-child { border-bottom: 0; }
+.readout-row > span:first-child { color: var(--steel-400); letter-spacing: 0.1em; font-size: 0.6875rem; }
+.readout-row .val { color: #fff; font-weight: 500; display: inline-flex; align-items: center; gap: 0.5rem; }
+.readout-row .bar { width: 60px; height: 4px; background: rgba(255,255,255,.1); border-radius: 2px; overflow: hidden; }
+.readout-row .bar i { display: block; height: 100%; background: linear-gradient(90deg, #00D18F, var(--sj-red)); }
+
+.hero-scroll { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 0.75rem; color: var(--steel-400); font-size: 0.625rem; letter-spacing: 0.3em; }
+.hero-scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--sj-red), transparent); animation: scrollDown 1.8s ease-in-out infinite; }
+@keyframes scrollDown { 0%, 100% { transform: translateY(0); opacity: 1; } 50% { transform: translateY(10px); opacity: 0.3; } }
+@media (max-width: 767px) { .hero-scroll { display: none; } }
+
+/* ─── Section baseline ────────────────────────────────────── */
+.section { padding-block: 96px; position: relative; }
+@media (max-width: 767px) { .section { padding-block: 64px; } }
+.section--dark { background: var(--steel-950); color: #fff; }
+.section--dark h1, .section--dark h2, .section--dark h3, .section--dark h4, .section--dark h5 { color: #fff; }
+.section--light { background: var(--steel-50); }
+[data-theme="dark"] .section:not(.section--dark):not(.section--services) { background: var(--bg); color: var(--fg-body); }
+[data-theme="dark"] .section h1, [data-theme="dark"] .section h2, [data-theme="dark"] .section h3, [data-theme="dark"] .section h4 { color: var(--fg); }
+[data-theme="dark"] .section--light { background: var(--steel-900); }
+
+/* ─── Proof ───────────────────────────────────────────────── */
+.section--proof { padding-block: 80px; background: var(--bg); border-bottom: 1px solid var(--border); }
+[data-theme="dark"] .section--proof { border-color: var(--border); }
+.proof-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; }
+@media (min-width: 768px) { .proof-grid { grid-template-columns: repeat(4, 1fr); gap: 1rem; } }
+.proof-item { display: flex; flex-direction: column; gap: 0.5rem; padding: 0 0 0 1.25rem; border-left: 2px solid var(--sj-red); }
+.proof-num { font-family: var(--font-display); font-size: clamp(2rem, 3.6vw, 3rem); font-weight: 800; color: var(--fg); letter-spacing: -0.03em; line-height: 1; display: inline-flex; align-items: baseline; gap: 0.25rem; }
+.proof-num em { font-family: var(--font-display); font-style: normal; font-size: 0.5em; font-weight: 500; color: var(--fg-mute); letter-spacing: 0; }
+.proof-label { font-size: 0.875rem; color: var(--fg-body); line-height: 1.5; }
+.proof-divider { height: 1px; background: var(--border); margin: 3rem 0 2rem; }
+.proof-caption { font-size: 0.75rem; color: var(--fg-mute); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.5rem; }
+.proof-logos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem 1.5rem; align-items: center; }
+@media (min-width: 768px) { .proof-logos { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1100px) { .proof-logos { grid-template-columns: repeat(8, 1fr); } }
+.client-logo {
+  font-family: var(--font-display); font-weight: 800; font-size: 1rem; color: var(--fg-mute);
+  letter-spacing: 0.05em; text-align: center; opacity: .7;
+  transition: opacity .2s, color .2s;
+}
+.client-logo em { font-family: var(--font-display); font-style: normal; font-weight: 400; font-size: 0.625rem; color: var(--sj-red); display: block; letter-spacing: 0.1em; margin-top: 2px; }
+.client-logo:hover { opacity: 1; color: var(--fg); }
+
+/* ─── CIJ Showcase ────────────────────────────────────────── */
+.section--cij { overflow: hidden; }
+.section--cij::before { display: none; }
+.cij-head { max-width: 880px; margin-bottom: 4rem; display: flex; flex-direction: column; gap: 1.25rem; position: relative; }
+.cij-head .badge { background: rgba(204,26,26,.08); border-color: rgba(204,26,26,.3); color: #fff; }
+.cij-head .mega-star { margin-right: 4px; }
+
+.cij-specs-grid {
+  display: grid; grid-template-columns: 1fr; gap: 1px;
+  background: var(--steel-800);
+  border: 1px solid var(--steel-800);
+  border-radius: 8px; overflow: hidden;
+  position: relative; margin-bottom: 6rem;
+}
+@media (min-width: 768px) { .cij-specs-grid { grid-template-columns: 1fr 1fr 1fr; } }
+.spec-card {
+  background: var(--steel-950); padding: 2rem 1.75rem;
+  display: flex; flex-direction: column; gap: 0.5rem; min-height: 260px;
+  transition: background-color .25s var(--ease-smooth);
+  position: relative;
+}
+.spec-card:hover { background: var(--steel-900); }
+.spec-card-num { font-size: 0.6875rem; letter-spacing: 0.18em; color: var(--steel-500); position: absolute; top: 1.25rem; right: 1.5rem; }
+.spec-card-label { font-size: 0.6875rem; letter-spacing: 0.14em; color: var(--sj-red); text-transform: uppercase; font-weight: 500; }
+.spec-card-value { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.5rem, 4vw, 3.25rem); color: #fff; line-height: 1; margin-top: 0.25rem; letter-spacing: -0.03em; display: inline-flex; align-items: baseline; gap: 0.15rem; }
+.spec-card-value em { font-family: var(--font-display); font-style: normal; font-size: 0.35em; font-weight: 500; color: var(--steel-400); letter-spacing: 0; }
+.spec-card-value.mono-val { font-family: var(--font-display); font-size: 1.125rem; font-weight: 500; }
+.spec-card-unit { font-size: 0.75rem; color: var(--steel-400); letter-spacing: 0.08em; text-transform: uppercase; }
+.spec-card-desc { margin-top: auto; color: var(--steel-300); font-size: 0.875rem; line-height: 1.55; padding-top: 1rem; border-top: 1px dashed rgba(255,255,255,.08); }
+
+.cij-models-head { max-width: 780px; margin-bottom: 2.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+
+.cij-models { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 3rem; }
+@media (min-width: 768px) { .cij-models { grid-template-columns: 1fr 1fr 1fr; gap: 1.25rem; } }
+.model-card { background: var(--steel-900); border: 1px solid var(--steel-800); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; transition: transform .3s var(--ease-mechanical), border-color .3s; }
+.model-card:hover { transform: translateY(-4px); border-color: var(--sj-red); }
+.model-media { position: relative; aspect-ratio: 4 / 3; background: radial-gradient(ellipse at 50% 60%, #1a2535 0%, #0a0f1a 85%); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.model-media::before {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 100%, rgba(204,26,26,.18), transparent 60%);
+  pointer-events: none;
+}
+.model-img { position: relative; z-index: 1; width: 78%; height: 78%; object-fit: contain; filter: drop-shadow(0 20px 40px rgba(0,0,0,.5)); transition: transform .5s var(--ease-mechanical); }
+.model-card:hover .model-img { transform: scale(1.06) translateY(-4px); }
+.model-ph { display: none; }
+.model-tag { position: absolute; top: 1rem; left: 1rem; z-index: 2; font-size: 0.625rem; letter-spacing: 0.16em; color: var(--sj-red); background: rgba(10,15,26,.8); backdrop-filter: blur(4px); padding: 0.3rem 0.5rem; border-radius: 3px; border: 1px solid rgba(204,26,26,.3); }
+.model-body { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.model-body h4 { color: #fff; font-size: 1.25rem; letter-spacing: -0.01em; }
+.model-body p { color: var(--steel-300); font-size: 0.875rem; line-height: 1.55; }
+.model-specs { display: flex; flex-direction: column; gap: 0.375rem; padding: 0.75rem 0; border-top: 1px dashed rgba(255,255,255,.08); border-bottom: 1px dashed rgba(255,255,255,.08); font-size: 0.75rem; }
+.model-specs li { display: flex; justify-content: space-between; color: var(--steel-300); }
+.model-specs li span:first-child { color: var(--steel-500); letter-spacing: 0.1em; }
+.model-specs li span:last-child { color: #fff; font-weight: 500; }
+
+.link-arrow { display: inline-flex; align-items: center; gap: 0.5rem; color: #fff; font-weight: 600; font-size: 0.875rem; border-bottom: 1px solid transparent; transition: border-color .2s, gap .2s; padding-bottom: 2px; }
+.link-arrow:hover { border-color: var(--sj-red); gap: 0.75rem; color: var(--sj-red); }
+.cij-footer { display: flex; justify-content: center; }
+
+/* ─── How It Works ────────────────────────────────────────── */
+.section--how { background: var(--bg); }
+[data-theme="dark"] .section--how { background: var(--steel-900); }
+.how-head { max-width: 780px; margin: 0 auto 5rem; text-align: center; display: flex; flex-direction: column; gap: 1rem; align-items: center; }
+.how-head h2 { text-wrap: balance; }
+.how-steps {
+  display: grid; grid-template-columns: 1fr; gap: 2.5rem;
+  position: relative;
+}
+@media (min-width: 768px) { .how-steps { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; } }
+.how-rail { display: none; position: absolute; top: 56px; left: 0; right: 0; width: 100%; height: 2px; pointer-events: none; }
+@media (min-width: 768px) { .how-rail { display: block; } }
+.how-rail-bg { stroke: var(--border); stroke-width: 2; stroke-dasharray: 4 6; }
+.how-rail-fg { stroke: var(--sj-red); stroke-width: 2; stroke-dasharray: 1200; stroke-dashoffset: 1200; transition: stroke-dashoffset 1.8s var(--ease-reveal); }
+.how-steps.is-in .how-rail-fg { stroke-dashoffset: 0; }
+.how-step { position: relative; display: flex; flex-direction: column; gap: 0.5rem; padding-top: 96px; }
+.how-num { position: absolute; top: 0; left: 0; font-size: 0.6875rem; letter-spacing: 0.2em; color: var(--fg-mute); }
+.how-dot {
+  position: absolute; top: 46px; left: 0; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--bg); border: 2px solid var(--sj-red);
+  box-shadow: 0 0 0 6px rgba(204,26,26,.12);
+}
+[data-theme="dark"] .how-dot { background: var(--steel-900); }
+.how-step h4 { font-size: 1.25rem; font-weight: 700; color: var(--fg); letter-spacing: -0.01em; }
+.how-step p { color: var(--fg-body); font-size: 0.9375rem; line-height: 1.55; }
+.how-mono { font-size: 0.6875rem; letter-spacing: 0.14em; color: var(--sj-red); margin-top: auto; padding-top: 0.75rem; border-top: 1px dashed var(--border); }
+
+.how-callout { margin-top: 4rem; display: flex; align-items: flex-start; gap: 1rem; padding: 1.5rem 1.75rem; border: 1px solid var(--border); border-left: 3px solid var(--sj-red); background: var(--bg-elev); border-radius: 6px; max-width: 760px; margin-inline: auto; color: var(--fg-body); }
+[data-theme="dark"] .how-callout { background: var(--steel-800); border-color: var(--steel-700); border-left-color: var(--sj-red); }
+.how-callout svg { flex-shrink: 0; color: var(--sj-red); margin-top: 3px; }
+.how-callout p { font-size: 0.9375rem; line-height: 1.6; }
+.how-callout strong { color: var(--fg); }
+.how-cta { display: flex; justify-content: center; margin-top: 2.5rem; }
+
+/* ─── Applications ────────────────────────────────────────── */
+.section--apps { background: var(--bg); padding-bottom: 0; overflow: hidden; }
+[data-theme="dark"] .section--apps { background: var(--bg); }
+.apps-head { max-width: 760px; margin-bottom: 3rem; display: flex; flex-direction: column; gap: 1rem; }
+.apps-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 640px) { .apps-grid { grid-template-columns: 1fr 1fr; } }
+
+/* Horizontal-scroll rail (desktop) */
+.hscroll-wrap { position: relative; overflow: hidden; padding-top: 1rem; padding-bottom: 5rem; }
+.hscroll-track { display: flex; gap: 1.25rem; padding: 0 clamp(1.25rem, 4vw, 3rem) 1rem; will-change: transform; align-items: stretch; }
+.hscroll-track .app-card { flex: 0 0 min(420px, 78vw); aspect-ratio: 4 / 5; margin: 0; }
+.hscroll-meta { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 2rem clamp(1.25rem, 4vw, 3rem) 0; color: var(--fg-muted); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; }
+.hscroll-meta__progress { flex: 1; height: 1px; background: var(--border); position: relative; max-width: 520px; }
+.hscroll-meta__progress::after { content: ""; position: absolute; left: 0; top: -1px; height: 3px; width: var(--hsp, 6%); background: var(--sj-red); transition: width .15s linear; }
+@media (max-width: 899px) {
+  .hscroll-wrap { overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 2rem; }
+  .hscroll-track { transform: none !important; }
+  .hscroll-track .app-card { scroll-snap-align: start; flex: 0 0 min(340px, 82vw); }
+  .hscroll-meta { display: none; }
+}
+.app-card { position: relative; overflow: hidden; border-radius: 10px; aspect-ratio: 4 / 5; display: flex; flex-direction: column; justify-content: flex-end; color: #fff; isolation: isolate; cursor: pointer; }
+.app-card__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; transform: scale(1.05); transition: transform .8s var(--ease-mechanical), filter .5s; filter: grayscale(.25) contrast(1.05) brightness(.88); will-change: transform; }
+.app-card:hover .app-card__img { transform: scale(1.12); filter: grayscale(0) contrast(1.05) brightness(.95); }
+.app-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,8,15,0) 30%, rgba(5,8,15,.55) 65%, rgba(5,8,15,.94) 100%); z-index: 1; pointer-events: none; }
+.app-card__body { position: relative; z-index: 2; padding: 1.75rem 1.75rem 1.5rem; display: flex; flex-direction: column; gap: .55rem; }
+.app-card__num { font-size: 0.6875rem; letter-spacing: 0.2em; color: rgba(255,255,255,.62); text-transform: uppercase; }
+.app-card h4 { font-size: clamp(1.375rem, 2vw, 1.6rem); font-weight: 700; letter-spacing: -0.015em; color: #fff; }
+.app-card p { color: rgba(255,255,255,.82); font-size: 0.9rem; line-height: 1.5; max-width: 32ch; }
+.app-card__substrate { font-size: 0.6875rem; letter-spacing: 0.14em; text-transform: uppercase; color: #ff6b6b; margin-top: .25rem; font-weight: 500; }
+.app-card__link { margin-top: 0.75rem; font-size: 0.85rem; font-weight: 600; color: #fff; display: inline-flex; gap: 0.5rem; align-items: center; align-self: flex-start; padding: .55rem 0; border-bottom: 1px solid rgba(255,255,255,.3); transition: border-color .25s, gap .25s; }
+.app-card:hover .app-card__link { border-color: var(--sj-red); gap: 0.8rem; }
+.app-card__mark { position: absolute; top: 1rem; right: 1rem; z-index: 2; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); display: inline-flex; align-items: center; justify-content: center; backdrop-filter: blur(6px); transition: background-color .3s, border-color .3s; }
+.app-card:hover .app-card__mark { background: var(--sj-red); border-color: var(--sj-red); }
+
+/* ─── VS ──────────────────────────────────────────────────── */
+.section--vs { position: relative; overflow: hidden; }
+.section--vs::before {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 20% 30%, rgba(0,209,143,.05), transparent 50%), radial-gradient(ellipse at 80% 70%, rgba(204,26,26,.07), transparent 50%);
+  pointer-events: none;
+}
+.vs-head { max-width: 880px; margin: 0 auto 4rem; text-align: center; display: flex; flex-direction: column; gap: 1rem; align-items: center; position: relative; }
+.vs-head h2 { text-wrap: balance; }
+.vs-split { display: grid; grid-template-columns: 1fr; gap: 1rem; align-items: stretch; position: relative; max-width: 1100px; margin: 0 auto; }
+@media (min-width: 900px) { .vs-split { grid-template-columns: 1fr auto 1fr; gap: 1.5rem; } }
+.vs-col { background: var(--steel-900); border: 1px solid var(--steel-800); border-radius: 10px; padding: 2rem 1.75rem; display: flex; flex-direction: column; gap: 1.25rem; }
+.vs-col--good { border-color: rgba(0, 209, 143, 0.25); box-shadow: 0 0 0 1px rgba(0, 209, 143, 0.08), 0 20px 40px rgba(0,209,143,.05); }
+.vs-col--bad { border-color: rgba(204, 26, 26, 0.25); }
+.vs-col-head { display: flex; align-items: center; gap: 0.75rem; padding-bottom: 1rem; border-bottom: 1px solid var(--steel-800); }
+.vs-mark { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; font-family: var(--font-display); font-weight: 800; font-size: 1rem; flex-shrink: 0; }
+.vs-mark--check { background: rgba(0,209,143,.12); color: #00D18F; border: 1px solid rgba(0,209,143,.3); }
+.vs-mark--x { background: rgba(204,26,26,.12); color: var(--sj-red); border: 1px solid rgba(204,26,26,.3); }
+.vs-title { font-family: var(--font-display); font-weight: 700; font-size: 1.0625rem; color: #fff; }
+.vs-pill { margin-left: auto; font-size: 0.625rem; letter-spacing: 0.14em; color: #00D18F; background: rgba(0,209,143,.1); border: 1px solid rgba(0,209,143,.25); padding: 0.2rem 0.5rem; border-radius: 3px; }
+.vs-pill--warn { color: var(--sj-red); background: rgba(204,26,26,.1); border-color: rgba(204,26,26,.25); }
+.vs-list { display: flex; flex-direction: column; gap: 0.875rem; }
+.vs-list li { color: var(--steel-300); font-size: 0.9375rem; line-height: 1.55; padding-left: 1.25rem; position: relative; }
+.vs-list li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 8px; height: 1px; background: var(--steel-500); }
+.vs-col--good .vs-list li::before { background: #00D18F; }
+.vs-col--bad .vs-list li::before { background: var(--sj-red); }
+.vs-list strong { color: #fff; }
+.vs-list .mono { color: #fff; }
+.vs-divider { display: none; }
+@media (min-width: 900px) {
+  .vs-divider { display: flex; align-items: center; justify-content: center; position: relative; }
+  .vs-divider::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: linear-gradient(to bottom, transparent, var(--steel-700), transparent); }
+  .vs-divider span { position: relative; background: var(--steel-950); padding: 1rem 0.5rem; color: var(--steel-500); font-size: 0.75rem; letter-spacing: 0.2em; }
+}
+.vs-authority { max-width: 900px; margin: 3rem auto 0; padding: 1.5rem 1.75rem; background: rgba(204,26,26,.05); border: 1px solid rgba(204,26,26,.2); border-left: 3px solid var(--sj-red); border-radius: 6px; display: flex; gap: 1rem; align-items: flex-start; }
+.vs-authority svg { color: var(--sj-red); flex-shrink: 0; margin-top: 2px; }
+.vs-authority p { color: var(--steel-200); font-size: 0.9375rem; line-height: 1.6; }
+.vs-authority strong { color: #fff; }
+
+/* ─── Services (fundo sj-red) ─────────────────────────────── */
+.section--services { background: var(--sj-red); color: #fff; position: relative; overflow: hidden; }
+.section--services::before {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,.08), transparent 40%),
+    linear-gradient(180deg, transparent 0%, rgba(0,0,0,.15) 100%);
+  pointer-events: none;
+}
+.section--services::after { display: none; }
+.section--services > .container { position: relative; z-index: 1; }
+.section--services h2, .section--services h3, .section--services h4 { color: #fff; }
+.serv-head { max-width: 720px; margin-bottom: 4rem; display: flex; flex-direction: column; gap: 1rem; }
+.serv-head .eyebrow { color: rgba(255,255,255,.7); }
+.serv-grid { display: grid; grid-template-columns: 1fr; gap: 1px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.18); border-radius: 8px; overflow: hidden; }
+@media (min-width: 640px) { .serv-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .serv-grid { grid-template-columns: repeat(4, 1fr); } }
+.serv-card { background: var(--sj-red); padding: 2rem 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; min-height: 280px; transition: background-color .25s; }
+.serv-card:hover { background: var(--sj-red-dark); }
+.serv-num { font-size: 0.6875rem; letter-spacing: 0.2em; color: rgba(255,255,255,.6); }
+.serv-card h4 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; }
+.serv-card p { color: rgba(255,255,255,.88); font-size: 0.9375rem; line-height: 1.55; }
+.serv-meta { margin-top: auto; padding-top: 1rem; font-size: 0.6875rem; letter-spacing: 0.14em; color: #fff; border-top: 1px dashed rgba(255,255,255,.2); }
+.serv-foot { display: flex; justify-content: center; margin-top: 3rem; }
+.section--services .btn--outline-light { border-color: rgba(255,255,255,.5); color: #fff; }
+.section--services .btn--outline-light:hover { border-color: #fff; background: rgba(255,255,255,.1); }
+
+/* ─── Lead Magnet ─────────────────────────────────────────── */
+.section--lead { background: var(--steel-900); }
+.lead-wrap { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
+@media (min-width: 900px) { .lead-wrap { grid-template-columns: 1.1fr 1fr; gap: 5rem; } }
+.lead-copy { display: flex; flex-direction: column; gap: 1.25rem; }
+.lead-copy h2 { color: #fff; text-wrap: balance; }
+.lead-badges { display: flex; flex-direction: column; gap: 0.625rem; margin-top: 1rem; }
+.lead-badges li { display: flex; align-items: center; gap: 0.625rem; color: var(--steel-200); font-size: 0.8125rem; letter-spacing: 0.04em; }
+.lead-badges .ck { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; background: rgba(0,209,143,.15); color: #00D18F; font-weight: 700; font-size: 0.75rem; border: 1px solid rgba(0,209,143,.3); }
+
+.lead-form { background: var(--steel-950); border: 1px solid var(--steel-800); border-radius: 10px; padding: 2rem 1.75rem; display: flex; flex-direction: column; gap: 1rem; box-shadow: 0 32px 64px rgba(0,0,0,.4); }
+.lead-form-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px dashed var(--steel-800); font-size: 0.6875rem; letter-spacing: 0.14em; color: var(--steel-400); }
+.lead-form-head .rdot-wrap { display: inline-flex; align-items: center; gap: 0.5rem; }
+.field { display: flex; flex-direction: column; gap: 0.4rem; }
+.field label { font-family: var(--font-display); font-size: 0.6875rem; letter-spacing: 0.14em; color: var(--steel-400); text-transform: uppercase; }
+.field input, .field select { background: var(--steel-900); color: #fff; border: 1px solid var(--steel-700); border-radius: 4px; padding: 0.75rem 0.875rem; font-family: var(--font-display); font-size: 0.9375rem; transition: border-color .15s, background .15s; }
+.field input:focus, .field select:focus { outline: none; border-color: var(--sj-red); background: var(--steel-800); }
+.field-row { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 500px) { .field-row { grid-template-columns: 1fr 1.3fr; } }
+.lead-micro { font-size: 0.6875rem; color: var(--steel-400); letter-spacing: 0.04em; display: flex; align-items: center; gap: 0.4rem; padding-top: 0.25rem; }
+.lead-success { display: none; padding: 0.875rem 1rem; background: rgba(0,209,143,.1); border: 1px solid rgba(0,209,143,.3); border-radius: 4px; color: #00D18F; font-size: 0.875rem; }
+.lead-success strong { color: #fff; }
+.lead-form.is-success .lead-success { display: block; }
+
+/* ─── Testimonials (v2 — simple fade) ───────────────────── */
+.section--testim { background: var(--bg); }
+[data-theme="dark"] .section--testim { background: var(--steel-900); }
+.testim-head { max-width: 820px; margin: 0 auto 4rem; text-align: center; display: flex; flex-direction: column; gap: 1rem; align-items: center; }
+.testim-head h2 { text-wrap: balance; }
+
+.tcar { position: relative; max-width: 1020px; margin: 0 auto; }
+.tcar-viewport { position: relative; }
+.tcar-slide { display: none; background: var(--bg-elev); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; grid-template-columns: 1fr; }
+@media (min-width: 768px) { .tcar-slide { grid-template-columns: 5fr 7fr; } }
+[data-theme="dark"] .tcar-slide { background: var(--steel-800); border-color: var(--steel-700); }
+.tcar-slide.is-active { display: grid; animation: tcarFade .4s ease; }
+@keyframes tcarFade { from { opacity: 0; } to { opacity: 1; } }
+.tcar-media { aspect-ratio: 4 / 3; background: #0a0f1a; position: relative; overflow: hidden; }
+.tcar-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(.2) contrast(1.05); }
+.tcar-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,15,26,0) 40%, rgba(10,15,26,.85) 100%); pointer-events: none; }
+.tcar-body { padding: 2.25rem 2rem; display: flex; flex-direction: column; gap: 1rem; position: relative; }
+.tcar-body .quote-mark { position: absolute; top: 0.75rem; right: 1.25rem; font-size: 5rem; line-height: 1; color: var(--sj-red); opacity: 0.15; font-family: Georgia, serif; font-weight: 700; }
+.tcar-body blockquote { font-family: var(--font-display); font-size: clamp(1rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--fg); font-weight: 500; letter-spacing: -0.005em; margin: 0; }
+.tcar-body footer { margin-top: auto; display: flex; flex-direction: column; gap: 0.25rem; padding-top: 1rem; border-top: 1px dashed var(--border); }
+.tcar-name { font-weight: 700; font-size: 0.9375rem; color: var(--fg); }
+.tcar-role { font-size: 0.6875rem; letter-spacing: 0.12em; color: var(--fg-mute); text-transform: uppercase; }
+.tcar-tech { font-size: 0.6875rem; letter-spacing: 0.12em; color: var(--sj-red); }
+
+.tcar-controls { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 2rem; }
+.tcar-btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-elev); color: var(--fg); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; transition: border-color .15s, color .15s; }
+[data-theme="dark"] .tcar-btn { background: var(--steel-800); border-color: var(--steel-700); color: #fff; }
+.tcar-btn:hover { border-color: var(--sj-red); color: var(--sj-red); }
+.tcar-dots { display: flex; gap: 0.5rem; }
+.tcar-dot { width: 24px; height: 2px; background: var(--border-strong); border-radius: 1px; cursor: pointer; border: 0; padding: 0; transition: background-color .2s, width .2s; }
+.tcar-dot.is-active { background: var(--sj-red); width: 36px; }
+
+/* ─── Blog ────────────────────────────────────────────────── */
+.section--blog { background: var(--bg-alt); }
+[data-theme="dark"] .section--blog { background: var(--bg); }
+.blog-head { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 3rem; align-items: end; }
+@media (min-width: 900px) { .blog-head { grid-template-columns: 1fr 1fr; gap: 3rem; } }
+.blog-head h2 { text-wrap: balance; }
+.blog-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+@media (min-width: 768px) { .blog-grid { grid-template-columns: repeat(3, 1fr); } }
+.blog-card { background: var(--bg-elev); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; transition: transform .3s var(--ease-mechanical), box-shadow .3s; }
+[data-theme="dark"] .blog-card { background: var(--steel-900); border-color: var(--steel-800); }
+.blog-card:hover { transform: translateY(-4px); box-shadow: var(--card-shadow); }
+.blog-media { aspect-ratio: 16 / 10; background: #0a0f1a; display: flex; align-items: flex-end; padding: 1rem; position: relative; overflow: hidden; }
+.blog-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(.15) contrast(1.05); transition: transform .5s var(--ease-mechanical); }
+.blog-card:hover .blog-media img { transform: scale(1.06); }
+.blog-media::after { content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(10,15,26,.1) 30%, rgba(10,15,26,.75) 100%); }
+.blog-media--2, .blog-media--3 { background: #0a0f1a; }
+.blog-media span { position: relative; z-index: 2; color: #fff; font-size: 0.625rem; letter-spacing: 0.18em; background: rgba(204,26,26,.9); padding: 0.3rem 0.5rem; border-radius: 3px; }
+.blog-body { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.625rem; flex: 1; }
+.blog-meta { font-size: 0.6875rem; letter-spacing: 0.14em; color: var(--fg-mute); }
+.blog-card h4 { font-size: 1.0625rem; line-height: 1.35; letter-spacing: -0.01em; color: var(--fg); }
+.blog-card p { font-size: 0.875rem; color: var(--fg-body); line-height: 1.55; }
+.blog-card .link-arrow { margin-top: auto; color: var(--fg); }
+[data-theme="dark"] .blog-card .link-arrow { color: #fff; }
+.blog-card .link-arrow:hover { color: var(--sj-red); }
+.blog-foot { display: flex; justify-content: center; }
+
+/* ─── Final CTA ───────────────────────────────────────────── */
+.section--final { background: #05080F; overflow: hidden; }
+.final-wrap { position: relative; }
+.final-gridlines { display: none; }
+.final-inner { max-width: 880px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; gap: 1.5rem; align-items: center; position: relative; padding-block: 2rem; }
+.final-inner h2 { text-wrap: balance; }
+.final-ctas { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center; margin-top: 1rem; }
+.final-micro { font-size: 0.75rem; color: var(--steel-400); letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* ─── Footer ──────────────────────────────────────────────── */
+.site-footer { background: var(--steel-950); color: var(--steel-300); padding: 4rem 0 2rem; border-top: 1px solid var(--steel-800); }
+.footer-top { display: grid; grid-template-columns: 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--steel-800); }
+@media (min-width: 768px) { .footer-top { grid-template-columns: 1.3fr 3fr; gap: 4rem; } }
+.footer-brand { display: flex; flex-direction: column; gap: 1rem; }
+.footer-logo-img { height: 52px; width: auto; max-width: 220px; object-fit: contain; object-position: left center; display: block; }
+.footer-logo-tile { display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 0.875rem 1.25rem; border-radius: 6px; align-self: flex-start; }
+.footer-tag { color: var(--steel-400); font-size: 0.875rem; line-height: 1.55; max-width: 320px; }
+.footer-social { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
+.footer-soc { width: 36px; height: 36px; border: 1px solid var(--steel-800); border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; color: var(--steel-400); transition: color .15s, border-color .15s, background .15s; }
+.footer-soc:hover { color: #fff; border-color: var(--sj-red); background: rgba(204,26,26,.1); }
+
+.footer-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; }
+@media (min-width: 768px) { .footer-cols { grid-template-columns: repeat(4, 1fr); } }
+.footer-col { display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-label { font-size: 0.6875rem; letter-spacing: 0.18em; color: var(--steel-500); text-transform: uppercase; margin-bottom: 0.5rem; }
+.footer-col a { color: var(--steel-300); font-size: 0.875rem; padding: 0.125rem 0; transition: color .15s; }
+.footer-col a:hover { color: #fff; }
+.footer-phone { font-family: var(--font-display); font-weight: 500; color: #fff !important; }
+.footer-addr { color: var(--steel-500); font-size: 0.8125rem; font-family: var(--font-display); margin-top: 0.25rem; }
+
+.footer-seals { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; padding: 2rem 0; border-bottom: 1px solid var(--steel-800); justify-content: center; }
+.seal { font-size: 0.6875rem; letter-spacing: 0.14em; color: var(--steel-400); text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem; }
+.seal-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sj-red); }
+.footer-bottom { padding-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; font-size: 0.6875rem; letter-spacing: 0.08em; color: var(--steel-500); }
+
+/* =========================================================
+   RESPONSIVE REFINEMENT PASS
+   Breakpoints:
+     <480   mini  (small phones)
+     480+   ph    (phones landscape / large phones)
+     640+   sm    (tablet portrait small)
+     768+   md    (tablet portrait)
+     900+   lg    (tablet landscape / small laptop)
+     1024+  xl    (laptop)
+     1280+  xxl   (desktop)
+   ========================================================= */
+
+/* ---------- Global: gutter tiers ---------- */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .container { padding-inline: 32px; }
+}
+@media (min-width: 1024px) {
+  .container { padding-inline: 48px; }
+}
+@media (min-width: 1600px) {
+  :root { --container: 1360px; }
+}
+
+/* prevent any horizontal overflow on small screens */
+@media (max-width: 767px) {
+  body { overflow-x: hidden; }
+  .container { padding-inline: 18px; }
+  .h-display { font-size: clamp(1.75rem, 7.5vw, 2.35rem); line-height: 1.1; letter-spacing: -0.015em; }
+  .h-medium  { font-size: clamp(1.375rem, 5.5vw, 1.75rem); line-height: 1.15; }
+  .lead { font-size: 0.9375rem; line-height: 1.6; }
+  .eyebrow { font-size: 0.6875rem; letter-spacing: 0.18em; }
+  .btn { padding: 0.75rem 1.1rem; font-size: 0.875rem; }
+  .btn--lg { padding: 0.875rem 1.35rem; font-size: 0.9375rem; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .h-display { font-size: clamp(2rem, 4.6vw, 2.75rem); }
+  .h-medium  { font-size: clamp(1.5rem, 3.4vw, 2.15rem); }
+}
+
+/* ---------- Header / Mobile menu ---------- */
+@media (max-width: 420px) {
+  .header-inner { gap: 0.5rem; height: 64px; }
+  .logo-img { height: 30px; }
+  .site-header:not(.is-scrolled) .logo { padding: 4px 7px; }
+}
+@media (max-width: 767px) {
+  .mobile-menu { padding: 88px 20px 24px; }
+  .mobile-menu a { font-size: 1rem; padding: 0.75rem 0; }
+  .mega-menu { width: calc(100vw - 32px); grid-template-columns: 1fr; padding: 1rem; }
+}
+
+/* ---------- Hero ---------- */
+@media (max-width: 767px) {
+  .hero { padding-top: 64px; min-height: 92svh; }
+  .hero-content { gap: 2rem; padding-block: 2.5rem 4.5rem; }
+  .hero-title { font-size: clamp(2.25rem, 10.2vw, 3.25rem); letter-spacing: -0.025em; line-height: 1.05; }
+  .hero-sub { font-size: 0.9375rem; line-height: 1.55; }
+  .hero-ctas { gap: 0.75rem; width: 100%; }
+  .hero-ctas .btn--cta { width: 100%; }
+  .hero-ctas .btn--ghost { width: 100%; justify-content: flex-start; }
+  .hero-specs { grid-template-columns: 1fr 1fr; gap: 0.4rem 1rem; padding-top: 1rem; margin-top: 0.25rem; }
+  .hero-specs li { font-size: 0.6875rem; letter-spacing: 0.04em; }
+  .hero-product { max-width: 260px; margin: 0 auto; }
+  .hero-product-stage { max-width: 260px; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-content { padding-block: 3.5rem 5rem; gap: 2.25rem; }
+  .hero-title { font-size: clamp(3rem, 7vw, 4.5rem); }
+  .hero-product { max-width: 360px; margin: 1rem auto 0; }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero-content { gap: 2.5rem; }
+  .hero-title { font-size: clamp(3.25rem, 6.8vh, 5rem); }
+}
+
+/* ---------- Intro overlay ---------- */
+@media (max-width: 640px) {
+  .intro-logo-wrap { width: 80vw; padding: 1rem 1.25rem; }
+  .intro-meta { left: 1rem; right: 1rem; bottom: 1.25rem; font-size: 0.625rem; letter-spacing: 0.14em; gap: 0.75rem; flex-wrap: wrap; }
+  .intro-counter { top: 1rem; right: 1rem; font-size: 0.6875rem; letter-spacing: 0.16em; }
+}
+
+/* ---------- Sections spacing ---------- */
+@media (max-width: 639px) {
+  .section { padding-block: 56px; }
+  .section--proof { padding-block: 48px; }
+  .cij-head, .apps-head, .vs-head, .testim-head, .blog-head, .serv-head, .how-head { margin-bottom: 2.5rem; }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  .section { padding-block: 80px; }
+}
+
+/* ---------- Proof ---------- */
+@media (max-width: 767px) {
+  .proof-grid { gap: 1.5rem 1rem; }
+  .proof-item { padding-left: 0.875rem; }
+  .proof-num { font-size: 1.65rem; }
+  .proof-label { font-size: 0.8125rem; }
+  .proof-logos { grid-template-columns: repeat(3, 1fr); gap: 0.875rem 1rem; }
+  .client-logo { font-size: 0.8125rem; }
+}
+@media (min-width: 768px) and (max-width: 1099px) {
+  .proof-logos { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ---------- CIJ spec cards ---------- */
+@media (max-width: 767px) {
+  .cij-specs-grid { margin-bottom: 3.5rem; }
+  .spec-card { min-height: auto; padding: 1.5rem 1.25rem; }
+  .spec-card-num { top: 1rem; right: 1.25rem; }
+  .spec-card-value { font-size: 2.25rem; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .spec-card { min-height: 220px; padding: 1.75rem 1.5rem; }
+  .spec-card-value { font-size: clamp(2rem, 4vw, 2.75rem); }
+}
+
+/* ---------- How it works ---------- */
+@media (max-width: 767px) {
+  .how-head { margin-bottom: 2.5rem; }
+  .how-step { padding-top: 72px; }
+  .how-dot { top: 32px; }
+  .how-step h4 { font-size: 1.125rem; }
+  .how-steps { gap: 2rem; }
+  .how-callout { margin-top: 2.5rem; padding: 1.1rem 1.25rem; gap: 0.75rem; }
+  .how-callout p { font-size: 0.875rem; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .how-step { padding-top: 84px; }
+  .how-rail { top: 46px; }
+  .how-dot { top: 36px; width: 18px; height: 18px; box-shadow: 0 0 0 5px rgba(204,26,26,.12); }
+  .how-step h4 { font-size: 1.0625rem; }
+  .how-step p { font-size: 0.875rem; }
+}
+
+/* ---------- Applications / hscroll ---------- */
+@media (max-width: 767px) {
+  .hscroll-wrap { padding-top: 0; padding-bottom: 1.25rem; }
+  .hscroll-track { gap: 0.875rem; padding: 0 18px 1rem; }
+  .hscroll-track .app-card { flex: 0 0 min(320px, 82vw); aspect-ratio: 3 / 4; }
+  .app-card__body { padding: 1.25rem 1.25rem 1.1rem; }
+  .app-card h4 { font-size: 1.25rem; }
+  .app-card p { font-size: 0.8125rem; }
+  .app-card__mark { width: 34px; height: 34px; top: 0.75rem; right: 0.75rem; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hscroll-wrap { overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; padding-bottom: 2rem; }
+  .hscroll-track { transform: none !important; padding: 0 32px 1rem; }
+  .hscroll-track .app-card { scroll-snap-align: start; flex: 0 0 min(360px, 56vw); }
+  .hscroll-meta { display: none; }
+}
+
+/* ---------- VS ---------- */
+@media (max-width: 767px) {
+  .vs-col { padding: 1.5rem 1.25rem; gap: 1rem; }
+  .vs-list li { font-size: 0.875rem; }
+  .vs-title { font-size: 1rem; }
+  .vs-authority { padding: 1.1rem 1.25rem; gap: 0.75rem; margin-top: 2rem; }
+  .vs-authority p { font-size: 0.875rem; }
+}
+
+/* ---------- Services ---------- */
+@media (max-width: 767px) {
+  .serv-card { min-height: 220px; padding: 1.5rem 1.25rem; }
+  .serv-card h4 { font-size: 1.0625rem; }
+  .serv-card p { font-size: 0.875rem; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .serv-card { min-height: 240px; padding: 1.75rem 1.5rem; }
+}
+
+/* ---------- Lead form ---------- */
+@media (max-width: 767px) {
+  .section--lead .lead-wrap { gap: 2rem; }
+  .lead-form { padding: 1.5rem 1.25rem; border-radius: 8px; }
+  .lead-badges li { font-size: 0.8125rem; }
+}
+@media (min-width: 768px) and (max-width: 899px) {
+  .lead-wrap { grid-template-columns: 1fr; gap: 2.5rem; max-width: 600px; margin: 0 auto; }
+}
+
+/* ---------- Testimonials ---------- */
+@media (max-width: 767px) {
+  .tcar-slide { border-radius: 10px; }
+  .tcar-media { aspect-ratio: 16 / 9; }
+  .tcar-body { padding: 1.5rem 1.25rem; gap: 0.875rem; }
+  .tcar-body blockquote { font-size: 0.9375rem; line-height: 1.55; }
+  .tcar-body .quote-mark { font-size: 3.5rem; right: 0.875rem; top: 0.5rem; }
+  .tcar-controls { gap: 1rem; margin-top: 1.5rem; }
+  .tcar-btn { width: 40px; height: 40px; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tcar-slide { grid-template-columns: 4fr 6fr; }
+  .tcar-body { padding: 1.75rem 1.5rem; }
+  .tcar-body blockquote { font-size: 1.0625rem; }
+}
+
+/* ---------- Blog ---------- */
+@media (max-width: 767px) {
+  .blog-card h4 { font-size: 1rem; }
+  .blog-card p { font-size: 0.8125rem; }
+  .blog-body { padding: 1.25rem; gap: 0.5rem; }
+}
+@media (min-width: 768px) and (max-width: 899px) {
+  .blog-grid { grid-template-columns: 1fr 1fr; }
+  .blog-head { grid-template-columns: 1fr; gap: 1rem; }
+}
+
+/* ---------- Final CTA ---------- */
+@media (max-width: 767px) {
+  .final-inner { gap: 1.25rem; padding-block: 1rem; }
+  .final-ctas { flex-direction: column; width: 100%; gap: 0.75rem; }
+  .final-ctas .btn { width: 100%; }
+}
+
+/* ---------- Footer ---------- */
+@media (max-width: 767px) {
+  .site-footer { padding: 3rem 0 1.5rem; }
+  .footer-top { gap: 2.25rem; padding-bottom: 2.25rem; }
+  .footer-logo-tile { padding: 0.75rem 1rem; }
+  .footer-logo-img { height: 40px; max-width: 180px; }
+  .footer-cols { grid-template-columns: 1fr 1fr; gap: 1.75rem 1.25rem; }
+  .footer-col a { font-size: 0.8125rem; }
+  .footer-seals { padding: 1.5rem 0; gap: 0.75rem 1.25rem; justify-content: flex-start; }
+  .seal { font-size: 0.625rem; letter-spacing: 0.1em; }
+  .footer-bottom { flex-direction: column; gap: 0.5rem; align-items: flex-start; padding-top: 1.25rem; }
+}
+@media (min-width: 768px) and (max-width: 899px) {
+  .footer-top { grid-template-columns: 1fr; gap: 2.5rem; }
+  .footer-brand { flex-direction: row; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+  .footer-tag { max-width: 420px; }
+  .footer-cols { grid-template-columns: repeat(4, 1fr); gap: 1.5rem 1rem; }
+}
+
+/* ---------- Hero figure / product max caps ---------- */
+@media (min-width: 1280px) {
+  .hero-product { max-width: 420px; }
+  .hero-product-stage { max-width: 420px; }
+}
+
+/* ─── Reduce motion ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  .reveal, .reveal-up { opacity: 1 !important; transform: none !important; }
+}
+
+/* ─── Theme transition (View Transitions API + fallback) ─── */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-old(root) { z-index: 1; }
+::view-transition-new(root) { z-index: 2; }
+.theme-flash {
+  position: fixed; inset: 0; z-index: 9998;
+  background: radial-gradient(circle at 50% 50%, rgba(204,26,26,.06), transparent 70%);
+  backdrop-filter: blur(0);
+  opacity: 0; pointer-events: none;
+  transition: opacity .18s ease, backdrop-filter .22s ease;
+}
+.theme-flash.is-in { opacity: 1; backdrop-filter: blur(3px); }
+.theme-flash.is-out { opacity: 0; backdrop-filter: blur(0); }
+
+/* subtle pulse feedback on the toggle itself */
+.theme-toggle.is-switching { animation: themeTick .5s var(--ease-mechanical); }
+@keyframes themeTick {
+  0%   { transform: scale(1) rotate(0); }
+  40%  { transform: scale(0.88) rotate(-18deg); }
+  70%  { transform: scale(1.08) rotate(12deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ══════════════ INTRO CURTAIN ══════════════ -->
+<div class="intro-curtain" id="introCurtain" aria-hidden="true">
+  <div class="intro-inner">
+    <span class="intro-tag" id="introTag">Codificação industrial · desde 2007</span>
+    <div class="intro-logo-wrap" id="introMark">
+      <img src="assets/logo-suljett.png?v=2" alt="Suljett do Brasil" class="intro-logo-img" />
+    </div>
+  </div>
+  <div class="intro-meta">
+    <span class="left" id="introLeft">Distribuidor oficial Hitachi</span>
+    <span class="right" id="introRight">Sul · Nordeste do Brasil</span>
+  </div>
+  <span class="intro-bar" id="introBar"></span>
+</div>
+
+<!-- ══════════════ HEADER ══════════════ -->
+<header class="site-header" id="siteHeader" role="banner">
+  <div class="container header-inner">
+    <a href="#" class="logo" aria-label="Suljett do Brasil — Página inicial">
+      <img src="assets/logo-suljett.png?v=2" alt="Suljett do Brasil" class="logo-img" />
+    </a>
+
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a class="nav-link" href="#sobre">Sobre</a>
+
+      <div class="has-dropdown" id="dropdownProdutos">
+        <button class="nav-link nav-link--dropdown" aria-haspopup="true" aria-expanded="false">
+          Produtos
+          <svg class="chev" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="mega-menu" role="menu">
+          <div class="mega-col">
+            <span class="mega-label">Impressão a Jato de Tinta</span>
+            <a href="#cij" class="mega-item mega-item--featured">
+              <span class="mega-star">★</span>
+              <span>
+                <strong>CIJ — Jato Contínuo</strong>
+                <em class="mono">Hitachi UX-D160W · UX-D150W · PX-D</em>
+              </span>
+              <span class="mega-badge">Principal</span>
+            </a>
+            <a href="#" class="mega-item"><strong>TIJ</strong><em>Jato Termal</em></a>
+            <a href="#" class="mega-item"><strong>TTO</strong><em>Transferência Térmica</em></a>
+          </div>
+          <div class="mega-col">
+            <span class="mega-label">Outras Tecnologias</span>
+            <a href="#" class="mega-item"><strong>Laser</strong><em>Marcação a Laser</em></a>
+            <a href="#" class="mega-item"><strong>GCH</strong><em>Grandes Caracteres</em></a>
+            <a href="#" class="mega-item"><strong>Insumos Originais</strong><em>Código S10 rastreável</em></a>
+            <a href="#" class="mega-item mega-item--accent"><strong>Comparar Modelos →</strong><em>7 modelos lado a lado</em></a>
+          </div>
+        </div>
+      </div>
+
+      <a class="nav-link" href="#servicos">Serviços</a>
+      <a class="nav-link" href="#aplicacoes">Aplicações</a>
+      <a class="nav-link" href="#blog">Blog</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema" title="Alternar tema claro/escuro">
+        <svg class="ic-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="ic-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 13.5A9 9 0 1 1 10.5 3a7 7 0 0 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="#contato" class="btn btn--cta">
+        Falar com Especialista
+        <svg class="btn-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button class="btn-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <a href="#sobre">Sobre</a>
+    <a href="#cij"><span class="mega-star">★</span> CIJ Hitachi</a>
+    <a href="#">TIJ</a>
+    <a href="#">TTO</a>
+    <a href="#">Laser</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#aplicacoes">Aplicações</a>
+    <a href="#blog">Blog</a>
+    <a href="#contato" class="btn btn--cta" style="margin-top:1rem">Falar com Especialista →</a>
+  </div>
+</div>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" aria-label="Seção principal">
+  <div class="hero-video-wrap" aria-hidden="true">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto">
+      <source src="assets/hero.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="container hero-content">
+    <div class="hero-inner">
+      <div class="hero-badge reveal" data-reveal-delay="0">
+        <span class="badge badge--brand">
+          <span class="dot"></span>
+          Distribuidor Oficial Hitachi — Sul e Nordeste do Brasil
+        </span>
+      </div>
+
+      <h1 class="hero-title" data-split>
+        <span class="line">Codificação que</span>
+        <span class="line">não para a <span class="accent">sua linha.</span></span>
+      </h1>
+
+      <div class="hero-ctas reveal" data-reveal-delay="600">
+        <a href="#contato" class="btn btn--cta btn--lg">
+          Solicitar Orçamento CIJ
+          <svg class="btn-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#cij" class="btn btn--ghost">
+          Ver linha completa
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero product figure -->
+    <div class="hero-figure" aria-label="Impressora CIJ Hitachi UX2-D160W">
+      <img class="hero-figure-img" src="assets/cij-machine-3.png" alt="Impressora CIJ Hitachi UX2-D160W" />
+    </div>
+    <!-- Hero product showcase removed per request -->
+  </div>
+
+</section>
+
+<!-- ══════════════ SOCIAL PROOF ══════════════ -->
+<section class="section section--proof" id="sobre" aria-label="Prova social">
+  <div class="container">
+    <div class="proof-grid">
+      <div class="proof-item reveal-up">
+        <span class="proof-num" data-counter="2400" data-prefix="+">0</span>
+        <span class="proof-label">Equipamentos instalados<br/>no Sul e Nordeste</span>
+      </div>
+      <div class="proof-item reveal-up">
+        <span class="proof-num"><span data-counter="17">0</span><em>+ anos</em></span>
+        <span class="proof-label">no mercado industrial<br/>brasileiro desde 2007</span>
+      </div>
+      <div class="proof-item reveal-up">
+        <span class="proof-num"><span data-counter="24">0</span><em>h</em></span>
+        <span class="proof-label">Suporte técnico<br/>remoto + presencial</span>
+      </div>
+      <div class="proof-item reveal-up">
+        <span class="proof-num"><span data-counter="100">0</span><em>%</em></span>
+        <span class="proof-label">Insumos originais<br/>Hitachi rastreáveis</span>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- ══════════════ CIJ SHOWCASE ══════════════ -->
+<section class="section section--dark section--cij" id="cij" aria-label="CIJ Showcase">
+  <div class="container">
+    <div class="cij-head">
+      <span class="badge badge--brand reveal-up"><span class="mega-star">★</span>&nbsp;95% das nossas instalações</span>
+      <h2 class="h-display reveal-up">A impressora que a<br/><span class="accent">indústria escolhe.</span></h2>
+      <p class="lead steel-300 reveal-up">
+        A tecnologia CIJ (Jato de Tinta Contínuo) é o padrão global para marcação de alta velocidade em linhas de produção contínua. A Suljett é a distribuidora oficial Hitachi no Sul e Nordeste do Brasil.
+      </p>
+    </div>
+
+    <div class="cij-specs-grid">
+      <div class="spec-card reveal-up">
+        <span class="spec-card-num mono">01</span>
+        <span class="spec-card-label mono">VELOCIDADE DE IMPRESSÃO</span>
+        <span class="spec-card-value">18.000</span>
+        <span class="spec-card-unit mono">caracteres / hora</span>
+        <span class="spec-card-desc">Produção contínua sem redução de velocidade da linha.</span>
+      </div>
+      <div class="spec-card reveal-up">
+        <span class="spec-card-num mono">02</span>
+        <span class="spec-card-label mono">PROTEÇÃO INDUSTRIAL</span>
+        <span class="spec-card-value">IP<span>65</span></span>
+        <span class="spec-card-unit mono">certificado</span>
+        <span class="spec-card-desc">Opera em ambientes com poeira, umidade e variação térmica.</span>
+      </div>
+      <div class="spec-card reveal-up">
+        <span class="spec-card-num mono">03</span>
+        <span class="spec-card-label mono">DURABILIDADE</span>
+        <span class="spec-card-value">15<em>anos</em></span>
+        <span class="spec-card-unit mono">vida útil média</span>
+        <span class="spec-card-desc">Comprovada em campo em instalações Hitachi no Brasil.</span>
+      </div>
+      <div class="spec-card reveal-up">
+        <span class="spec-card-num mono">04</span>
+        <span class="spec-card-label mono">INSUMOS</span>
+        <span class="spec-card-value">S<span>10</span></span>
+        <span class="spec-card-unit mono">código rastreável</span>
+        <span class="spec-card-desc">Compatível exclusivamente com insumos originais Hitachi.</span>
+      </div>
+      <div class="spec-card reveal-up">
+        <span class="spec-card-num mono">05</span>
+        <span class="spec-card-label mono">CONECTIVIDADE</span>
+        <span class="spec-card-value mono-val">USB · ETH · RS-232</span>
+        <span class="spec-card-unit mono">protocolos industriais</span>
+        <span class="spec-card-desc">Integração com sistemas de gestão e ERPs da linha.</span>
+      </div>
+      <div class="spec-card reveal-up">
+        <span class="spec-card-num mono">06</span>
+        <span class="spec-card-label mono">SUPORTE</span>
+        <span class="spec-card-value">24<em>h</em></span>
+        <span class="spec-card-unit mono">remoto + presencial</span>
+        <span class="spec-card-desc">Cobertura certificada no Sul e Nordeste do Brasil.</span>
+      </div>
+    </div>
+
+    <div class="cij-models-head">
+      <h3 class="h-medium reveal-up">Escolha o modelo certo para a sua linha.</h3>
+      <p class="steel-300 reveal-up">Cada modelo CIJ Hitachi foi projetado para uma aplicação específica. Selecione pelo tipo de substrato, velocidade ou ambiente de operação.</p>
+    </div>
+
+    <div class="cij-models">
+      <article class="model-card reveal-up">
+        <div class="model-media">
+          <img class="model-img" src="assets/cij-machine-1.png" alt="Hitachi UX-D160W" loading="lazy" />
+          <span class="model-tag mono">MODELO TOPO</span>
+        </div>
+        <div class="model-body">
+          <h4>Hitachi UX-D160W</h4>
+          <p class="steel-300">Ideal para linhas de alta velocidade em alimentos, bebidas e farmacêutica.</p>
+          <ul class="model-specs mono">
+            <li><span>VELOCIDADE</span><span>18.000 c/h</span></li>
+            <li><span>RESOLUÇÃO</span><span>5×5 – 34×24</span></li>
+            <li><span>CABEÇOTE</span><span>3 m</span></li>
+          </ul>
+          <a href="#" class="link-arrow">Ver ficha técnica completa <span>→</span></a>
+        </div>
+      </article>
+
+      <article class="model-card reveal-up">
+        <div class="model-media">
+          <img class="model-img" src="assets/cij-machine-2.png" alt="Hitachi UX-D150W" loading="lazy" />
+          <span class="model-tag mono">LINHA PADRÃO</span>
+        </div>
+        <div class="model-body">
+          <h4>Hitachi UX-D150W</h4>
+          <p class="steel-300">Solução balanceada para laticínios e embalagens flexíveis.</p>
+          <ul class="model-specs mono">
+            <li><span>VELOCIDADE</span><span>14.800 c/h</span></li>
+            <li><span>RESOLUÇÃO</span><span>5×5 – 34×24</span></li>
+            <li><span>CABEÇOTE</span><span>3 m</span></li>
+          </ul>
+          <a href="#" class="link-arrow">Ver ficha técnica completa <span>→</span></a>
+        </div>
+      </article>
+
+      <article class="model-card reveal-up">
+        <div class="model-media">
+          <img class="model-img" src="assets/cij-machine-3.png" alt="Hitachi PX-D" loading="lazy" />
+          <span class="model-tag mono">CONDIÇÕES EXTREMAS</span>
+        </div>
+        <div class="model-body">
+          <h4>Hitachi PX-D</h4>
+          <p class="steel-300">Projetado para cabos, fios e aplicações com exigência de alta tinta.</p>
+          <ul class="model-specs mono">
+            <li><span>VELOCIDADE</span><span>12.600 c/h</span></li>
+            <li><span>RESOLUÇÃO</span><span>5×5 – 16×16</span></li>
+            <li><span>CABEÇOTE</span><span>2 m</span></li>
+          </ul>
+          <a href="#" class="link-arrow">Ver ficha técnica completa <span>→</span></a>
+        </div>
+      </article>
+    </div>
+
+    <div class="cij-footer reveal-up">
+      <a href="#" class="btn btn--outline-light">
+        Comparar todos os modelos CIJ
+        <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ HOW IT WORKS ══════════════ -->
+<section class="section section--light section--how" id="how" aria-label="Como a CIJ funciona">
+  <div class="container">
+    <div class="how-head">
+      <span class="eyebrow mono reveal-up">PROCESSO TÉCNICO</span>
+      <h2 class="h-display reveal-up">Como a CIJ marca a embalagem<br/><span class="accent">com precisão absoluta.</span></h2>
+      <p class="lead ink-600 reveal-up">Entender o processo ajuda a especificar a solução certa para a realidade da sua linha de produção.</p>
+    </div>
+
+    <div class="how-steps">
+      <svg class="how-rail" aria-hidden="true" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path class="how-rail-bg" d="M0 30 L1200 30" />
+        <path class="how-rail-fg" d="M0 30 L1200 30" />
+      </svg>
+
+      <article class="how-step reveal-up">
+        <span class="how-num mono">01</span>
+        <div class="how-dot"></div>
+        <h4>Pressurização</h4>
+        <p>O sistema bombeia tinta com pressão controlada, formando um fluxo contínuo e estável.</p>
+        <span class="how-mono mono">3.25 PSI · FLOW STABLE</span>
+      </article>
+      <article class="how-step reveal-up">
+        <span class="how-num mono">02</span>
+        <div class="how-dot"></div>
+        <h4>Formação da gota</h4>
+        <p>A vibração piezoelétrica fragmenta o fluxo em microgotas com frequência e tamanho precisos.</p>
+        <span class="how-mono mono">62.5 kHz · Ø 70 µm</span>
+      </article>
+      <article class="how-step reveal-up">
+        <span class="how-num mono">03</span>
+        <div class="how-dot"></div>
+        <h4>Deflexão elétrica</h4>
+        <p>Um campo elétrico direciona cada gota individualmente, definindo sua posição exata na embalagem.</p>
+        <span class="how-mono mono">± 3 kV · 32 niveis</span>
+      </article>
+      <article class="how-step reveal-up">
+        <span class="how-num mono">04</span>
+        <div class="how-dot"></div>
+        <h4>Marcação permanente</h4>
+        <p>O resultado é uma impressão clara, aderente e resistente — sem contato com a superfície.</p>
+        <span class="how-mono mono">NON-CONTACT · IP65</span>
+      </article>
+    </div>
+
+    <div class="how-callout reveal-up">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2 2 18h16L10 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 8v4M10 14.5v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <p><strong>A tinta não entra em contato com a cabeça impressora.</strong> Isso reduz a manutenção e garante operação contínua mesmo em ambientes agressivos.</p>
+    </div>
+
+    <div class="how-cta reveal-up">
+      <a href="#contato" class="btn btn--cta">
+        Falar com um especialista sobre minha aplicação
+        <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ APPLICATIONS ══════════════ -->
+<section class="section section--apps" id="aplicacoes" aria-label="Aplicações setoriais">
+  <div class="container">
+    <div class="apps-head">
+      <span class="eyebrow mono reveal-up">APLICAÇÕES SETORIAIS</span>
+      <h2 class="h-display reveal-up">Onde a Suljett opera.</h2>
+      <p class="lead reveal-up">A codificação correta varia por substrato, velocidade de linha e exigência regulatória de cada setor.</p>
+    </div>
+
+  </div>
+  <div class="hscroll-wrap" data-hscroll>
+    <div class="apps-grid hscroll-track" data-hscroll-track>
+      <article class="app-card reveal-up" data-parallax-card>
+        <img class="app-card__img" src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=75" alt="Linha de produção alimentícia" loading="lazy" />
+        <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="app-card__body">
+          <span class="app-card__num">01 / 06</span>
+          <h4>Alimentícia</h4>
+          <p>Marcação de lote, validade e rastreabilidade em plásticos, papelão e vidro com linha contínua.</p>
+          <span class="app-card__substrate">Plástico · Papelão · Vidro</span>
+          <a href="#" class="app-card__link">Ver solução <span>→</span></a>
+        </div>
+      </article>
+      <article class="app-card reveal-up" data-parallax-card>
+        <img class="app-card__img" src="https://images.unsplash.com/photo-1550505095-81378a674395?auto=format&fit=crop&w=1200&q=75" alt="Linha de envase de bebidas" loading="lazy" />
+        <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="app-card__body">
+          <span class="app-card__num">02 / 06</span>
+          <h4>Bebidas</h4>
+          <p>Codificação de alta velocidade em garrafas PET, latas e vidros — resistente a umidade e térmica.</p>
+          <span class="app-card__substrate">PET · Lata · Vidro</span>
+          <a href="#" class="app-card__link">Ver solução <span>→</span></a>
+        </div>
+      </article>
+      <article class="app-card reveal-up" data-parallax-card>
+        <img class="app-card__img" src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=1200&q=75" alt="Leites e laticínios em embalagens" loading="lazy" />
+        <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="app-card__body">
+          <span class="app-card__num">03 / 06</span>
+          <h4>Laticínios</h4>
+          <p>Impressão confiável em embalagens flexíveis, caixas e tampas plásticas em ambientes refrigerados.</p>
+          <span class="app-card__substrate">Flexível · PP · PEAD</span>
+          <a href="#" class="app-card__link">Ver solução <span>→</span></a>
+        </div>
+      </article>
+      <article class="app-card reveal-up" data-parallax-card>
+        <img class="app-card__img" src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1200&q=75" alt="Produção farmacêutica" loading="lazy" />
+        <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="app-card__body">
+          <span class="app-card__num">04 / 06</span>
+          <h4>Farmacêutica</h4>
+          <p>Serialização e rastreabilidade conforme exigências da ANVISA em blisters, frascos e caixas.</p>
+          <span class="app-card__substrate">Blister · Frasco · Cartucho</span>
+          <a href="#" class="app-card__link">Ver solução <span>→</span></a>
+        </div>
+      </article>
+      <article class="app-card reveal-up" data-parallax-card>
+        <img class="app-card__img" src="https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1200&q=75" alt="Indústria automotiva" loading="lazy" />
+        <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="app-card__body">
+          <span class="app-card__num">05 / 06</span>
+          <h4>Automotiva</h4>
+          <p>Identificação permanente de peças, conjuntos e componentes em metais e plásticos técnicos.</p>
+          <span class="app-card__substrate">Metal · Polímero técnico</span>
+          <a href="#" class="app-card__link">Ver solução <span>→</span></a>
+        </div>
+      </article>
+      <article class="app-card reveal-up" data-parallax-card>
+        <img class="app-card__img" src="https://images.unsplash.com/photo-1498654200943-1088dd4438ae?auto=format&fit=crop&w=1200&q=75" alt="Ovos em bandeja" loading="lazy" />
+        <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="app-card__body">
+          <span class="app-card__num">06 / 06</span>
+          <h4>Ovos · Agropecuária</h4>
+          <p>Codificação direta sobre casca de ovo com tinta aprovada para contato alimentar — sem danos ao produto.</p>
+          <span class="app-card__substrate">Casca · Tinta food-safe</span>
+          <a href="#" class="app-card__link">Ver solução <span>→</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="hscroll-meta">
+    <span class="mono">06 SETORES · ROLE LATERALMENTE</span>
+    <span class="hscroll-meta__progress" aria-hidden="true"></span>
+    <span class="mono">CODIFICAÇÃO CIJ HITACHI</span>
+  </div>
+</section>
+
+<!-- ══════════════ ORIGINAL VS PARALELO ══════════════ -->
+<section class="section section--dark section--vs" aria-label="Hitachi original vs. paralelo">
+  <div class="container">
+    <div class="vs-head">
+      <span class="eyebrow mono reveal-up">INSUMOS · EDUCAÇÃO DE MERCADO</span>
+      <h2 class="h-display reveal-up">Insumo original não é custo.<br/><span class="accent">É garantia da máquina funcionando.</span></h2>
+      <p class="lead steel-300 reveal-up">O mercado oferece solventes e tintas identificadas como "compatíveis" com equipamentos Hitachi. O problema é o que esse rótulo não informa.</p>
+    </div>
+
+    <div class="vs-split">
+      <div class="vs-col vs-col--good reveal-up">
+        <header class="vs-col-head">
+          <span class="vs-mark vs-mark--check">✓</span>
+          <span class="vs-title">Insumos originais Hitachi</span>
+          <span class="vs-pill mono">CERTIFICADO</span>
+        </header>
+        <ul class="vs-list">
+          <li>Fórmula certificada pelo fabricante para cada modelo de impressora CIJ.</li>
+          <li>Garantia de 5 anos do equipamento <strong>mantida integralmente.</strong></li>
+          <li>Viscosidade e condutividade calibradas para a cabeça impressora.</li>
+          <li>Código <span class="mono">S10</span> rastreável e auditável por número de série e lote.</li>
+          <li>Suporte técnico Suljett incluído no pós-venda de insumos.</li>
+        </ul>
+        <a href="#" class="btn btn--cta btn--full">Comprar insumos originais <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+
+      <div class="vs-divider" aria-hidden="true">
+        <span class="mono">VS</span>
+      </div>
+
+      <div class="vs-col vs-col--bad reveal-up">
+        <header class="vs-col-head">
+          <span class="vs-mark vs-mark--x">✗</span>
+          <span class="vs-title">Insumos "compatíveis"</span>
+          <span class="vs-pill mono vs-pill--warn">RISCO</span>
+        </header>
+        <ul class="vs-list">
+          <li>Composição química <strong>não divulgada</strong> ou parcialmente declarada.</li>
+          <li>Anula a garantia do equipamento Hitachi imediatamente.</li>
+          <li>Variação de viscosidade causa entupimento e desgaste precoce da cabeça.</li>
+          <li>Rótulo <span class="mono">"S10"</span> ou <span class="mono">"equivalente"</span> sem rastreabilidade de origem.</li>
+          <li>Sem suporte em caso de dano ao equipamento.</li>
+        </ul>
+      </div>
+    </div>
+
+    <aside class="vs-authority reveal-up">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 3 6v6c0 5 3.8 9.2 9 10 5.2-.8 9-5 9-10V6l-9-4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      <p>A Suljett é a única distribuidora autorizada dos insumos e equipamentos Hitachi no Sul e Nordeste do Brasil. <strong>Não existe produto Hitachi original sem procedência rastreável.</strong></p>
+    </aside>
+  </div>
+</section>
+
+<!-- ══════════════ SERVIÇOS ══════════════ -->
+<section class="section section--services" id="servicos" aria-label="Serviços Suljett">
+  <div class="container">
+    <div class="serv-head">
+      <span class="eyebrow mono reveal-up">SERVIÇOS</span>
+      <h2 class="h-display reveal-up">Suporte que acompanha<br/>a sua operação.</h2>
+    </div>
+
+    <div class="serv-grid">
+      <article class="serv-card reveal-up">
+        <span class="serv-num mono">01</span>
+        <h4>Assistência técnica 24h</h4>
+        <p>Atendimento remoto imediato e presencial programado para manutenção corretiva e preventiva em qualquer modelo Hitachi.</p>
+        <span class="serv-meta mono">REMOTO · PRESENCIAL</span>
+      </article>
+      <article class="serv-card reveal-up">
+        <span class="serv-num mono">02</span>
+        <h4>Laboratório de amostras</h4>
+        <p>Testamos a marcação no seu substrato real antes da compra. Você vê o resultado na sua embalagem, não em foto de catálogo.</p>
+        <span class="serv-meta mono">TESTE IN-LOCO</span>
+      </article>
+      <article class="serv-card reveal-up">
+        <span class="serv-num mono">03</span>
+        <h4>Treinamento técnico</h4>
+        <p>Capacitação da equipe de manutenção e operação para reduzir paradas causadas por uso incorreto do equipamento.</p>
+        <span class="serv-meta mono">TURMA · IN-COMPANY</span>
+      </article>
+      <article class="serv-card reveal-up">
+        <span class="serv-num mono">04</span>
+        <h4>Entrega ágil de insumos</h4>
+        <p>Estoque permanente de tintas, solventes e peças originais Hitachi para reposição sem atrasar a sua linha de produção.</p>
+        <span class="serv-meta mono">S10 · RASTREÁVEL</span>
+      </article>
+    </div>
+
+    <div class="serv-foot reveal-up">
+      <a href="#" class="btn btn--outline-light">Ver todos os serviços <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ LEAD MAGNET ══════════════ -->
+<section class="section section--dark section--lead" aria-label="Lead magnet">
+  <div class="container lead-wrap">
+    <div class="lead-copy">
+      <span class="eyebrow mono reveal-up">FICHA TÉCNICA · CIJ HITACHI 2025</span>
+      <h2 class="h-display reveal-up">Precisa especificar uma codificadora<br/>para a sua linha?</h2>
+      <p class="steel-300 reveal-up">Baixe a <strong>Ficha Técnica Comparativa da Linha CIJ Hitachi 2025</strong>. Tabela completa com velocidade, resolução, consumo de tinta e compatibilidade por substrato — os dados que você precisa para fazer a escolha certa.</p>
+
+      <ul class="lead-badges mono reveal-up">
+        <li><span class="ck">✓</span> Garantia Hitachi de 5 anos</li>
+        <li><span class="ck">✓</span> Impressora antiga como parte do pagamento</li>
+        <li><span class="ck">✓</span> Dados de 7 modelos em uma única tabela</li>
+      </ul>
+    </div>
+
+    <form class="lead-form reveal-up" id="leadForm" novalidate>
+      <div class="lead-form-head">
+        <span>Ficha Técnica CIJ Hitachi 2025</span>
+        <span class="rdot-wrap"><span class="rdot"></span> 2.4 MB · 12 páginas</span>
+      </div>
+
+      <div class="field">
+        <label for="f-email">E-mail corporativo</label>
+        <input id="f-email" name="email" type="email" required autocomplete="email" placeholder="seu.nome@empresa.com.br" />
+      </div>
+      <div class="field">
+        <label for="f-model">Modelo da codificadora</label>
+        <select id="f-model" name="model" required>
+          <option value="">Escolha o modelo para baixar a ficha…</option>
+          <option value="ux-d160w">Hitachi UX-D160W — Topo de linha</option>
+          <option value="ux2-d160w">Hitachi UX2-D160W — Flagship</option>
+          <option value="ux-d150w">Hitachi UX-D150W — Linha padrão</option>
+          <option value="ux-d161w">Hitachi UX-D161W — Tinta food-safe</option>
+          <option value="px-d">Hitachi PX-D — Condições extremas</option>
+          <option value="lx-a2">Hitachi LX-A2 — Aplicações dedicadas</option>
+          <option value="all">Comparativo de toda a linha</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn--cta btn--lg btn--full">
+        Baixar Ficha Técnica
+        <svg class="btn-arrow" width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v9M4 7l4 4 4-4M3 14h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <p class="lead-micro mono">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="vertical-align:-1px"><rect x="3" y="7" width="10" height="7" rx="1" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.3"/></svg>
+        Enviamos apenas conteúdo técnico relevante. Sem spam, sem contato de vendas sem solicitação.
+      </p>
+
+      <div class="lead-success" aria-live="polite">
+        <strong>Download iniciado.</strong> Se não abriu automaticamente, verifique seu e-mail corporativo em alguns instantes.
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ══════════════ TESTIMONIALS ══════════════ -->
+<section class="section section--testim" aria-label="Depoimentos">
+  <div class="container">
+    <div class="testim-head">
+      <span class="eyebrow mono reveal-up">DEPOIMENTOS</span>
+      <h2 class="h-display reveal-up">O que os responsáveis pela<br/><span class="accent">produção dizem sobre a Suljett.</span></h2>
+      <p class="lead reveal-up">Não trabalhamos com depoimentos genéricos. Cada case é uma instalação real, com foto do equipamento em operação.</p>
+    </div>
+
+    <div class="tcar" id="tcar">
+      <div class="tcar-viewport">
+        <article class="tcar-slide is-active" data-idx="0">
+          <div class="tcar-media">
+            <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=900&q=70" alt="Linha de envase PET" loading="lazy" />
+          </div>
+          <div class="tcar-body">
+            <span class="quote-mark" aria-hidden="true">"</span>
+            <blockquote>Desde a instalação da Hitachi, nossa linha de bebidas não teve uma única parada por falha de codificação em 14 meses. O suporte da Suljett responde antes do problema virar parada.</blockquote>
+            <footer>
+              <span class="tcar-name">Carlos Andrade</span>
+              <span class="tcar-role">Gerente de Produção · Envasadora Águas do Sul · RS</span>
+              <span class="tcar-tech">Tecnologia instalada: CIJ Hitachi UX-D160W</span>
+            </footer>
+          </div>
+        </article>
+
+        <article class="tcar-slide" data-idx="1">
+          <div class="tcar-media">
+            <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=900&q=70" alt="Linha de envase de laticínios" loading="lazy" />
+          </div>
+          <div class="tcar-body">
+            <span class="quote-mark" aria-hidden="true">"</span>
+            <blockquote>Desde que instalamos a CIJ Hitachi na nossa linha de envase, não tivemos uma única parada por falha de codificação. Antes trocávamos de fornecedor toda vez que o suporte sumia. Com a Suljett, o técnico aparece — presencial ou remoto — antes que o problema vire crise.</blockquote>
+            <footer>
+              <span class="tcar-name">Ricardo Menezes</span>
+              <span class="tcar-role">Gerente de Produção · Laticínios São Bento · Laticínios · SC</span>
+              <span class="tcar-tech">Tecnologia instalada: CIJ Hitachi UX-D160W · 3 anos em operação</span>
+            </footer>
+          </div>
+        </article>
+
+        <article class="tcar-slide" data-idx="2">
+          <div class="tcar-media">
+            <img src="https://images.unsplash.com/photo-1514995669114-6081e934b693?auto=format&fit=crop&w=900&q=70" alt="Linha de envase de bebidas" loading="lazy" />
+          </div>
+          <div class="tcar-body">
+            <span class="quote-mark" aria-hidden="true">"</span>
+            <blockquote>A decisão de trocar para a tecnologia CIJ Hitachi foi baseada em um teste real aqui na planta. A Suljett trouxe o equipamento, rodamos no nosso substrato, avaliamos a marcação antes de qualquer contrato. Esse processo nos deu segurança técnica para justificar a compra internamente.</blockquote>
+            <footer>
+              <span class="tcar-name">Fernanda Oliveira</span>
+              <span class="tcar-role">Engenheira de Qualidade · Grupo Bebidas Nordeste · Bebidas · PE</span>
+              <span class="tcar-tech">Tecnologia instalada: CIJ Hitachi PX-D series · 2 anos em operação</span>
+            </footer>
+          </div>
+        </article>
+      </div>
+
+      <div class="tcar-controls">
+        <button type="button" class="tcar-btn" id="tcarPrev" aria-label="Anterior">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M10 3 5 8l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="tcar-dots" id="tcarDots" role="tablist">
+          <button type="button" class="tcar-dot is-active" data-idx="0" aria-label="Depoimento 1"></button>
+          <button type="button" class="tcar-dot" data-idx="1" aria-label="Depoimento 2"></button>
+          <button type="button" class="tcar-dot" data-idx="2" aria-label="Depoimento 3"></button>
+        </div>
+        <button type="button" class="tcar-btn" id="tcarNext" aria-label="Próximo">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ BLOG ══════════════ -->
+<section class="section section--blog" id="blog" aria-label="Blog técnico">
+  <div class="container">
+    <div class="blog-head">
+      <div>
+        <span class="eyebrow mono reveal-up">CONTEÚDO TÉCNICO</span>
+        <h2 class="h-display reveal-up">Para quem decide<br/>com base em dados.</h2>
+      </div>
+      <p class="lead reveal-up">Artigos, comparativos e guias produzidos pela equipe técnica da Suljett para apoiar especificações, manutenções e avaliações.</p>
+    </div>
+
+    <div class="blog-grid">
+      <article class="blog-card reveal-up">
+        <div class="blog-media"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=70" alt="Comparativo CIJ vs TIJ" loading="lazy" /><span class="mono">COMPARATIVO</span></div>
+        <div class="blog-body">
+          <div class="blog-meta mono">CIJ · 8 MIN DE LEITURA</div>
+          <h4>CIJ vs. TIJ: qual tecnologia de impressão é certa para a sua linha?</h4>
+          <p>Velocidade, consumo, substrato e custo total ao longo de 5 anos — lado a lado.</p>
+          <a href="#" class="link-arrow">Ler artigo <span>→</span></a>
+        </div>
+      </article>
+      <article class="blog-card reveal-up">
+        <div class="blog-media blog-media--2"><img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=900&q=70" alt="Manutenção industrial" loading="lazy" /><span class="mono">MANUTENÇÃO</span></div>
+        <div class="blog-body">
+          <div class="blog-meta mono">MANUTENÇÃO · 6 MIN DE LEITURA</div>
+          <h4>Como evitar paradas por entupimento na cabeça impressora CIJ.</h4>
+          <p>Checklist prático para a rotina de manutenção preventiva do operador.</p>
+          <a href="#" class="link-arrow">Ler artigo <span>→</span></a>
+        </div>
+      </article>
+      <article class="blog-card reveal-up">
+        <div class="blog-media blog-media--3"><img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=900&q=70" alt="Produção farmacêutica" loading="lazy" /><span class="mono">REGULATÓRIO</span></div>
+        <div class="blog-body">
+          <div class="blog-meta mono">REGULATÓRIO · 10 MIN DE LEITURA</div>
+          <h4>O que a ANVISA exige na codificação de produtos farmacêuticos em 2025.</h4>
+          <p>Serialização, rastreabilidade e o impacto direto na arquitetura da linha.</p>
+          <a href="#" class="link-arrow">Ler artigo <span>→</span></a>
+        </div>
+      </article>
+    </div>
+
+    <div class="blog-foot reveal-up">
+      <a href="#" class="btn btn--ghost-dark">Ver todos os artigos técnicos <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FINAL CTA ══════════════ -->
+<section class="section section--dark section--final" id="contato" aria-label="Contato">
+  <div class="container final-wrap">
+    <div class="final-gridlines" aria-hidden="true"></div>
+    <div class="final-inner">
+      <span class="eyebrow mono reveal-up">ANÁLISE TÉCNICA GRATUITA</span>
+      <h2 class="h-display reveal-up">Pronto para falar sobre<br/><span class="accent">a sua linha de produção?</span></h2>
+      <p class="lead steel-300 reveal-up">Nossa equipe técnica analisa a sua aplicação e indica a solução correta — sem pressão comercial, sem proposta genérica.</p>
+      <div class="final-ctas reveal-up">
+        <a href="#" class="btn btn--cta btn--lg">
+          Solicitar análise técnica gratuita
+          <svg class="btn-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#" class="btn btn--ghost btn--lg">
+          Ou ligue: (51) 3333-1212
+        </a>
+      </div>
+      <p class="final-micro mono reveal-up">Respondemos em até 4 horas úteis · Atendemos Sul e Nordeste do Brasil</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo-tile">
+          <img src="assets/suljett-logo-rw.png" alt="Suljett do Brasil" class="footer-logo-img" />
+        </span>
+        <p class="footer-tag">Codificação industrial desde 2007.<br/>Distribuidor oficial Hitachi no Sul e Nordeste do Brasil.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="WhatsApp" class="footer-soc"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5s0-.4-.1-.5-.7-1.6-.9-2.2c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4Z"/><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.9-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg></a>
+          <a href="#" aria-label="LinkedIn" class="footer-soc"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h4v1.7c.6-1 1.9-2 3.9-2 4.2 0 5 2.8 5 6.4V21h-4v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9V9Z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <span class="footer-label mono">Produtos</span>
+          <a href="#">CIJ Hitachi</a>
+          <a href="#">TIJ</a>
+          <a href="#">TTO</a>
+          <a href="#">Laser</a>
+          <a href="#">Grandes Caracteres</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-label mono">Serviços</span>
+          <a href="#">Assistência Técnica</a>
+          <a href="#">Lab de Amostras</a>
+          <a href="#">Treinamento</a>
+          <a href="#">Insumos Originais</a>
+          <a href="#">Comparador</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-label mono">Empresa</span>
+          <a href="#">Sobre a Suljett</a>
+          <a href="#">Blog Técnico</a>
+          <a href="#">Trabalhe Conosco</a>
+          <a href="#">Política de Privacidade</a>
+          <a href="#">LGPD</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-label mono">Contato</span>
+          <a href="tel:+55" class="footer-phone">(51) 3333-1212</a>
+          <a href="mailto:contato@suljett.com.br">contato@suljett.com.br</a>
+          <span class="footer-addr">Porto Alegre · RS<br/>Recife · PE</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-seals">
+      <span class="seal mono"><span class="seal-dot"></span> Distribuidor Oficial Hitachi</span>
+      <span class="seal mono"><span class="seal-dot"></span> ISO 9001</span>
+      <span class="seal mono"><span class="seal-dot"></span> LGPD em conformidade</span>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="mono">© 2026 Suljett do Brasil · Todos os direitos reservados</span>
+      <span class="mono">Sul e Nordeste do Brasil · CNPJ 00.000.000/0001-00</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+/* =============================================================
+   SULJETT HOME — INTRO + GSAP
+   ============================================================= */
+(() => {
+  const body = document.body;
+  const curtain = document.getElementById('introCurtain');
+  if (!curtain) return;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Always play intro on load (refresh replays too)
+  body.classList.add('no-scroll');
+
+  const logoEl = document.getElementById('introMark');
+  const left = document.getElementById('introLeft');
+  const right = document.getElementById('introRight');
+  const bar = document.getElementById('introBar');
+  const tag = document.getElementById('introTag');
+
+  const tl = gsap.timeline({
+    defaults: { ease: 'power3.out' },
+    onComplete: () => {
+      body.classList.remove('no-scroll');
+      runReveal();
+    }
+  });
+
+  tl.to([left, right], { opacity: 1, duration: 0.5, stagger: 0.05 })
+    .to(bar, { width: '100%', duration: 1.4, ease: 'power2.inOut' }, 0.1)
+    .to(tag, { opacity: 1, duration: 0.5 }, 0.15)
+    .to(logoEl, { opacity: 1, y: 0, scale: 1, duration: 0.9, ease: 'expo.out' }, 0.35)
+    .to([tag, left, right], { opacity: 0, duration: 0.3 }, '>+0.35')
+    .to(logoEl, { opacity: 0, y: -30, scale: 0.96, duration: 0.45, ease: 'power3.in' }, '>-0.1')
+    .to(curtain, { yPercent: -100, duration: 0.8, ease: 'expo.inOut', onStart(){ curtain.classList.add('is-out'); } }, '>-0.2');
+
+  function runReveal() {
+    const hero = document.querySelector('.hero');
+    hero?.classList.add('is-loaded');
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isDesktop = window.matchMedia('(min-width: 900px)').matches;
+
+    /* ── Lenis smooth scroll ──────────────────────────────── */
+    let lenis;
+    if (window.Lenis && !prefersReduced) {
+      lenis = new window.Lenis({ lerp: 0.15, smoothWheel: true, wheelMultiplier: 1, syncTouch: false, duration: 0.9 });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((t) => lenis.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+    }
+
+    // Global ScrollTrigger defaults — fire earlier, never choke
+    ScrollTrigger.defaults({ toggleActions: 'play none none none' });
+
+    /* ── Word-mask splitter ───────────────────────────────── */
+    const splitWords = (el) => {
+      if (el.dataset.split === '1') return;
+      el.dataset.split = '1';
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+      const textNodes = [];
+      while (walker.nextNode()) textNodes.push(walker.currentNode);
+      textNodes.forEach((node) => {
+        const parent = node.parentNode;
+        const words = node.textContent.split(/(\s+)/);
+        const frag = document.createDocumentFragment();
+        words.forEach((w) => {
+          if (!w) return;
+          if (/^\s+$/.test(w)) { frag.appendChild(document.createTextNode(w)); return; }
+          const mask = document.createElement('span');
+          mask.className = 'w-mask';
+          const inner = document.createElement('span');
+          inner.className = 'w-inner';
+          inner.textContent = w;
+          mask.appendChild(inner);
+          frag.appendChild(mask);
+        });
+        parent.replaceChild(frag, node);
+      });
+    };
+
+    /* ── Hero: title word-mask + immediate reveals ────────── */
+    document.querySelectorAll('.hero-title .line').forEach(splitWords);
+    const heroMasks = document.querySelectorAll('.hero-title .w-mask');
+    heroMasks.forEach((m, i) => setTimeout(() => m.classList.add('is-in'), 100 + i * 40));
+
+    gsap.utils.toArray('.hero .reveal').forEach(el => {
+      const d = parseInt(el.dataset.revealDelay || '0', 10) / 1000;
+      gsap.fromTo(el, { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, delay: 0.25 + d * 0.5, ease: 'power3.out' });
+    });
+
+    // hero product showcase removed
+
+    /* ── Clear CSS reveal gate immediately (never trust ScrollTrigger alone) ── */
+    gsap.set('.reveal, .reveal-up', { clearProps: 'opacity,transform' });
+
+    /* ── Section headings + generic reveals: bulletproof scroll-based ── */
+    const headingTargets = gsap.utils.toArray('.section .h-display, .section .h-medium');
+    const headingQueue = [];
+    headingTargets.forEach(h => {
+      splitWords(h);
+      h.style.opacity = '1';  // override .reveal-up { opacity: 0 }
+      const masks = h.querySelectorAll('.w-mask');
+      headingQueue.push({ el: h, masks, done: false });
+    });
+
+    const genericTargets = gsap.utils.toArray('.reveal-up').filter(el => !el.matches('.h-display, .h-medium'));
+    const genericQueue = [];
+    genericTargets.forEach(el => {
+      gsap.set(el, { opacity: 0, y: 24 });
+      genericQueue.push({ el, done: false });
+    });
+
+    const checkReveals = () => {
+      const vh = window.innerHeight;
+      const threshold = vh * 0.92;
+      headingQueue.forEach(item => {
+        if (item.done) return;
+        const top = item.el.getBoundingClientRect().top;
+        if (top < threshold) {
+          item.done = true;
+          item.masks.forEach((m, i) => {
+            setTimeout(() => m.classList.add('is-in'), i * 30);
+          });
+        }
+      });
+      genericQueue.forEach(item => {
+        if (item.done) return;
+        const top = item.el.getBoundingClientRect().top;
+        if (top < threshold) {
+          item.done = true;
+          gsap.to(item.el, { opacity: 1, y: 0, duration: 0.55, ease: 'power3.out' });
+        }
+      });
+    };
+    checkReveals();
+    let scrollTicking = false;
+    window.addEventListener('scroll', () => {
+      if (scrollTicking) return;
+      scrollTicking = true;
+      requestAnimationFrame(() => { checkReveals(); scrollTicking = false; });
+    }, { passive: true });
+    window.addEventListener('resize', checkReveals, { passive: true });
+
+    /* ── Hero parallax ─────────────────────────────────────── */
+    gsap.to('.hero-video', { yPercent: 16, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+
+    /* ── Image parallax (app cards + blog) ────────────────── */
+    gsap.utils.toArray('.app-card__img, .blog-media img').forEach(img => {
+      gsap.fromTo(img, { yPercent: -8 }, {
+        yPercent: 8, ease: 'none',
+        scrollTrigger: { trigger: img.closest('.app-card, .blog-card'), start: 'top bottom', end: 'bottom top', scrub: 0.6 }
+      });
+    });
+
+    /* ── Testimonial image zoom on scroll ─────────────────── */
+    gsap.utils.toArray('.testim-card').forEach(card => {
+      const img = card.querySelector('.testim-img');
+      if (!img) return;
+      gsap.fromTo(img, { scale: 1.2 }, {
+        scale: 1, ease: 'none',
+        scrollTrigger: { trigger: card, start: 'top bottom', end: 'bottom top', scrub: 0.6 }
+      });
+    });
+
+    /* ── Counters ─────────────────────────────────────────── */
+    gsap.utils.toArray('[data-counter]').forEach(el => {
+      const target = parseInt(el.dataset.counter, 10);
+      const prefix = el.dataset.prefix || '';
+      gsap.fromTo({ v: 0 }, { v: 0 }, {
+        v: target, duration: 1.6, ease: 'power2.out',
+        onUpdate() { el.textContent = prefix + Math.round(this.targets()[0].v).toLocaleString('pt-BR'); },
+        scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+      });
+    });
+
+    /* ── Proof stats: scale up on scrub ────────────────────── */
+    const proof = document.querySelector('.section--proof');
+    if (proof && isDesktop) {
+      gsap.fromTo(proof.querySelectorAll('.proof-item'), { scale: 0.94, opacity: 0.5 }, {
+        scale: 1, opacity: 1, ease: 'power2.out', stagger: 0.06,
+        scrollTrigger: { trigger: proof, start: 'top 75%', end: 'top 25%', scrub: 0.6 }
+      });
+    }
+
+    /* ── HORIZONTAL SCROLL: Applications (pinned rail) ──── */
+    const hScroll = document.querySelector('[data-hscroll]');
+    const hTrack = hScroll?.querySelector('[data-hscroll-track]');
+    const hMeta = document.querySelector('.hscroll-meta');
+    if (hScroll && hTrack && isDesktop && !prefersReduced) {
+      const getDist = () => Math.max(0, hTrack.scrollWidth - window.innerWidth + 120);
+      gsap.to(hTrack, {
+        x: () => -getDist(),
+        ease: 'none',
+        scrollTrigger: {
+          trigger: hScroll,
+          start: 'top top',
+          end: () => '+=' + (getDist() * 0.7),
+          pin: true,
+          pinSpacing: true,
+          scrub: 0.8,
+          invalidateOnRefresh: true,
+          anticipatePin: 1,
+          onUpdate: (self) => {
+            if (hMeta) hMeta.style.setProperty('--hsp', Math.round(self.progress * 100) + '%');
+          }
+        }
+      });
+    }
+
+    /* ── Magnetic buttons ─────────────────────────────────── */
+    if (!prefersReduced && matchMedia('(hover: hover)').matches) {
+      document.querySelectorAll('.btn--cta, .btn--lg').forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+          const r = btn.getBoundingClientRect();
+          const mx = e.clientX - r.left - r.width / 2;
+          const my = e.clientY - r.top - r.height / 2;
+          gsap.to(btn, { x: mx * 0.15, y: my * 0.2, duration: 0.3, ease: 'power2.out' });
+        });
+        btn.addEventListener('mouseleave', () => {
+          gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.5)' });
+        });
+      });
+    }
+
+    // Final CTA gradient drift
+    gsap.to('.section--final .h-display', {
+      backgroundPosition: '200% 0', duration: 9, repeat: -1, ease: 'none'
+    });
+
+    /* ── Refresh ──────────────────────────────────────────── */
+    window.addEventListener('load', () => ScrollTrigger.refresh());
+    if (document.fonts?.ready) document.fonts.ready.then(() => ScrollTrigger.refresh());
+    // Also refresh after any async img loads (testim/hero)
+    setTimeout(() => ScrollTrigger.refresh(), 500);
+  }
+})();
+</script>
+
+<script>
+(() => {
+  const qs  = (s, c=document) => c.querySelector(s);
+  const qsa = (s, c=document) => [...c.querySelectorAll(s)];
+
+  /* ─── Theme ─────────────────────────────────────────────── */
+  const html = document.documentElement;
+  const saved = localStorage.getItem('sj-theme');
+  if (saved) html.dataset.theme = saved;
+
+  qs('#themeToggle')?.addEventListener('click', (e) => {
+    const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+
+    // Circular reveal transition (View Transitions API — progressive enhancement)
+    const btn = e.currentTarget;
+    const r = btn.getBoundingClientRect();
+    const x = r.left + r.width / 2;
+    const y = r.top + r.height / 2;
+    const endRadius = Math.hypot(
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y)
+    );
+
+    const apply = () => {
+      html.dataset.theme = next;
+      localStorage.setItem('sj-theme', next);
+    };
+
+    btn.classList.add('is-switching');
+    setTimeout(() => btn.classList.remove('is-switching'), 520);
+
+    if (document.startViewTransition) {
+      const t = document.startViewTransition(apply);
+      t.ready.then(() => {
+        const going = next === 'dark';
+        document.documentElement.animate(
+          {
+            clipPath: going
+              ? [`circle(0 at ${x}px ${y}px)`, `circle(${endRadius}px at ${x}px ${y}px)`]
+              : [`circle(${endRadius}px at ${x}px ${y}px)`, `circle(0 at ${x}px ${y}px)`],
+          },
+          {
+            duration: 520,
+            easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+            pseudoElement: going ? '::view-transition-new(root)' : '::view-transition-old(root)',
+          }
+        );
+      });
+    } else {
+      // Fallback: quick fade via a full-viewport overlay
+      const overlay = document.createElement('div');
+      overlay.className = 'theme-flash';
+      document.body.appendChild(overlay);
+      requestAnimationFrame(() => overlay.classList.add('is-in'));
+      setTimeout(() => {
+        apply();
+        overlay.classList.remove('is-in');
+        overlay.classList.add('is-out');
+        setTimeout(() => overlay.remove(), 320);
+      }, 180);
+    }
+  });
+
+  /* ─── Header auto-hide on scroll down, show on up / near top ── */
+  const header = qs('#siteHeader');
+  let lastY = window.scrollY;
+  let hideRaf = 0;
+  const HIDE_THRESHOLD = 12;
+  const REVEAL_ZONE = 90;   // px from top of viewport that force-shows header
+  const onScroll = () => {
+    if (!header) return;
+    const y = window.scrollY;
+    header.classList.toggle('is-scrolled', y > 40);
+    const dy = y - lastY;
+    if (y > 180 && dy > HIDE_THRESHOLD) {
+      header.classList.add('is-hidden');
+    } else if (dy < -HIDE_THRESHOLD || y < 80) {
+      header.classList.remove('is-hidden');
+    }
+    lastY = y;
+  };
+  window.addEventListener('scroll', () => {
+    if (hideRaf) return;
+    hideRaf = requestAnimationFrame(() => { hideRaf = 0; onScroll(); });
+  }, { passive: true });
+  window.addEventListener('mousemove', (e) => {
+    if (!header) return;
+    if (e.clientY < REVEAL_ZONE) header.classList.remove('is-hidden');
+  }, { passive: true });
+  onScroll();
+
+  /* ─── Dropdown ──────────────────────────────────────────── */
+  qsa('.has-dropdown').forEach((dd) => {
+    const btn = qs('.nav-link--dropdown', dd);
+    btn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = dd.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+  });
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.has-dropdown')) {
+      qsa('.has-dropdown.is-open').forEach((d) => {
+        d.classList.remove('is-open');
+        qs('.nav-link--dropdown', d)?.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  /* ─── Mobile menu ───────────────────────────────────────── */
+  const ham = qs('#hamburger');
+  const mm  = qs('#mobileMenu');
+  ham?.addEventListener('click', () => {
+    const open = ham.getAttribute('aria-expanded') !== 'true';
+    ham.setAttribute('aria-expanded', String(open));
+    mm?.classList.toggle('is-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  qsa('#mobileMenu a').forEach((a) => a.addEventListener('click', () => {
+    ham?.setAttribute('aria-expanded', 'false');
+    mm?.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }));
+
+  /* ─── Hero title / reveals / counters ─────────────────────
+     Handled by the GSAP block above (Lenis + ScrollTrigger).
+     Legacy splitter + IntersectionObserver + counter IO
+     intentionally removed to avoid double-processing. */
+
+  /* ─── How-it-works rail ─────────────────────────────────── */
+  const hs = qs('.how-steps');
+  if (hs) {
+    const railIO = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { hs.classList.add('is-in'); railIO.disconnect(); } });
+    }, { threshold: 0.3 });
+    railIO.observe(hs);
+  }
+
+  /* ─── Hero live readout (simulate) ──────────────────────── */
+  const rand = (min, max, dec=2) => (min + Math.random() * (max - min)).toFixed(dec);
+  setInterval(() => {
+    const chars = qs('[data-live="chars"]');
+    const psi   = qs('[data-live="psi"]');
+    const visc  = qs('[data-live="visc"]');
+    if (chars) chars.textContent = (17800 + Math.round(Math.random() * 400)).toLocaleString('en-US');
+    if (psi)   psi.textContent   = rand(3.18, 3.32, 2);
+    if (visc)  visc.textContent  = rand(24.2, 25.1, 1) + ' cps';
+  }, 1400);
+
+  /* ─── Testimonials carousel v2 (fade) ──────────────────── */
+  (function initTcar(){
+    const root = document.getElementById('tcar');
+    if (!root) return;
+    const slides = Array.from(root.querySelectorAll('.tcar-slide'));
+    const dots = Array.from(root.querySelectorAll('.tcar-dot'));
+    const prevBtn = document.getElementById('tcarPrev');
+    const nextBtn = document.getElementById('tcarNext');
+    let idx = 0;
+    let timer = null;
+    function go(n) {
+      idx = ((n % slides.length) + slides.length) % slides.length;
+      slides.forEach((s, i) => s.classList.toggle('is-active', i === idx));
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+    }
+    function start() { stop(); timer = setInterval(() => go(idx + 1), 9000); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    prevBtn && prevBtn.addEventListener('click', () => { go(idx - 1); start(); });
+    nextBtn && nextBtn.addEventListener('click', () => { go(idx + 1); start(); });
+    dots.forEach(d => d.addEventListener('click', () => { go(parseInt(d.dataset.idx, 10)); start(); }));
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+    go(0);
+    start();
+  })();
+
+  /* ─── Lead form ─────────────────────────────────────────── */
+  qs('#leadForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    form.classList.add('is-success');
+    form.querySelector('button[type=submit]').textContent = 'Download iniciado ✓';
+  });
+
+})();
+
+</script>
+</body>
+</html>
