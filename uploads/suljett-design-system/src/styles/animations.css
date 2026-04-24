@@ -1,0 +1,210 @@
+/* =============================================================
+   SULJETT DESIGN SYSTEM — ANIMATIONS
+   Princípio: MECÂNICO, não fofo.
+   Ease expo, snap — nunca ease bounce ou elastic.
+   ============================================================= */
+
+/* ─── Keyframes ─────────────────────────────────────────────── */
+@keyframes scrollDown {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50%       { transform: translateY(8px); opacity: 0.3; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes revealClip {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
+}
+
+@keyframes countUp {
+  from { --num: 0; }
+  to   { --num: var(--target); }
+}
+
+@keyframes laser-pulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(255, 32, 32, 0.3); }
+  50%       { box-shadow: 0 0 30px rgba(255, 32, 32, 0.7), 0 0 60px rgba(255, 32, 32, 0.3); }
+}
+
+@keyframes borderDraw {
+  from { stroke-dashoffset: 1000; }
+  to   { stroke-dashoffset: 0; }
+}
+
+/* ─── Classes de Animação Reutilizáveis ─────────────────────── */
+
+/* Entrada padrão de seções */
+.anim-fade-in {
+  opacity: 0;
+  animation: fadeIn var(--dur-medium) var(--ease-smooth) forwards;
+}
+
+.anim-slide-up {
+  opacity: 0;
+  animation: slideUp var(--dur-medium) var(--ease-reveal) forwards;
+}
+
+.anim-slide-left {
+  opacity: 0;
+  animation: slideInLeft var(--dur-medium) var(--ease-mechanical) forwards;
+}
+
+.anim-slide-right {
+  opacity: 0;
+  animation: slideInRight var(--dur-medium) var(--ease-mechanical) forwards;
+}
+
+/* Delays para stagger manual */
+.anim-delay-1 { animation-delay: 0.1s; }
+.anim-delay-2 { animation-delay: 0.2s; }
+.anim-delay-3 { animation-delay: 0.3s; }
+.anim-delay-4 { animation-delay: 0.4s; }
+.anim-delay-5 { animation-delay: 0.5s; }
+.anim-delay-6 { animation-delay: 0.6s; }
+.anim-delay-7 { animation-delay: 0.7s; }
+.anim-delay-8 { animation-delay: 0.8s; }
+
+/* Scroll indicator */
+.scroll-indicator-line {
+  animation: scrollDown 1.5s ease-in-out infinite;
+}
+
+/* Laser glow — apenas seção Laser */
+.laser-glow-anim {
+  animation: laser-pulse 2s ease-in-out infinite;
+}
+
+/* ─── Clip-path Dropdown (Header mega menu) ─────────────────── */
+.dropdown-enter {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path var(--dur-short) var(--ease-mechanical);
+}
+
+.dropdown-enter.is-open {
+  clip-path: inset(0 0 0% 0);
+}
+
+/* ─── Hover de Botão Primário ───────────────────────────────── */
+.btn-primary {
+  transition:
+    background-color var(--dur-micro) var(--ease-mechanical),
+    transform var(--dur-micro) var(--ease-mechanical),
+    box-shadow var(--dur-micro) var(--ease-mechanical);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(204, 26, 26, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  transition-duration: calc(var(--dur-micro) / 2);
+}
+
+/* ─── Hover de Cards ────────────────────────────────────────── */
+.card-hover {
+  transition:
+    transform var(--dur-short) var(--ease-mechanical),
+    box-shadow var(--dur-short) var(--ease-mechanical);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(10, 15, 26, 0.2);
+}
+
+/* ─── Application Grid Cards ────────────────────────────────── */
+.app-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.app-card .app-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 15, 26, 0.85) 0%, transparent 60%);
+  opacity: 0.6;
+  transition: opacity var(--dur-short) var(--ease-mechanical);
+}
+
+.app-card:hover .app-card-overlay {
+  opacity: 0.85;
+}
+
+.app-card .app-card-cta {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity var(--dur-short) var(--ease-mechanical),
+    transform var(--dur-short) var(--ease-mechanical);
+}
+
+.app-card:hover .app-card-cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── GSAP Initial States (evita flash antes da animação) ───── */
+.gsap-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.gsap-ready .gsap-hidden {
+  visibility: visible;
+}
+
+/* ─── SVG Process Line ──────────────────────────────────────── */
+.process-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+/* ─── Disable heavy animations on mobile ────────────────────── */
+@media (max-width: 767px) {
+  /* ScrollTrigger desabilitado via JS — classes fallback */
+  .mobile-static {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Partículas não renderizam no mobile */
+  #hero-particles {
+    display: none;
+  }
+}
+
+/* ─── Prefers reduced motion ────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .scroll-indicator-line {
+    animation: none;
+  }
+}

@@ -1,0 +1,303 @@
+---
+/**
+ * BlogPreview — 3 artigos técnicos recentes
+ * Grid 3 colunas. Fade + slide up com stagger 0.1s.
+ */
+
+const posts = [
+  {
+    slug: 'como-escolher-impressora-cij-hitachi',
+    category: 'Guia Técnico',
+    title: 'Como escolher a impressora CIJ Hitachi certa para sua linha de produção',
+    excerpt: 'Velocidade, resolução, certificação IP e custo por impressão: os 5 critérios técnicos que definem a escolha certa.',
+    readTime: '8 min',
+    date: '2025-01-10',
+    image: '/assets/blog/guia-cij.jpg',
+  },
+  {
+    slug: 'insumo-original-vs-paralelo-comparativo',
+    category: 'Qualidade',
+    title: 'Insumo original Hitachi vs. paralelo: análise técnica de viscosidade e condutividade',
+    excerpt: 'Testes realizados no laboratório Suljett revelam por que insumos não-certificados danificam impressoras CIJ em 6 a 18 meses.',
+    readTime: '12 min',
+    date: '2025-01-03',
+    image: '/assets/blog/insumo-original.jpg',
+  },
+  {
+    slug: 'manutenção-preventiva-cij-hitachi',
+    category: 'Manutenção',
+    title: 'Checklist de manutenção preventiva para impressoras CIJ Hitachi — 0 paradas não programadas',
+    excerpt: 'O guia completo que nossos técnicos certificados usam nas visitas preventivas de mais de 400 clientes no Sul e Nordeste.',
+    readTime: '6 min',
+    date: '2024-12-20',
+    image: '/assets/blog/manutencao.jpg',
+  },
+];
+
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString('pt-BR', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric',
+  });
+}
+---
+
+<section
+  class="blog-preview section theme-light"
+  aria-label="Artigos técnicos recentes"
+>
+  <div class="container">
+
+    <header class="blog-header">
+      <div class="blog-header-text">
+        <span class="spec blog-label">Blog Técnico</span>
+        <h2 class="blog-title">Conteúdo para quem decide</h2>
+        <p class="blog-subtitle">
+          Artigos escritos pelos técnicos da Suljett para gestores industriais.
+        </p>
+      </div>
+      <a href="/blog" class="blog-all-link">
+        Ver todos os artigos
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </header>
+
+    <div class="blog-grid" role="list">
+      {posts.map((post) => (
+        <article class="blog-card reveal-section" role="listitem">
+          <!-- Imagem -->
+          <a href={`/blog/${post.slug}`} class="blog-card-img-link" tabindex="-1" aria-hidden="true">
+            <div class="blog-card-img-wrapper">
+              <div class="blog-card-img-placeholder" aria-hidden="true"></div>
+            </div>
+          </a>
+
+          <!-- Conteúdo -->
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="spec blog-category">{post.category}</span>
+              <span class="spec blog-read-time" aria-label={`Tempo de leitura: ${post.readTime}`}>
+                {post.readTime} de leitura
+              </span>
+            </div>
+
+            <h3 class="blog-card-title">
+              <a href={`/blog/${post.slug}`}>
+                {post.title}
+              </a>
+            </h3>
+
+            <p class="blog-card-excerpt">{post.excerpt}</p>
+
+            <footer class="blog-card-footer">
+              <time
+                class="spec blog-date"
+                datetime={post.date}
+              >
+                {formatDate(post.date)}
+              </time>
+
+              <a
+                href={`/blog/${post.slug}`}
+                class="blog-read-link"
+                aria-label={`Ler: ${post.title}`}
+              >
+                Ler artigo
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </footer>
+          </div>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* ─── Header ─────────────────────────────────────────────── */
+  .blog-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .blog-label.spec {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--sj-red);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-title {
+    font-size: var(--text-h2);
+    font-weight: 700;
+    color: var(--ink-950);
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-subtitle {
+    color: var(--steel-500);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .blog-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--sj-red);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: gap var(--dur-micro) var(--ease-mechanical);
+  }
+
+  .blog-all-link:hover { gap: 0.75rem; }
+
+  /* ─── Grid ───────────────────────────────────────────────── */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .blog-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .blog-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* ─── Card ───────────────────────────────────────────────── */
+  .blog-card {
+    background: var(--pure-white);
+    border: 1px solid var(--steel-100);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition:
+      border-color var(--dur-short) var(--ease-mechanical),
+      box-shadow var(--dur-short) var(--ease-mechanical);
+  }
+
+  .blog-card:hover {
+    border-color: var(--sj-red);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Imagem */
+  .blog-card-img-link { display: block; }
+
+  .blog-card-img-wrapper {
+    overflow: hidden;
+    height: 200px;
+  }
+
+  .blog-card-img-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--steel-100), var(--steel-50));
+    transition: transform var(--dur-medium) var(--ease-mechanical);
+  }
+
+  .blog-card:hover .blog-card-img-placeholder {
+    transform: scale(1.04);
+  }
+
+  /* Corpo */
+  .blog-card-body {
+    padding: 1.375rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+  }
+
+  .blog-card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .blog-category.spec {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    color: var(--sj-red);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .blog-read-time.spec {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--steel-300);
+  }
+
+  .blog-card-title {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--ink-950);
+    line-height: 1.35;
+  }
+
+  .blog-card-title a {
+    transition: color var(--dur-micro) var(--ease-smooth);
+  }
+
+  .blog-card-title a:hover { color: var(--sj-red); }
+
+  .blog-card-excerpt {
+    font-size: 0.9rem;
+    color: var(--steel-500);
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  /* Footer */
+  .blog-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.875rem;
+    border-top: 1px solid var(--steel-100);
+    margin-top: auto;
+  }
+
+  .blog-date.spec {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--steel-300);
+  }
+
+  .blog-read-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    color: var(--sj-red);
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    transition: gap var(--dur-micro) var(--ease-mechanical);
+  }
+
+  .blog-read-link:hover { gap: 0.625rem; }
+</style>

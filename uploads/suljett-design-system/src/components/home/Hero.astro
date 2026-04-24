@@ -1,0 +1,324 @@
+---
+/**
+ * Hero — A Cena de Abertura
+ *
+ * Cinematográfico. Fundo steel-950. Vídeo background.
+ * Efeito grain sutil. Partículas "poeira industrial".
+ * Animação GSAP sequenciada (total ~2.2s).
+ */
+import Badge from '../ui/Badge.astro';
+import Button from '../ui/Button.astro';
+---
+
+<section
+  class="hero"
+  aria-label="Seção principal — Suljett do Brasil"
+>
+  <!-- Vídeo Background -->
+  <div class="hero-video-wrapper" aria-hidden="true">
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      aria-hidden="true"
+    >
+      <source src="/videos/hero-cij-drop.mp4" type="video/mp4" />
+    </video>
+    <!-- Gradient overlay -->
+    <div class="hero-overlay" aria-hidden="true"></div>
+  </div>
+
+  <!-- Partículas "Poeira Industrial" -->
+  <div id="hero-particles" aria-hidden="true"></div>
+
+  <!-- Conteúdo principal -->
+  <div class="container hero-content">
+    <div class="hero-inner">
+
+      <!-- Badge de credencial -->
+      <div class="hero-badge">
+        <Badge variant="brand" dot>
+          Distribuidor Oficial Hitachi — Sul e Nordeste do Brasil
+        </Badge>
+      </div>
+
+      <!-- Título: Splitting.js divide por palavras para animação -->
+      <h1
+        class="hero-title"
+        data-splitting
+      >
+        Codificação que nunca para.
+      </h1>
+
+      <!-- Subtítulo -->
+      <p class="hero-subtitle">
+        Impressoras CIJ Hitachi com 15 anos de durabilidade.
+        Insumos originais. Assistência técnica certificada
+        no Sul e Nordeste do Brasil.
+      </p>
+
+      <!-- CTAs -->
+      <div class="hero-ctas">
+        <Button href="/contato#orcamento" variant="primary" size="lg">
+          Solicitar Orçamento CIJ
+          <svg class="btn-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </Button>
+
+        <a href="/produtos/cij" class="hero-cta-secondary">
+          Ver Linha Completa
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Specs Técnicas Flutuantes — IBM Plex Mono OBRIGATÓRIO -->
+      <div class="hero-specs" aria-label="Especificações principais">
+        <span class="spec">18.000 impressões/hora</span>
+        <span class="hero-specs-divider" aria-hidden="true">·</span>
+        <span class="spec">IP65 Certificado</span>
+        <span class="hero-specs-divider" aria-hidden="true">·</span>
+        <span class="spec">Uptime 99.9%</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-indicator-line"></div>
+  </div>
+</section>
+
+<style>
+  /* ─── Hero Layout ────────────────────────────────────────── */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    min-height: 600px;
+    background-color: var(--steel-950);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  /* ─── Vídeo Background ───────────────────────────────────── */
+  .hero-video-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    will-change: transform; /* GSAP parallax */
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(10, 15, 26, 0.85) 0%,
+      rgba(10, 15, 26, 0.60) 50%,
+      rgba(10, 15, 26, 0.40) 100%
+    );
+  }
+
+  /* Grain sutil */
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events: none;
+    opacity: 0.35;
+  }
+
+  /* Partículas */
+  #hero-particles {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* ─── Conteúdo ───────────────────────────────────────────── */
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 720px;
+  }
+
+  /* ─── Badge ──────────────────────────────────────────────── */
+  .hero-badge {
+    opacity: 0; /* GSAP anima */
+  }
+
+  /* ─── Título ─────────────────────────────────────────────── */
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: var(--text-hero);
+    font-weight: 800;
+    line-height: 1.02;
+    color: var(--pure-white);
+    letter-spacing: -0.02em;
+    /* Splitting.js: cada .word recebe opacity:0 e y:60 via GSAP */
+  }
+
+  /* ─── Subtítulo ──────────────────────────────────────────── */
+  .hero-subtitle {
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 1.5vw, 1.1875rem);
+    font-weight: 400;
+    color: var(--steel-300);
+    line-height: 1.65;
+    max-width: 540px;
+    opacity: 0; /* GSAP anima */
+  }
+
+  /* ─── CTAs ───────────────────────────────────────────────── */
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0; /* GSAP anima */
+  }
+
+  .hero-cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--pure-white);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition:
+      border-color var(--dur-micro) var(--ease-mechanical),
+      gap var(--dur-micro) var(--ease-mechanical);
+  }
+
+  .hero-cta-secondary:hover {
+    border-color: var(--pure-white);
+    gap: 0.75rem;
+  }
+
+  /* ─── Specs Técnicas ─────────────────────────────────────── */
+  .hero-specs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  /* IBM Plex Mono — OBRIGATÓRIO para specs */
+  .hero-specs .spec {
+    font-family: var(--font-mono);
+    font-size: var(--text-mono);
+    font-weight: 500;
+    color: var(--steel-500);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0; /* GSAP anima */
+  }
+
+  .hero-specs-divider {
+    color: var(--steel-700);
+    font-size: 0.75rem;
+  }
+
+  /* ─── Scroll Indicator ───────────────────────────────────── */
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0; /* GSAP anima */
+  }
+
+  .scroll-indicator-line {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, var(--sj-red), transparent);
+    animation: scrollDown 1.5s ease-in-out infinite;
+  }
+
+  /* ─── Mobile adjustments ─────────────────────────────────── */
+  @media (max-width: 767px) {
+    .hero-inner { max-width: 100%; }
+    .scroll-indicator { display: none; }
+  }
+</style>
+
+<script>
+  import { initAllAnimations } from '../../scripts/gsap-init.js';
+  import { initSplitting } from '../../scripts/splitting-init.js';
+  import '../../scripts/lenis.js';
+
+  // Inicializa Splitting antes do GSAP para que .word exista
+  initSplitting();
+
+  // Aguarda DOM pronto para animações
+  document.addEventListener('DOMContentLoaded', () => {
+    initAllAnimations();
+  });
+
+  // ─── tsParticles — Poeira Industrial ─────────────────────
+  async function initParticles() {
+    if (window.innerWidth < 768) return; // Não carrega no mobile
+
+    try {
+      const { tsParticles } = await import('tsparticles');
+
+      await tsParticles.load({
+        id: 'hero-particles',
+        options: {
+          particles: {
+            number:  { value: 40 },
+            color:   { value: '#CC1A1A' },
+            opacity: { value: { min: 0.04, max: 0.18 } },
+            size:    { value: { min: 0.5, max: 2 } },
+            move: {
+              enable: true,
+              speed: 0.4,
+              direction: 'top',
+              random: true,
+              outModes: { default: 'out' },
+            },
+          },
+          background: { color: 'transparent' },
+        },
+      });
+    } catch (e) {
+      // Partículas são opcionais — falha silenciosa
+      console.warn('Particles not loaded:', e);
+    }
+  }
+
+  initParticles();
+</script>
