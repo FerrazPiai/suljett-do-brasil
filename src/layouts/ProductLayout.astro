@@ -1,0 +1,104 @@
+---
+/**
+ * ProductLayout — Layout de página de produto.
+ * Schema.org Product JSON-LD embutido.
+ */
+
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  product: {
+    name: string;
+    description: string;
+    image?: string;
+    brand?: string;
+    velocity?: string;
+    ipCertification?: string;
+    uptime?: string;
+    sku?: string;
+    inStock?: boolean;
+  };
+  canonical?: string;
+}
+
+const {
+  title,
+  description,
+  product,
+  canonical,
+} = Astro.props;
+
+const siteUrl = 'https://suljett.com.br';
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": product.name,
+  "description": product.description,
+  "image": product.image ? `${siteUrl}${product.image}` : undefined,
+  "sku": product.sku,
+  "brand": {
+    "@type": "Brand",
+    "name": product.brand ?? "Hitachi",
+  },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "Hitachi Industrial Equipment Systems",
+    "url": "https://www.hitachi.com",
+  },
+  "offers": {
+    "@type": "Offer",
+    "seller": {
+      "@type": "Organization",
+      "name": "Suljett do Brasil",
+      "url": siteUrl,
+    },
+    "areaServed": ["Sul do Brasil", "Nordeste do Brasil"],
+    "availability": product.inStock !== false
+      ? "https://schema.org/InStock"
+      : "https://schema.org/OutOfStock",
+    "priceCurrency": "BRL",
+    "priceValidUntil": `${new Date().getFullYear() + 1}-12-31`,
+  },
+  "additionalProperty": [
+    product.velocity && {
+      "@type": "PropertyValue",
+      "name": "Velocidade de Impressão",
+      "value": product.velocity,
+    },
+    product.ipCertification && {
+      "@type": "PropertyValue",
+      "name": "Certificação IP",
+      "value": product.ipCertification,
+    },
+    product.uptime && {
+      "@type": "PropertyValue",
+      "name": "Uptime Garantido",
+      "value": product.uptime,
+    },
+  ].filter(Boolean),
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="product"
+  canonical={canonical}
+>
+  <!-- JSON-LD do Produto -->
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(productSchema)}
+  />
+
+  <Header />
+  <main id="main-content">
+    <slot />
+  </main>
+  <Footer />
+</BaseLayout>

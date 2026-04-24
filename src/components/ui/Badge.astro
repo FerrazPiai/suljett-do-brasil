@@ -1,0 +1,43 @@
+---
+/**
+ * Badge — Etiquetas de destaque e categorias
+ * Usado no Hero, seções de produto, categorias de blog.
+ */
+
+export interface Props {
+  variant?: 'brand' | 'tech' | 'success' | 'neutral';
+  dot?: boolean;
+  class?: string;
+}
+
+const {
+  variant = 'brand',
+  dot = false,
+  class: className = '',
+} = Astro.props;
+
+const variants = {
+  brand:   'bg-sj-red/10 text-sj-red border border-sj-red/20',
+  tech:    'bg-steel-800 text-steel-300 border border-steel-700',
+  success: 'bg-emerald-900/30 text-emerald-400 border border-emerald-800/40',
+  neutral: 'bg-steel-100 text-ink-600 border border-steel-100',
+};
+
+const classes = [
+  'inline-flex items-center gap-1.5',
+  'font-display font-600 text-sm',
+  'px-3 py-1 rounded-full',
+  variants[variant],
+  className,
+].join(' ');
+---
+
+<span class={classes}>
+  {dot && (
+    <span
+      class="w-1.5 h-1.5 rounded-full bg-current animate-pulse"
+      aria-hidden="true"
+    />
+  )}
+  <slot />
+</span>

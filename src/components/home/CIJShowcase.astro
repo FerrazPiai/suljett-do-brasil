@@ -1,0 +1,470 @@
+---
+/**
+ * CIJShowcase — ★ Seção Principal (CIJ = 95% das vendas)
+ *
+ * Scroll-driven storytelling em ~300vh.
+ * Fase 1: Entrada do produto
+ * Fase 2: Specs pinned (ScrollTrigger)
+ * Fase 3: Grade de modelos
+ */
+import Badge from '../ui/Badge.astro';
+import Button from '../ui/Button.astro';
+import SpecCard from '../ui/SpecCard.astro';
+
+const specs = [
+  {
+    label: 'Velocidade de Impressão',
+    value: '18.000',
+    unit: 'impressões/hora',
+    description: 'Produção contínua sem redução de velocidade',
+  },
+  {
+    label: 'Certificação',
+    value: 'IP65',
+    unit: '',
+    description: 'Proteção total contra poeira e jatos d\'água',
+  },
+  {
+    label: 'Uptime Garantido',
+    value: '99.9',
+    unit: '%',
+    description: 'Produção contínua 24/7, 365 dias por ano',
+  },
+  {
+    label: 'Resolução',
+    value: '5 linhas',
+    unit: '',
+    description: 'Código de validade, lote, QR e mais',
+  },
+  {
+    label: 'Temperatura Operacional',
+    value: '0–45',
+    unit: '°C',
+    description: 'Opera em ambientes extremos de fábrica',
+  },
+  {
+    label: 'Consumo de Tinta',
+    value: 'Otimizado',
+    unit: '',
+    description: 'Algoritmo Hitachi reduz desperdício em 30%',
+  },
+];
+
+const models = [
+  { id: 'ux-d160w', name: 'UX-D160W', tag: '★ Mais Vendido', specs: ['18.000 car/h', 'IP65', '5 linhas'] },
+  { id: 'ux-d150w', name: 'UX-D150W', tag: 'Compacto',       specs: ['12.000 car/h', 'IP55', '4 linhas'] },
+  { id: 'px-d160w', name: 'PX-D160W', tag: 'Alta Resolução',  specs: ['15.000 car/h', 'IP65', '7 linhas'] },
+  { id: 'ux-d110w', name: 'UX-D110W', tag: 'Entry-level',     specs: ['8.000 car/h',  'IP55', '3 linhas'] },
+  { id: 'rx-d160w', name: 'RX-D160W', tag: 'Pigmentado',      specs: ['18.000 car/h', 'IP65', '5 linhas'] },
+  { id: 'px-r250w', name: 'PX-R250W', tag: 'Multi-tinta',     specs: ['12.000 car/h', 'IP65', '5 linhas'] },
+  { id: 'hx-d160w', name: 'HX-D160W', tag: 'Industrial Heavy',specs: ['18.000 car/h', 'IP67', '5 linhas'] },
+];
+---
+
+<section
+  class="cij-showcase theme-dark"
+  aria-label="Impressora CIJ Hitachi — Produto Principal"
+>
+  <!-- ─── Fase 1: Entrada do Produto ──────────────────────── -->
+  <div class="phase-1 container">
+    <div class="phase-1-inner">
+
+      <!-- Visual do Produto (será pinned pelo GSAP) -->
+      <div class="cij-product-visual" aria-hidden="true">
+        <div class="cij-product-img-wrapper">
+          <img
+            class="cij-product-img"
+            src="/assets/hitachi-cij-ux-d160w.png"
+            alt="Impressora CIJ Hitachi UX-D160W"
+            width="600"
+            height="600"
+            loading="eager"
+          />
+          <!-- Reflexo sutil -->
+          <div class="product-reflection" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- Texto de apresentação -->
+      <div class="phase-1-content">
+        <Badge variant="brand">
+          ★ Carro-chefe — 95% da nossa operação
+        </Badge>
+
+        <h2 class="phase-1-title">
+          Hitachi CIJ —<br />
+          A impressora que<br />
+          a indústria confia.
+        </h2>
+
+        <p class="phase-1-subtitle">
+          Tecnologia japonesa de precisão. Zero falhas de código.
+          Insumos originais Hitachi com garantia de 5 anos.
+        </p>
+
+        <Button href="/produtos/cij" variant="primary" size="lg">
+          Ver Todos os Modelos
+          <svg class="btn-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </Button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ─── Fase 2: Specs (pinned) ──────────────────────────── -->
+  <div class="phase-2">
+    <div class="container phase-2-inner">
+
+      <!-- Imagem pinned (referenciada pelo ScrollTrigger) -->
+      <div class="phase-2-visual" aria-hidden="true">
+        <p class="phase-2-label spec">Hitachi UX-D160W</p>
+        <div class="phase-2-img-placeholder">
+          <!-- A mesma imagem é pinned via GSAP — esta é um placeholder visual -->
+        </div>
+      </div>
+
+      <!-- Specs: aparecem uma a uma ao scroll -->
+      <div class="specs-list" aria-label="Especificações técnicas">
+        {specs.map((spec) => (
+          <SpecCard
+            label={spec.label}
+            value={spec.value}
+            unit={spec.unit}
+            description={spec.description}
+          />
+        ))}
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ─── Fase 3: Grade de Modelos ────────────────────────── -->
+  <div class="phase-3 container">
+    <div class="phase-3-header">
+      <h3 class="phase-3-title">Linha Completa Hitachi CIJ</h3>
+      <p class="phase-3-subtitle spec">7 modelos para cada necessidade industrial</p>
+    </div>
+
+    <div class="models-grid">
+      {models.map((model) => (
+        <article class="model-card" aria-label={`Modelo ${model.name}`}>
+          <!-- Placeholder da imagem do modelo -->
+          <div class="model-img-placeholder" aria-hidden="true">
+            <span class="spec model-img-label">{model.name}</span>
+          </div>
+
+          <div class="model-card-body">
+            <div class="model-card-header">
+              <h4 class="model-name">{model.name}</h4>
+              <span class="model-tag spec">{model.tag}</span>
+            </div>
+
+            <ul class="model-specs" aria-label="Specs principais">
+              {model.specs.map((s) => (
+                <li class="spec model-spec-item">{s}</li>
+              ))}
+            </ul>
+
+            <a href={`/produtos/cij/${model.id}`} class="model-cta">
+              Ver Ficha Técnica
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+
+</section>
+
+<style>
+  .cij-showcase {
+    background-color: var(--steel-900);
+    padding-block: 0;
+    overflow: hidden;
+  }
+
+  /* ─── Fase 1 ─────────────────────────────────────────────── */
+  .phase-1 {
+    padding-block: var(--section-py-mobile);
+  }
+
+  @media (min-width: 768px) {
+    .phase-1 { padding-block: var(--section-py); }
+  }
+
+  .phase-1-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    .phase-1-inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+  }
+
+  /* Produto visual */
+  .cij-product-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .cij-product-img-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .cij-product-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 32px 64px rgba(0,0,0,0.6));
+    transform-origin: center;
+    will-change: transform; /* GSAP rotationY */
+  }
+
+  .product-reflection {
+    position: absolute;
+    bottom: -20px;
+    left: 10%;
+    right: 10%;
+    height: 40px;
+    background: radial-gradient(ellipse, rgba(204, 26, 26, 0.15), transparent 70%);
+    filter: blur(20px);
+  }
+
+  /* Conteúdo Fase 1 */
+  .phase-1-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .phase-1-title {
+    font-size: var(--text-h1);
+    font-weight: 800;
+    color: var(--pure-white);
+    line-height: 1.1;
+  }
+
+  .phase-1-subtitle {
+    font-size: 1.0625rem;
+    color: var(--steel-300);
+    line-height: 1.65;
+    max-width: 440px;
+  }
+
+  /* ─── Fase 2 ─────────────────────────────────────────────── */
+  .phase-2 {
+    padding-block: var(--section-py-mobile);
+    border-top: 1px solid var(--steel-700);
+  }
+
+  @media (min-width: 768px) {
+    .phase-2 { padding-block: var(--section-py); }
+  }
+
+  .phase-2-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  @media (min-width: 1024px) {
+    .phase-2-inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+  }
+
+  .phase-2-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .phase-2-label.spec {
+    font-family: var(--font-mono);
+    font-size: var(--text-mono);
+    color: var(--steel-500);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .phase-2-img-placeholder {
+    height: 400px;
+    border-radius: 4px;
+    border: 1px solid var(--steel-700);
+    background: var(--steel-800);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .specs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* ─── Fase 3 ─────────────────────────────────────────────── */
+  .phase-3 {
+    padding-block: var(--section-py-mobile);
+    border-top: 1px solid var(--steel-700);
+  }
+
+  @media (min-width: 768px) {
+    .phase-3 { padding-block: var(--section-py); }
+  }
+
+  .phase-3-header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .phase-3-title {
+    font-size: var(--text-h2);
+    font-weight: 700;
+    color: var(--pure-white);
+    margin-bottom: 0.5rem;
+  }
+
+  .phase-3-subtitle.spec {
+    font-family: var(--font-mono);
+    font-size: var(--text-mono);
+    color: var(--steel-500);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Grade de modelos */
+  .models-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .models-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .models-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .model-card {
+    background: var(--steel-800);
+    border: 1px solid var(--steel-700);
+    border-radius: 4px;
+    overflow: hidden;
+    transition:
+      border-color var(--dur-short) var(--ease-mechanical),
+      transform var(--dur-short) var(--ease-mechanical),
+      box-shadow var(--dur-short) var(--ease-mechanical);
+  }
+
+  .model-card:hover {
+    border-color: var(--sj-red);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .model-img-placeholder {
+    height: 200px;
+    background: var(--steel-900);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--steel-700);
+  }
+
+  .model-img-label.spec {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--steel-700);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .model-card-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+
+  .model-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .model-name {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--pure-white);
+  }
+
+  .model-tag.spec {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--sj-red);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .model-specs {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .model-spec-item.spec {
+    font-family: var(--font-mono);
+    font-size: var(--text-mono);
+    color: var(--steel-300);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .model-spec-item.spec::before {
+    content: '·';
+    color: var(--sj-red);
+  }
+
+  .model-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    color: var(--sj-red);
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+    transition:
+      gap var(--dur-micro) var(--ease-mechanical),
+      color var(--dur-micro) var(--ease-mechanical);
+  }
+
+  .model-cta:hover {
+    color: #e82020;
+    gap: 0.625rem;
+  }
+</style>

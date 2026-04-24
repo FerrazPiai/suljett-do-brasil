@@ -1,0 +1,265 @@
+---
+/**
+ * SocialProof — Barra de credenciais + contadores animados
+ *
+ * Tema: Light (steel-50)
+ * Contadores GSAP incrementam ao entrar no viewport.
+ * Logos de clientes via Embla Carousel autoplay.
+ */
+
+const stats = [
+  { value: 2400, suffix: '+', label: 'Equipamentos Instalados' },
+  { value: 17,   suffix: '',  label: 'Anos de Mercado' },
+  { value: 24,   suffix: 'h', label: 'Assistência Técnica' },
+  { value: 5,    suffix: ' anos', label: 'Garantia Hitachi' },
+];
+
+const partners = [
+  { name: 'Sadia', logo: '/assets/logos/sadia.svg' },
+  { name: 'BRF',   logo: '/assets/logos/brf.svg' },
+  { name: 'Nestlé', logo: '/assets/logos/nestle.svg' },
+  { name: 'Seara', logo: '/assets/logos/seara.svg' },
+  { name: 'Aurora', logo: '/assets/logos/aurora.svg' },
+  { name: 'JBS',   logo: '/assets/logos/jbs.svg' },
+];
+---
+
+<section class="social-proof section theme-light" aria-label="Nossa presença e credenciais">
+  <div class="container">
+
+    <!-- Stats Grid -->
+    <div class="stats-grid" role="list">
+      {stats.map((stat, i) => (
+        <div class="stat-item reveal-section" role="listitem" style={`animation-delay: ${i * 0.1}s`}>
+          <div class="stat-value">
+            <span
+              class="stat-number"
+              data-counter={stat.value}
+              aria-label={`${stat.value}${stat.suffix}`}
+            >
+              0
+            </span>
+            <span class="stat-suffix" aria-hidden="true">{stat.suffix}</span>
+          </div>
+          <p class="stat-label spec">{stat.label}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Divider -->
+    <div class="partners-divider" aria-hidden="true">
+      <span class="spec">Clientes que confiam na Suljett</span>
+    </div>
+
+    <!-- Logos Carousel -->
+    <div class="partners-carousel-wrapper" aria-label="Empresas parceiras">
+      <!-- Fade edges -->
+      <div class="carousel-fade carousel-fade--left" aria-hidden="true"></div>
+      <div class="carousel-fade carousel-fade--right" aria-hidden="true"></div>
+
+      <div class="embla partners-carousel" role="region" aria-label="Carrossel de logos">
+        <div class="embla__container">
+          {[...partners, ...partners].map((partner, i) => (
+            <div class="embla__slide partners-slide" key={i}>
+              <div class="partner-logo" aria-label={partner.name}>
+                <!-- Fallback: nome da empresa se logo não encontrada -->
+                <span class="partner-name spec">{partner.name}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .social-proof {
+    padding-block: 4rem;
+  }
+
+  /* ─── Stats ──────────────────────────────────────────────── */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .stats-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    position: relative;
+  }
+
+  @media (min-width: 768px) {
+    .stat-item + .stat-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 25%;
+      height: 50%;
+      width: 1px;
+      background: var(--steel-100);
+    }
+  }
+
+  .stat-value {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-number {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--ink-950);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .stat-suffix {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-weight: 700;
+    color: var(--sj-red);
+  }
+
+  /* IBM Plex Mono para labels — OBRIGATÓRIO */
+  .stat-label.spec {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--steel-500);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* ─── Divider Partners ───────────────────────────────────── */
+  .partners-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .partners-divider::before,
+  .partners-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--steel-100);
+  }
+
+  .partners-divider .spec {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--steel-300);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+
+  /* ─── Carousel ───────────────────────────────────────────── */
+  .partners-carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .embla { overflow: hidden; }
+  .embla__container {
+    display: flex;
+    align-items: center;
+  }
+
+  .embla__slide.partners-slide {
+    flex: 0 0 auto;
+    min-width: 140px;
+    padding-inline: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .partner-logo {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: grayscale(100%);
+    opacity: 0.4;
+    transition: opacity var(--dur-short) var(--ease-smooth), filter var(--dur-short) var(--ease-smooth);
+  }
+
+  .partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 0.8;
+  }
+
+  .partner-logo img {
+    max-height: 36px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* Fallback nome quando sem logo */
+  .partner-name.spec {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--steel-500);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* Fade nas bordas do carousel */
+  .carousel-fade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .carousel-fade--left {
+    left: 0;
+    background: linear-gradient(to right, var(--steel-50), transparent);
+  }
+
+  .carousel-fade--right {
+    right: 0;
+    background: linear-gradient(to left, var(--steel-50), transparent);
+  }
+</style>
+
+<script>
+  import EmblaCarousel from 'embla-carousel';
+  import Autoplay from 'embla-carousel-autoplay';
+
+  const carouselEl = document.querySelector('.partners-carousel');
+  if (carouselEl) {
+    EmblaCarousel(
+      carouselEl,
+      {
+        loop: true,
+        dragFree: true,
+        align: 'start',
+      },
+      [Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })]
+    );
+  }
+</script>
