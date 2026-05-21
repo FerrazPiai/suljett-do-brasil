@@ -7,6 +7,17 @@ Copy completo da Home + página-modelo de cada categoria do site Suljett, produz
 
 ---
 
+## ⚠️ Terminologia obrigatória
+
+**A Suljett não faz etiquetas — faz impressões.** Os equipamentos Hitachi (CIJ, TIJ, TTO, Laser) imprimem **diretamente no substrato** (PET, lata, vidro, papelão, ovo, cabo, peça metálica…), sem aplicar etiqueta adesiva.
+
+Termos corretos: **impressão · marcação · codificação · imprimir · codificar · marcar**
+Termos a evitar: ~~etiqueta · etiquetar · etiquetagem · rótulo (autoadesivo)~~
+
+Use sempre que se referir ao que o equipamento produz na linha. Vale para toda a copy do site, e-mail, ads e qualquer material da marca.
+
+---
+
 ## Sumário
 
 1. [Home](#01--home) — adaptada bloco a bloco ao layout do index.html
@@ -395,7 +406,7 @@ Somos a distribuidora oficial da Hitachi Industrial Equipment Systems no Sul e N
 
 ## Seção 01 · Quem somos
 
-**A engenharia que está atrás da etiqueta de validade da sua linha.**
+**A engenharia que está atrás da impressão de validade da sua linha.**
 
 A Suljett do Brasil nasceu em 2008 com uma decisão clara: trazer para a indústria brasileira o padrão Hitachi de codificação industrial, com equipamento original, insumo original e suporte técnico de gente que conhece a linha de fábrica por dentro. Em quase duas décadas, passamos por mais de mil chãos de fábrica — de avícolas e laticínios no Sul a refinarias de bebidas no Nordeste — e o que aprendemos virou método.
 
