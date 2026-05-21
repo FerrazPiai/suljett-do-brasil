@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Wireframe · Contato · Suljett</title>
+<link rel="stylesheet" href="shared/wire.css" />
+</head>
+<body>
+
+<!-- ══════════════ PAGEBAR ══════════════ -->
+<div class="w-pagebar">
+  <span><a href="index.html">← Wireframes</a> &nbsp; / &nbsp; 08 · Contato</span>
+  <span class="w-pagebar-meta">URL: /contato · página única com seletor obrigatório</span>
+</div>
+
+<!-- ══════════════ HEADER ══════════════ -->
+<header class="w-header">
+  <div class="w-container w-header-inner">
+    <div class="w-logo">SULJETT<small>do Brasil</small></div>
+    <nav class="w-nav">
+      <a href="#">Home</a>
+      <a href="empresa.html">Empresa</a>
+      <a href="#">Soluções ▾</a>
+      <a href="contato.html" class="is-active">Contato</a>
+    </nav>
+    <a href="#whatsapp" class="w-nav-cta">WhatsApp</a>
+  </div>
+</header>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="w-hero">
+  <div class="w-container" style="text-align:center;">
+    <div class="w-eyebrow">FALE COM A SULJETT</div>
+    <h1>Como podemos te ajudar hoje?</h1>
+    <p class="w-lead" style="margin:0 auto 16px;">
+      A Suljett atende três tipos de público por canais diferentes: clientes ativos com chamado em
+      curso, indústrias interessadas em codificação Hitachi e profissionais procurando vaga ou
+      parceria. Selecione abaixo o motivo do seu contato — assim conseguimos te encaminhar para a
+      pessoa certa em minutos, não em dias.
+    </p>
+    <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+      <span class="w-chip">⏱ Resposta em até 4h úteis</span>
+      <span class="w-chip">🇧🇷 Sul + Nordeste do Brasil</span>
+      <span class="w-chip">🛡 Equipe Suljett · sem call center</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SEÇÃO 01 · SELETOR (peça central) ══════════════ -->
+<section class="w-section">
+  <div class="w-container">
+    <span class="w-section-tag">01 · Seletor de contato · peça central</span>
+    <h2>Selecione o motivo do contato.</h2>
+    <p>
+      Cada caminho leva ao formulário certo — e à equipe certa. O preenchimento leva menos de 1 minuto.
+    </p>
+
+    <div class="w-grid w-grid--4" style="margin-top:20px;">
+      <a href="#form-lead" class="w-card w-card--accent" style="text-decoration:none; color:inherit;">
+        <div class="w-ph w-ph--icon" style="margin-bottom:12px;">🟦</div>
+        <div class="w-card-meta">Novo lead · cotar</div>
+        <h3>Quero codificar minha linha</h3>
+        <p style="font-size:12px;">
+          Indústrias que ainda não são clientes Suljett e querem avaliar a tecnologia Hitachi.
+        </p>
+        <div style="margin-top:10px; font-family:var(--w-mono); font-size:10px; color:var(--w-ink-3);">
+          → Formulário comercial · Vendas
+        </div>
+      </a>
+      <a href="#form-cliente" class="w-card w-card--accent" style="text-decoration:none; color:inherit;">
+        <div class="w-ph w-ph--icon" style="margin-bottom:12px;">🟩</div>
+        <div class="w-card-meta">Cliente ativo · suporte</div>
+        <h3>Já sou cliente Suljett</h3>
+        <p style="font-size:12px;">
+          Chamado técnico, 2ª via de NF, documentação, FISPQ, ficha técnica ou Help Desk.
+        </p>
+        <div style="margin-top:10px; font-family:var(--w-mono); font-size:10px; color:var(--w-ink-3);">
+          → Pós-venda · Help Desk + SDC + Faturamento
+        </div>
+      </a>
+      <a href="#form-rh" class="w-card w-card--accent" style="text-decoration:none; color:inherit;">
+        <div class="w-ph w-ph--icon" style="margin-bottom:12px;">🟨</div>
+        <div class="w-card-meta">Trabalhe conosco</div>
+        <h3>Quero trabalhar na Suljett</h3>
+        <p style="font-size:12px;">
+          Profissionais interessados em vagas (técnico, comercial, engenharia, administrativo).
+        </p>
+        <div style="margin-top:10px; font-family:var(--w-mono); font-size:10px; color:var(--w-ink-3);">
+          → Portal TOTVS (externo) · RH
+        </div>
+      </a>
+      <a href="#form-fornecedor" class="w-card w-card--accent" style="text-decoration:none; color:inherit;">
+        <div class="w-ph w-ph--icon" style="margin-bottom:12px;">🟫</div>
+        <div class="w-card-meta">Fornecedor / parceria</div>
+        <h3>Sou fornecedor ou parceiro</h3>
+        <p style="font-size:12px;">
+          Empresas que querem fornecer produto/serviço ou propor parceria comercial.
+        </p>
+        <div style="margin-top:10px; font-family:var(--w-mono); font-size:10px; color:var(--w-ink-3);">
+          → Formulário fornecedor · Compras
+        </div>
+      </a>
+    </div>
+
+    <div class="w-annot" style="margin-top:18px;">
+      ⚠ O seletor é <strong>obrigatório</strong> antes do formulário — é a peça que corta 97% de lead frio no RD Station.
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SEÇÃO 02 · FORMULÁRIO 01 · NOVO LEAD ══════════════ -->
+<section class="w-section" id="form-lead">
+  <div class="w-container">
+    <span class="w-section-tag">02 · Formulário 01 · Novo lead (cotar)</span>
+    <h2>Análise técnica gratuita da sua linha.</h2>
+    <p>
+      Conta um pouco sobre o seu caso. Um engenheiro Suljett vai até a sua fábrica avaliar o
+      substrato, a velocidade do envase e a regulação do seu setor — e indicar a Hitachi correta.
+    </p>
+    <div class="w-split w-split--sidebar" style="margin-top:20px;">
+      <div class="w-card">
+        <form class="w-form">
+          <div class="w-grid w-grid--2">
+            <div class="w-field"><label>Nome completo *</label><div class="w-input">Seu nome</div></div>
+            <div class="w-field"><label>E-mail corporativo *</label><div class="w-input">voce@empresa.com.br</div></div>
+            <div class="w-field"><label>Telefone / WhatsApp *</label><div class="w-input">(00) 00000-0000</div></div>
+            <div class="w-field"><label>Empresa *</label><div class="w-input">Razão social</div></div>
+            <div class="w-field"><label>Cargo</label><div class="w-input">Ex.: Gerente de produção</div></div>
+            <div class="w-field"><label>Estado *</label><div class="w-select">Selecionar UF ▾</div></div>
+            <div class="w-field"><label>Cidade</label><div class="w-input">Cidade</div></div>
+            <div class="w-field"><label>Setor da empresa *</label><div class="w-select">Bebidas · Alimentícia · ... ▾</div></div>
+            <div class="w-field"><label>Substrato principal *</label><div class="w-select">PET · Lata · Vidro · ... ▾</div></div>
+            <div class="w-field"><label>Velocidade aproximada (un/h)</label><div class="w-input">Ex.: 30.000</div></div>
+            <div class="w-field"><label>Já opera com codificadora?</label><div class="w-select">Sim · Não · Não sei ▾</div></div>
+          </div>
+          <div class="w-field"><label>Conta um pouco mais sobre sua necessidade</label><div class="w-textarea">Descreva seu caso...</div></div>
+          <div style="font-size:12px; color:var(--w-ink-2);">
+            ☐ Autorizo a Suljett a usar meus dados para a análise técnica, conforme Política de Privacidade.
+          </div>
+          <a href="#" class="w-btn" style="margin-top:6px;">Solicitar análise técnica gratuita →</a>
+        </form>
+      </div>
+      <aside>
+        <div class="w-card">
+          <div class="w-card-meta">Microcopy de confiança</div>
+          <p style="font-size:12px;">🔒 Não vendemos seus dados</p>
+          <p style="font-size:12px;">🛡 Apenas a equipe técnica tem acesso</p>
+          <p style="font-size:12px;">⏱ Resposta em até 4h úteis</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SEÇÃO 03 · FORMULÁRIO 02 · CLIENTE ATIVO ══════════════ -->
+<section class="w-section" id="form-cliente">
+  <div class="w-container">
+    <span class="w-section-tag">03 · Formulário 02 · Cliente ativo</span>
+    <h2>O que você precisa hoje?</h2>
+    <p>Selecione o tipo de solicitação para encaminhar direto para a equipe responsável.</p>
+
+    <div class="w-grid w-grid--3" style="margin:20px 0;">
+      <div class="w-card"><div class="w-card-meta">🛠</div><h3>Abrir chamado técnico</h3><p style="font-size:12px;">Falhas, parametrização, troca de mensagem · Help Desk</p></div>
+      <div class="w-card"><div class="w-card-meta">📋</div><h3>Solicitar documentação</h3><p style="font-size:12px;">FISPQ, certificado, 2ª via NF, ficha técnica</p></div>
+      <div class="w-card"><div class="w-card-meta">📦</div><h3>Pedido de insumo / reposição</h3><p style="font-size:12px;">Tinta, solvente, make-up, peça original</p></div>
+      <div class="w-card"><div class="w-card-meta">💼</div><h3>Faturamento</h3><p style="font-size:12px;">Boleto, 2ª via, ajuste de NF, dúvida cobrança</p></div>
+      <div class="w-card"><div class="w-card-meta">🚚</div><h3>Logística / entrega</h3><p style="font-size:12px;">Acompanhamento, agendamento, troca endereço</p></div>
+      <div class="w-card"><div class="w-card-meta">👥</div><h3>Sucesso do Cliente (SDC)</h3><p style="font-size:12px;">Contrato, sugestão, ouvidoria, relacionamento</p></div>
+    </div>
+
+    <div class="w-card">
+      <div class="w-card-meta">Campos comuns (após seleção)</div>
+      <form class="w-form" style="margin-top:10px;">
+        <div class="w-grid w-grid--2">
+          <div class="w-field"><label>CNPJ da empresa *</label><div class="w-input">00.000.000/0000-00</div></div>
+          <div class="w-field"><label>Razão social</label><div class="w-input">Razão social</div></div>
+          <div class="w-field"><label>Nome do solicitante *</label><div class="w-input">Seu nome</div></div>
+          <div class="w-field"><label>E-mail *</label><div class="w-input">voce@empresa.com.br</div></div>
+          <div class="w-field"><label>WhatsApp *</label><div class="w-input">(00) 00000-0000</div></div>
+          <div class="w-field"><label>Modelo do equipamento Hitachi</label><div class="w-select">UX2-D160W · UX-D150W · ... ▾</div></div>
+        </div>
+        <div class="w-field"><label>Descreva sua solicitação *</label><div class="w-textarea">Detalhes...</div></div>
+        <a href="#" class="w-btn">Enviar solicitação →</a>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SEÇÃO 04 · FORMULÁRIO 03 · TRABALHE CONOSCO ══════════════ -->
+<section class="w-section" id="form-rh">
+  <div class="w-container">
+    <span class="w-section-tag">04 · Formulário 03 · Trabalhe conosco</span>
+    <div class="w-split">
+      <div>
+        <h2>Carreira na Suljett.</h2>
+        <p>
+          Acreditamos que o crescimento da Suljett está diretamente ligado ao desenvolvimento das
+          pessoas. Estamos sempre em busca de talentos para nossas três unidades — Porto Alegre,
+          Joinville e Marechal Deodoro — em vagas técnicas (assistência certificada Hitachi),
+          comerciais, de engenharia e administrativas.
+        </p>
+        <div class="w-btn-row">
+          <a href="https://atracaodetalentos.totvs.app/suljett" class="w-btn">Ver vagas no portal TOTVS →</a>
+        </div>
+        <p style="font-size:11px; font-style:italic; margin-top:8px;">
+          Link externo: atracaodetalentos.totvs.app/suljett
+        </p>
+      </div>
+      <div class="w-card">
+        <div class="w-card-meta">Sub-bloco · Banco de talentos</div>
+        <h3>Não tem vaga aberta no seu perfil agora?</h3>
+        <p style="font-size:13px; margin-top:6px;">
+          Cadastre seu currículo no banco de talentos pelo mesmo portal. Avaliamos perfis novos
+          toda semana.
+        </p>
+        <div class="w-annot" style="margin-top:10px;">
+          ⚠ A Suljett <strong>não recebe currículos por e-mail nem pelo formulário do site.</strong> Use apenas o portal oficial.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SEÇÃO 05 · FORMULÁRIO 04 · FORNECEDOR ══════════════ -->
+<section class="w-section" id="form-fornecedor">
+  <div class="w-container">
+    <span class="w-section-tag">05 · Formulário 04 · Fornecedor / parceria</span>
+    <h2>Quer fornecer produto ou serviço para a Suljett?</h2>
+    <p>
+      A Suljett mantém rede de fornecedores estratégicos nas três unidades. Aceitamos fornecimento,
+      prestação de serviço, parceria B2B e cooperação com canais industriais. Resposta em até 10
+      dias úteis.
+    </p>
+    <div class="w-card" style="margin-top:20px;">
+      <form class="w-form">
+        <div class="w-grid w-grid--2">
+          <div class="w-field"><label>Nome do responsável *</label><div class="w-input">Seu nome</div></div>
+          <div class="w-field"><label>Cargo *</label><div class="w-input">Cargo</div></div>
+          <div class="w-field"><label>E-mail corporativo *</label><div class="w-input">voce@empresa.com.br</div></div>
+          <div class="w-field"><label>WhatsApp / telefone *</label><div class="w-input">(00) 00000-0000</div></div>
+          <div class="w-field"><label>Empresa / Razão social *</label><div class="w-input">Razão social</div></div>
+          <div class="w-field"><label>CNPJ *</label><div class="w-input">00.000.000/0000-00</div></div>
+          <div class="w-field" style="grid-column:span 2;">
+            <label>Tipo de proposta *</label>
+            <div class="w-select">Fornecimento · Serviço · Parceria · Representação · Outro ▾</div>
+          </div>
+        </div>
+        <div class="w-field"><label>Descreva a proposta * (mínimo 100 caracteres)</label><div class="w-textarea">Detalhes da proposta...</div></div>
+        <div class="w-field">
+          <label>Anexar apresentação / portfólio (PDF até 10 MB)</label>
+          <div class="w-input" style="border-style:dashed;">[ ⬆ ARQUIVO ] Selecionar arquivo</div>
+        </div>
+        <a href="#" class="w-btn">Enviar proposta →</a>
+      </form>
+    </div>
+    <p style="font-size:11px; font-style:italic; margin-top:10px;">
+      ⏱ Resposta da equipe de Compras em até 10 dias úteis
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════ SEÇÃO 06 · UNIDADES + MAPA ══════════════ -->
+<section class="w-section">
+  <div class="w-container">
+    <span class="w-section-tag">06 · Unidades e mapa interativo</span>
+    <h2>Três unidades. Cobertura Sul + Nordeste.</h2>
+    <p>
+      Cada unidade tem equipe técnica certificada Hitachi, estoque permanente de insumos S10 e
+      laboratório de amostras. Chamado emergencial: técnico em campo em até 4h úteis.
+    </p>
+
+    <div class="w-grid w-grid--3" style="margin-top:20px;">
+      <div class="w-card">
+        <div class="w-card-meta">📍 RS · Matriz</div>
+        <h3>Porto Alegre</h3>
+        <p style="font-size:13px;">Estr. João Passuelo, 342 · Vila Nova · CEP 91740-550</p>
+        <ul style="font-size:13px; margin-top:6px; list-style:none; padding:0;">
+          <li>📞 (51) 98037-0198</li>
+          <li>✉ poa@suljett.com</li>
+          <li>🕗 Seg–Sex, 8h–18h</li>
+        </ul>
+        <div style="font-size:11px; color:var(--w-ink-3); margin-top:6px;">Cobertura: RS · SC · PR</div>
+      </div>
+      <div class="w-card">
+        <div class="w-card-meta">📍 SC</div>
+        <h3>Joinville</h3>
+        <p style="font-size:13px;">R. Dona Francisca, 4808 · Santo Antônio · CEP 89218-112</p>
+        <ul style="font-size:13px; margin-top:6px; list-style:none; padding:0;">
+          <li>📞 [telefone a confirmar]</li>
+          <li>✉ joinville@suljett.com</li>
+          <li>🕗 Seg–Sex, 8h–18h</li>
+        </ul>
+        <div style="font-size:11px; color:var(--w-ink-3); margin-top:6px;">Cobertura: corredor SC + norte PR</div>
+      </div>
+      <div class="w-card">
+        <div class="w-card-meta">📍 AL</div>
+        <h3>Marechal Deodoro</h3>
+        <p style="font-size:13px;">Rod. Dr. Ib Gatto M. Falcão, 500 · Barra Nova · CEP 57160-000</p>
+        <ul style="font-size:13px; margin-top:6px; list-style:none; padding:0;">
+          <li>📞 [telefone a confirmar]</li>
+          <li>✉ nordeste@suljett.com</li>
+          <li>🕗 Seg–Sex, 8h–18h</li>
+        </ul>
+        <div style="font-size:11px; color:var(--w-ink-3); margin-top:6px;">Cobertura: AL · PE · BA · SE · RN · PB · CE</div>
+      </div>
+    </div>
+
+    <div class="w-ph w-ph--map" style="margin-top:20px;">
+      [ MAPA INTERATIVO · 3 pinos das unidades + raio de cobertura técnica ]
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SEÇÃO 07 · CONTATOS POR DEPARTAMENTO ══════════════ -->
+<section class="w-section">
+  <div class="w-container">
+    <span class="w-section-tag">07 · Contatos por departamento</span>
+    <h2>Fala direto com o departamento.</h2>
+    <p>Se você já sabe com qual área precisa falar, segue o atalho:</p>
+    <div class="w-grid w-grid--3" style="margin-top:20px;">
+      <div class="w-card">
+        <div class="w-card-meta">🟦 Vendas</div>
+        <p style="font-size:13px;">vendas@suljett.com<br>(51) 98037-0198</p>
+        <p style="font-size:11px; color:var(--w-ink-3); margin-top:4px;">Cotação · proposta · demo técnica</p>
+      </div>
+      <div class="w-card">
+        <div class="w-card-meta">🛠 Help Desk Técnico</div>
+        <p style="font-size:13px;">helpdesk@suljett.com<br>(51) 98037-0198</p>
+        <p style="font-size:11px; color:var(--w-ink-3); margin-top:4px;">Assistência · suporte · parametrização · FISPQ</p>
+      </div>
+      <div class="w-card">
+        <div class="w-card-meta">💼 Faturamento</div>
+        <p style="font-size:13px;">financeiro@suljett.com</p>
+        <p style="font-size:11px; color:var(--w-ink-3); margin-top:4px;">Boleto · 2ª via · ajuste NF</p>
+      </div>
+      <div class="w-card">
+        <div class="w-card-meta">🚚 Logística</div>
+        <p style="font-size:13px;">logistica@suljett.com</p>
+        <p style="font-size:11px; color:var(--w-ink-3); margin-top:4px;">Entrega · agendamento · endereço</p>
+      </div>
+      <div class="w-card">
+        <div class="w-card-meta">💰 Financeiro</div>
+        <p style="font-size:13px;">financeiro@suljett.com</p>
+        <p style="font-size:11px; color:var(--w-ink-3); margin-top:4px;">Negociação · cobrança · conciliação</p>
+      </div>
+      <div class="w-card">
+        <div class="w-card-meta">👥 RH / Carreiras</div>
+        <p style="font-size:13px;">rh@suljett.com</p>
+        <p style="font-size:11px; color:var(--w-ink-3); margin-top:4px;">Vagas · recrutamento · parcerias acadêmicas</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SEÇÃO 08 · REDES SOCIAIS ══════════════ -->
+<section class="w-section">
+  <div class="w-container">
+    <span class="w-section-tag">08 · Redes sociais</span>
+    <h2>Nas redes sociais.</h2>
+    <div class="w-grid w-grid--4" style="margin-top:16px;">
+      <a href="#" class="w-card" style="text-decoration:none; color:inherit;">
+        <div class="w-card-meta">💼 LinkedIn</div>
+        <h3>@suljett-do-brasil</h3>
+        <p style="font-size:12px;">Conteúdo técnico, vagas e cases</p>
+      </a>
+      <a href="#" class="w-card" style="text-decoration:none; color:inherit;">
+        <div class="w-card-meta">📸 Instagram</div>
+        <h3>@suljettdobrasil</h3>
+        <p style="font-size:12px;">Bastidores e equipamentos em produção</p>
+      </a>
+      <a href="#" class="w-card" style="text-decoration:none; color:inherit;">
+        <div class="w-card-meta">📺 YouTube</div>
+        <h3>youtube.com/user/suljett</h3>
+        <p style="font-size:12px;">Vídeos técnicos e demonstrações</p>
+      </a>
+      <a href="#" class="w-card" style="text-decoration:none; color:inherit;">
+        <div class="w-card-meta">📘 Facebook</div>
+        <h3>@suljettdobrasil</h3>
+        <p style="font-size:12px;">Comunicados e atualizações</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SEÇÃO 09 · FAQ ══════════════ -->
+<section class="w-section">
+  <div class="w-container">
+    <span class="w-section-tag">09 · FAQ da página de contato</span>
+    <h2>O que perguntam antes de entrar em contato.</h2>
+    <div style="margin-top:16px;">
+      <div class="w-faq-item">
+        <div class="w-faq-q">Em quanto tempo a Suljett responde?</div>
+        <div class="w-faq-a">
+          Até 4h úteis para todos os tipos de contato. Para chamados técnicos de clientes com
+          contrato ativo, resposta inicial em até 1h útil.
+        </div>
+      </div>
+      <div class="w-faq-item">
+        <div class="w-faq-q">A Suljett atende minha região?</div>
+        <div class="w-faq-a">
+          Sul (RS, SC, PR) e Nordeste (AL, PE, BA, SE, RN, PB, CE) com técnico em campo. Para SP,
+          Sudeste e Centro-Oeste, encaminhamos via distribuidor Hitachi parceiro.
+        </div>
+      </div>
+      <div class="w-faq-item">
+        <div class="w-faq-q">Como envio meu currículo?</div>
+        <div class="w-faq-a">
+          Apenas pelo portal oficial de carreiras (TOTVS). Não recebemos currículos por e-mail nem
+          pelo formulário do site.
+        </div>
+      </div>
+      <div class="w-faq-item">
+        <div class="w-faq-q">Posso visitar uma unidade Suljett?</div>
+        <div class="w-faq-a">
+          Sim. Agendamos visita nas 3 unidades (PoA, Joinville, Mal. Deodoro) para indústrias
+          interessadas em conhecer o laboratório de amostras. Solicite pelo formulário de novo lead.
+        </div>
+      </div>
+      <div class="w-faq-item">
+        <div class="w-faq-q">A Suljett vende para pessoa física?</div>
+        <div class="w-faq-a">
+          Não. Comercializamos exclusivamente para indústrias (B2B) com CNPJ ativo. Tintas e
+          equipamentos Hitachi são uso industrial — sem versões residenciais.
+        </div>
+      </div>
+      <div class="w-faq-item">
+        <div class="w-faq-q">Tem horário de plantão / 24h?</div>
+        <div class="w-faq-a">
+          Sim, para clientes com contrato de assistência ativo — Help Desk 24h via WhatsApp para
+          diagnóstico remoto imediato. Visita técnica: primeira hora útil seguinte.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CTA FINAL ══════════════ -->
+<section class="w-section" id="whatsapp" style="background:var(--w-paper);">
+  <div class="w-container" style="text-align:center;">
+    <span class="w-section-tag">CTA final</span>
+    <h2>Prefere falar direto pelo WhatsApp?</h2>
+    <p style="margin:0 auto 16px;">
+      Se você não quer preencher formulário e prefere conversar agora mesmo, manda mensagem para o
+      nosso WhatsApp comercial. Atendimento em horário comercial, com a equipe Suljett — não call
+      center terceirizado.
+    </p>
+    <div class="w-btn-row" style="justify-content:center;">
+      <a href="#" class="w-btn">Abrir WhatsApp · (51) 98037-0198 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="w-footer">
+  <div class="w-container">
+    <div class="w-footer-grid">
+      <div>
+        <div class="w-logo" style="margin-bottom:8px;">SULJETT<small>do Brasil</small></div>
+        <p style="font-size:11px;">Distribuidora oficial Hitachi · Sul e Nordeste do Brasil</p>
+      </div>
+      <div>
+        <h4>Soluções</h4>
+        <ul>
+          <li><a href="produtos-cij-hitachi.html">Produtos</a></li>
+          <li><a href="industrias-bebidas.html">Indústrias</a></li>
+          <li><a href="aplicacoes-garrafas-pet.html">Aplicações</a></li>
+          <li><a href="servicos-assistencia-tecnica.html">Serviços</a></li>
+          <li><a href="ficha-tecnica-fispq.html">Ficha técnica</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="empresa.html">Sobre nós</a></li>
+          <li><a href="#">Política da Qualidade</a></li>
+          <li><a href="#">Trabalhe conosco</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="contato.html">Fale conosco</a></li>
+          <li>(51) 98037-0198</li>
+          <li>PoA · Joinville · Mal. Deodoro</li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid var(--w-line); padding-top:14px; font-size:11px;">
+      © Suljett do Brasil · todos os direitos reservados
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
