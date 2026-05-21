@@ -1710,56 +1710,67 @@ body.no-scroll { overflow: hidden; }
     </a>
 
     <nav class="nav-links" aria-label="Navegação principal">
-      <a class="nav-link" href="wireframes/empresa.html">Sobre</a>
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link" href="wireframes/empresa.html">Empresa</a>
 
-      <div class="has-dropdown" id="dropdownServicos">
+      <div class="has-dropdown" id="dropdownSolucoes">
         <button class="nav-link nav-link--dropdown" aria-haspopup="true" aria-expanded="false">
-          Serviços e Suporte
+          Soluções
           <svg class="chev" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="mega-menu" role="menu">
-          <div class="mega-col">
-            <span class="mega-label">Tecnologias de Codificação</span>
-            <a href="wireframes/produtos-cij-hitachi.html" class="mega-item">
-              <span class="mega-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 4h14v10H5z M9 18h6 M12 14v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="8" r="1" fill="currentColor"/><circle cx="12" cy="8" r="1" fill="currentColor"/><circle cx="15" cy="8" r="1" fill="currentColor"/></svg></span>
-              <span><strong>CIJ — Jato Contínuo</strong><em>Marcação em alta velocidade</em></span>
+          <!-- Coluna 1: Destaques (Ficha Técnica + Aplicações) -->
+          <div class="mega-col mega-col--featured">
+            <span class="mega-label">Em destaque</span>
+            <a href="wireframes/ficha-tecnica-fispq.html" class="mega-item mega-item--featured mega-item--accent">
+              <span class="mega-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6z M14 3v6h6 M8 14h8 M8 17h5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+              <span><strong>★ Ficha Técnica (FISPQ)</strong><em>Baixe FISPQ + part number</em></span>
             </a>
-            <a href="#tij" class="mega-item">
-              <span class="mega-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 5h12 M8 9h8 M6 13h12 M10 17h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-              <span><strong>TIJ — Jato Termal</strong><em>Embalagens flexíveis e cartonadas</em></span>
-            </a>
-            <a href="#tto" class="mega-item">
-              <span class="mega-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="4" y="6" width="16" height="12" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M7 10h10 M7 13h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-              <span><strong>TTO — Transferência Térmica</strong><em>Filmes e rótulos de alta resolução</em></span>
-            </a>
-            <a href="#laser" class="mega-item">
-              <span class="mega-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3v6 M12 21v-3 M5 12h6 M21 12h-3 M6.3 6.3l3 3 M17.7 17.7l-3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.6"/></svg></span>
-              <span><strong>Laser</strong><em>Marcação permanente sem insumo</em></span>
+            <a href="wireframes/aplicacoes-garrafas-pet.html" class="mega-item">
+              <span class="mega-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M8 3h8l-1 4 2 3v9a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-9l2-3-1-4z M8 10h8" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+              <span><strong>Aplicações</strong><em>Por substrato e embalagem</em></span>
             </a>
           </div>
+
+          <!-- Coluna 2: Produtos -->
           <div class="mega-col">
-            <span class="mega-label">Suporte</span>
-            <a href="wireframes/servicos-assistencia-tecnica.html" class="mega-item">
-              <span class="mega-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              <span><strong>Assistência técnica 24h</strong><em>Atendimento remoto e presencial</em></span>
-            </a>
-            <a href="#insumos" class="mega-item">
-              <span class="mega-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 3h6l2 4v13a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V7l2-4z M7 11h10" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
-              <span><strong>Insumos originais Hitachi</strong><em>Código S10 rastreável</em></span>
-            </a>
-            <a href="#treinamento" class="mega-item">
-              <span class="mega-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 8l9-4 9 4-9 4-9-4z M7 10v6c0 1 2 2 5 2s5-1 5-2v-6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
-              <span><strong>Treinamento técnico</strong><em>Capacitação de operadores</em></span>
-            </a>
-            <a href="wireframes/ficha-tecnica-fispq.html" class="mega-item mega-item--accent">
-              <span class="mega-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6z M14 3v6h6 M8 14h8 M8 17h5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
-              <span><strong>Ficha técnica &amp; Comparador →</strong><em>Compare especificações lado a lado</em></span>
-            </a>
+            <span class="mega-label">Produtos</span>
+            <a href="wireframes/produtos-cij-hitachi.html" class="mega-item mega-item--simple"><span><strong>CIJ Hitachi</strong></span></a>
+            <a href="#" class="mega-item mega-item--simple"><span><strong>Comparativo Hitachi</strong></span></a>
+            <a href="#tij" class="mega-item mega-item--simple"><span><strong>TIJ — Jato Termal</strong></span></a>
+            <a href="#tto" class="mega-item mega-item--simple"><span><strong>TTO — Transf. Térmica</strong></span></a>
+            <a href="#insumos" class="mega-item mega-item--simple"><span><strong>Insumos Hitachi</strong></span></a>
+            <a href="#" class="mega-item mega-item--simple"><span><strong>Detectores Fortress</strong></span></a>
+          </div>
+
+          <!-- Coluna 3: Indústrias -->
+          <div class="mega-col">
+            <span class="mega-label">Indústrias</span>
+            <a href="#" class="mega-item mega-item--simple"><span><strong>Alimentícia</strong></span></a>
+            <a href="wireframes/industrias-bebidas.html" class="mega-item mega-item--simple"><span><strong>Bebidas</strong></span></a>
+            <a href="#" class="mega-item mega-item--simple"><span><strong>Ovos / Avícolas</strong></span></a>
+            <a href="#" class="mega-item mega-item--simple"><span><strong>Laticínios</strong></span></a>
+            <a href="#" class="mega-item mega-item--simple"><span><strong>Farmacêutica</strong></span></a>
+            <a href="#" class="mega-item mega-item--simple"><span><strong>Automotiva</strong></span></a>
+            <a href="#" class="mega-item mega-item--simple"><span><strong>Cosméticos</strong></span></a>
+            <a href="#" class="mega-item mega-item--simple"><span><strong>Eletrônicos</strong></span></a>
+            <a href="#" class="mega-item mega-item--simple"><span><strong>Fios, Cabos e Dutos</strong></span></a>
+            <a href="#" class="mega-item mega-item--simple"><span><strong>Construção</strong></span></a>
+          </div>
+
+          <!-- Coluna 4: Serviços -->
+          <div class="mega-col">
+            <span class="mega-label">Serviços</span>
+            <a href="wireframes/servicos-assistencia-tecnica.html" class="mega-item mega-item--simple"><span><strong>Assistência Técnica</strong></span></a>
+            <a href="#" class="mega-item mega-item--simple"><span><strong>Manutenção</strong></span></a>
+            <a href="#" class="mega-item mega-item--simple"><span><strong>Instalação</strong></span></a>
+            <a href="#treinamento" class="mega-item mega-item--simple"><span><strong>Treinamento técnico</strong></span></a>
+            <a href="#" class="mega-item mega-item--simple"><span><strong>Contratos de serviço</strong></span></a>
+            <a href="#" class="mega-item mega-item--simple"><span><strong>Help Desk</strong></span></a>
           </div>
         </div>
       </div>
 
-      <a class="nav-link" href="wireframes/aplicacoes-garrafas-pet.html">Aplicações</a>
       <a class="nav-link" href="wireframes/contato.html">Contato</a>
     </nav>
 
@@ -1775,18 +1786,42 @@ body.no-scroll { overflow: hidden; }
 
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <div class="mobile-menu-inner">
-    <a href="wireframes/empresa.html">Sobre</a>
-    <span class="mobile-label">Tecnologias de codificação</span>
-    <a href="wireframes/produtos-cij-hitachi.html">CIJ — Jato Contínuo</a>
+    <a href="/">Home</a>
+    <a href="wireframes/empresa.html">Empresa</a>
+
+    <span class="mobile-label">Soluções</span>
+    <a href="wireframes/ficha-tecnica-fispq.html" class="mobile-featured">★ Ficha Técnica (FISPQ)</a>
+    <a href="wireframes/aplicacoes-garrafas-pet.html">Aplicações</a>
+
+    <span class="mobile-sublabel">Produtos</span>
+    <a href="wireframes/produtos-cij-hitachi.html">CIJ Hitachi</a>
+    <a href="#">Comparativo Hitachi</a>
     <a href="#tij">TIJ — Jato Termal</a>
     <a href="#tto">TTO — Transferência Térmica</a>
-    <a href="#laser">Laser</a>
-    <span class="mobile-label">Suporte</span>
-    <a href="wireframes/servicos-assistencia-tecnica.html">Assistência técnica 24h</a>
-    <a href="#insumos">Insumos originais</a>
-    <a href="#treinamento">Treinamento</a>
-    <a href="wireframes/ficha-tecnica-fispq.html">Ficha técnica &amp; Comparador</a>
-    <a href="wireframes/aplicacoes-garrafas-pet.html" style="margin-top:0.5rem">Aplicações</a>
+    <a href="#insumos">Insumos Hitachi</a>
+    <a href="#">Detectores Fortress</a>
+
+    <span class="mobile-sublabel">Indústrias</span>
+    <a href="#">Alimentícia</a>
+    <a href="wireframes/industrias-bebidas.html">Bebidas</a>
+    <a href="#">Ovos / Avícolas</a>
+    <a href="#">Laticínios</a>
+    <a href="#">Farmacêutica</a>
+    <a href="#">Automotiva</a>
+    <a href="#">Cosméticos</a>
+    <a href="#">Eletrônicos</a>
+    <a href="#">Fios, Cabos e Dutos</a>
+    <a href="#">Construção</a>
+
+    <span class="mobile-sublabel">Serviços</span>
+    <a href="wireframes/servicos-assistencia-tecnica.html">Assistência Técnica</a>
+    <a href="#">Manutenção</a>
+    <a href="#">Instalação</a>
+    <a href="#treinamento">Treinamento técnico</a>
+    <a href="#">Contratos de serviço</a>
+    <a href="#">Help Desk</a>
+
+    <a href="wireframes/contato.html">Contato</a>
     <a href="wireframes/contato.html" class="btn btn--cta" style="margin-top:1rem">Falar com Especialista →</a>
   </div>
 </div>
