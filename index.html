@@ -505,29 +505,6 @@ body.no-scroll { overflow: hidden; }
 .cij-head .badge { background: rgba(204,26,26,.08); border-color: rgba(204,26,26,.3); color: #fff; }
 .cij-head .mega-star { margin-right: 4px; }
 
-.cij-specs-grid {
-  display: grid; grid-template-columns: 1fr; gap: 1px;
-  background: var(--steel-800);
-  border: 1px solid var(--steel-800);
-  border-radius: 8px; overflow: hidden;
-  position: relative; margin-bottom: 6rem;
-}
-@media (min-width: 768px) { .cij-specs-grid { grid-template-columns: 1fr 1fr 1fr; } }
-.spec-card {
-  background: var(--steel-950); padding: 2rem 1.75rem;
-  display: flex; flex-direction: column; gap: 0.5rem; min-height: 260px;
-  transition: background-color .25s var(--ease-smooth);
-  position: relative;
-}
-.spec-card:hover { background: var(--steel-900); }
-.spec-card-num { font-size: 0.6875rem; letter-spacing: 0.18em; color: var(--steel-500); position: absolute; top: 1.25rem; right: 1.5rem; }
-.spec-card-label { font-size: 0.6875rem; letter-spacing: 0.14em; color: var(--sj-red); text-transform: uppercase; font-weight: 500; }
-.spec-card-value { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.5rem, 4vw, 3.25rem); color: #fff; line-height: 1; margin-top: 0.25rem; letter-spacing: -0.03em; display: inline-flex; align-items: baseline; gap: 0.15rem; }
-.spec-card-value em { font-family: var(--font-display); font-style: normal; font-size: 0.35em; font-weight: 500; color: var(--steel-400); letter-spacing: 0; }
-.spec-card-value.mono-val { font-family: var(--font-display); font-size: 1.125rem; font-weight: 500; }
-.spec-card-unit { font-size: 0.75rem; color: var(--steel-400); letter-spacing: 0.08em; text-transform: uppercase; }
-.spec-card-desc { margin-top: auto; color: var(--steel-300); font-size: 0.875rem; line-height: 1.55; padding-top: 1rem; border-top: 1px dashed rgba(255,255,255,.08); }
-
 .cij-models-head { max-width: 780px; margin-bottom: 2.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
 
 .cij-models { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 3rem; }
@@ -912,18 +889,6 @@ body.no-scroll { overflow: hidden; }
   .proof-logos { grid-template-columns: repeat(4, 1fr); }
 }
 
-/* ---------- CIJ spec cards ---------- */
-@media (max-width: 767px) {
-  .cij-specs-grid { margin-bottom: 3.5rem; }
-  .spec-card { min-height: auto; padding: 1.5rem 1.25rem; }
-  .spec-card-num { top: 1rem; right: 1.25rem; }
-  .spec-card-value { font-size: 2.25rem; }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .spec-card { min-height: 220px; padding: 1.75rem 1.5rem; }
-  .spec-card-value { font-size: clamp(2rem, 4vw, 2.75rem); }
-}
-
 /* ---------- How it works ---------- */
 @media (max-width: 767px) {
   .how-head { margin-bottom: 2.5rem; }
@@ -1154,23 +1119,6 @@ body.no-scroll { overflow: hidden; }
 .section--cij h1, .section--cij h2, .section--cij h3, .section--cij h4,
 .section--lead h1, .section--lead h2, .section--lead h3, .section--lead h4,
 .section--final h1, .section--final h2, .section--final h3, .section--final h4 { color: var(--fg); }
-
-/* CIJ spec cards: claros, com label azul e valor escuro */
-.cij-specs-grid {
-  background: var(--border);
-  border-color: var(--border);
-}
-.spec-card {
-  background: var(--bg);
-  border-radius: 0;
-}
-.spec-card:hover { background: var(--bg-alt); }
-.spec-card-num { color: var(--fg-mute); }
-.spec-card-label { color: var(--sj-blue); }
-.spec-card-value { color: var(--fg); }
-.spec-card-value em { color: var(--fg-mute); }
-.spec-card-unit { color: var(--fg-mute); }
-.spec-card-desc { color: var(--fg-body); border-top-color: var(--border); }
 
 /* Model cards: claros */
 .model-card { background: var(--bg-elev); border-color: var(--border); }
@@ -1520,8 +1468,6 @@ body.no-scroll { overflow: hidden; }
 /* Garantir que .eyebrow no .section--services fique branca (contrasta com azul) */
 .section--services .eyebrow { color: rgba(255,255,255,.85); }
 
-/* Spec-card-label dentro do .section--cij — manter azul */
-.section--cij .spec-card-label { color: var(--sj-blue); }
 .section--cij .model-tag { color: var(--sj-blue); }
 
 /* CIJ section sutil background tint para destacar dos demais (opcional) */
@@ -1559,37 +1505,39 @@ body.no-scroll { overflow: hidden; }
 .lead-copy .h-display { max-width: 24ch; }
 .final-inner .h-display { max-width: 22ch; }
 
-/* ─── Apps section: pinned com textos visíveis acima dos cards ─── */
+/* ─── Apps section: título acima (scroll normal), cards pinados ─── */
 @media (min-width: 900px) {
   .section--apps {
     padding-top: clamp(80px, 10vh, 130px);
     padding-bottom: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
   }
   .section--apps .apps-head {
     margin-bottom: 2rem;
   }
-  .section--apps .hscroll-wrap {
+  /* Só o wrapper dos cards é pinado — ocupa altura de viewport */
+  .apps-pin-target {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+  }
+  .apps-pin-target .hscroll-wrap {
     padding-top: 0;
     padding-bottom: 0;
     flex: 1;
     display: flex;
     align-items: center;
   }
-  .section--apps .hscroll-meta {
+  .apps-pin-target .hscroll-meta {
     padding-top: 1.25rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 0;
   }
 }
 
 /* ─── Cards levemente acinzentados para contraste com texto vermelho ─── */
 .model-card { background: #F9FAFC; border-color: #E0E5EE; }
 .model-card:hover { background: #F4F6FA; }
-.spec-card { background: #FCFDFF; }
-.spec-card:hover { background: #F4F6FA; }
 .tech-card { background: #F9FAFC; border-color: #E0E5EE; }
 .tech-card:hover { background: #FFFFFF; }
 .lead-form { background: #F9FAFC; border-color: #E0E5EE; }
@@ -1937,51 +1885,6 @@ body.no-scroll { overflow: hidden; }
       </figure>
     </div>
 
-    <div class="cij-specs-grid">
-      <div class="spec-card reveal-up">
-        <span class="spec-card-num mono">01</span>
-        <span class="spec-card-label mono">VELOCIDADE DE IMPRESSÃO</span>
-        <span class="spec-card-value">18.000</span>
-        <span class="spec-card-unit mono">caracteres / hora</span>
-        <span class="spec-card-desc">Produção contínua sem redução de velocidade da linha.</span>
-      </div>
-      <div class="spec-card reveal-up">
-        <span class="spec-card-num mono">02</span>
-        <span class="spec-card-label mono">PROTEÇÃO INDUSTRIAL</span>
-        <span class="spec-card-value">IP<span>65</span></span>
-        <span class="spec-card-unit mono">certificado</span>
-        <span class="spec-card-desc">Opera em ambientes com poeira, umidade e variação térmica.</span>
-      </div>
-      <div class="spec-card reveal-up">
-        <span class="spec-card-num mono">03</span>
-        <span class="spec-card-label mono">DURABILIDADE</span>
-        <span class="spec-card-value">15<em>anos</em></span>
-        <span class="spec-card-unit mono">vida útil média</span>
-        <span class="spec-card-desc">Comprovada em campo em instalações Hitachi no Brasil.</span>
-      </div>
-      <div class="spec-card reveal-up">
-        <span class="spec-card-num mono">04</span>
-        <span class="spec-card-label mono">INSUMOS</span>
-        <span class="spec-card-value">S<span>10</span></span>
-        <span class="spec-card-unit mono">código rastreável</span>
-        <span class="spec-card-desc">Compatível exclusivamente com insumos originais Hitachi.</span>
-      </div>
-      <div class="spec-card reveal-up">
-        <span class="spec-card-num mono">05</span>
-        <span class="spec-card-label mono">CONECTIVIDADE</span>
-        <span class="spec-card-value mono-val">USB · ETH · RS-232</span>
-        <span class="spec-card-unit mono">protocolos industriais</span>
-        <span class="spec-card-desc">Integração com sistemas de gestão e ERPs da linha.</span>
-      </div>
-      <div class="spec-card reveal-up">
-        <span class="spec-card-num mono">06</span>
-        <span class="spec-card-label mono">SUPORTE</span>
-        <span class="spec-card-value">24<em>h</em></span>
-        <span class="spec-card-unit mono">remoto + presencial</span>
-        <span class="spec-card-desc">Cobertura certificada no Sul e Nordeste do Brasil.</span>
-      </div>
-    </div>
-
     <div class="cij-models-head">
       <h3 class="h-medium reveal-up">Escolha o modelo certo para a sua linha.</h3>
       <p class="steel-300 reveal-up">Cada modelo CIJ Hitachi foi projetado para uma aplicação específica. Selecione pelo tipo de substrato, velocidade ou ambiente de operação.</p>
@@ -2049,6 +1952,94 @@ body.no-scroll { overflow: hidden; }
   </div>
 </section>
 
+<!-- ══════════════ APPLICATIONS ══════════════ -->
+<section class="section section--apps" id="aplicacoes" aria-label="Aplicações setoriais">
+  <div class="container">
+    <div class="apps-head">
+      <span class="eyebrow mono reveal-up">APLICAÇÕES SETORIAIS</span>
+      <h2 class="h-display reveal-up">Onde a Suljett opera.</h2>
+      <p class="lead reveal-up">A codificação correta varia por substrato, velocidade de linha e exigência regulatória de cada setor.</p>
+    </div>
+  </div>
+  <div class="apps-pin-target">
+    <div class="hscroll-wrap" data-hscroll>
+      <div class="apps-grid hscroll-track" data-hscroll-track>
+        <article class="app-card reveal-up" data-parallax-card>
+          <img class="app-card__img" src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=75" alt="Linha de produção alimentícia" loading="lazy" />
+          <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="app-card__body">
+            <span class="app-card__num">01 / 06</span>
+            <h4>Alimentícia</h4>
+            <p>Marcação de lote, validade e rastreabilidade em plásticos, papelão e vidro com linha contínua.</p>
+            <span class="app-card__substrate">Plástico · Papelão · Vidro</span>
+            <a href="#" class="app-card__link">Ver solução <span>→</span></a>
+          </div>
+        </article>
+        <article class="app-card reveal-up" data-parallax-card>
+          <img class="app-card__img" src="https://images.unsplash.com/photo-1550505095-81378a674395?auto=format&fit=crop&w=1200&q=75" alt="Linha de envase de bebidas" loading="lazy" />
+          <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="app-card__body">
+            <span class="app-card__num">02 / 06</span>
+            <h4>Bebidas</h4>
+            <p>Codificação de alta velocidade em garrafas PET, latas e vidros — resistente a umidade e térmica.</p>
+            <span class="app-card__substrate">PET · Lata · Vidro</span>
+            <a href="wireframes/industrias-bebidas.html" class="app-card__link">Ver solução <span>→</span></a>
+          </div>
+        </article>
+        <article class="app-card reveal-up" data-parallax-card>
+          <img class="app-card__img" src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=1200&q=75" alt="Leites e laticínios em embalagens" loading="lazy" />
+          <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="app-card__body">
+            <span class="app-card__num">03 / 06</span>
+            <h4>Laticínios</h4>
+            <p>Impressão confiável em embalagens flexíveis, caixas e tampas plásticas em ambientes refrigerados.</p>
+            <span class="app-card__substrate">Flexível · PP · PEAD</span>
+            <a href="#" class="app-card__link">Ver solução <span>→</span></a>
+          </div>
+        </article>
+        <article class="app-card reveal-up" data-parallax-card>
+          <img class="app-card__img" src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1200&q=75" alt="Produção farmacêutica" loading="lazy" />
+          <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="app-card__body">
+            <span class="app-card__num">04 / 06</span>
+            <h4>Farmacêutica</h4>
+            <p>Serialização e rastreabilidade conforme exigências da ANVISA em blisters, frascos e caixas.</p>
+            <span class="app-card__substrate">Blister · Frasco · Cartucho</span>
+            <a href="#" class="app-card__link">Ver solução <span>→</span></a>
+          </div>
+        </article>
+        <article class="app-card reveal-up" data-parallax-card>
+          <img class="app-card__img" src="https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1200&q=75" alt="Indústria automotiva" loading="lazy" />
+          <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="app-card__body">
+            <span class="app-card__num">05 / 06</span>
+            <h4>Automotiva</h4>
+            <p>Identificação permanente de peças, conjuntos e componentes em metais e plásticos técnicos.</p>
+            <span class="app-card__substrate">Metal · Polímero técnico</span>
+            <a href="#" class="app-card__link">Ver solução <span>→</span></a>
+          </div>
+        </article>
+        <article class="app-card reveal-up" data-parallax-card>
+          <img class="app-card__img" src="https://images.unsplash.com/photo-1498654200943-1088dd4438ae?auto=format&fit=crop&w=1200&q=75" alt="Ovos em bandeja" loading="lazy" />
+          <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="app-card__body">
+            <span class="app-card__num">06 / 06</span>
+            <h4>Ovos · Agropecuária</h4>
+            <p>Codificação direta sobre casca de ovo com tinta aprovada para contato alimentar — sem danos ao produto.</p>
+            <span class="app-card__substrate">Casca · Tinta food-safe</span>
+            <a href="#" class="app-card__link">Ver solução <span>→</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="hscroll-meta">
+      <span class="mono">06 SETORES · ROLE LATERALMENTE</span>
+      <span class="hscroll-meta__progress" aria-hidden="true"></span>
+      <span class="mono">CODIFICAÇÃO CIJ HITACHI</span>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════ OUTRAS TECNOLOGIAS (TIJ + TTO) ══════════════ -->
 <section class="section section--tech" id="outras-tecnologias" aria-label="Outras tecnologias de codificação">
   <div class="container">
@@ -2104,93 +2095,6 @@ body.no-scroll { overflow: hidden; }
         <a href="#tto" class="link-arrow">Ver detalhes da linha TTO <span>→</span></a>
       </article>
     </div>
-  </div>
-</section>
-
-<!-- ══════════════ APPLICATIONS ══════════════ -->
-<section class="section section--apps" id="aplicacoes" aria-label="Aplicações setoriais">
-  <div class="container">
-    <div class="apps-head">
-      <span class="eyebrow mono reveal-up">APLICAÇÕES SETORIAIS</span>
-      <h2 class="h-display reveal-up">Onde a Suljett opera.</h2>
-      <p class="lead reveal-up">A codificação correta varia por substrato, velocidade de linha e exigência regulatória de cada setor.</p>
-    </div>
-
-  </div>
-  <div class="hscroll-wrap" data-hscroll>
-    <div class="apps-grid hscroll-track" data-hscroll-track>
-      <article class="app-card reveal-up" data-parallax-card>
-        <img class="app-card__img" src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=75" alt="Linha de produção alimentícia" loading="lazy" />
-        <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <div class="app-card__body">
-          <span class="app-card__num">01 / 06</span>
-          <h4>Alimentícia</h4>
-          <p>Marcação de lote, validade e rastreabilidade em plásticos, papelão e vidro com linha contínua.</p>
-          <span class="app-card__substrate">Plástico · Papelão · Vidro</span>
-          <a href="#" class="app-card__link">Ver solução <span>→</span></a>
-        </div>
-      </article>
-      <article class="app-card reveal-up" data-parallax-card>
-        <img class="app-card__img" src="https://images.unsplash.com/photo-1550505095-81378a674395?auto=format&fit=crop&w=1200&q=75" alt="Linha de envase de bebidas" loading="lazy" />
-        <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <div class="app-card__body">
-          <span class="app-card__num">02 / 06</span>
-          <h4>Bebidas</h4>
-          <p>Codificação de alta velocidade em garrafas PET, latas e vidros — resistente a umidade e térmica.</p>
-          <span class="app-card__substrate">PET · Lata · Vidro</span>
-          <a href="wireframes/industrias-bebidas.html" class="app-card__link">Ver solução <span>→</span></a>
-        </div>
-      </article>
-      <article class="app-card reveal-up" data-parallax-card>
-        <img class="app-card__img" src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=1200&q=75" alt="Leites e laticínios em embalagens" loading="lazy" />
-        <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <div class="app-card__body">
-          <span class="app-card__num">03 / 06</span>
-          <h4>Laticínios</h4>
-          <p>Impressão confiável em embalagens flexíveis, caixas e tampas plásticas em ambientes refrigerados.</p>
-          <span class="app-card__substrate">Flexível · PP · PEAD</span>
-          <a href="#" class="app-card__link">Ver solução <span>→</span></a>
-        </div>
-      </article>
-      <article class="app-card reveal-up" data-parallax-card>
-        <img class="app-card__img" src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1200&q=75" alt="Produção farmacêutica" loading="lazy" />
-        <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <div class="app-card__body">
-          <span class="app-card__num">04 / 06</span>
-          <h4>Farmacêutica</h4>
-          <p>Serialização e rastreabilidade conforme exigências da ANVISA em blisters, frascos e caixas.</p>
-          <span class="app-card__substrate">Blister · Frasco · Cartucho</span>
-          <a href="#" class="app-card__link">Ver solução <span>→</span></a>
-        </div>
-      </article>
-      <article class="app-card reveal-up" data-parallax-card>
-        <img class="app-card__img" src="https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1200&q=75" alt="Indústria automotiva" loading="lazy" />
-        <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <div class="app-card__body">
-          <span class="app-card__num">05 / 06</span>
-          <h4>Automotiva</h4>
-          <p>Identificação permanente de peças, conjuntos e componentes em metais e plásticos técnicos.</p>
-          <span class="app-card__substrate">Metal · Polímero técnico</span>
-          <a href="#" class="app-card__link">Ver solução <span>→</span></a>
-        </div>
-      </article>
-      <article class="app-card reveal-up" data-parallax-card>
-        <img class="app-card__img" src="https://images.unsplash.com/photo-1498654200943-1088dd4438ae?auto=format&fit=crop&w=1200&q=75" alt="Ovos em bandeja" loading="lazy" />
-        <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <div class="app-card__body">
-          <span class="app-card__num">06 / 06</span>
-          <h4>Ovos · Agropecuária</h4>
-          <p>Codificação direta sobre casca de ovo com tinta aprovada para contato alimentar — sem danos ao produto.</p>
-          <span class="app-card__substrate">Casca · Tinta food-safe</span>
-          <a href="#" class="app-card__link">Ver solução <span>→</span></a>
-        </div>
-      </article>
-    </div>
-  </div>
-  <div class="hscroll-meta">
-    <span class="mono">06 SETORES · ROLE LATERALMENTE</span>
-    <span class="hscroll-meta__progress" aria-hidden="true"></span>
-    <span class="mono">CODIFICAÇÃO CIJ HITACHI</span>
   </div>
 </section>
 
@@ -2563,21 +2467,24 @@ body.no-scroll { overflow: hidden; }
       });
     }
 
-    /* ── HORIZONTAL SCROLL: Applications (pinned section) ──── */
-    const appsSection = document.querySelector('.section--apps');
+    /* ── HORIZONTAL SCROLL: Applications (pinned cards-only) ──
+       O título de "Aplicações" fica fora do pin e rola normal;
+       só o bloco .apps-pin-target (cards + meta) é pinado, evitando
+       que o conteúdo extrapole o viewport em telas mais baixas. */
+    const pinTarget = document.querySelector('.apps-pin-target');
     const hScroll = document.querySelector('[data-hscroll]');
     const hTrack = hScroll?.querySelector('[data-hscroll-track]');
     const hMeta = document.querySelector('.hscroll-meta');
-    if (appsSection && hScroll && hTrack && isDesktop && !prefersReduced) {
+    if (pinTarget && hScroll && hTrack && isDesktop && !prefersReduced) {
       const getDist = () => Math.max(0, hTrack.scrollWidth - window.innerWidth + 120);
       gsap.to(hTrack, {
         x: () => -getDist(),
         ease: 'none',
         scrollTrigger: {
-          trigger: appsSection,
+          trigger: pinTarget,
           start: 'top top',
           end: () => '+=' + (getDist() * 0.9),
-          pin: appsSection,
+          pin: pinTarget,
           pinSpacing: true,
           scrub: 0.8,
           invalidateOnRefresh: true,
