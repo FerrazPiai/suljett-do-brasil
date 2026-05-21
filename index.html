@@ -1461,13 +1461,14 @@ body.no-scroll { overflow: hidden; }
   font-weight: 600;
 }
 
-/* ─── MEGA-MENU: mais largo + 2 col + ícones ─── */
+/* ─── MEGA-MENU: 4 colunas (Soluções) ─── */
 .mega-menu {
-  width: 720px;
-  grid-template-columns: 1fr 1fr;
-  padding: 1.75rem;
-  gap: 2rem;
+  width: 1040px;
+  grid-template-columns: 1.15fr 1fr 1fr 1fr;
+  padding: 1.5rem;
+  gap: 1.5rem;
 }
+.mega-col--featured { gap: 0.5rem; }
 .mega-ico {
   flex-shrink: 0;
   display: inline-flex; align-items: center; justify-content: center;
@@ -1480,8 +1481,32 @@ body.no-scroll { overflow: hidden; }
   background: var(--sj-blue-tint-2);
 }
 .mega-item > span:last-child { display: flex; flex-direction: column; }
+
+/* Variante compacta — listas longas de Produtos/Indústrias/Serviços */
+.mega-item--simple { padding: 0.45rem 0.625rem; gap: 0.5rem; }
+.mega-item--simple strong { font-size: 0.875rem; font-weight: 500; letter-spacing: -0.003em; }
+
+@media (max-width: 1279px) {
+  .mega-menu { width: 760px; grid-template-columns: 1fr 1fr; }
+}
 @media (max-width: 767px) {
   .mega-menu { width: calc(100vw - 32px); grid-template-columns: 1fr; padding: 1rem; }
+}
+
+/* ─── Mobile menu — sub-rótulos do grupo Soluções ─── */
+.mobile-sublabel {
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--steel-500);
+  padding: 1rem 0 0.25rem;
+  font-weight: 600;
+  border-bottom: none !important;
+}
+.mobile-menu .mobile-featured {
+  color: var(--sj-red) !important;
+  font-weight: 700;
 }
 
 /* ─── Btn ghost (links de seções) hover → azul (não vermelho) ─── */
@@ -1685,7 +1710,7 @@ body.no-scroll { overflow: hidden; }
     </a>
 
     <nav class="nav-links" aria-label="Navegação principal">
-      <a class="nav-link" href="#sobre">Sobre</a>
+      <a class="nav-link" href="wireframes/empresa.html">Sobre</a>
 
       <div class="has-dropdown" id="dropdownServicos">
         <button class="nav-link nav-link--dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1695,7 +1720,7 @@ body.no-scroll { overflow: hidden; }
         <div class="mega-menu" role="menu">
           <div class="mega-col">
             <span class="mega-label">Tecnologias de Codificação</span>
-            <a href="#cij" class="mega-item">
+            <a href="wireframes/produtos-cij-hitachi.html" class="mega-item">
               <span class="mega-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 4h14v10H5z M9 18h6 M12 14v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="8" r="1" fill="currentColor"/><circle cx="12" cy="8" r="1" fill="currentColor"/><circle cx="15" cy="8" r="1" fill="currentColor"/></svg></span>
               <span><strong>CIJ — Jato Contínuo</strong><em>Marcação em alta velocidade</em></span>
             </a>
@@ -1714,7 +1739,7 @@ body.no-scroll { overflow: hidden; }
           </div>
           <div class="mega-col">
             <span class="mega-label">Suporte</span>
-            <a href="#servicos" class="mega-item">
+            <a href="wireframes/servicos-assistencia-tecnica.html" class="mega-item">
               <span class="mega-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
               <span><strong>Assistência técnica 24h</strong><em>Atendimento remoto e presencial</em></span>
             </a>
@@ -1726,7 +1751,7 @@ body.no-scroll { overflow: hidden; }
               <span class="mega-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 8l9-4 9 4-9 4-9-4z M7 10v6c0 1 2 2 5 2s5-1 5-2v-6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
               <span><strong>Treinamento técnico</strong><em>Capacitação de operadores</em></span>
             </a>
-            <a href="#ficha-tecnica" class="mega-item mega-item--accent">
+            <a href="wireframes/ficha-tecnica-fispq.html" class="mega-item mega-item--accent">
               <span class="mega-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6z M14 3v6h6 M8 14h8 M8 17h5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
               <span><strong>Ficha técnica &amp; Comparador →</strong><em>Compare especificações lado a lado</em></span>
             </a>
@@ -1734,12 +1759,12 @@ body.no-scroll { overflow: hidden; }
         </div>
       </div>
 
-      <a class="nav-link" href="#aplicacoes">Aplicações</a>
-      <a class="nav-link" href="#contato">Contato</a>
+      <a class="nav-link" href="wireframes/aplicacoes-garrafas-pet.html">Aplicações</a>
+      <a class="nav-link" href="wireframes/contato.html">Contato</a>
     </nav>
 
     <div class="nav-actions">
-      <a href="#contato" class="btn btn--cta">
+      <a href="wireframes/contato.html" class="btn btn--cta">
         Falar com Especialista
         <svg class="btn-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
@@ -1750,19 +1775,19 @@ body.no-scroll { overflow: hidden; }
 
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <div class="mobile-menu-inner">
-    <a href="#sobre">Sobre</a>
+    <a href="wireframes/empresa.html">Sobre</a>
     <span class="mobile-label">Tecnologias de codificação</span>
-    <a href="#cij">CIJ — Jato Contínuo</a>
+    <a href="wireframes/produtos-cij-hitachi.html">CIJ — Jato Contínuo</a>
     <a href="#tij">TIJ — Jato Termal</a>
     <a href="#tto">TTO — Transferência Térmica</a>
     <a href="#laser">Laser</a>
     <span class="mobile-label">Suporte</span>
-    <a href="#servicos">Assistência técnica 24h</a>
+    <a href="wireframes/servicos-assistencia-tecnica.html">Assistência técnica 24h</a>
     <a href="#insumos">Insumos originais</a>
     <a href="#treinamento">Treinamento</a>
-    <a href="#ficha-tecnica">Ficha técnica &amp; Comparador</a>
-    <a href="#aplicacoes" style="margin-top:0.5rem">Aplicações</a>
-    <a href="#contato" class="btn btn--cta" style="margin-top:1rem">Falar com Especialista →</a>
+    <a href="wireframes/ficha-tecnica-fispq.html">Ficha técnica &amp; Comparador</a>
+    <a href="wireframes/aplicacoes-garrafas-pet.html" style="margin-top:0.5rem">Aplicações</a>
+    <a href="wireframes/contato.html" class="btn btn--cta" style="margin-top:1rem">Falar com Especialista →</a>
   </div>
 </div>
 
@@ -1799,11 +1824,11 @@ body.no-scroll { overflow: hidden; }
       </ul>
 
       <div class="hero-ctas reveal" data-reveal-delay="600">
-        <a href="#contato" class="btn btn--cta btn--lg">
+        <a href="wireframes/contato.html" class="btn btn--cta btn--lg">
           Solicitar Orçamento
           <svg class="btn-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="#cij" class="btn btn--ghost">
+        <a href="wireframes/produtos-cij-hitachi.html" class="btn btn--ghost">
           Ver linha CIJ
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -2011,7 +2036,7 @@ body.no-scroll { overflow: hidden; }
           <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Insumos originais S10 rastreáveis</li>
           <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Vida útil média de 15 anos</li>
         </ul>
-        <a href="#cij" class="link-arrow">Ver detalhes da linha CIJ <span>→</span></a>
+        <a href="wireframes/produtos-cij-hitachi.html" class="link-arrow">Ver detalhes da linha CIJ <span>→</span></a>
       </article>
 
       <article class="tech-card reveal-up" id="tij">
@@ -2078,7 +2103,7 @@ body.no-scroll { overflow: hidden; }
           <h4>Bebidas</h4>
           <p>Codificação de alta velocidade em garrafas PET, latas e vidros — resistente a umidade e térmica.</p>
           <span class="app-card__substrate">PET · Lata · Vidro</span>
-          <a href="#" class="app-card__link">Ver solução <span>→</span></a>
+          <a href="wireframes/industrias-bebidas.html" class="app-card__link">Ver solução <span>→</span></a>
         </div>
       </article>
       <article class="app-card reveal-up" data-parallax-card>
