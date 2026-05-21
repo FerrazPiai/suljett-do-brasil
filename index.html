@@ -596,6 +596,7 @@ body.no-scroll { overflow: hidden; }
 .app-card h4 { font-size: clamp(1.375rem, 2vw, 1.6rem); font-weight: 700; letter-spacing: -0.015em; color: #fff; }
 .app-card p { color: rgba(255,255,255,.82); font-size: 0.9rem; line-height: 1.5; max-width: 32ch; }
 .app-card__substrate { font-size: 0.6875rem; letter-spacing: 0.14em; text-transform: uppercase; color: #ff6b6b; margin-top: .25rem; font-weight: 500; }
+.app-card__model { font-size: 0.7rem; letter-spacing: 0.04em; color: rgba(255,255,255,.78); margin-top: .15rem; font-weight: 500; }
 .app-card__link { margin-top: 0.75rem; font-size: 0.85rem; font-weight: 600; color: #fff; display: inline-flex; gap: 0.5rem; align-items: center; align-self: flex-start; padding: .55rem 0; border-bottom: 1px solid rgba(255,255,255,.3); transition: border-color .25s, gap .25s; }
 .app-card:hover .app-card__link { border-color: var(--sj-red); gap: 0.8rem; }
 .app-card__mark { position: absolute; top: 1rem; right: 1rem; z-index: 2; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); display: inline-flex; align-items: center; justify-content: center; backdrop-filter: blur(6px); transition: background-color .3s, border-color .3s; }
@@ -1473,6 +1474,11 @@ body.no-scroll { overflow: hidden; }
 /* CIJ section sutil background tint para destacar dos demais (opcional) */
 .section--cij { background: var(--bg); }
 
+/* As duas sections CIJ (intro + modelos) compartilham fundo —
+   colapsa o espaço vertical entre elas */
+#cij { padding-bottom: 1.5rem; }
+.section--cij-models { padding-top: 1.5rem; }
+
 /* Botão outline em fundo claro (CIJ section): azul */
 .section--cij .btn--outline-light {
   color: var(--sj-blue);
@@ -1508,26 +1514,22 @@ body.no-scroll { overflow: hidden; }
 /* ─── Apps section: título acima (scroll normal), cards pinados ─── */
 @media (min-width: 900px) {
   .section--apps {
-    padding-top: clamp(80px, 10vh, 130px);
+    padding-top: clamp(60px, 7vh, 90px);
     padding-bottom: 0;
   }
   .section--apps .apps-head {
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
   }
-  /* Só o wrapper dos cards é pinado — ocupa altura de viewport */
+  /* Pin com altura natural — só envolve cards + régua, sem espaço vazio */
   .apps-pin-target {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-bottom: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1.25rem;
   }
   .apps-pin-target .hscroll-wrap {
     padding-top: 0;
     padding-bottom: 0;
-    flex: 1;
-    display: flex;
-    align-items: center;
   }
   .apps-pin-target .hscroll-meta {
     padding-top: 1.25rem;
@@ -1788,31 +1790,31 @@ body.no-scroll { overflow: hidden; }
       <div class="hero-badge reveal" data-reveal-delay="0">
         <span class="badge badge--brand">
           <span class="dot"></span>
-          Distribuidor Oficial Hitachi — 15+ anos no Brasil
+          Distribuidor oficial Hitachi · 17 anos no Brasil
         </span>
       </div>
 
       <h1 class="hero-title" data-split>
         <span class="line">Codificação industrial</span>
-        <span class="line">com <span class="accent">tecnologia Hitachi.</span></span>
+        <span class="line">com <span class="accent">tecnologia Hitachi original.</span></span>
       </h1>
 
       <p class="hero-sub reveal" data-reveal-delay="400">
-        Codificamos linhas de produção contínua com a tecnologia CIJ líder mundial — impressão nítida, ininterrupta e à prova das condições mais severas de fábrica.
+        Codificamos linhas de produção contínua com a tecnologia CIJ líder mundial — impressão nítida, ininterrupta e à prova das condições mais severas de fábrica. Equipamento Hitachi original, insumos S10 rastreáveis e assistência técnica certificada no Sul e Nordeste do Brasil.
       </p>
 
       <ul class="hero-bullets reveal" data-reveal-delay="500">
-        <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Insumos originais com código S10 rastreável</li>
-        <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Assistência técnica em até 4h</li>
+        <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Insumos originais Hitachi com código S10 rastreável</li>
+        <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Assistência técnica em até 4h úteis no Sul e Nordeste</li>
       </ul>
 
       <div class="hero-ctas reveal" data-reveal-delay="600">
         <a href="/wireframes/contato.html" class="btn btn--cta btn--lg">
-          Solicitar Orçamento
+          Solicitar análise técnica
           <svg class="btn-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <a href="/wireframes/produtos-cij-hitachi.html" class="btn btn--ghost">
-          Ver linha CIJ
+          Ver linha CIJ Hitachi
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -1822,19 +1824,19 @@ body.no-scroll { overflow: hidden; }
           <span class="hero-trust-ico" aria-hidden="true">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2 3 6v6c0 5 3.8 9.2 9 10 5.2-.8 9-5 9-10V6l-9-4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
-          Distribuidor oficial Hitachi
+          Distribuidor oficial Hitachi · Japão
         </li>
         <li>
           <span class="hero-trust-ico" aria-hidden="true">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 21V7l9-4 9 4v14 M3 21h18 M9 21v-6h6v6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
           </span>
-          2.400+ equipamentos instalados
+          +1.700 indústrias atendidas
         </li>
         <li>
           <span class="hero-trust-ico" aria-hidden="true">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
-          Suporte técnico 24h
+          Suporte técnico 24h · remoto e presencial
         </li>
       </ul>
     </div>
@@ -1848,42 +1850,24 @@ body.no-scroll { overflow: hidden; }
   <div class="container">
     <div class="proof-grid">
       <div class="proof-item reveal-up">
-        <span class="proof-num" data-counter="2400" data-prefix="+">0</span>
-        <span class="proof-label">Equipamentos instalados<br/>no Sul e Nordeste</span>
+        <span class="proof-num" data-counter="1700" data-prefix="+">0</span>
+        <span class="proof-label">Indústrias atendidas<br/>no Sul e Nordeste</span>
       </div>
       <div class="proof-item reveal-up">
         <span class="proof-num"><span data-counter="17">0</span><em>+ anos</em></span>
-        <span class="proof-label">no mercado industrial<br/>brasileiro desde 2007</span>
+        <span class="proof-label">de mercado industrial<br/>brasileiro desde 2008</span>
       </div>
       <div class="proof-item reveal-up">
-        <span class="proof-num"><span data-counter="24">0</span><em>h</em></span>
-        <span class="proof-label">Suporte técnico<br/>remoto + presencial</span>
+        <span class="proof-num" data-counter="9200" data-prefix="+">0</span>
+        <span class="proof-label">Manutenções realizadas<br/>em equipamentos Hitachi</span>
       </div>
       <div class="proof-item reveal-up">
-        <span class="proof-num"><span data-counter="100">0</span><em>%</em></span>
-        <span class="proof-label">Insumos originais<br/>Hitachi rastreáveis</span>
+        <span class="proof-num"><span data-counter="2">0</span><em>mi+</em></span>
+        <span class="proof-label">de insumos originais<br/>Hitachi entregues</span>
       </div>
     </div>
 
 
-  </div>
-</section>
-
-<!-- ══════════════ CIJ SHOWCASE ══════════════ -->
-<section class="section section--dark section--cij" id="cij" aria-label="CIJ Showcase">
-  <div class="container">
-    <div class="cij-head">
-      <div class="cij-head-copy">
-        <span class="eyebrow mono reveal-up">Linha CIJ — produto principal</span>
-        <h2 class="h-display reveal-up">A impressora que a<br/><span class="accent">indústria escolhe.</span></h2>
-        <p class="lead reveal-up">
-          A tecnologia CIJ (Jato de Tinta Contínuo) é o padrão global para marcação de alta velocidade em linhas de produção contínua. A Suljett é a distribuidora oficial Hitachi no Sul e Nordeste do Brasil.
-        </p>
-      </div>
-      <figure class="cij-head-figure reveal-up" aria-label="Impressora CIJ Hitachi UX-D160W">
-        <img src="assets/cij-machine-1.png" alt="Impressora CIJ Hitachi UX-D160W" loading="lazy" />
-      </figure>
-    </div>
   </div>
 </section>
 
@@ -1893,7 +1877,7 @@ body.no-scroll { overflow: hidden; }
     <div class="apps-head">
       <span class="eyebrow mono reveal-up">APLICAÇÕES SETORIAIS</span>
       <h2 class="h-display reveal-up">Onde a Suljett opera.</h2>
-      <p class="lead reveal-up">A codificação correta varia por substrato, velocidade de linha e exigência regulatória de cada setor.</p>
+      <p class="lead reveal-up">A codificação correta varia por substrato, velocidade de linha e exigência regulatória. Veja como atendemos cada setor — com modelo Hitachi recomendado, embalagem-alvo e a regra de conformidade que se aplica.</p>
     </div>
   </div>
   <div class="apps-pin-target">
@@ -1905,8 +1889,9 @@ body.no-scroll { overflow: hidden; }
           <div class="app-card__body">
             <span class="app-card__num">01 / 06</span>
             <h4>Alimentícia</h4>
-            <p>Marcação de lote, validade e rastreabilidade em plásticos, papelão e vidro com linha contínua.</p>
-            <span class="app-card__substrate">Plástico · Papelão · Vidro</span>
+            <p>Marcação de lote, validade e rastreabilidade em embalagens primárias e secundárias, conforme RDC ANVISA 727/2022.</p>
+            <span class="app-card__substrate">Plástico · Papelão · Vidro · Lata</span>
+            <span class="app-card__model mono">Modelo sugerido: Hitachi UX2-D160W</span>
             <a href="#" class="app-card__link">Ver solução <span>→</span></a>
           </div>
         </article>
@@ -1916,8 +1901,9 @@ body.no-scroll { overflow: hidden; }
           <div class="app-card__body">
             <span class="app-card__num">02 / 06</span>
             <h4>Bebidas</h4>
-            <p>Codificação de alta velocidade em garrafas PET, latas e vidros — resistente a umidade e térmica.</p>
+            <p>Codificação em alta velocidade em PET, lata e vidro — resistente a umidade, condensação e ciclos térmicos da linha de envase.</p>
             <span class="app-card__substrate">PET · Lata · Vidro</span>
+            <span class="app-card__model mono">Modelo sugerido: Hitachi UX2-D160W + TTO SJ-T8500</span>
             <a href="/wireframes/industrias-bebidas.html" class="app-card__link">Ver solução <span>→</span></a>
           </div>
         </article>
@@ -1927,8 +1913,9 @@ body.no-scroll { overflow: hidden; }
           <div class="app-card__body">
             <span class="app-card__num">03 / 06</span>
             <h4>Laticínios</h4>
-            <p>Impressão confiável em embalagens flexíveis, caixas e tampas plásticas em ambientes refrigerados.</p>
-            <span class="app-card__substrate">Flexível · PP · PEAD</span>
+            <p>Impressão confiável em embalagens flexíveis, caixas TetraPak e tampas plásticas — em ambientes refrigerados e com alta variação de umidade.</p>
+            <span class="app-card__substrate">Flexível · TetraPak · PP · PEAD</span>
+            <span class="app-card__model mono">Modelo sugerido: Hitachi UX-D150W</span>
             <a href="#" class="app-card__link">Ver solução <span>→</span></a>
           </div>
         </article>
@@ -1938,8 +1925,9 @@ body.no-scroll { overflow: hidden; }
           <div class="app-card__body">
             <span class="app-card__num">04 / 06</span>
             <h4>Farmacêutica</h4>
-            <p>Serialização e rastreabilidade conforme exigências da ANVISA em blisters, frascos e caixas.</p>
-            <span class="app-card__substrate">Blister · Frasco · Cartucho</span>
+            <p>Serialização, Datamatrix e rastreabilidade conforme ANVISA em blisters, frascos, bisnagas e caixas. Tinta certificada para contato indireto.</p>
+            <span class="app-card__substrate">Blister · Frasco · Cartucho · Bisnaga</span>
+            <span class="app-card__model mono">Modelo sugerido: Hitachi UX2-D160W</span>
             <a href="#" class="app-card__link">Ver solução <span>→</span></a>
           </div>
         </article>
@@ -1949,8 +1937,9 @@ body.no-scroll { overflow: hidden; }
           <div class="app-card__body">
             <span class="app-card__num">05 / 06</span>
             <h4>Automotiva</h4>
-            <p>Identificação permanente de peças, conjuntos e componentes em metais e plásticos técnicos.</p>
-            <span class="app-card__substrate">Metal · Polímero técnico</span>
+            <p>Identificação permanente de peças, conjuntos e componentes em metais, borrachas e plásticos técnicos — com forte contraste e leitura por câmera.</p>
+            <span class="app-card__substrate">Metal · Borracha · Polímero técnico</span>
+            <span class="app-card__model mono">Modelo sugerido: Hitachi UX-P160WP</span>
             <a href="#" class="app-card__link">Ver solução <span>→</span></a>
           </div>
         </article>
@@ -1959,9 +1948,10 @@ body.no-scroll { overflow: hidden; }
           <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <div class="app-card__body">
             <span class="app-card__num">06 / 06</span>
-            <h4>Ovos · Agropecuária</h4>
-            <p>Codificação direta sobre casca de ovo com tinta aprovada para contato alimentar — sem danos ao produto.</p>
+            <h4>Ovos · Avícolas</h4>
+            <p>Codificação direta sobre casca, conforme exigências MAPA, com tinta aprovada para contato alimentar — sem danificar o produto.</p>
             <span class="app-card__substrate">Casca · Tinta food-safe</span>
+            <span class="app-card__model mono">Modelo sugerido: Hitachi UX-D110W + UX-B160WG</span>
             <a href="#" class="app-card__link">Ver solução <span>→</span></a>
           </div>
         </article>
@@ -1975,25 +1965,43 @@ body.no-scroll { overflow: hidden; }
   </div>
 </section>
 
+<!-- ══════════════ CIJ SHOWCASE ══════════════ -->
+<section class="section section--dark section--cij" id="cij" aria-label="CIJ Showcase">
+  <div class="container">
+    <div class="cij-head">
+      <div class="cij-head-copy">
+        <span class="eyebrow mono reveal-up">LINHA CIJ HITACHI · 95% DAS NOSSAS VENDAS</span>
+        <h2 class="h-display reveal-up">A impressora que a<br/><span class="accent">indústria escolhe.</span></h2>
+        <p class="lead reveal-up">
+          CIJ (Continuous Inkjet) é o padrão global para marcação de alta velocidade em linhas de produção contínua. A Suljett é distribuidora oficial da Hitachi Industrial Equipment Systems no Sul e Nordeste do Brasil — equipamento Hitachi de fábrica, insumos originais com código S10 rastreável e técnicos certificados pela própria Hitachi.
+        </p>
+      </div>
+      <figure class="cij-head-figure reveal-up" aria-label="Impressora CIJ Hitachi UX-D160W">
+        <img src="assets/cij-machine-1.png" alt="Impressora CIJ Hitachi UX-D160W" loading="lazy" />
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════ CIJ MODELOS ══════════════ -->
 <section class="section section--dark section--cij section--cij-models" aria-label="Modelos CIJ Hitachi">
   <div class="container">
     <div class="cij-models-head">
       <h3 class="h-medium reveal-up">Escolha o modelo certo para a sua linha.</h3>
-      <p class="steel-300 reveal-up">Cada modelo CIJ Hitachi foi projetado para uma aplicação específica. Selecione pelo tipo de substrato, velocidade ou ambiente de operação.</p>
+      <p class="steel-300 reveal-up">Cada equipamento CIJ Hitachi foi projetado para uma aplicação específica. Selecione pelo substrato (PET, vidro, lata, papelão, ovo, cabo), pela velocidade de linha ou pelo ambiente de operação — e fale com um especialista antes de comprar.</p>
     </div>
 
     <div class="cij-models">
       <article class="model-card reveal-up">
         <div class="model-media">
-          <img class="model-img" src="assets/cij-machine-1.png" alt="Hitachi UX-D160W" loading="lazy" />
+          <img class="model-img" src="assets/cij-machine-1.png" alt="Hitachi UX2-D160W" loading="lazy" />
           <span class="model-tag mono">MODELO TOPO</span>
         </div>
         <div class="model-body">
-          <h4>Hitachi UX-D160W</h4>
-          <p class="steel-300">Ideal para linhas de alta velocidade em alimentos, bebidas e farmacêutica.</p>
+          <h4>Hitachi UX2-D160W</h4>
+          <p class="steel-300">Topo da linha Hitachi para alimentos, bebidas e farmacêutica em alta velocidade. Tela 10,1" colorida, IoT integrada e troca de mensagem sem parar a linha.</p>
           <ul class="model-specs mono">
-            <li><span>VELOCIDADE</span><span>18.000 c/h</span></li>
+            <li><span>VELOCIDADE</span><span>até 3.173 c/s</span></li>
             <li><span>RESOLUÇÃO</span><span>5×5 – 34×24</span></li>
             <li><span>CABEÇOTE</span><span>3 m</span></li>
           </ul>
@@ -2008,9 +2016,9 @@ body.no-scroll { overflow: hidden; }
         </div>
         <div class="model-body">
           <h4>Hitachi UX-D150W</h4>
-          <p class="steel-300">Solução balanceada para laticínios e embalagens flexíveis.</p>
+          <p class="steel-300">A escolha balanceada para laticínios, ovos e embalagens flexíveis. Ótima relação investimento × performance, com manutenção simples.</p>
           <ul class="model-specs mono">
-            <li><span>VELOCIDADE</span><span>14.800 c/h</span></li>
+            <li><span>VELOCIDADE</span><span>até 2.083 c/s</span></li>
             <li><span>RESOLUÇÃO</span><span>5×5 – 34×24</span></li>
             <li><span>CABEÇOTE</span><span>3 m</span></li>
           </ul>
@@ -2020,14 +2028,14 @@ body.no-scroll { overflow: hidden; }
 
       <article class="model-card reveal-up">
         <div class="model-media">
-          <img class="model-img" src="assets/cij-machine-3.png" alt="Hitachi PX-D" loading="lazy" />
+          <img class="model-img" src="assets/cij-machine-3.png" alt="Hitachi UX-P160WP" loading="lazy" />
           <span class="model-tag mono">CONDIÇÕES EXTREMAS</span>
         </div>
         <div class="model-body">
-          <h4>Hitachi PX-D</h4>
-          <p class="steel-300">Projetado para cabos, fios e aplicações com exigência de alta tinta.</p>
+          <h4>Hitachi UX-P160WP</h4>
+          <p class="steel-300">Tinta pigmentada para substratos escuros, fios, cabos, dutos e peças metálicas. Onde os outros falham em contraste, a P160WP entrega impressão legível.</p>
           <ul class="model-specs mono">
-            <li><span>VELOCIDADE</span><span>12.600 c/h</span></li>
+            <li><span>VELOCIDADE</span><span>até 1.148 c/s</span></li>
             <li><span>RESOLUÇÃO</span><span>5×5 – 16×16</span></li>
             <li><span>CABEÇOTE</span><span>2 m</span></li>
           </ul>
@@ -2049,9 +2057,9 @@ body.no-scroll { overflow: hidden; }
 <section class="section section--tech" id="outras-tecnologias" aria-label="Outras tecnologias de codificação">
   <div class="container">
     <div class="tech-head">
-      <span class="eyebrow mono reveal-up">Linhas de codificação</span>
+      <span class="eyebrow mono reveal-up">LINHAS DE CODIFICAÇÃO</span>
       <h2 class="h-display reveal-up">A tecnologia certa<br/><span class="accent">para cada linha.</span></h2>
-      <p class="lead reveal-up">Cada substrato, cada velocidade e cada exigência regulatória pedem uma tecnologia específica. Conheça as três linhas que cobrem o portfólio completo.</p>
+      <p class="lead reveal-up">Cada substrato, cada velocidade e cada exigência regulatória pedem uma tecnologia diferente. A Suljett distribui as três famílias que cobrem o portfólio completo da codificação industrial brasileira — todas Hitachi originais.</p>
     </div>
 
     <div class="tech-grid">
@@ -2061,11 +2069,11 @@ body.no-scroll { overflow: hidden; }
         </figure>
         <span class="tech-card-tag mono">CIJ · Jato Contínuo</span>
         <h3>Marcação em alta velocidade</h3>
-        <p>O padrão global para linhas de produção contínua — codifica data, lote e barcode em substratos diversos sem contato.</p>
+        <p>O padrão global para linhas de produção contínua — imprime data, lote, validade e código de barras em substratos diversos, sem contato com o produto.</p>
         <ul class="tech-card-bullets">
-          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Até 18.000 caracteres/hora</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Até 3.173 caracteres por segundo</li>
           <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Insumos originais S10 rastreáveis</li>
-          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Vida útil média de 15 anos</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Vida útil média de 15 anos comprovada em campo</li>
         </ul>
         <a href="/wireframes/produtos-cij-hitachi.html" class="link-arrow">Ver detalhes da linha CIJ <span>→</span></a>
       </article>
@@ -2076,11 +2084,11 @@ body.no-scroll { overflow: hidden; }
         </figure>
         <span class="tech-card-tag mono">TIJ · Jato Termal</span>
         <h3>Impressão termal em alta resolução</h3>
-        <p>Ideal para embalagens cartonadas, flexíveis e secundárias quando a prioridade é nitidez gráfica, código de barras e QR Code.</p>
+        <p>Ideal para embalagens cartonadas, secundárias e qualquer marcação onde a prioridade é nitidez gráfica, código de barras 2D e QR Code.</p>
         <ul class="tech-card-bullets">
           <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Resolução até 600 DPI</li>
-          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Sem manutenção de circuito de tinta</li>
-          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Cartuchos plug-and-play</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Cartuchos plug-and-play sem sistema de tinta</li>
+          <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Tinta base água (eco-friendly) e baixa manutenção</li>
         </ul>
         <a href="#tij" class="link-arrow">Ver detalhes da linha TIJ <span>→</span></a>
       </article>
@@ -2115,25 +2123,25 @@ body.no-scroll { overflow: hidden; }
       <article class="serv-card reveal-up">
         <span class="serv-num mono">01</span>
         <h4>Assistência técnica 24h</h4>
-        <p>Atendimento remoto imediato e presencial programado para manutenção corretiva e preventiva em qualquer modelo Hitachi.</p>
+        <p>Atendimento remoto imediato e presencial programado para manutenção corretiva e preventiva em qualquer modelo Hitachi — com peças originais em estoque permanente nas três unidades.</p>
         <span class="serv-meta mono">REMOTO · PRESENCIAL</span>
       </article>
       <article class="serv-card reveal-up">
         <span class="serv-num mono">02</span>
         <h4>Laboratório de amostras</h4>
-        <p>Testamos a marcação no seu substrato real antes da compra. Você vê o resultado na sua embalagem, não em foto de catálogo.</p>
+        <p>Testamos a marcação no seu substrato real antes da compra. Você recebe a peça impressa, não foto de catálogo — e enxerga o resultado na sua embalagem.</p>
         <span class="serv-meta mono">TESTE IN-LOCO</span>
       </article>
       <article class="serv-card reveal-up">
         <span class="serv-num mono">03</span>
         <h4>Treinamento técnico</h4>
-        <p>Capacitação da equipe de manutenção e operação para reduzir paradas causadas por uso incorreto do equipamento.</p>
+        <p>Capacitação da sua equipe de operação e manutenção para reduzir paradas causadas por uso incorreto, configuração errada de mensagem ou troca de insumo fora do procedimento.</p>
         <span class="serv-meta mono">TURMA · IN-COMPANY</span>
       </article>
       <article class="serv-card reveal-up">
         <span class="serv-num mono">04</span>
-        <h4>Entrega ágil de insumos</h4>
-        <p>Estoque permanente de tintas, solventes e peças originais Hitachi para reposição sem atrasar a sua linha de produção.</p>
+        <h4>Entrega ágil de insumos originais</h4>
+        <p>Estoque permanente de tintas, solventes, make-up e peças Hitachi originais, com código S10 rastreável, para reposição sem atrasar a sua linha de produção.</p>
         <span class="serv-meta mono">S10 · RASTREÁVEL</span>
       </article>
     </div>
@@ -2148,21 +2156,21 @@ body.no-scroll { overflow: hidden; }
 <section class="section section--dark section--lead" aria-label="Lead magnet">
   <div class="container lead-wrap">
     <div class="lead-copy">
-      <span class="eyebrow mono reveal-up">FICHA TÉCNICA · CIJ HITACHI 2025</span>
+      <span class="eyebrow mono reveal-up">FICHA TÉCNICA · CIJ HITACHI 2026</span>
       <h2 class="h-display reveal-up">Precisa especificar uma codificadora<br/>para a sua linha?</h2>
-      <p class="steel-300 reveal-up">Baixe a <strong>Ficha Técnica Comparativa da Linha CIJ Hitachi 2025</strong>. Tabela completa com velocidade, resolução, consumo de tinta e compatibilidade por substrato — os dados que você precisa para fazer a escolha certa.</p>
+      <p class="steel-300 reveal-up">Baixe a <strong>Ficha Técnica Comparativa da Linha CIJ Hitachi 2026</strong>. Tabela completa com velocidade, resolução, consumo de tinta, IP, dimensões e compatibilidade por substrato — os dados que você precisa para fazer a escolha certa antes de cotar.</p>
 
       <ul class="lead-badges mono reveal-up">
-        <li><span class="ck">✓</span> Garantia Hitachi de 5 anos</li>
-        <li><span class="ck">✓</span> Impressora antiga como parte do pagamento</li>
-        <li><span class="ck">✓</span> Dados de 7 modelos em uma única tabela</li>
+        <li><span class="ck">✓</span> Garantia Hitachi original de até 5 anos</li>
+        <li><span class="ck">✓</span> Equipamento antigo aceito como parte do pagamento</li>
+        <li><span class="ck">✓</span> Dados de 7 modelos Hitachi em uma única tabela</li>
       </ul>
     </div>
 
     <form class="lead-form reveal-up" id="leadForm" novalidate>
       <div class="lead-form-head">
-        <span>Ficha Técnica CIJ Hitachi 2025</span>
-        <span class="rdot-wrap"><span class="rdot"></span> 2.4 MB · 12 páginas</span>
+        <span>Ficha Técnica CIJ Hitachi 2026</span>
+        <span class="rdot-wrap"><span class="rdot"></span> 2,4 MB · 12 páginas</span>
       </div>
 
       <div class="field">
@@ -2173,13 +2181,13 @@ body.no-scroll { overflow: hidden; }
         <label for="f-model">Modelo da codificadora</label>
         <select id="f-model" name="model" required>
           <option value="">Escolha o modelo para baixar a ficha…</option>
-          <option value="ux-d160w">Hitachi UX-D160W — Topo de linha</option>
-          <option value="ux2-d160w">Hitachi UX2-D160W — Flagship</option>
+          <option value="ux2-d160w">Hitachi UX2-D160W — Topo de linha</option>
+          <option value="ux-d110w">Hitachi UX-D110W — Compacta</option>
+          <option value="ux-d140w">Hitachi UX-D140W — Linha intermediária</option>
           <option value="ux-d150w">Hitachi UX-D150W — Linha padrão</option>
-          <option value="ux-d161w">Hitachi UX-D161W — Tinta food-safe</option>
-          <option value="px-d">Hitachi PX-D — Condições extremas</option>
-          <option value="lx-a2">Hitachi LX-A2 — Aplicações dedicadas</option>
-          <option value="all">Comparativo de toda a linha</option>
+          <option value="ux-p160wp">Hitachi UX-P160WP — Tinta pigmentada (substrato escuro)</option>
+          <option value="ux-b160w">Hitachi UX-B160W / B160WG — Food-safe</option>
+          <option value="all">Comparativo de toda a linha CIJ Hitachi</option>
         </select>
       </div>
 
@@ -2190,11 +2198,11 @@ body.no-scroll { overflow: hidden; }
 
       <p class="lead-micro mono">
         <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="vertical-align:-1px"><rect x="3" y="7" width="10" height="7" rx="1" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.3"/></svg>
-        Enviamos apenas conteúdo técnico relevante. Sem spam, sem contato de vendas sem solicitação.
+        Enviamos apenas conteúdo técnico relevante. Sem spam, sem contato comercial sem solicitação. Você pode descadastrar a qualquer momento.
       </p>
 
       <div class="lead-success" aria-live="polite">
-        <strong>Download iniciado.</strong> Se não abriu automaticamente, verifique seu e-mail corporativo em alguns instantes.
+        <strong>Download iniciado.</strong> Se o arquivo não abrir automaticamente, verifique seu e-mail corporativo em alguns instantes — enviamos uma cópia da ficha técnica para você.
       </div>
     </form>
   </div>
@@ -2207,17 +2215,17 @@ body.no-scroll { overflow: hidden; }
     <div class="final-inner">
       <span class="eyebrow mono reveal-up">ANÁLISE TÉCNICA GRATUITA</span>
       <h2 class="h-display reveal-up">Pronto para falar sobre<br/><span class="accent">a sua linha de produção?</span></h2>
-      <p class="lead steel-300 reveal-up">Nossa equipe técnica analisa a sua aplicação e indica a solução correta — sem pressão comercial, sem proposta genérica.</p>
+      <p class="lead steel-300 reveal-up">Nossa equipe técnica analisa a sua aplicação — substrato, velocidade, regulação do setor — e indica a solução correta. Sem pressão comercial, sem proposta genérica de catálogo: você recebe a recomendação que a Suljett daria para a própria fábrica.</p>
       <div class="final-ctas reveal-up">
-        <a href="#" class="btn btn--cta btn--lg">
+        <a href="/wireframes/contato.html" class="btn btn--cta btn--lg">
           Solicitar análise técnica gratuita
           <svg class="btn-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="#" class="btn btn--ghost btn--lg">
-          Ou ligue: (51) 3333-1212
+        <a href="tel:+5551980370198" class="btn btn--ghost btn--lg">
+          Ou ligue: (51) 98037-0198
         </a>
       </div>
-      <p class="final-micro mono reveal-up">Respondemos em até 4 horas úteis · Atendemos Sul e Nordeste do Brasil</p>
+      <p class="final-micro mono reveal-up">Respondemos em até 4 horas úteis · Atendemos Sul e Nordeste do Brasil · Equipe certificada pela Hitachi Industrial</p>
     </div>
   </div>
 </section>
@@ -2230,7 +2238,7 @@ body.no-scroll { overflow: hidden; }
         <span class="footer-logo-tile">
           <img src="assets/logo-suljett.png?v=2" alt="Suljett do Brasil" class="footer-logo-img" />
         </span>
-        <p class="footer-tag">Codificação industrial desde 2007.<br/>Distribuidor oficial Hitachi no Sul e Nordeste do Brasil.</p>
+        <p class="footer-tag">Codificação industrial desde 2008.<br/>Distribuidor oficial Hitachi no Sul e Nordeste do Brasil.</p>
         <div class="footer-social">
           <a href="#" aria-label="WhatsApp" class="footer-soc"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5s0-.4-.1-.5-.7-1.6-.9-2.2c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4Z"/><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.9-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg></a>
           <a href="#" aria-label="LinkedIn" class="footer-soc"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h4v1.7c.6-1 1.9-2 3.9-2 4.2 0 5 2.8 5 6.4V21h-4v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9V9Z"/></svg></a>
@@ -2240,33 +2248,36 @@ body.no-scroll { overflow: hidden; }
       <div class="footer-cols">
         <div class="footer-col">
           <span class="footer-label mono">Produtos</span>
-          <a href="#">CIJ Hitachi</a>
-          <a href="#">TIJ</a>
-          <a href="#">TTO</a>
-          <a href="#">Laser</a>
-          <a href="#">Grandes Caracteres</a>
+          <a href="/wireframes/produtos-cij-hitachi.html">CIJ Hitachi</a>
+          <a href="#">TIJ — Jato Termal</a>
+          <a href="#">TTO — Transferência Térmica</a>
+          <a href="#">Detectores Fortress</a>
+          <a href="#">Insumos originais Hitachi</a>
+          <a href="#">Comparativo de modelos</a>
         </div>
         <div class="footer-col">
           <span class="footer-label mono">Serviços</span>
-          <a href="#">Assistência Técnica</a>
-          <a href="#">Lab de Amostras</a>
-          <a href="#">Treinamento</a>
-          <a href="#">Insumos Originais</a>
-          <a href="#">Comparador</a>
+          <a href="/wireframes/servicos-assistencia-tecnica.html">Assistência técnica 24h</a>
+          <a href="#">Manutenção preventiva e corretiva</a>
+          <a href="#">Instalação e configuração</a>
+          <a href="#">Treinamento técnico</a>
+          <a href="#">Contratos de serviço</a>
+          <a href="#">Help Desk</a>
         </div>
         <div class="footer-col">
           <span class="footer-label mono">Empresa</span>
-          <a href="#">Sobre a Suljett</a>
-          <a href="#">Blog Técnico</a>
+          <a href="/wireframes/empresa.html">Sobre a Suljett</a>
+          <a href="#">Política da Qualidade · ISO 9001</a>
+          <a href="#">Blog técnico</a>
           <a href="#">Trabalhe Conosco</a>
           <a href="#">Política de Privacidade</a>
           <a href="#">LGPD</a>
         </div>
         <div class="footer-col">
           <span class="footer-label mono">Contato</span>
-          <a href="tel:+55" class="footer-phone">(51) 3333-1212</a>
-          <a href="mailto:contato@suljett.com.br">contato@suljett.com.br</a>
-          <span class="footer-addr">Porto Alegre · RS<br/>Recife · PE</span>
+          <a href="tel:+5551980370198" class="footer-phone">(51) 98037-0198</a>
+          <a href="mailto:contato@suljett.com">contato@suljett.com</a>
+          <span class="footer-addr">Porto Alegre · RS<br/>Joinville · SC<br/>Marechal Deodoro · AL</span>
         </div>
       </div>
     </div>
@@ -2275,11 +2286,12 @@ body.no-scroll { overflow: hidden; }
       <span class="seal mono"><span class="seal-dot"></span> Distribuidor Oficial Hitachi</span>
       <span class="seal mono"><span class="seal-dot"></span> ISO 9001</span>
       <span class="seal mono"><span class="seal-dot"></span> LGPD em conformidade</span>
+      <span class="seal mono"><span class="seal-dot"></span> Distribuidor Fortress</span>
     </div>
 
     <div class="footer-bottom">
       <span class="mono">© 2026 Suljett do Brasil · Todos os direitos reservados</span>
-      <span class="mono">Sul e Nordeste do Brasil · CNPJ 00.000.000/0001-00</span>
+      <span class="mono">Sul e Nordeste do Brasil · CNPJ 13.197.778/0002-65</span>
     </div>
   </div>
 </footer>
