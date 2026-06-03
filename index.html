@@ -1588,7 +1588,7 @@ body.no-scroll { overflow: hidden; }
   .apps-pin-target {
     display: flex;
     flex-direction: column;
-    padding-top: 0.25rem;
+    padding-top: 0;
     padding-bottom: 0;
   }
   .apps-pin-target .hscroll-wrap {
@@ -2584,7 +2584,7 @@ body.no-scroll { overflow: hidden; }
         ease: 'none',
         scrollTrigger: {
           trigger: pinTarget,
-          start: 'top top',
+          start: 'top top+=16',
           end: () => '+=' + (getDist() * 0.9),
           pin: pinTarget,
           pinSpacing: true,
