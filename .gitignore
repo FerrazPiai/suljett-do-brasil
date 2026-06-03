@@ -1,4 +1,6 @@
 .DS_Store
 *.log
+*.zip
+.playwright-mcp/
 CLAUDE.md
 sitemap.md
