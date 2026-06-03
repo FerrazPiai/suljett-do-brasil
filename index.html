@@ -632,16 +632,6 @@ body.no-scroll { overflow: hidden; }
 .hscroll-meta { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 2rem clamp(1.25rem, 4vw, 3rem) 0; color: var(--fg-muted); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; }
 .hscroll-meta__progress { flex: 1; height: 1px; background: var(--border); position: relative; max-width: 520px; }
 .hscroll-meta__progress::after { content: ""; position: absolute; left: 0; top: -1px; height: 3px; width: var(--hsp, 6%); background: var(--sj-red); transition: width .15s linear; }
-@media (min-width: 900px) {
-  /* slide pinado inclui o título → espaçamentos verticais apertados
-     p/ título + cards caberem na viewport (padding-top fica no bloco
-     dedicado mais abaixo) */
-  /* leve reducao da largura (=> altura, aspect 4/5) p/ caber gap maior
-     + rodape dos cards + barra de progresso na viewport */
-  .hscroll-track .app-card { flex-basis: 392px; }
-  .hscroll-wrap { padding-top: 0.5rem; padding-bottom: 1.5rem; }
-  .hscroll-meta { padding-top: 1.25rem; }
-}
 @media (max-width: 899px) {
   .hscroll-wrap { overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 2rem; }
   .hscroll-track { transform: none !important; }
@@ -1588,7 +1578,7 @@ body.no-scroll { overflow: hidden; }
 /* ─── Apps section: título acima (scroll normal), cards pinados ─── */
 @media (min-width: 900px) {
   .section--apps {
-    padding-top: 8px;
+    padding-top: 80px;
     padding-bottom: 0;
   }
   .section--apps .apps-head {
@@ -1606,7 +1596,7 @@ body.no-scroll { overflow: hidden; }
     padding-bottom: 0;
   }
   .apps-pin-target .hscroll-meta {
-    padding-top: 0.6rem;
+    padding-top: 2.25rem;
     padding-bottom: 0;
   }
 }
@@ -2579,24 +2569,24 @@ body.no-scroll { overflow: hidden; }
       });
     }
 
-    /* ── HORIZONTAL SCROLL: Applications (seção inteira pinada) ──
-       A seção toda — título "Onde a Suljett opera" + cards + barra —
-       é pinada com uma pequena margem do topo enquanto os cards
+    /* ── HORIZONTAL SCROLL: Applications (pin só nos cards) ──
+       O título "Onde a Suljett opera" rola normal; só o bloco
+       .apps-pin-target (cards + barra) é pinado enquanto os cards
        deslizam lateralmente. */
-    const appsSection = document.querySelector('.section--apps');
+    const pinTarget = document.querySelector('.apps-pin-target');
     const hScroll = document.querySelector('[data-hscroll]');
     const hTrack = hScroll?.querySelector('[data-hscroll-track]');
     const hMeta = document.querySelector('.hscroll-meta');
-    if (appsSection && hScroll && hTrack && isDesktop && !prefersReduced) {
+    if (pinTarget && hScroll && hTrack && isDesktop && !prefersReduced) {
       const getDist = () => Math.max(0, hTrack.scrollWidth - window.innerWidth + 120);
       gsap.to(hTrack, {
         x: () => -getDist(),
         ease: 'none',
         scrollTrigger: {
-          trigger: appsSection,
+          trigger: pinTarget,
           start: 'top top',
           end: () => '+=' + (getDist() * 0.9),
-          pin: appsSection,
+          pin: pinTarget,
           pinSpacing: true,
           scrub: 0.8,
           invalidateOnRefresh: true,
