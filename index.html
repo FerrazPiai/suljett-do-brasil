@@ -612,7 +612,7 @@ body.no-scroll { overflow: hidden; }
 [data-theme="dark"] .section--apps { background: var(--bg); }
 .apps-head { max-width: 760px; margin-bottom: 3rem; display: flex; flex-direction: column; gap: 1rem; }
 /* gap visual eyebrow→título em 16px (compensa o leading do H2) */
-.apps-head .eyebrow { margin-bottom: -4px; }
+.apps-head .eyebrow { margin-bottom: -18px; line-height: 1; }
 .apps-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
 @media (min-width: 640px) { .apps-grid { grid-template-columns: 1fr 1fr; } }
 
@@ -637,13 +637,15 @@ body.no-scroll { overflow: hidden; }
   .hscroll-meta { display: none; }
 }
 .app-card { position: relative; overflow: hidden; border-radius: 10px; aspect-ratio: 4 / 5; display: flex; flex-direction: column; justify-content: flex-end; color: #fff; isolation: isolate; cursor: pointer; }
-.app-card__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; transform: scale(1.05); transition: transform .8s var(--ease-mechanical), filter .5s; filter: grayscale(.25) contrast(1.05) brightness(.88); will-change: transform; }
-.app-card:hover .app-card__img { transform: scale(1.12); filter: grayscale(0) contrast(1.05) brightness(.95); }
+/* folga vertical (top/height) p/ o parallax nunca revelar borda no topo/baixo;
+   o GSAP controla 100% do transform (translate) — sem scale no CSS p/ não conflitar */
+.app-card__img { position: absolute; left: 0; top: -16%; width: 100%; height: 132%; object-fit: cover; z-index: 0; transition: filter .5s; filter: grayscale(.25) contrast(1.05) brightness(.88); will-change: transform; }
+.app-card:hover .app-card__img { filter: grayscale(0) contrast(1.05) brightness(.95); }
 .app-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,8,15,0) 30%, rgba(5,8,15,.55) 65%, rgba(5,8,15,.94) 100%); z-index: 1; pointer-events: none; }
 .app-card__body { position: relative; z-index: 2; padding: 1.75rem 1.75rem 1.5rem; display: flex; flex-direction: column; gap: .55rem; }
-.app-card__num { font-size: 0.6875rem; letter-spacing: 0.2em; color: rgba(255,255,255,.62); text-transform: uppercase; }
+.app-card__num { display: none; }
 .app-card h4 { font-size: clamp(1.375rem, 2vw, 1.6rem); font-weight: 700; letter-spacing: -0.015em; color: #fff; }
-.app-card p { color: rgba(255,255,255,.82); font-size: 0.9rem; line-height: 1.5; max-width: 32ch; }
+.app-card p { color: rgba(255,255,255,.82); font-size: 0.9rem; line-height: 1.5; max-width: 32ch; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .app-card__substrate { font-size: 0.6875rem; letter-spacing: 0.14em; text-transform: uppercase; color: #ff6b6b; margin-top: .25rem; font-weight: 500; }
 .app-card__model { font-size: 0.7rem; letter-spacing: 0.04em; color: rgba(255,255,255,.78); margin-top: .15rem; font-weight: 500; }
 .app-card__link { margin-top: 0.75rem; font-size: 0.85rem; font-weight: 600; color: #fff; display: inline-flex; gap: 0.5rem; align-items: center; align-self: flex-start; padding: .55rem 0; border-bottom: 1px solid rgba(255,255,255,.3); transition: border-color .25s, gap .25s; }
@@ -1942,7 +1944,7 @@ body.no-scroll { overflow: hidden; }
           <div class="app-card__body">
             <span class="app-card__num">01 / 06</span>
             <h4>Alimentícia</h4>
-            <p>Marcação de lote, validade e rastreabilidade em embalagens primárias e secundárias, conforme RDC ANVISA 727/2022.</p>
+            <p>Marcação de lote, validade e rastreabilidade conforme a RDC ANVISA 727/2022.</p>
             <span class="app-card__substrate">Plástico · Papelão · Vidro · Lata</span>
             <span class="app-card__model mono">Modelo sugerido: Hitachi UX2-D160W</span>
             <a href="#" class="app-card__link">Ver solução <span>→</span></a>
@@ -1954,7 +1956,7 @@ body.no-scroll { overflow: hidden; }
           <div class="app-card__body">
             <span class="app-card__num">02 / 06</span>
             <h4>Bebidas</h4>
-            <p>Codificação em alta velocidade em PET, lata e vidro — resistente a umidade, condensação e ciclos térmicos da linha de envase.</p>
+            <p>Alta velocidade em PET, lata e vidro — resistente à condensação da linha fria.</p>
             <span class="app-card__substrate">PET · Lata · Vidro</span>
             <span class="app-card__model mono">Modelo sugerido: Hitachi UX2-D160W + TTO SJ-T8500</span>
             <a href="industrias-bebidas.html" class="app-card__link">Ver solução <span>→</span></a>
@@ -1966,7 +1968,7 @@ body.no-scroll { overflow: hidden; }
           <div class="app-card__body">
             <span class="app-card__num">03 / 06</span>
             <h4>Laticínios</h4>
-            <p>Impressão confiável em embalagens flexíveis, caixas TetraPak e tampas plásticas — em ambientes refrigerados e com alta variação de umidade.</p>
+            <p>Impressão confiável em flexíveis, TetraPak e tampas — sob refrigeração e umidade.</p>
             <span class="app-card__substrate">Flexível · TetraPak · PP · PEAD</span>
             <span class="app-card__model mono">Modelo sugerido: Hitachi UX-D150W</span>
             <a href="#" class="app-card__link">Ver solução <span>→</span></a>
@@ -1978,7 +1980,7 @@ body.no-scroll { overflow: hidden; }
           <div class="app-card__body">
             <span class="app-card__num">04 / 06</span>
             <h4>Farmacêutica</h4>
-            <p>Serialização, Datamatrix e rastreabilidade conforme ANVISA em blisters, frascos, bisnagas e caixas. Tinta certificada para contato indireto.</p>
+            <p>Serialização e Datamatrix conforme ANVISA, com tinta certificada para contato indireto.</p>
             <span class="app-card__substrate">Blister · Frasco · Cartucho · Bisnaga</span>
             <span class="app-card__model mono">Modelo sugerido: Hitachi UX2-D160W</span>
             <a href="#" class="app-card__link">Ver solução <span>→</span></a>
@@ -1990,7 +1992,7 @@ body.no-scroll { overflow: hidden; }
           <div class="app-card__body">
             <span class="app-card__num">05 / 06</span>
             <h4>Automotiva</h4>
-            <p>Identificação permanente de peças, conjuntos e componentes em metais, borrachas e plásticos técnicos — com forte contraste e leitura por câmera.</p>
+            <p>Marcação permanente em metais, borrachas e plásticos técnicos, legível por câmera.</p>
             <span class="app-card__substrate">Metal · Borracha · Polímero técnico</span>
             <span class="app-card__model mono">Modelo sugerido: Hitachi UX-P160WP</span>
             <a href="#" class="app-card__link">Ver solução <span>→</span></a>
@@ -2002,7 +2004,7 @@ body.no-scroll { overflow: hidden; }
           <div class="app-card__body">
             <span class="app-card__num">06 / 06</span>
             <h4>Ovos · Avícolas</h4>
-            <p>Codificação direta sobre casca, conforme exigências MAPA, com tinta aprovada para contato alimentar — sem danificar o produto.</p>
+            <p>Codificação direta na casca, conforme o MAPA, com tinta food-safe.</p>
             <span class="app-card__substrate">Casca · Tinta food-safe</span>
             <span class="app-card__model mono">Modelo sugerido: Hitachi UX-D110W + UX-B160WG</span>
             <a href="#" class="app-card__link">Ver solução <span>→</span></a>
