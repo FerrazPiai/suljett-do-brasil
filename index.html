@@ -540,38 +540,49 @@ body.no-scroll { overflow: hidden; }
 .link-arrow:hover { border-color: var(--sj-red); gap: 0.75rem; color: var(--sj-red); }
 .cij-footer { display: flex; justify-content: center; }
 
-/* ─── CIJ Modelos: carrossel (esquerda) + texto vinculado (direita) ─── */
+/* ─── CIJ Modelos: carrossel (esquerda, 30%) + texto vinculado (direita, 70%) ─── */
 .model-showcase { display: grid; grid-template-columns: 1fr; gap: 2.5rem; margin-bottom: 3rem; align-items: center; }
 @media (min-width: 900px) {
-  .model-showcase { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2.5rem, 5vw, 4.5rem); }
+  .model-showcase { grid-template-columns: minmax(0, 3fr) minmax(0, 7fr); gap: clamp(2.5rem, 5vw, 4.5rem); }
 }
-/* esquerda — palco do carrossel */
+/* esquerda — palco do carrossel (imagem com setas nas laterais) */
+.ms-stage { max-width: 420px; }
 .ms-frame { position: relative; }
-.ms-slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: opacity .45s var(--ease-reveal), transform .45s var(--ease-reveal); margin: 0; }
-.ms-slide.is-active { position: relative; opacity: 1; visibility: visible; transform: none; }
+.ms-slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .45s var(--ease-reveal); margin: 0; }
+.ms-slide.is-active { position: relative; opacity: 1; visibility: visible; }
 .ms-slide .model-media { aspect-ratio: 4 / 3; border-radius: 12px; border: 1px solid var(--border); }
-.ms-specs { width: 100%; border-collapse: collapse; margin-top: 1.25rem; }
+/* setas flanqueando o card, centradas na imagem */
+.ms-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 4;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--border); background: var(--bg-elev); color: var(--fg);
+  display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+  box-shadow: 0 6px 20px rgba(10,15,26,.12);
+  transition: border-color .2s, background-color .2s, color .2s, box-shadow .2s;
+}
+.ms-arrow--prev { left: 0; transform: translate(-50%, -50%); }
+.ms-arrow--next { right: 0; transform: translate(50%, -50%); }
+.ms-arrow:hover { border-color: var(--sj-blue); color: var(--sj-blue); box-shadow: 0 8px 24px rgba(15,76,129,.22); }
+/* deck de specs (crossfade) abaixo da imagem */
+.ms-specs-deck { position: relative; margin-top: 1.5rem; }
+.ms-specs { width: 100%; border-collapse: collapse; }
+.ms-specs:not(.is-active) { position: absolute; inset: 0; opacity: 0; visibility: hidden; }
+.ms-specs.is-active { position: relative; opacity: 1; visibility: visible; transition: opacity .45s var(--ease-reveal); }
 .ms-specs th, .ms-specs td { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 0.78rem; }
 .ms-specs th { text-align: left; color: var(--fg-mute); font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; }
 .ms-specs td { text-align: right; color: var(--fg); font-weight: 600; }
-.ms-controls { display: flex; align-items: center; gap: 1.1rem; margin-top: 1.75rem; }
-.ms-arrow {
-  width: 46px; height: 46px; flex: 0 0 auto; border-radius: 50%;
-  border: 1px solid var(--border); background: var(--bg-elev); color: var(--fg);
-  display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
-  transition: border-color .2s, background-color .2s, color .2s, transform .2s;
-}
-.ms-arrow:hover { border-color: var(--sj-blue); color: var(--sj-blue); transform: translateY(-2px); }
-.ms-arrow:active { transform: translateY(0); }
-.ms-counter { font-size: 0.8rem; letter-spacing: 0.2em; color: var(--fg-mute); }
+.ms-counter { display: block; text-align: center; margin-top: 1.5rem; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--fg-mute); }
 .ms-counter b { color: var(--fg); font-weight: 700; }
-/* direita — texto do modelo */
+/* direita — texto do modelo (coluna maior) */
 .ms-info { position: relative; }
-.ms-panel { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .45s var(--ease-reveal); display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
+.ms-panel { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .45s var(--ease-reveal); display: flex; flex-direction: column; align-items: flex-start; gap: 1.1rem; }
 .ms-panel.is-active { position: relative; opacity: 1; visibility: visible; }
-.ms-tag { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sj-blue); font-weight: 600; }
-.ms-panel h4 { color: var(--fg); font-size: clamp(1.6rem, 3vw, 2.25rem); font-weight: 800; letter-spacing: -0.02em; }
-.ms-panel p { color: var(--fg-body); font-size: 1.0625rem; line-height: 1.6; max-width: 46ch; }
+.ms-tag { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sj-blue); font-weight: 600; }
+.ms-panel h4 { color: var(--fg); font-size: clamp(1.8rem, 3.4vw, 2.75rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; }
+.ms-panel p { color: var(--fg-body); font-size: clamp(1.0625rem, 1.4vw, 1.25rem); line-height: 1.6; max-width: 54ch; }
+@media (max-width: 899px) {
+  .ms-stage { max-width: 360px; margin-inline: auto; }
+}
 
 /* ─── How It Works ────────────────────────────────────────── */
 .section--how { background: var(--bg); }
@@ -2056,50 +2067,50 @@ body.no-scroll { overflow: hidden; }
               <img class="model-img" src="assets/cij-machine-1.png" alt="Hitachi UX2-D160W" loading="lazy" />
               <span class="model-tag mono">MODELO TOPO</span>
             </div>
-            <table class="ms-specs mono">
-              <tbody>
-                <tr><th>Velocidade</th><td>até 3.173 c/s</td></tr>
-                <tr><th>Resolução</th><td>5×5 – 34×24</td></tr>
-                <tr><th>Cabeçote</th><td>3 m</td></tr>
-              </tbody>
-            </table>
           </figure>
           <figure class="ms-slide">
             <div class="model-media">
               <img class="model-img" src="assets/cij-machine-2.png" alt="Hitachi UX-D150W" loading="lazy" />
               <span class="model-tag mono">LINHA PADRÃO</span>
             </div>
-            <table class="ms-specs mono">
-              <tbody>
-                <tr><th>Velocidade</th><td>até 2.083 c/s</td></tr>
-                <tr><th>Resolução</th><td>5×5 – 34×24</td></tr>
-                <tr><th>Cabeçote</th><td>3 m</td></tr>
-              </tbody>
-            </table>
           </figure>
           <figure class="ms-slide">
             <div class="model-media">
               <img class="model-img" src="assets/cij-machine-3.png" alt="Hitachi UX-P160WP" loading="lazy" />
               <span class="model-tag mono">CONDIÇÕES EXTREMAS</span>
             </div>
-            <table class="ms-specs mono">
-              <tbody>
-                <tr><th>Velocidade</th><td>até 1.148 c/s</td></tr>
-                <tr><th>Resolução</th><td>5×5 – 16×16</td></tr>
-                <tr><th>Cabeçote</th><td>2 m</td></tr>
-              </tbody>
-            </table>
           </figure>
-        </div>
-        <div class="ms-controls">
-          <button type="button" class="ms-arrow" data-prev aria-label="Modelo anterior">
+          <button type="button" class="ms-arrow ms-arrow--prev" data-prev aria-label="Modelo anterior">
             <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <span class="ms-counter mono"><b>01</b> / 03</span>
-          <button type="button" class="ms-arrow" data-next aria-label="Próximo modelo">
+          <button type="button" class="ms-arrow ms-arrow--next" data-next aria-label="Próximo modelo">
             <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
         </div>
+        <div class="ms-specs-deck">
+          <table class="ms-specs mono is-active">
+            <tbody>
+              <tr><th>Velocidade</th><td>até 3.173 c/s</td></tr>
+              <tr><th>Resolução</th><td>5×5 – 34×24</td></tr>
+              <tr><th>Cabeçote</th><td>3 m</td></tr>
+            </tbody>
+          </table>
+          <table class="ms-specs mono">
+            <tbody>
+              <tr><th>Velocidade</th><td>até 2.083 c/s</td></tr>
+              <tr><th>Resolução</th><td>5×5 – 34×24</td></tr>
+              <tr><th>Cabeçote</th><td>3 m</td></tr>
+            </tbody>
+          </table>
+          <table class="ms-specs mono">
+            <tbody>
+              <tr><th>Velocidade</th><td>até 1.148 c/s</td></tr>
+              <tr><th>Resolução</th><td>5×5 – 16×16</td></tr>
+              <tr><th>Cabeçote</th><td>2 m</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <span class="ms-counter mono"><b>01</b> / 03</span>
       </div>
 
       <!-- DIREITA: texto vinculado ao modelo selecionado -->
@@ -2613,14 +2624,15 @@ body.no-scroll { overflow: hidden; }
     /* ── CIJ Modelos: carrossel (setas trocam slide + painel) ── */
     document.querySelectorAll('[data-model-carousel]').forEach((root) => {
       const slides = [...root.querySelectorAll('.ms-slide')];
+      const specs = [...root.querySelectorAll('.ms-specs')];
       const panels = [...root.querySelectorAll('.ms-panel')];
       const counter = root.querySelector('.ms-counter b');
       const total = slides.length;
       let idx = 0;
       const go = (n) => {
         idx = (n + total) % total;
-        slides.forEach((s, i) => s.classList.toggle('is-active', i === idx));
-        panels.forEach((p, i) => p.classList.toggle('is-active', i === idx));
+        [slides, specs, panels].forEach((group) =>
+          group.forEach((el, i) => el.classList.toggle('is-active', i === idx)));
         if (counter) counter.textContent = String(idx + 1).padStart(2, '0');
       };
       root.querySelector('[data-prev]')?.addEventListener('click', () => go(idx - 1));
