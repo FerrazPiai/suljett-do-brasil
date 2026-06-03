@@ -635,11 +635,12 @@ body.no-scroll { overflow: hidden; }
 .hscroll-meta__progress { flex: 1; height: 1px; background: var(--border); position: relative; max-width: 520px; }
 .hscroll-meta__progress::after { content: ""; position: absolute; left: 0; top: -1px; height: 3px; width: var(--hsp, 6%); background: var(--sj-red); transition: width .15s linear; }
 @media (min-width: 900px) {
-  /* slide pinado inclui o título → apenas aperta espaçamentos verticais
-     (cards mantêm o tamanho original) */
-  .apps-head { margin-bottom: 2rem; }
-  .hscroll-wrap { padding-bottom: 2.5rem; }
-  .hscroll-meta { padding-top: 1.5rem; }
+  /* slide pinado inclui o título → margem pequena no topo e espaçamentos
+     verticais apertados p/ título + cards caberem na viewport */
+  .section--apps { padding-top: 40px; }
+  .apps-head { margin-bottom: 1.75rem; }
+  .hscroll-wrap { padding-top: 0.5rem; padding-bottom: 1.5rem; }
+  .hscroll-meta { padding-top: 1.25rem; }
 }
 @media (max-width: 899px) {
   .hscroll-wrap { overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 2rem; }
@@ -2594,7 +2595,7 @@ body.no-scroll { overflow: hidden; }
         ease: 'none',
         scrollTrigger: {
           trigger: appsSection,
-          start: 'top top+=40',
+          start: 'top top',
           end: () => '+=' + (getDist() * 0.9),
           pin: appsSection,
           pinSpacing: true,
