@@ -540,6 +540,39 @@ body.no-scroll { overflow: hidden; }
 .link-arrow:hover { border-color: var(--sj-red); gap: 0.75rem; color: var(--sj-red); }
 .cij-footer { display: flex; justify-content: center; }
 
+/* ─── CIJ Modelos: carrossel (esquerda) + texto vinculado (direita) ─── */
+.model-showcase { display: grid; grid-template-columns: 1fr; gap: 2.5rem; margin-bottom: 3rem; align-items: center; }
+@media (min-width: 900px) {
+  .model-showcase { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2.5rem, 5vw, 4.5rem); }
+}
+/* esquerda — palco do carrossel */
+.ms-frame { position: relative; }
+.ms-slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: opacity .45s var(--ease-reveal), transform .45s var(--ease-reveal); margin: 0; }
+.ms-slide.is-active { position: relative; opacity: 1; visibility: visible; transform: none; }
+.ms-slide .model-media { aspect-ratio: 4 / 3; border-radius: 12px; border: 1px solid var(--border); }
+.ms-specs { width: 100%; border-collapse: collapse; margin-top: 1.25rem; }
+.ms-specs th, .ms-specs td { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 0.78rem; }
+.ms-specs th { text-align: left; color: var(--fg-mute); font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; }
+.ms-specs td { text-align: right; color: var(--fg); font-weight: 600; }
+.ms-controls { display: flex; align-items: center; gap: 1.1rem; margin-top: 1.75rem; }
+.ms-arrow {
+  width: 46px; height: 46px; flex: 0 0 auto; border-radius: 50%;
+  border: 1px solid var(--border); background: var(--bg-elev); color: var(--fg);
+  display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+  transition: border-color .2s, background-color .2s, color .2s, transform .2s;
+}
+.ms-arrow:hover { border-color: var(--sj-blue); color: var(--sj-blue); transform: translateY(-2px); }
+.ms-arrow:active { transform: translateY(0); }
+.ms-counter { font-size: 0.8rem; letter-spacing: 0.2em; color: var(--fg-mute); }
+.ms-counter b { color: var(--fg); font-weight: 700; }
+/* direita — texto do modelo */
+.ms-info { position: relative; }
+.ms-panel { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .45s var(--ease-reveal); display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
+.ms-panel.is-active { position: relative; opacity: 1; visibility: visible; }
+.ms-tag { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sj-blue); font-weight: 600; }
+.ms-panel h4 { color: var(--fg); font-size: clamp(1.6rem, 3vw, 2.25rem); font-weight: 800; letter-spacing: -0.02em; }
+.ms-panel p { color: var(--fg-body); font-size: 1.0625rem; line-height: 1.6; max-width: 46ch; }
+
 /* ─── How It Works ────────────────────────────────────────── */
 .section--how { background: var(--bg); }
 [data-theme="dark"] .section--how { background: var(--steel-900); }
@@ -578,6 +611,8 @@ body.no-scroll { overflow: hidden; }
 .section--apps { background: var(--bg); padding-bottom: 0; overflow: hidden; }
 [data-theme="dark"] .section--apps { background: var(--bg); }
 .apps-head { max-width: 760px; margin-bottom: 3rem; display: flex; flex-direction: column; gap: 1rem; }
+/* gap visual eyebrow→título em 16px (compensa o leading do H2) */
+.apps-head .eyebrow { margin-bottom: -4px; }
 .apps-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
 @media (min-width: 640px) { .apps-grid { grid-template-columns: 1fr 1fr; } }
 
@@ -588,6 +623,13 @@ body.no-scroll { overflow: hidden; }
 .hscroll-meta { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 2rem clamp(1.25rem, 4vw, 3rem) 0; color: var(--fg-muted); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; }
 .hscroll-meta__progress { flex: 1; height: 1px; background: var(--border); position: relative; max-width: 520px; }
 .hscroll-meta__progress::after { content: ""; position: absolute; left: 0; top: -1px; height: 3px; width: var(--hsp, 6%); background: var(--sj-red); transition: width .15s linear; }
+@media (min-width: 900px) {
+  /* slide pinado inclui o título → apenas aperta espaçamentos verticais
+     (cards mantêm o tamanho original) */
+  .apps-head { margin-bottom: 2rem; }
+  .hscroll-wrap { padding-bottom: 2.5rem; }
+  .hscroll-meta { padding-top: 1.5rem; }
+}
 @media (max-width: 899px) {
   .hscroll-wrap { overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 2rem; }
   .hscroll-track { transform: none !important; }
@@ -1305,7 +1347,15 @@ body.no-scroll { overflow: hidden; }
   text-wrap: pretty;
 }
 .hero-title .line { padding-bottom: 0; display: block; }
-.hero-title .line .accent { white-space: nowrap; }
+/* quebras de linha controladas: 2 linhas no desktop, 3 no mobile.
+   nowrap impede wraps automáticos — só os <br> abaixo quebram. */
+.hero-title { white-space: nowrap; }
+.hero-title .br-m { display: none; }
+.hero-title .br-d { display: inline; }
+@media (max-width: 767px) {
+  .hero-title .br-d { display: none; }
+  .hero-title .br-m { display: inline; }
+}
 
 /* ─── HERO sub + micro ─── */
 .hero-micro {
@@ -1604,40 +1654,37 @@ body.no-scroll { overflow: hidden; }
 .tech-card-bullets li svg { color: var(--sj-red); flex-shrink: 0; }
 .tech-card .link-arrow { margin-top: auto; align-self: flex-start; }
 
-/* ─── CIJ Showcase head: split copy + figure ─── */
+/* ─── CIJ Showcase: seção full-bleed com imagem de fundo ─── */
+.section--cij { position: relative; }
+.section--cij .container { position: relative; z-index: 1; }
+/* camada de imagem de fundo, ancorada à direita */
+.cij-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.cij-bg img {
+  position: absolute; right: 0; top: 0;
+  height: 100%; width: clamp(420px, 56%, 60vw);
+  object-fit: cover; object-position: center;
+}
+/* fade da cor da seção (esquerda) sobre a imagem → texto sempre legível */
+.cij-bg::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, var(--bg) 0%, var(--bg) 38%, transparent 72%);
+}
 .cij-head {
   display: flex; flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 4rem;
-  max-width: none;
+  gap: 1.25rem;
+  margin-bottom: 0;
+  max-width: 560px;   /* texto à esquerda; direita livre para a imagem */
 }
 .cij-head-copy { display: flex; flex-direction: column; gap: 1.25rem; }
 .cij-head-copy .eyebrow { color: var(--sj-blue); }
-.cij-head-figure {
-  position: relative;
-  width: 100%;
-  max-width: 520px;
-  aspect-ratio: 4 / 3;
-  margin: 0 auto;
-  border-radius: 14px;
-  background: radial-gradient(ellipse at 50% 60%, #ffffff 0%, var(--bg-alt) 100%);
-  display: flex; align-items: center; justify-content: center;
-  padding: 1.5rem;
-  border: 1px solid var(--border);
-}
-.cij-head-figure img {
-  max-width: 100%; max-height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 14px 28px rgba(10,15,26,.18));
-}
 @media (min-width: 900px) {
-  .cij-head {
-    display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-    gap: 3rem;
-    align-items: center;
-  }
-  .cij-head-figure { margin: 0; max-width: 100%; aspect-ratio: 5 / 4; }
+  .section--cij { min-height: clamp(520px, 64vh, 680px); display: flex; align-items: center; }
+  .cij-head { max-width: 520px; }
+}
+@media (max-width: 767px) {
+  /* na vertical a imagem fica como pano de fundo discreto */
+  .cij-bg img { width: 100%; object-position: right center; }
+  .cij-bg::after { background: linear-gradient(90deg, var(--bg) 0%, var(--bg) 55%, color-mix(in srgb, var(--bg) 55%, transparent) 100%); }
 }
 
 </style>
@@ -1802,8 +1849,7 @@ body.no-scroll { overflow: hidden; }
       </div>
 
       <h1 class="hero-title" data-split>
-        <span class="line">Codificação industrial</span>
-        <span class="line">com <span class="accent">tecnologia Hitachi original.</span></span>
+        <span class="line">Codificação industrial<br class="br-m" /> com<br class="br-d" /> <span class="accent">tecnologia<br class="br-m" /> Hitachi original.</span></span>
       </h1>
 
       <p class="hero-sub reveal" data-reveal-delay="400">
@@ -1884,7 +1930,7 @@ body.no-scroll { overflow: hidden; }
     <div class="apps-head">
       <span class="eyebrow mono reveal-up">APLICAÇÕES SETORIAIS</span>
       <h2 class="h-display reveal-up">Onde a Suljett opera.</h2>
-      <p class="lead reveal-up">A codificação correta varia por substrato, velocidade de linha e exigência regulatória. Veja como atendemos cada setor — com modelo Hitachi recomendado, embalagem-alvo e a regra de conformidade que se aplica.</p>
+      <p class="lead reveal-up">A codificação certa varia por substrato, velocidade de linha e norma do setor. Veja o equipamento Hitachi e a embalagem ideal para cada caso.</p>
     </div>
   </div>
   <div class="apps-pin-target">
@@ -1974,6 +2020,10 @@ body.no-scroll { overflow: hidden; }
 
 <!-- ══════════════ CIJ SHOWCASE ══════════════ -->
 <section class="section section--dark section--cij" id="cij" aria-label="CIJ Showcase">
+  <!-- Imagem de fundo (lado direito). Troque o src abaixo pela imagem definitiva. -->
+  <div class="cij-bg" aria-hidden="true">
+    <img src="assets/cij-machine-1.png" alt="" loading="lazy" />
+  </div>
   <div class="container">
     <div class="cij-head">
       <div class="cij-head-copy">
@@ -1983,9 +2033,6 @@ body.no-scroll { overflow: hidden; }
           CIJ (Continuous Inkjet) é o padrão global para marcação de alta velocidade em linhas de produção contínua. A Suljett é distribuidora oficial da Hitachi Industrial Equipment Systems no Sul e Nordeste do Brasil — equipamento Hitachi de fábrica, insumos originais com código S10 rastreável e técnicos certificados pela própria Hitachi.
         </p>
       </div>
-      <figure class="cij-head-figure reveal-up" aria-label="Impressora CIJ Hitachi UX-D160W">
-        <img src="assets/cij-machine-1.png" alt="Impressora CIJ Hitachi UX-D160W" loading="lazy" />
-      </figure>
     </div>
   </div>
 </section>
@@ -1998,57 +2045,82 @@ body.no-scroll { overflow: hidden; }
       <p class="steel-300 reveal-up">Cada equipamento CIJ Hitachi foi projetado para uma aplicação específica. Selecione pelo substrato (PET, vidro, lata, papelão, ovo, cabo), pela velocidade de linha ou pelo ambiente de operação — e fale com um especialista antes de comprar.</p>
     </div>
 
-    <div class="cij-models">
-      <article class="model-card reveal-up">
-        <div class="model-media">
-          <img class="model-img" src="assets/cij-machine-1.png" alt="Hitachi UX2-D160W" loading="lazy" />
-          <span class="model-tag mono">MODELO TOPO</span>
+    <div class="model-showcase reveal-up" data-model-carousel>
+      <!-- ESQUERDA: carrossel — 1 modelo por vez (imagem + specs + setas) -->
+      <div class="ms-stage">
+        <div class="ms-frame">
+          <figure class="ms-slide is-active">
+            <div class="model-media">
+              <img class="model-img" src="assets/cij-machine-1.png" alt="Hitachi UX2-D160W" loading="lazy" />
+              <span class="model-tag mono">MODELO TOPO</span>
+            </div>
+            <table class="ms-specs mono">
+              <tbody>
+                <tr><th>Velocidade</th><td>até 3.173 c/s</td></tr>
+                <tr><th>Resolução</th><td>5×5 – 34×24</td></tr>
+                <tr><th>Cabeçote</th><td>3 m</td></tr>
+              </tbody>
+            </table>
+          </figure>
+          <figure class="ms-slide">
+            <div class="model-media">
+              <img class="model-img" src="assets/cij-machine-2.png" alt="Hitachi UX-D150W" loading="lazy" />
+              <span class="model-tag mono">LINHA PADRÃO</span>
+            </div>
+            <table class="ms-specs mono">
+              <tbody>
+                <tr><th>Velocidade</th><td>até 2.083 c/s</td></tr>
+                <tr><th>Resolução</th><td>5×5 – 34×24</td></tr>
+                <tr><th>Cabeçote</th><td>3 m</td></tr>
+              </tbody>
+            </table>
+          </figure>
+          <figure class="ms-slide">
+            <div class="model-media">
+              <img class="model-img" src="assets/cij-machine-3.png" alt="Hitachi UX-P160WP" loading="lazy" />
+              <span class="model-tag mono">CONDIÇÕES EXTREMAS</span>
+            </div>
+            <table class="ms-specs mono">
+              <tbody>
+                <tr><th>Velocidade</th><td>até 1.148 c/s</td></tr>
+                <tr><th>Resolução</th><td>5×5 – 16×16</td></tr>
+                <tr><th>Cabeçote</th><td>2 m</td></tr>
+              </tbody>
+            </table>
+          </figure>
         </div>
-        <div class="model-body">
+        <div class="ms-controls">
+          <button type="button" class="ms-arrow" data-prev aria-label="Modelo anterior">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <span class="ms-counter mono"><b>01</b> / 03</span>
+          <button type="button" class="ms-arrow" data-next aria-label="Próximo modelo">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- DIREITA: texto vinculado ao modelo selecionado -->
+      <div class="ms-info">
+        <div class="ms-panel is-active">
+          <span class="ms-tag mono">MODELO TOPO</span>
           <h4>Hitachi UX2-D160W</h4>
-          <p class="steel-300">Topo da linha Hitachi para alimentos, bebidas e farmacêutica em alta velocidade. Tela 10,1" colorida, IoT integrada e troca de mensagem sem parar a linha.</p>
-          <ul class="model-specs mono">
-            <li><span>VELOCIDADE</span><span>até 3.173 c/s</span></li>
-            <li><span>RESOLUÇÃO</span><span>5×5 – 34×24</span></li>
-            <li><span>CABEÇOTE</span><span>3 m</span></li>
-          </ul>
+          <p>Topo da linha Hitachi para alimentos, bebidas e farmacêutica em alta velocidade. Tela 10,1" colorida, IoT integrada e troca de mensagem sem parar a linha.</p>
           <a href="#" class="link-arrow">Ver ficha técnica completa <span>→</span></a>
         </div>
-      </article>
-
-      <article class="model-card reveal-up">
-        <div class="model-media">
-          <img class="model-img" src="assets/cij-machine-2.png" alt="Hitachi UX-D150W" loading="lazy" />
-          <span class="model-tag mono">LINHA PADRÃO</span>
-        </div>
-        <div class="model-body">
+        <div class="ms-panel">
+          <span class="ms-tag mono">LINHA PADRÃO</span>
           <h4>Hitachi UX-D150W</h4>
-          <p class="steel-300">A escolha balanceada para laticínios, ovos e embalagens flexíveis. Ótima relação investimento × performance, com manutenção simples.</p>
-          <ul class="model-specs mono">
-            <li><span>VELOCIDADE</span><span>até 2.083 c/s</span></li>
-            <li><span>RESOLUÇÃO</span><span>5×5 – 34×24</span></li>
-            <li><span>CABEÇOTE</span><span>3 m</span></li>
-          </ul>
+          <p>A escolha balanceada para laticínios, ovos e embalagens flexíveis. Ótima relação investimento × performance, com manutenção simples.</p>
           <a href="#" class="link-arrow">Ver ficha técnica completa <span>→</span></a>
         </div>
-      </article>
-
-      <article class="model-card reveal-up">
-        <div class="model-media">
-          <img class="model-img" src="assets/cij-machine-3.png" alt="Hitachi UX-P160WP" loading="lazy" />
-          <span class="model-tag mono">CONDIÇÕES EXTREMAS</span>
-        </div>
-        <div class="model-body">
+        <div class="ms-panel">
+          <span class="ms-tag mono">CONDIÇÕES EXTREMAS</span>
           <h4>Hitachi UX-P160WP</h4>
-          <p class="steel-300">Tinta pigmentada para substratos escuros, fios, cabos, dutos e peças metálicas. Onde os outros falham em contraste, a P160WP entrega impressão legível.</p>
-          <ul class="model-specs mono">
-            <li><span>VELOCIDADE</span><span>até 1.148 c/s</span></li>
-            <li><span>RESOLUÇÃO</span><span>5×5 – 16×16</span></li>
-            <li><span>CABEÇOTE</span><span>2 m</span></li>
-          </ul>
+          <p>Tinta pigmentada para substratos escuros, fios, cabos, dutos e peças metálicas. Onde os outros falham em contraste, a P160WP entrega impressão legível.</p>
           <a href="#" class="link-arrow">Ver ficha técnica completa <span>→</span></a>
         </div>
-      </article>
+      </div>
     </div>
 
     <div class="cij-footer reveal-up">
@@ -2491,24 +2563,25 @@ body.no-scroll { overflow: hidden; }
       });
     }
 
-    /* ── HORIZONTAL SCROLL: Applications (pinned cards-only) ──
-       O título de "Aplicações" fica fora do pin e rola normal;
-       só o bloco .apps-pin-target (cards + meta) é pinado, evitando
-       que o conteúdo extrapole o viewport em telas mais baixas. */
-    const pinTarget = document.querySelector('.apps-pin-target');
+    /* ── HORIZONTAL SCROLL: Applications (seção inteira pinada) ──
+       A seção toda — título "Onde a Suljett opera" + cards + barra —
+       é pinada no topo enquanto os cards deslizam lateralmente.
+       Os cards são encolhidos via CSS (clamp em 100vh) para tudo
+       caber junto na viewport, inclusive em notebooks de tela baixa. */
+    const appsSection = document.querySelector('.section--apps');
     const hScroll = document.querySelector('[data-hscroll]');
     const hTrack = hScroll?.querySelector('[data-hscroll-track]');
     const hMeta = document.querySelector('.hscroll-meta');
-    if (pinTarget && hScroll && hTrack && isDesktop && !prefersReduced) {
+    if (appsSection && hScroll && hTrack && isDesktop && !prefersReduced) {
       const getDist = () => Math.max(0, hTrack.scrollWidth - window.innerWidth + 120);
       gsap.to(hTrack, {
         x: () => -getDist(),
         ease: 'none',
         scrollTrigger: {
-          trigger: pinTarget,
+          trigger: appsSection,
           start: 'top top',
           end: () => '+=' + (getDist() * 0.9),
-          pin: pinTarget,
+          pin: appsSection,
           pinSpacing: true,
           scrub: 0.8,
           invalidateOnRefresh: true,
@@ -2534,6 +2607,24 @@ body.no-scroll { overflow: hidden; }
         });
       });
     }
+
+    /* ── CIJ Modelos: carrossel (setas trocam slide + painel) ── */
+    document.querySelectorAll('[data-model-carousel]').forEach((root) => {
+      const slides = [...root.querySelectorAll('.ms-slide')];
+      const panels = [...root.querySelectorAll('.ms-panel')];
+      const counter = root.querySelector('.ms-counter b');
+      const total = slides.length;
+      let idx = 0;
+      const go = (n) => {
+        idx = (n + total) % total;
+        slides.forEach((s, i) => s.classList.toggle('is-active', i === idx));
+        panels.forEach((p, i) => p.classList.toggle('is-active', i === idx));
+        if (counter) counter.textContent = String(idx + 1).padStart(2, '0');
+      };
+      root.querySelector('[data-prev]')?.addEventListener('click', () => go(idx - 1));
+      root.querySelector('[data-next]')?.addEventListener('click', () => go(idx + 1));
+      go(0);
+    });
 
     // Final CTA gradient drift
     gsap.to('.section--final .h-display', {
