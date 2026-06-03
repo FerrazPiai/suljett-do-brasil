@@ -543,10 +543,10 @@ body.no-scroll { overflow: hidden; }
 /* ─── CIJ Modelos: carrossel (esquerda, 30%) + texto vinculado (direita, 70%) ─── */
 .model-showcase { display: grid; grid-template-columns: 1fr; gap: 2.5rem; margin-bottom: 3rem; align-items: center; }
 @media (min-width: 900px) {
-  .model-showcase { grid-template-columns: minmax(0, 3fr) minmax(0, 7fr); gap: clamp(2.5rem, 5vw, 4.5rem); }
+  .model-showcase { grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); gap: clamp(2.5rem, 5vw, 4.5rem); }
 }
 /* esquerda — palco do carrossel (imagem com setas nas laterais) */
-.ms-stage { max-width: 420px; }
+.ms-stage { max-width: 480px; }
 .ms-frame { position: relative; }
 .ms-slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .45s var(--ease-reveal); margin: 0; }
 .ms-slide.is-active { position: relative; opacity: 1; visibility: visible; }
@@ -1383,8 +1383,8 @@ body.no-scroll { overflow: hidden; }
 /* ─── HERO trust badges (com ícones) ─── */
 .hero-trust {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem 1.75rem;
+  flex-wrap: nowrap;          /* desktop: tudo numa linha só */
+  gap: 1rem;
   padding-top: 1.25rem;
   margin-top: 0.5rem;
   border-top: 1px solid var(--border);
@@ -1392,25 +1392,26 @@ body.no-scroll { overflow: hidden; }
 .hero-trust li {
   display: inline-flex;
   align-items: center;
-  gap: 0.625rem;
+  gap: 0.55rem;
   font-family: var(--font-display);
   font-size: 0.8125rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   color: var(--fg);
+  white-space: nowrap;
 }
 .hero-trust-ico {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 34px; height: 34px;
+  width: 30px; height: 30px;
   border-radius: 8px;
   background: var(--sj-blue-tint);
   color: var(--sj-blue);
   flex-shrink: 0;
 }
-@media (max-width: 640px) {
-  .hero-trust { gap: 0.875rem 1.25rem; }
-  .hero-trust li { font-size: 0.75rem; }
-  .hero-trust-ico { width: 30px; height: 30px; }
+@media (max-width: 899px) {
+  /* mobile/tablet: empilhado (um abaixo do outro) */
+  .hero-trust { flex-direction: column; align-items: flex-start; gap: 0.875rem; }
+  .hero-trust li { font-size: 0.8125rem; }
 }
 
 /* ─── HERO: vídeo full-width de fundo com sobreposição branca ─── */
@@ -1868,7 +1869,7 @@ body.no-scroll { overflow: hidden; }
       </h1>
 
       <p class="hero-sub reveal" data-reveal-delay="400">
-        Codificamos linhas de produção contínua com a tecnologia CIJ líder mundial — impressão nítida, ininterrupta e à prova das condições mais severas de fábrica. Equipamento Hitachi original, insumos S10 rastreáveis e assistência técnica certificada no Sul e Nordeste do Brasil.
+        Codificamos linhas de produção contínua com a tecnologia CIJ líder mundial — equipamento Hitachi original, insumos S10 rastreáveis e assistência certificada no Sul e Nordeste.
       </p>
 
       <ul class="hero-bullets reveal" data-reveal-delay="500">
@@ -2580,9 +2581,8 @@ body.no-scroll { overflow: hidden; }
 
     /* ── HORIZONTAL SCROLL: Applications (seção inteira pinada) ──
        A seção toda — título "Onde a Suljett opera" + cards + barra —
-       é pinada no topo enquanto os cards deslizam lateralmente.
-       Os cards são encolhidos via CSS (clamp em 100vh) para tudo
-       caber junto na viewport, inclusive em notebooks de tela baixa. */
+       é pinada com uma pequena margem do topo enquanto os cards
+       deslizam lateralmente. */
     const appsSection = document.querySelector('.section--apps');
     const hScroll = document.querySelector('[data-hscroll]');
     const hTrack = hScroll?.querySelector('[data-hscroll-track]');
@@ -2594,7 +2594,7 @@ body.no-scroll { overflow: hidden; }
         ease: 'none',
         scrollTrigger: {
           trigger: appsSection,
-          start: 'top top',
+          start: 'top top+=40',
           end: () => '+=' + (getDist() * 0.9),
           pin: appsSection,
           pinSpacing: true,
