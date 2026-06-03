@@ -633,9 +633,9 @@ body.no-scroll { overflow: hidden; }
 .hscroll-meta__progress { flex: 1; height: 1px; background: var(--border); position: relative; max-width: 520px; }
 .hscroll-meta__progress::after { content: ""; position: absolute; left: 0; top: -1px; height: 3px; width: var(--hsp, 6%); background: var(--sj-red); transition: width .15s linear; }
 @media (min-width: 900px) {
-  /* slide pinado inclui o título → margem pequena no topo e espaçamentos
-     verticais apertados p/ título + cards caberem na viewport */
-  .section--apps { padding-top: 40px; }
+  /* slide pinado inclui o título → espaçamentos verticais apertados
+     p/ título + cards caberem na viewport (padding-top fica no bloco
+     dedicado mais abaixo) */
   .apps-head { margin-bottom: 1.75rem; }
   .hscroll-wrap { padding-top: 0.5rem; padding-bottom: 1.5rem; }
   .hscroll-meta { padding-top: 1.25rem; }
@@ -1586,7 +1586,7 @@ body.no-scroll { overflow: hidden; }
 /* ─── Apps section: título acima (scroll normal), cards pinados ─── */
 @media (min-width: 900px) {
   .section--apps {
-    padding-top: clamp(60px, 7vh, 90px);
+    padding-top: 28px;
     padding-bottom: 0;
   }
   .section--apps .apps-head {
