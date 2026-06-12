@@ -54,7 +54,7 @@
 .media-frame--sm img { width: 76%; height: 76%; }
 
 /* product / model card */
-.model-card { padding: 1.25rem; }
+.model-card { padding: 1.25rem; scroll-margin-top: 110px; }
 .model-card .media-frame { margin-bottom: 1rem; }
 .model-tagline { font-family: var(--font-display); font-weight: 500; font-size: 0.75rem; letter-spacing: 0.04em; color: var(--fg-mute); line-height: 1.5; padding: 0.7rem 0; margin-top: 0.25rem; border-top: 1px dashed var(--border); border-bottom: 1px dashed var(--border); }
 .filter-bar { display: flex; flex-wrap: wrap; gap: 0.625rem; margin: 1.5rem 0 2.5rem; }
