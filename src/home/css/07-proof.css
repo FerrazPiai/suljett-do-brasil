@@ -1,0 +1,22 @@
+/* ─── Proof ───────────────────────────────────────────────── */
+.section--proof { padding-block: 80px; background: var(--bg); border-bottom: 1px solid var(--border); }
+[data-theme="dark"] .section--proof { border-color: var(--border); }
+.proof-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; }
+@media (min-width: 768px) { .proof-grid { grid-template-columns: repeat(4, 1fr); gap: 1rem; } }
+.proof-item { display: flex; flex-direction: column; gap: 0.5rem; padding: 0 0 0 1.25rem; border-left: 2px solid var(--sj-red); }
+.proof-num { font-family: var(--font-display); font-size: clamp(2rem, 3.6vw, 3rem); font-weight: 800; color: var(--fg); letter-spacing: -0.03em; line-height: 1; display: inline-flex; align-items: baseline; gap: 0.25rem; }
+.proof-num em { font-family: var(--font-display); font-style: normal; font-size: 0.5em; font-weight: 500; color: var(--fg-mute); letter-spacing: 0; }
+.proof-label { font-size: 0.875rem; color: var(--fg-body); line-height: 1.5; }
+.proof-divider { height: 1px; background: var(--border); margin: 3rem 0 2rem; }
+.proof-caption { font-size: 0.75rem; color: var(--fg-mute); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.5rem; }
+.proof-logos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem 1.5rem; align-items: center; }
+@media (min-width: 768px) { .proof-logos { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1100px) { .proof-logos { grid-template-columns: repeat(8, 1fr); } }
+.client-logo {
+  font-family: var(--font-display); font-weight: 800; font-size: 1rem; color: var(--fg-mute);
+  letter-spacing: 0.05em; text-align: center; opacity: .7;
+  transition: opacity .2s, color .2s;
+}
+.client-logo em { font-family: var(--font-display); font-style: normal; font-weight: 400; font-size: 0.625rem; color: var(--sj-red); display: block; letter-spacing: 0.1em; margin-top: 2px; }
+.client-logo:hover { opacity: 1; color: var(--fg); }
+

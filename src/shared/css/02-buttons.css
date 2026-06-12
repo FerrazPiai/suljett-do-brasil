@@ -1,0 +1,28 @@
+/* ─── Buttons ─────────────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  font-family: var(--font-display); font-weight: 700; font-size: 0.9375rem;
+  padding: 0.8rem 1.3rem; border-radius: 4px; white-space: nowrap;
+  transition: transform .15s var(--ease-mechanical), background-color .15s var(--ease-mechanical), box-shadow .15s var(--ease-mechanical), color .15s var(--ease-mechanical), border-color .15s var(--ease-mechanical), gap .15s var(--ease-mechanical);
+  position: relative;
+}
+.btn--cta { background: var(--sj-red); color: #fff; box-shadow: 0 6px 16px rgba(204,26,26,.25); }
+.btn--cta:hover { background: var(--sj-red-dark); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(204,26,26,.45); }
+.btn--ghost-dark { color: var(--fg); border-bottom: 1px solid var(--border-strong); border-radius: 0; padding: 0.8rem 0.1rem; }
+.btn--ghost-dark:hover { border-color: var(--sj-red); color: var(--sj-red); gap: .75rem; }
+.btn--ghost { color: #fff; border-bottom: 1px solid rgba(255,255,255,.3); padding: 0.8rem 0.1rem; border-radius: 0; }
+.btn--ghost:hover { border-color: #fff; gap: .75rem; }
+.btn--outline { color: var(--fg); border: 1px solid var(--border-strong); background: var(--bg); }
+.btn--outline:hover { border-color: var(--sj-red); color: var(--sj-red); transform: translateY(-2px); }
+.btn--outline-light { color: #fff; border: 1px solid var(--steel-700); background: rgba(255,255,255,.02); }
+.btn--outline-light:hover { border-color: var(--sj-red); background: rgba(204,26,26,.12); transform: translateY(-2px); }
+.btn--lg { padding: 1rem 1.75rem; font-size: 1rem; }
+.btn--full { width: 100%; }
+.btn-arrow { transition: transform .15s var(--ease-mechanical); }
+.btn:hover .btn-arrow { transform: translateX(4px); }
+
+.link-arrow { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--fg); font-weight: 600; font-size: 0.875rem; border-bottom: 1px solid transparent; transition: border-color .2s, gap .2s, color .2s; padding-bottom: 2px; align-self: flex-start; }
+.link-arrow:hover { border-color: var(--sj-red); gap: 0.75rem; color: var(--sj-red); }
+.link-arrow--light { color: #fff; }
+.link-arrow--light:hover { color: #fff; }
+

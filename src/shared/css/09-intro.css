@@ -1,0 +1,9 @@
+/* ─── Intro curtain (lightweight, once per session) ───────── */
+.intro-curtain { position: fixed; inset: 0; z-index: 9999; background: #fff; display: flex; align-items: center; justify-content: center; }
+.intro-curtain.is-out { pointer-events: none; }
+.intro-logo-wrap { background: transparent; padding: 1rem; opacity: 0; transform: translateY(16px) scale(.97); }
+.intro-logo-wrap img { width: clamp(180px, 30vw, 320px); height: auto; display: block; }
+.intro-bar { position: absolute; bottom: 0; left: 0; height: 3px; width: 0; background: var(--sj-red); }
+body.no-scroll { overflow: hidden; }
+@keyframes fadeIn { to { opacity: 1; } }
+

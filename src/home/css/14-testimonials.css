@@ -1,0 +1,32 @@
+/* ─── Testimonials (v2 — simple fade) ───────────────────── */
+.section--testim { background: var(--bg); }
+[data-theme="dark"] .section--testim { background: var(--steel-900); }
+.testim-head { max-width: 820px; margin: 0 auto 4rem; text-align: center; display: flex; flex-direction: column; gap: 1rem; align-items: center; }
+.testim-head h2 { text-wrap: balance; }
+
+.tcar { position: relative; max-width: 1020px; margin: 0 auto; }
+.tcar-viewport { position: relative; }
+.tcar-slide { display: none; background: var(--bg-elev); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; grid-template-columns: 1fr; }
+@media (min-width: 768px) { .tcar-slide { grid-template-columns: 5fr 7fr; } }
+[data-theme="dark"] .tcar-slide { background: var(--steel-800); border-color: var(--steel-700); }
+.tcar-slide.is-active { display: grid; animation: tcarFade .4s ease; }
+@keyframes tcarFade { from { opacity: 0; } to { opacity: 1; } }
+.tcar-media { aspect-ratio: 4 / 3; background: #0a0f1a; position: relative; overflow: hidden; }
+.tcar-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(.2) contrast(1.05); }
+.tcar-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,15,26,0) 40%, rgba(10,15,26,.85) 100%); pointer-events: none; }
+.tcar-body { padding: 2.25rem 2rem; display: flex; flex-direction: column; gap: 1rem; position: relative; }
+.tcar-body .quote-mark { position: absolute; top: 0.75rem; right: 1.25rem; font-size: 5rem; line-height: 1; color: var(--sj-red); opacity: 0.15; font-family: Georgia, serif; font-weight: 700; }
+.tcar-body blockquote { font-family: var(--font-display); font-size: clamp(1rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--fg); font-weight: 500; letter-spacing: -0.005em; margin: 0; }
+.tcar-body footer { margin-top: auto; display: flex; flex-direction: column; gap: 0.25rem; padding-top: 1rem; border-top: 1px dashed var(--border); }
+.tcar-name { font-weight: 700; font-size: 0.9375rem; color: var(--fg); }
+.tcar-role { font-size: 0.6875rem; letter-spacing: 0.12em; color: var(--fg-mute); text-transform: uppercase; }
+.tcar-tech { font-size: 0.6875rem; letter-spacing: 0.12em; color: var(--sj-red); }
+
+.tcar-controls { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 2rem; }
+.tcar-btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--bg-elev); color: var(--fg); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; transition: border-color .15s, color .15s; }
+[data-theme="dark"] .tcar-btn { background: var(--steel-800); border-color: var(--steel-700); color: #fff; }
+.tcar-btn:hover { border-color: var(--sj-red); color: var(--sj-red); }
+.tcar-dots { display: flex; gap: 0.5rem; }
+.tcar-dot { width: 24px; height: 2px; background: var(--border-strong); border-radius: 1px; cursor: pointer; border: 0; padding: 0; transition: background-color .2s, width .2s; }
+.tcar-dot.is-active { background: var(--sj-red); width: 36px; }
+

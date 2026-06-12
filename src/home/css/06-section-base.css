@@ -1,0 +1,10 @@
+/* ─── Section baseline ────────────────────────────────────── */
+.section { padding-block: 96px; position: relative; }
+@media (max-width: 767px) { .section { padding-block: 64px; } }
+.section--dark { background: var(--steel-950); color: #fff; }
+.section--dark h1, .section--dark h2, .section--dark h3, .section--dark h4, .section--dark h5 { color: #fff; }
+.section--light { background: var(--steel-50); }
+[data-theme="dark"] .section:not(.section--dark):not(.section--services) { background: var(--bg); color: var(--fg-body); }
+[data-theme="dark"] .section h1, [data-theme="dark"] .section h2, [data-theme="dark"] .section h3, [data-theme="dark"] .section h4 { color: var(--fg); }
+[data-theme="dark"] .section--light { background: var(--steel-900); }
+

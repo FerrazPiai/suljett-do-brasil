@@ -1,0 +1,20 @@
+/* ─── Footer ──────────────────────────────────────────────── */
+.site-footer { background: var(--steel-50); color: var(--fg-body); padding: 4rem 0 2rem; border-top: 1px solid var(--border); }
+.footer-top { display: grid; grid-template-columns: 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
+@media (min-width: 768px) { .footer-top { grid-template-columns: 1.3fr 3fr; gap: 4rem; } }
+.footer-brand { display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; }
+.footer-logo-tile { display: inline-flex; background: #fff; padding: 0.7rem 1rem; border-radius: 6px; border: 1px solid var(--border); }
+.footer-logo-tile img { height: 40px; width: auto; }
+.footer-tag { color: var(--fg-mute); font-size: 0.875rem; line-height: 1.55; max-width: 320px; }
+.footer-social { display: flex; gap: 0.5rem; margin-top: 0.25rem; }
+.footer-soc { width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; color: var(--fg-mute); transition: color .15s, border-color .15s, background .15s; }
+.footer-soc:hover { color: var(--sj-red); border-color: var(--sj-red); background: rgba(204,26,26,.06); }
+.footer-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; }
+@media (min-width: 768px) { .footer-cols { grid-template-columns: repeat(4,1fr); } }
+.footer-col { display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-label { font-size: 0.6875rem; letter-spacing: 0.18em; color: var(--fg-mute); text-transform: uppercase; margin-bottom: 0.5rem; font-weight: 700; }
+.footer-col a, .footer-col span { color: var(--fg-body); font-size: 0.875rem; padding: 0.1rem 0; transition: color .15s; }
+.footer-col a:hover { color: var(--fg); }
+.footer-phone { color: var(--sj-red) !important; font-weight: 700; }
+.footer-bottom { padding-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; font-size: 0.6875rem; letter-spacing: 0.06em; color: var(--fg-mute); }
+

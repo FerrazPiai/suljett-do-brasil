@@ -1,0 +1,33 @@
+/* ─── Reduce motion ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  .reveal, .reveal-up { opacity: 1 !important; transform: none !important; }
+}
+
+/* ─── Theme transition (View Transitions API + fallback) ─── */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-old(root) { z-index: 1; }
+::view-transition-new(root) { z-index: 2; }
+.theme-flash {
+  position: fixed; inset: 0; z-index: 9998;
+  background: radial-gradient(circle at 50% 50%, rgba(204,26,26,.06), transparent 70%);
+  backdrop-filter: blur(0);
+  opacity: 0; pointer-events: none;
+  transition: opacity .18s ease, backdrop-filter .22s ease;
+}
+.theme-flash.is-in { opacity: 1; backdrop-filter: blur(3px); }
+.theme-flash.is-out { opacity: 0; backdrop-filter: blur(0); }
+
+/* subtle pulse feedback on the toggle itself */
+.theme-toggle.is-switching { animation: themeTick .5s var(--ease-mechanical); }
+@keyframes themeTick {
+  0%   { transform: scale(1) rotate(0); }
+  40%  { transform: scale(0.88) rotate(-18deg); }
+  70%  { transform: scale(1.08) rotate(12deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+

@@ -1,0 +1,32 @@
+/* ─── Forms ───────────────────────────────────────────────── */
+.form-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 2rem 1.75rem; box-shadow: var(--card-shadow); }
+.form-card--dark { background: var(--steel-950); border-color: var(--steel-800); }
+.form { display: flex; flex-direction: column; gap: 1rem; }
+.form-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px dashed var(--border); font-size: 0.6875rem; letter-spacing: 0.14em; color: var(--fg-mute); text-transform: uppercase; font-weight: 600; }
+.field { display: flex; flex-direction: column; gap: 0.4rem; }
+.field label { font-size: 0.6875rem; letter-spacing: 0.12em; color: var(--fg-mute); text-transform: uppercase; font-weight: 700; }
+.field input, .field select, .field textarea {
+  background: #fff; color: var(--fg); border: 1px solid var(--border-strong); border-radius: 4px;
+  padding: 0.7rem 0.85rem; font-family: var(--font-display); font-size: 0.9375rem; transition: border-color .15s, box-shadow .15s; width: 100%;
+}
+.field textarea { min-height: 110px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--sj-red); box-shadow: 0 0 0 3px rgba(204,26,26,.1); }
+.form-card--dark .field label { color: var(--steel-400); }
+.form-card--dark .field input, .form-card--dark .field select, .form-card--dark .field textarea { background: var(--steel-900); color: #fff; border-color: var(--steel-700); }
+.form-card--dark .field input:focus, .form-card--dark .field select:focus, .form-card--dark .field textarea:focus { border-color: var(--sj-red); background: var(--steel-800); box-shadow: none; }
+.field-row { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 560px) { .field-row--2 { grid-template-columns: 1fr 1fr; } }
+.form-consent { font-size: 0.75rem; color: var(--fg-mute); display: flex; gap: 0.5rem; align-items: flex-start; line-height: 1.5; }
+.form-consent input { width: auto; margin-top: 3px; accent-color: var(--sj-red); }
+.form-micro { font-size: 0.6875rem; color: var(--fg-mute); letter-spacing: 0.03em; display: flex; align-items: center; gap: 0.4rem; }
+.form-success { display: none; padding: 0.875rem 1rem; background: rgba(0,209,143,.1); border: 1px solid rgba(0,209,143,.3); border-radius: 4px; color: #0a8f63; font-size: 0.875rem; }
+.form-success strong { color: var(--fg); }
+.form.is-success .form-success { display: block; }
+
+/* trust badge list (green check) */
+.checklist { display: flex; flex-direction: column; gap: 0.7rem; }
+.checklist li { display: flex; align-items: flex-start; gap: 0.7rem; color: var(--fg-body); font-size: 0.9375rem; line-height: 1.5; }
+.checklist .ck { flex-shrink: 0; margin-top: 1px; display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: rgba(0,209,143,.15); color: #0a8f63; font-weight: 800; font-size: 0.75rem; border: 1px solid rgba(0,209,143,.3); }
+.checklist .xk { background: rgba(204,26,26,.1); color: var(--sj-red); border-color: rgba(204,26,26,.3); }
+.section--dark .checklist li { color: var(--steel-200); }
+

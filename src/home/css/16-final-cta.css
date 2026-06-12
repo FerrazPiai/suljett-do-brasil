@@ -1,0 +1,9 @@
+/* ─── Final CTA ───────────────────────────────────────────── */
+.section--final { background: #05080F; overflow: hidden; }
+.final-wrap { position: relative; }
+.final-gridlines { display: none; }
+.final-inner { max-width: 880px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; gap: 1.5rem; align-items: center; position: relative; padding-block: 2rem; }
+.final-inner h2 { text-wrap: balance; }
+.final-ctas { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center; margin-top: 1rem; }
+.final-micro { font-size: 0.75rem; color: var(--steel-400); letter-spacing: 0.1em; text-transform: uppercase; }
+

@@ -1,0 +1,108 @@
+/* ─── HERO bullets ─── */
+.hero-bullets { display: flex; flex-direction: column; gap: 0.5rem; max-width: 56ch; }
+.hero-bullets li {
+  display: flex; align-items: center; gap: 0.625rem;
+  color: var(--fg-body); font-size: 0.9375rem; line-height: 1.5;
+}
+.hero-bullets li svg { flex-shrink: 0; color: var(--sj-red); }
+
+/* ─── HERO title: 2 linhas, espaçamento mais apertado ─── */
+.hero-inner { max-width: 820px; }
+.hero-title {
+  font-size: clamp(2rem, 4.4vw, 3.75rem);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  text-wrap: pretty;
+}
+.hero-title .line { padding-bottom: 0; display: block; }
+/* quebras de linha controladas: 2 linhas no desktop, 3 no mobile.
+   nowrap impede wraps automáticos — só os <br> abaixo quebram. */
+.hero-title { white-space: nowrap; }
+.hero-title .br-m { display: none; }
+.hero-title .br-d { display: inline; }
+@media (max-width: 767px) {
+  .hero-title .br-d { display: none; }
+  .hero-title .br-m { display: inline; }
+}
+
+/* ─── HERO sub + micro ─── */
+.hero-micro {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sj-blue);
+  font-weight: 600;
+}
+
+/* ─── HERO trust badges (com ícones) ─── */
+.hero-trust {
+  display: flex;
+  flex-wrap: nowrap;          /* desktop: tudo numa linha só */
+  gap: 1rem;
+  padding-top: 1.25rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+.hero-trust li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--fg);
+  white-space: nowrap;
+}
+.hero-trust-ico {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px;
+  border-radius: 8px;
+  background: var(--sj-blue-tint);
+  color: var(--sj-blue);
+  flex-shrink: 0;
+}
+@media (max-width: 899px) {
+  /* mobile/tablet: empilhado (um abaixo do outro) */
+  .hero-trust { flex-direction: column; align-items: flex-start; gap: 0.875rem; }
+  .hero-trust li { font-size: 0.8125rem; }
+}
+
+/* ─── HERO: vídeo full-width de fundo com sobreposição branca ─── */
+.hero { background: var(--bg); padding-top: 100px; min-height: 0; }
+@media (max-width: 767px) { .hero { padding-top: 84px; } }
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  overflow: hidden;
+}
+.hero-bg-video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: brightness(1.08) contrast(0.92) saturate(0.85);
+}
+.hero-bg-overlay {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(100deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.88) 35%, rgba(255,255,255,0.62) 60%, rgba(255,255,255,0.42) 100%),
+    radial-gradient(ellipse at 90% 40%, var(--sj-blue-tint) 0%, transparent 50%);
+}
+@media (max-width: 767px) {
+  .hero-bg-overlay {
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.78) 50%, rgba(255,255,255,0.6) 100%);
+  }
+}
+.hero > .container.hero-content {
+  display: flex; flex-direction: column; gap: 2rem;
+  padding-block: 4rem 5rem;
+  position: relative; z-index: 2;
+}
+@media (min-width: 1024px) {
+  .hero > .container.hero-content {
+    padding-block: 5rem 6rem;
+  }
+}
+

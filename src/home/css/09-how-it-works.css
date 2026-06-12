@@ -1,0 +1,34 @@
+/* ─── How It Works ────────────────────────────────────────── */
+.section--how { background: var(--bg); }
+[data-theme="dark"] .section--how { background: var(--steel-900); }
+.how-head { max-width: 780px; margin: 0 auto 5rem; text-align: center; display: flex; flex-direction: column; gap: 1rem; align-items: center; }
+.how-head h2 { text-wrap: balance; }
+.how-steps {
+  display: grid; grid-template-columns: 1fr; gap: 2.5rem;
+  position: relative;
+}
+@media (min-width: 768px) { .how-steps { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; } }
+.how-rail { display: none; position: absolute; top: 56px; left: 0; right: 0; width: 100%; height: 2px; pointer-events: none; }
+@media (min-width: 768px) { .how-rail { display: block; } }
+.how-rail-bg { stroke: var(--border); stroke-width: 2; stroke-dasharray: 4 6; }
+.how-rail-fg { stroke: var(--sj-red); stroke-width: 2; stroke-dasharray: 1200; stroke-dashoffset: 1200; transition: stroke-dashoffset 1.8s var(--ease-reveal); }
+.how-steps.is-in .how-rail-fg { stroke-dashoffset: 0; }
+.how-step { position: relative; display: flex; flex-direction: column; gap: 0.5rem; padding-top: 96px; }
+.how-num { position: absolute; top: 0; left: 0; font-size: 0.6875rem; letter-spacing: 0.2em; color: var(--fg-mute); }
+.how-dot {
+  position: absolute; top: 46px; left: 0; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--bg); border: 2px solid var(--sj-red);
+  box-shadow: 0 0 0 6px rgba(204,26,26,.12);
+}
+[data-theme="dark"] .how-dot { background: var(--steel-900); }
+.how-step h4 { font-size: 1.25rem; font-weight: 700; color: var(--fg); letter-spacing: -0.01em; }
+.how-step p { color: var(--fg-body); font-size: 0.9375rem; line-height: 1.55; }
+.how-mono { font-size: 0.6875rem; letter-spacing: 0.14em; color: var(--sj-red); margin-top: auto; padding-top: 0.75rem; border-top: 1px dashed var(--border); }
+
+.how-callout { margin-top: 4rem; display: flex; align-items: flex-start; gap: 1rem; padding: 1.5rem 1.75rem; border: 1px solid var(--border); border-left: 3px solid var(--sj-red); background: var(--bg-elev); border-radius: 6px; max-width: 760px; margin-inline: auto; color: var(--fg-body); }
+[data-theme="dark"] .how-callout { background: var(--steel-800); border-color: var(--steel-700); border-left-color: var(--sj-red); }
+.how-callout svg { flex-shrink: 0; color: var(--sj-red); margin-top: 3px; }
+.how-callout p { font-size: 0.9375rem; line-height: 1.6; }
+.how-callout strong { color: var(--fg); }
+.how-cta { display: flex; justify-content: center; margin-top: 2.5rem; }
+

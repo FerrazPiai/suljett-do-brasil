@@ -1,0 +1,235 @@
+/* ═══════════════════════════════════════════════════════════════
+   LIGHT THEME OVERRIDE — 60/30/10 (white / blue / red)
+   - Background dominante: branco (--bg, var(--steel-50))
+   - Cor secundária (texto, ícones, micro-elementos): --sj-blue
+   - Acento (CTAs e destaques pontuais): --sj-red
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Selection & focus → azul (foco) / vermelho continua na seleção ─── */
+:focus-visible { outline-color: var(--sj-blue); }
+
+/* ─── Eyebrow / mono pequenos: trocar vermelho por azul ─── */
+.eyebrow { color: var(--sj-blue); }
+
+/* ─── HERO → claro, mas com vídeo discreto ─── */
+.hero {
+  background: var(--bg);
+  color: var(--fg);
+}
+.hero-video { opacity: 0.16; filter: grayscale(0.2) contrast(0.95); }
+.hero-overlay {
+  background:
+    radial-gradient(at 75% 100%, rgba(15, 76, 129, .12) 0%, transparent 55%),
+    linear-gradient(105deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.78) 45%, rgba(244,246,250,.65) 100%);
+}
+.hero-title { color: var(--fg); }
+.hero-title .accent { color: var(--sj-red); }
+.hero-title .accent::after { background: var(--sj-red); }
+.hero-sub { color: var(--fg-body); }
+.hero-specs { border-top-color: var(--border); }
+.hero-specs li { color: var(--fg-body); }
+.hero-specs .ar { color: var(--sj-blue); }
+.hero-scroll { color: var(--fg-mute); }
+.hero-scroll-line { background: linear-gradient(to bottom, var(--sj-blue), transparent); }
+
+/* Hero badge: chip claro com texto azul */
+.hero .badge,
+.section--cij .badge,
+.cij-head .badge {
+  background: var(--sj-blue-tint);
+  border-color: var(--sj-blue-tint-2);
+  color: var(--sj-blue);
+}
+.hero .badge .dot,
+.section--cij .badge .dot,
+.cij-head .badge .dot { background: var(--sj-red); }
+
+/* btn-ghost no hero claro: precisa de texto escuro */
+.hero .btn--ghost { color: var(--fg); border-bottom-color: var(--border-strong); }
+.hero .btn--ghost:hover { border-color: var(--sj-blue); color: var(--sj-blue); }
+
+/* ─── HEADER sobre hero claro ─── */
+.site-header { color: var(--fg-body); }
+.site-header .logo-text { fill: var(--logo-text); }
+.site-header .logo-mark { fill: var(--sj-blue); }
+.site-header .nav-link { color: var(--fg-body); }
+.site-header .nav-link:hover { color: var(--sj-blue); }
+.site-header .theme-toggle { color: var(--fg-body); }
+.site-header .theme-toggle:hover { color: var(--sj-blue); border-color: var(--border-strong); background: transparent; }
+.site-header:not(.is-scrolled) .logo {
+  padding: 0; background: transparent; box-shadow: none;
+}
+
+/* ─── SECTION--DARK / SECTION--CIJ → claras ─── */
+.section--dark,
+.section--cij,
+.section--lead,
+.section--final {
+  background: var(--bg);
+  color: var(--fg-body);
+}
+.section--dark h1, .section--dark h2, .section--dark h3, .section--dark h4,
+.section--cij h1, .section--cij h2, .section--cij h3, .section--cij h4,
+.section--lead h1, .section--lead h2, .section--lead h3, .section--lead h4,
+.section--final h1, .section--final h2, .section--final h3, .section--final h4 { color: var(--fg); }
+
+/* Model cards: claros */
+.model-card { background: var(--bg-elev); border-color: var(--border); }
+.model-card:hover { border-color: var(--sj-blue); }
+.model-media { background: radial-gradient(ellipse at 50% 60%, var(--steel-100) 0%, var(--steel-50) 85%); }
+.model-media::before { background: radial-gradient(circle at 50% 100%, var(--sj-blue-tint), transparent 60%); }
+.model-tag {
+  color: var(--sj-blue);
+  background: rgba(255,255,255,.92);
+  border-color: var(--sj-blue-tint-2);
+}
+.model-body h4 { color: var(--fg); }
+.model-body p { color: var(--fg-body); }
+.model-specs { border-top-color: var(--border); border-bottom-color: var(--border); }
+.model-specs li { color: var(--fg-body); }
+.model-specs li span:first-child { color: var(--fg-mute); }
+.model-specs li span:last-child { color: var(--fg); }
+
+.link-arrow { color: var(--sj-blue); }
+.link-arrow:hover { border-color: var(--sj-blue); color: var(--sj-blue-dark); }
+
+/* How it works: dot azul, rail azul */
+.how-rail-fg { stroke: var(--sj-blue); }
+.how-dot { border-color: var(--sj-blue); box-shadow: 0 0 0 6px var(--sj-blue-tint); }
+.how-mono { color: var(--sj-blue); border-top-color: var(--border); }
+.how-callout { border-left-color: var(--sj-blue); background: var(--bg-elev); }
+.how-callout svg { color: var(--sj-blue); }
+
+/* ─── SECTION--SERVICES: era fundo vermelho — vira AZUL ─── */
+.section--services {
+  background: var(--sj-blue);
+}
+.section--services::before {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,.08), transparent 40%),
+    linear-gradient(180deg, transparent 0%, rgba(0,0,0,.15) 100%);
+}
+.serv-card { background: var(--sj-blue); }
+.serv-card:hover { background: var(--sj-blue-dark); }
+
+/* ─── LEAD: claro, formulário em card claro ─── */
+.section--lead { background: var(--bg-alt); }
+.lead-copy h2 { color: var(--fg); }
+.lead-badges li { color: var(--fg-body); }
+.lead-form {
+  background: var(--bg-elev);
+  border-color: var(--border);
+  box-shadow: 0 1px 2px rgba(10,15,26,.04), 0 20px 48px rgba(10,15,26,.08);
+}
+.lead-form-head { color: var(--fg-mute); border-bottom-color: var(--border); }
+.field label { color: var(--fg-mute); }
+.field input, .field select {
+  background: var(--bg);
+  color: var(--fg);
+  border-color: var(--border-strong);
+}
+.field input:focus, .field select:focus {
+  border-color: var(--sj-blue);
+  background: var(--bg);
+  box-shadow: 0 0 0 3px var(--sj-blue-tint);
+}
+.lead-micro { color: var(--fg-mute); }
+
+/* ─── TESTIMONIALS já estavam claros, só ajustar tech color e dot ─── */
+.tcar-body .quote-mark { color: var(--sj-blue); }
+.tcar-tech { color: var(--sj-blue); }
+.tcar-btn:hover { border-color: var(--sj-blue); color: var(--sj-blue); }
+.tcar-dot.is-active { background: var(--sj-blue); }
+
+/* ─── BLOG: ajustar accent ─── */
+.blog-card .link-arrow:hover { color: var(--sj-blue); border-color: var(--sj-blue); }
+.blog-media span { background: var(--sj-blue); }
+
+/* ─── FINAL CTA → claro ─── */
+.section--final { background: var(--bg-alt); }
+.final-micro { color: var(--fg-mute); }
+.section--final .btn--ghost,
+.section--final .btn--outline-light {
+  color: var(--fg);
+  border-color: var(--border-strong);
+  background: transparent;
+}
+.section--final .btn--outline-light:hover {
+  border-color: var(--sj-blue);
+  color: var(--sj-blue);
+  background: var(--sj-blue-tint);
+}
+.section--final .btn--ghost:hover { border-color: var(--sj-blue); color: var(--sj-blue); }
+
+/* ─── FOOTER → azul escuro institucional ─── */
+.site-footer {
+  background: var(--sj-blue-dark);
+  color: rgba(255,255,255,.72);
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.footer-top { border-bottom-color: rgba(255,255,255,.08); }
+.footer-logo-tile {
+  background: #ffffff;
+  border-color: rgba(255,255,255,.12);
+}
+.footer-tag { color: rgba(255,255,255,.78); }
+.footer-soc {
+  border-color: rgba(255,255,255,.18);
+  color: rgba(255,255,255,.7);
+  background: rgba(255,255,255,.04);
+}
+.footer-soc:hover {
+  color: #ffffff;
+  border-color: rgba(255,255,255,.5);
+  background: rgba(255,255,255,.1);
+}
+.footer-label { color: rgba(255,255,255,.55); }
+.footer-col a { color: rgba(255,255,255,.78); }
+.footer-col a:hover { color: #ffffff; }
+.footer-phone { color: #ffffff !important; font-weight: 600; }
+.footer-addr { color: rgba(255,255,255,.55); }
+.footer-seals { border-bottom-color: rgba(255,255,255,.08); }
+.seal { color: rgba(255,255,255,.6); }
+.seal-dot { background: var(--sj-red); }
+.footer-bottom { color: rgba(255,255,255,.5); }
+
+/* ─── PROOF — border-left azul, mantém número escuro ─── */
+.proof-item { border-left-color: var(--sj-blue); }
+
+/* ─── VS — col-bad e col-good seguem semântica (vermelho/verde) mas em fundo claro ─── */
+.vs-col {
+  background: var(--bg-elev);
+  border-color: var(--border);
+}
+.vs-col-head { border-bottom-color: var(--border); }
+.vs-title { color: var(--fg); }
+.vs-list li { color: var(--fg-body); }
+.vs-list li::before { background: var(--border-strong); }
+.vs-list strong { color: var(--fg); }
+.vs-list .mono { color: var(--fg); }
+.vs-divider span { background: var(--bg); color: var(--fg-mute); }
+
+/* ─── MEGA-MENU — featured item agora em azul ─── */
+.mega-item--featured {
+  background: linear-gradient(135deg, var(--sj-blue-tint), transparent);
+  border-color: var(--sj-blue-tint-2);
+}
+.mega-item--featured:hover {
+  background: linear-gradient(135deg, var(--sj-blue-tint-2), var(--sj-blue-tint));
+  border-color: var(--sj-blue);
+}
+.mega-badge {
+  color: var(--sj-blue);
+  background: var(--sj-blue-tint);
+  border-color: var(--sj-blue-tint-2);
+}
+.mega-item--accent strong { color: var(--sj-blue); }
+.mega-star { color: var(--sj-red); }
+
+/* ─── HSCROLL meta bar (apps) → progresso em azul ─── */
+.hscroll-meta__progress::after { background: var(--sj-blue); }
+
+/* ─── APP CARD hover mark → azul (era vermelho) ─── */
+.app-card:hover .app-card__mark { background: var(--sj-blue); border-color: var(--sj-blue); }
+.app-card:hover .app-card__link { border-color: var(--sj-blue); }
+

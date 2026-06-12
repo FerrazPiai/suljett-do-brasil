@@ -1,0 +1,73 @@
+/* ─── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; scroll-behavior: smooth; }
+body {
+  font-family: var(--font-display);
+  font-size: var(--text-body);
+  color: var(--fg-body);
+  background: var(--bg);
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+img, svg, video { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+ul, ol { list-style: none; }
+h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 700; line-height: 1.1; color: var(--fg); letter-spacing: -0.01em; }
+::selection { background: var(--sj-red); color: #fff; }
+:focus-visible { outline: 2px solid var(--sj-red); outline-offset: 3px; border-radius: 2px; }
+
+/* ─── Utilities ───────────────────────────────────────────── */
+.mono { font-family: var(--font-display); font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.72em; }
+.container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter-mobile); }
+@media (min-width: 768px) { .container { padding-inline: var(--gutter-desktop); } }
+
+.h-display { font-size: var(--text-h1); font-weight: 800; line-height: 1.04; letter-spacing: -0.025em; padding-bottom: 0.12em; color: var(--fg); }
+.h-medium  { font-size: var(--text-h2); font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; padding-bottom: 0.1em; color: var(--fg); }
+.lead { font-size: clamp(1rem, 1.25vw, 1.1875rem); line-height: 1.65; max-width: 64ch; color: var(--fg-body); }
+.eyebrow { display: inline-block; font-size: 0.75rem; letter-spacing: 0.22em; color: var(--sj-red); text-transform: uppercase; font-weight: 600; }
+.accent { color: var(--sj-red); }
+.muted { color: var(--fg-mute); }
+.text-center { text-align: center; }
+.mx-auto { margin-inline: auto; }
+
+/* ─── Reveal system ───────────────────────────────────────── */
+/* Opacity flips INSTANTLY on .is-in (never frozen at 0); only the
+   transform animates — so content is always visible once revealed. */
+.reveal, .reveal-up { opacity: 0; will-change: transform; }
+.reveal { transform: translateY(14px); }
+.reveal-up { transform: translateY(28px); }
+.w-mask { display: inline-block; overflow: hidden; vertical-align: baseline; line-height: 1.18; padding-bottom: 0.04em; }
+.w-inner { display: inline-block; will-change: transform; transform: translateY(110%); transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+.w-mask.is-in .w-inner { transform: translateY(0); }
+.w-mask .accent, .w-inner .accent { color: var(--sj-red); }
+.reveal.is-in, .reveal-up.is-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform .85s var(--ease-reveal);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-up { opacity: 1 !important; transform: none !important; }
+  .w-inner { transform: none !important; }
+}
+
+/* ─── Badges / chips ──────────────────────────────────────── */
+.badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.4rem 0.8rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.03em;
+  border-radius: 999px; border: 1px solid var(--border); background: var(--bg);
+  color: var(--fg); box-shadow: var(--card-shadow);
+}
+.badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sj-red); }
+.badge--ghost { background: transparent; box-shadow: none; color: rgba(255,255,255,.9); border-color: rgba(255,255,255,.18); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 0.625rem; }
+.chip {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  padding: 0.45rem 0.8rem; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.01em;
+  border-radius: 4px; border: 1px solid var(--border); background: var(--bg); color: var(--fg-body);
+}
+.chip svg { color: var(--sj-red); flex-shrink: 0; }
+.chip--ondark { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.16); color: var(--steel-200); backdrop-filter: blur(6px); }
+.chip--ondark svg { color: #ff6b6b; }
+

@@ -1,0 +1,7 @@
+/* ─── Misc responsive ─────────────────────────────────────── */
+@media (min-width: 1600px) { :root { --container: 1360px; } }
+@media (max-width: 767px) {
+  .container { padding-inline: 18px; }
+  .page-hero-ctas { gap: 0.75rem; width: 100%; }
+  .page-hero-ctas .btn--cta { width: 100%; }
+}

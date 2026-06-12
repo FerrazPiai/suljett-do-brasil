@@ -1,0 +1,85 @@
+/* ─── Section spacing fixes — services & cij em fundo claro precisam reforçar bordas ─── */
+.cij-head .badge { color: var(--sj-blue); }
+.section--services .badge { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.3); color: #fff; }
+.section--services .badge .dot { background: #fff; }
+
+/* Garantir que .eyebrow no .section--services fique branca (contrasta com azul) */
+.section--services .eyebrow { color: rgba(255,255,255,.85); }
+
+.section--cij .model-tag { color: var(--sj-blue); }
+
+/* CIJ section sutil background tint para destacar dos demais (opcional) */
+.section--cij { background: var(--bg); }
+
+/* As duas sections CIJ (intro + modelos) compartilham fundo —
+   colapsa o espaço vertical entre elas */
+#cij { padding-bottom: 1.5rem; }
+.section--cij-models { padding-top: 1.5rem; }
+
+/* Botão outline em fundo claro (CIJ section): azul */
+.section--cij .btn--outline-light {
+  color: var(--sj-blue);
+  border-color: var(--sj-blue);
+  background: transparent;
+}
+.section--cij .btn--outline-light:hover {
+  color: #ffffff;
+  background: var(--sj-blue);
+  border-color: var(--sj-blue);
+  box-shadow: 0 8px 20px var(--sj-blue-glow);
+}
+
+/* ─── Section titles: máximo 2 linhas ─── */
+.h-display {
+  font-size: clamp(1.875rem, 3.4vw, 2.875rem);
+  line-height: 1.08;
+  text-wrap: balance;
+}
+.cij-head .h-display,
+.tech-head .h-display,
+.serv-head .h-display,
+.lead-copy .h-display,
+.final-inner .h-display,
+.apps-head .h-display {
+  text-wrap: balance;
+  max-width: 22ch;
+}
+.tech-head .h-display { max-width: 26ch; }
+.lead-copy .h-display { max-width: 24ch; }
+.final-inner .h-display { max-width: 22ch; }
+
+/* ─── Apps section: título acima (scroll normal), cards pinados ─── */
+@media (min-width: 900px) {
+  .section--apps {
+    padding-top: 80px;
+    padding-bottom: 0;
+  }
+  .section--apps .apps-head {
+    margin-bottom: 2.75rem;
+  }
+  /* Pin com altura natural — só envolve cards + régua, sem espaço vazio */
+  .apps-pin-target {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .apps-pin-target .hscroll-wrap {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .apps-pin-target .hscroll-meta {
+    padding-top: 2.25rem;
+    padding-bottom: 0;
+  }
+}
+
+/* ─── Cards levemente acinzentados para contraste com texto vermelho ─── */
+.model-card { background: #F9FAFC; border-color: #E0E5EE; }
+.model-card:hover { background: #F4F6FA; }
+.tech-card { background: #F9FAFC; border-color: #E0E5EE; }
+.tech-card:hover { background: #FFFFFF; }
+.lead-form { background: #F9FAFC; border-color: #E0E5EE; }
+.tcar-slide { background: #F9FAFC; border-color: #E0E5EE; }
+.vs-col { background: #F9FAFC; border-color: #E0E5EE; }
+

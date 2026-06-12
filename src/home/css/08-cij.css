@@ -1,0 +1,79 @@
+/* ─── CIJ Showcase ────────────────────────────────────────── */
+.section--cij { overflow: hidden; }
+.section--cij::before { display: none; }
+.cij-head { max-width: 880px; margin-bottom: 4rem; display: flex; flex-direction: column; gap: 1.25rem; position: relative; }
+.cij-head .badge { background: rgba(204,26,26,.08); border-color: rgba(204,26,26,.3); color: #fff; }
+.cij-head .mega-star { margin-right: 4px; }
+
+.cij-models-head { max-width: 780px; margin-bottom: 2.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+
+.cij-models { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 3rem; }
+@media (min-width: 768px) { .cij-models { grid-template-columns: 1fr 1fr 1fr; gap: 1.25rem; } }
+.model-card { background: var(--steel-900); border: 1px solid var(--steel-800); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; transition: transform .3s var(--ease-mechanical), border-color .3s; }
+.model-card:hover { transform: translateY(-4px); border-color: var(--sj-red); }
+.model-media { position: relative; aspect-ratio: 4 / 3; background: radial-gradient(ellipse at 50% 60%, #1a2535 0%, #0a0f1a 85%); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.model-media::before {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 100%, rgba(204,26,26,.18), transparent 60%);
+  pointer-events: none;
+}
+.model-img { position: relative; z-index: 1; width: 78%; height: 78%; object-fit: contain; filter: drop-shadow(0 20px 40px rgba(0,0,0,.5)); transition: transform .5s var(--ease-mechanical); }
+.model-card:hover .model-img { transform: scale(1.06) translateY(-4px); }
+.model-ph { display: none; }
+.model-tag { position: absolute; top: 1rem; left: 1rem; z-index: 2; font-size: 0.625rem; letter-spacing: 0.16em; color: var(--sj-red); background: rgba(10,15,26,.8); backdrop-filter: blur(4px); padding: 0.3rem 0.5rem; border-radius: 3px; border: 1px solid rgba(204,26,26,.3); }
+.model-body { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.model-body h4 { color: #fff; font-size: 1.25rem; letter-spacing: -0.01em; }
+.model-body p { color: var(--steel-300); font-size: 0.875rem; line-height: 1.55; }
+.model-specs { display: flex; flex-direction: column; gap: 0.375rem; padding: 0.75rem 0; border-top: 1px dashed rgba(255,255,255,.08); border-bottom: 1px dashed rgba(255,255,255,.08); font-size: 0.75rem; }
+.model-specs li { display: flex; justify-content: space-between; color: var(--steel-300); }
+.model-specs li span:first-child { color: var(--steel-500); letter-spacing: 0.1em; }
+.model-specs li span:last-child { color: #fff; font-weight: 500; }
+
+.link-arrow { display: inline-flex; align-items: center; gap: 0.5rem; color: #fff; font-weight: 600; font-size: 0.875rem; border-bottom: 1px solid transparent; transition: border-color .2s, gap .2s; padding-bottom: 2px; }
+.link-arrow:hover { border-color: var(--sj-red); gap: 0.75rem; color: var(--sj-red); }
+.cij-footer { display: flex; justify-content: center; }
+
+/* ─── CIJ Modelos: carrossel (esquerda, 30%) + texto vinculado (direita, 70%) ─── */
+.model-showcase { display: grid; grid-template-columns: 1fr; gap: 2.5rem; margin-bottom: 3rem; align-items: center; }
+@media (min-width: 900px) {
+  .model-showcase { grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); gap: clamp(2.5rem, 5vw, 4.5rem); }
+}
+/* esquerda — palco do carrossel (imagem com setas nas laterais) */
+.ms-stage { max-width: 480px; }
+.ms-frame { position: relative; }
+.ms-slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .45s var(--ease-reveal); margin: 0; }
+.ms-slide.is-active { position: relative; opacity: 1; visibility: visible; }
+.ms-slide .model-media { aspect-ratio: 4 / 3; border-radius: 12px; border: 1px solid var(--border); }
+/* setas flanqueando o card, centradas na imagem */
+.ms-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 4;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--border); background: var(--bg-elev); color: var(--fg);
+  display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+  box-shadow: 0 6px 20px rgba(10,15,26,.12);
+  transition: border-color .2s, background-color .2s, color .2s, box-shadow .2s;
+}
+.ms-arrow--prev { left: 0; transform: translate(-50%, -50%); }
+.ms-arrow--next { right: 0; transform: translate(50%, -50%); }
+.ms-arrow:hover { border-color: var(--sj-blue); color: var(--sj-blue); box-shadow: 0 8px 24px rgba(15,76,129,.22); }
+/* deck de specs (crossfade) abaixo da imagem */
+.ms-specs-deck { position: relative; margin-top: 1.5rem; }
+.ms-specs { width: 100%; border-collapse: collapse; }
+.ms-specs:not(.is-active) { position: absolute; inset: 0; opacity: 0; visibility: hidden; }
+.ms-specs.is-active { position: relative; opacity: 1; visibility: visible; transition: opacity .45s var(--ease-reveal); }
+.ms-specs th, .ms-specs td { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 0.78rem; }
+.ms-specs th { text-align: left; color: var(--fg-mute); font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; }
+.ms-specs td { text-align: right; color: var(--fg); font-weight: 600; }
+.ms-counter { display: block; text-align: center; margin-top: 1.5rem; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--fg-mute); }
+.ms-counter b { color: var(--fg); font-weight: 700; }
+/* direita — texto do modelo (coluna maior) */
+.ms-info { position: relative; }
+.ms-panel { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .45s var(--ease-reveal); display: flex; flex-direction: column; align-items: flex-start; gap: 1.1rem; }
+.ms-panel.is-active { position: relative; opacity: 1; visibility: visible; }
+.ms-tag { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sj-blue); font-weight: 600; }
+.ms-panel h4 { color: var(--fg); font-size: clamp(1.8rem, 3.4vw, 2.75rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; }
+.ms-panel p { color: var(--fg-body); font-size: clamp(1.0625rem, 1.4vw, 1.25rem); line-height: 1.6; max-width: 54ch; }
+@media (max-width: 899px) {
+  .ms-stage { max-width: 360px; margin-inline: auto; }
+}
+

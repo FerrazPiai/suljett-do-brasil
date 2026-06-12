@@ -1,0 +1,34 @@
+/* ─── Badges ──────────────────────────────────────────────── */
+.badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.05);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+.badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sj-red); }
+
+/* ─── Buttons ─────────────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  font-family: var(--font-display); font-weight: 700; font-size: 0.9375rem;
+  padding: 0.75rem 1.25rem; border-radius: 4px; white-space: nowrap;
+  transition: transform var(--ease-mechanical) 150ms, background-color var(--ease-mechanical) 150ms, box-shadow var(--ease-mechanical) 150ms, color var(--ease-mechanical) 150ms, border-color var(--ease-mechanical) 150ms;
+  position: relative;
+}
+.btn--cta { background: var(--sj-red); color: #fff; box-shadow: 0 6px 16px rgba(204,26,26,.25); }
+.btn--cta:hover { background: var(--sj-red-dark); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(204,26,26,.45); }
+.btn--ghost { color: #fff; border-bottom: 1px solid rgba(255,255,255,.25); padding: 0.75rem 0.1rem; border-radius: 0; }
+.btn--ghost:hover { border-color: #fff; gap: .75rem; }
+.btn--ghost-dark { color: var(--fg); border-bottom: 1px solid var(--border-strong); border-radius: 0; padding: 0.75rem 0.1rem; }
+.btn--ghost-dark:hover { border-color: var(--sj-red); color: var(--sj-red); gap: .75rem; }
+.btn--outline-light { color: #fff; border: 1px solid var(--steel-700); background: rgba(255,255,255,.02); }
+.btn--outline-light:hover { border-color: var(--sj-red); color: #fff; background: rgba(204,26,26,.12); transform: translateY(-2px); }
+.btn--lg { padding: 1rem 1.75rem; font-size: 1rem; }
+.btn--full { width: 100%; }
+.btn-arrow { transition: transform var(--ease-mechanical) 150ms; }
+.btn:hover .btn-arrow { transform: translateX(4px); }
+
