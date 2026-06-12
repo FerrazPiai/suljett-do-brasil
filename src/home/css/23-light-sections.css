@@ -57,20 +57,25 @@
   .section--apps .apps-head {
     margin-bottom: 2.75rem;
   }
-  /* Pin com altura natural — só envolve cards + régua, sem espaço vazio */
+  /* Pin ocupa a viewport inteira: cards centralizados verticalmente
+     e a régua de progresso fixa na parte inferior da tela durante o pin */
   .apps-pin-target {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    min-height: 100svh;
     padding-top: 0;
     padding-bottom: 0;
   }
   .apps-pin-target .hscroll-wrap {
     padding-top: 0;
     padding-bottom: 0;
+    margin-top: auto;    /* centraliza os cards no espaço entre o topo e a régua */
+    margin-bottom: auto;
   }
   .apps-pin-target .hscroll-meta {
-    padding-top: 2.25rem;
-    padding-bottom: 0;
+    padding-top: 1.25rem;
+    padding-bottom: 1.75rem;
   }
 }
 

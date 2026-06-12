@@ -197,7 +197,7 @@
         ease: 'none',
         scrollTrigger: {
           trigger: pinTarget,
-          start: 'top top+=16',
+          start: 'top top',
           end: () => '+=' + (getDist() * 0.9),
           pin: pinTarget,
           pinSpacing: true,

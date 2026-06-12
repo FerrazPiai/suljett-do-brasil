@@ -35,13 +35,20 @@
   onScroll();
 
   /* ─── Dropdown ──────────────────────────────────────────── */
+  // Abre no hover (como nas páginas internas) e fecha com delay,
+  // para dar tempo de mover o mouse do botão até o painel.
+  const DD_CLOSE_DELAY = 320;
   qsa('.has-dropdown').forEach((dd) => {
     const btn = qs('.nav-link--dropdown', dd);
+    let closeTimer = null;
+    const open = () => { clearTimeout(closeTimer); dd.classList.add('is-open'); btn?.setAttribute('aria-expanded', 'true'); };
+    const close = () => { clearTimeout(closeTimer); dd.classList.remove('is-open'); btn?.setAttribute('aria-expanded', 'false'); };
     btn?.addEventListener('click', (e) => {
       e.stopPropagation();
-      const open = dd.classList.toggle('is-open');
-      btn.setAttribute('aria-expanded', String(open));
+      dd.classList.contains('is-open') ? close() : open();
     });
+    dd.addEventListener('mouseenter', open);
+    dd.addEventListener('mouseleave', () => { clearTimeout(closeTimer); closeTimer = setTimeout(close, DD_CLOSE_DELAY); });
   });
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.has-dropdown')) {
