@@ -1480,12 +1480,15 @@ body.no-scroll { overflow: hidden; }
   font-weight: 600;
 }
 
-/* ─── MEGA-MENU: 4 colunas (Soluções) ─── */
+/* ─── MEGA-MENU: 4 colunas (Soluções) ───
+   Sempre 4 colunas (o menu só aparece em ≥1024px); a largura
+   acompanha a viewport para nunca colapsar em 2 colunas (o que
+   deixava o painel alto demais e cortava opções fora da tela). */
 .mega-menu {
-  width: 1040px;
+  width: min(1080px, calc(100vw - 40px));
   grid-template-columns: 1.15fr 1fr 1fr 1fr;
   padding: 1.5rem;
-  gap: 1.5rem;
+  gap: 1.25rem 1.5rem;
 }
 .mega-col--featured { gap: 0.5rem; }
 .mega-ico {
@@ -1507,9 +1510,6 @@ body.no-scroll { overflow: hidden; }
 .mega-item--simple .mega-ico { width: 30px; height: 30px; border-radius: 7px; }
 .mega-item--simple .mega-ico svg { width: 16px; height: 16px; }
 
-@media (max-width: 1279px) {
-  .mega-menu { width: 760px; grid-template-columns: 1fr 1fr; }
-}
 @media (max-width: 767px) {
   .mega-menu { width: calc(100vw - 32px); grid-template-columns: 1fr; padding: 1rem; }
 }
@@ -1707,6 +1707,40 @@ body.no-scroll { overflow: hidden; }
   .cij-bg::after { background: linear-gradient(90deg, var(--bg) 0%, var(--bg) 55%, color-mix(in srgb, var(--bg) 55%, transparent) 100%); }
 }
 
+/* ─── Links/CTAs para páginas ainda não criadas ──────────────────
+   Mantém o elemento visível, porém INATIVO (cinza, sem hover), com
+   selo "Em breve", até a página de destino existir.
+
+   COMO REATIVAR quando a página for criada:
+     1. remova a classe `is-soon` do <a>
+     2. devolva o href real (ex.: href="produtos-tij.html")
+     3. remova aria-disabled="true"
+   Inventário das pendências em CLAUDE.md › "Botões inativos". */
+.is-soon {
+  color: var(--fg-mute) !important;
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;        /* mata clique e hover de uma vez */
+}
+.is-soon * { color: inherit !important; }
+.link-arrow.is-soon > span { display: none; }   /* esconde a seta → */
+.is-soon::after {
+  content: "Em breve";
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.1rem 0.45rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+}
+.link-arrow.is-soon::after { margin-left: 0.6rem; }
+.mega-item.is-soon::after { margin-left: auto; }
+.btn.is-soon {
+  background: var(--steel-100) !important;
+  border-color: var(--border-strong) !important;
+  box-shadow: none !important;
+}
 </style>
 </head>
 <body>
@@ -1761,8 +1795,8 @@ body.no-scroll { overflow: hidden; }
             <span class="mega-label">Produtos</span>
             <a href="produtos-cij-hitachi.html" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg></span><span><strong>CIJ Hitachi</strong></span></a>
             <a href="produtos-cij-hitachi.html#comparativo" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="11" width="3" height="6"/><rect x="12" y="7" width="3" height="10"/><rect x="17" y="13" width="3" height="4"/></svg></span><span><strong>Comparativo Hitachi</strong></span></a>
-            <a href="#tij" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V5a2 2 0 0 0-4 0v9.76a4 4 0 1 0 4 0z"/></svg></span><span><strong>TIJ — Jato Termal</strong></span></a>
-            <a href="#tto" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="8" cy="12" r="2.5"/><circle cx="16" cy="12" r="2.5"/></svg></span><span><strong>TTO — Transf. Térmica</strong></span></a>
+            <a class="mega-item mega-item--simple is-soon" aria-disabled="true"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V5a2 2 0 0 0-4 0v9.76a4 4 0 1 0 4 0z"/></svg></span><span><strong>TIJ — Jato Termal</strong></span></a>
+            <a class="mega-item mega-item--simple is-soon" aria-disabled="true"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="8" cy="12" r="2.5"/><circle cx="16" cy="12" r="2.5"/></svg></span><span><strong>TTO — Transf. Térmica</strong></span></a>
             <a href="produtos-cij-hitachi.html#insumos" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7S5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2.7 12 2.7z"/></svg></span><span><strong>Insumos Hitachi</strong></span></a>
             <a href="empresa.html#parcerias" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span><span><strong>Detectores Fortress</strong></span></a>
           </div>
@@ -1820,8 +1854,8 @@ body.no-scroll { overflow: hidden; }
     <span class="mobile-sublabel">Produtos</span>
     <a href="produtos-cij-hitachi.html">CIJ Hitachi</a>
     <a href="produtos-cij-hitachi.html#comparativo">Comparativo Hitachi</a>
-    <a href="#tij">TIJ — Jato Termal</a>
-    <a href="#tto">TTO — Transferência Térmica</a>
+    <a class="is-soon" aria-disabled="true">TIJ — Jato Termal</a>
+    <a class="is-soon" aria-disabled="true">TTO — Transferência Térmica</a>
     <a href="produtos-cij-hitachi.html#insumos">Insumos Hitachi</a>
     <a href="empresa.html#parcerias">Detectores Fortress</a>
 
@@ -2188,7 +2222,8 @@ body.no-scroll { overflow: hidden; }
           <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Cartuchos plug-and-play sem sistema de tinta</li>
           <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Tinta base água (eco-friendly) e baixa manutenção</li>
         </ul>
-        <a href="#tij" class="link-arrow">Ver detalhes da linha TIJ <span>→</span></a>
+        <!-- inativo até existir a página da linha TIJ: trocar por <a href="produtos-tij.html" class="link-arrow"> e remover is-soon/aria-disabled -->
+        <a class="link-arrow is-soon" aria-disabled="true">Ver detalhes da linha TIJ <span>→</span></a>
       </article>
 
       <article class="tech-card reveal-up" id="tto">
@@ -2203,7 +2238,8 @@ body.no-scroll { overflow: hidden; }
           <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Impressão intermitente ou contínua</li>
           <li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Resolução até 300 DPI em alta velocidade</li>
         </ul>
-        <a href="#tto" class="link-arrow">Ver detalhes da linha TTO <span>→</span></a>
+        <!-- inativo até existir a página da linha TTO: trocar por <a href="produtos-tto.html" class="link-arrow"> e remover is-soon/aria-disabled -->
+        <a class="link-arrow is-soon" aria-disabled="true">Ver detalhes da linha TTO <span>→</span></a>
       </article>
     </div>
   </div>
@@ -2347,8 +2383,9 @@ body.no-scroll { overflow: hidden; }
         <div class="footer-col">
           <span class="footer-label mono">Produtos</span>
           <a href="produtos-cij-hitachi.html">CIJ Hitachi</a>
-          <a href="#tij">TIJ — Jato Termal</a>
-          <a href="#tto">TTO — Transferência Térmica</a>
+          <!-- inativos até existirem as páginas TIJ/TTO (ver CLAUDE.md) -->
+          <a class="is-soon" aria-disabled="true">TIJ — Jato Termal</a>
+          <a class="is-soon" aria-disabled="true">TTO — Transferência Térmica</a>
           <a href="empresa.html#parcerias">Detectores Fortress</a>
           <a href="produtos-cij-hitachi.html#insumos">Insumos originais Hitachi</a>
           <a href="produtos-cij-hitachi.html#comparativo">Comparativo de modelos</a>

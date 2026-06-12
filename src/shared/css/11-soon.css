@@ -1,0 +1,37 @@
+/* ─── Links/CTAs para páginas ainda não criadas ──────────────────
+   Mantém o elemento visível, porém INATIVO (cinza, sem hover), com
+   selo "Em breve", até a página de destino existir.
+
+   COMO REATIVAR quando a página for criada:
+     1. remova a classe `is-soon` do <a>
+     2. devolva o href real (ex.: href="produtos-tij.html")
+     3. remova aria-disabled="true"
+   Inventário das pendências em CLAUDE.md › "Botões inativos".
+
+   OBS: o header/footer das páginas internas são injetados por
+   assets/site.js — as entradas TIJ/TTO já recebem `is-soon` lá. */
+.is-soon {
+  color: var(--fg-mute) !important;
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;        /* mata clique e hover de uma vez */
+}
+.is-soon * { color: inherit !important; }
+.link-arrow.is-soon > span { display: none; }   /* esconde a seta → */
+.is-soon::after {
+  content: "Em breve";
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.1rem 0.45rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+}
+.link-arrow.is-soon::after { margin-left: 0.6rem; }
+.mega-item.is-soon::after { margin-left: auto; }
+.btn.is-soon {
+  background: var(--steel-100) !important;
+  border-color: var(--border-strong) !important;
+  box-shadow: none !important;
+}
