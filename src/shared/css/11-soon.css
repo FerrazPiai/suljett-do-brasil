@@ -35,3 +35,4 @@
   border-color: var(--border-strong) !important;
   box-shadow: none !important;
 }
+.selector-card.is-soon::after { align-self: flex-start; margin-top: 0.25rem; }

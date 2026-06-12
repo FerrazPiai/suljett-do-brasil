@@ -84,6 +84,8 @@
 .mega-menu::before { content: ""; position: absolute; left: 0; right: 0; top: -14px; height: 14px; }
 .mega-col { display: flex; flex-direction: column; gap: 0.25rem; }
 .mega-label { font-family: var(--font-display); font-size: 0.6875rem; letter-spacing: 0.18em; color: var(--mega-label); text-transform: uppercase; padding: 0.25rem 0.625rem 0.625rem; font-weight: 600; }
+a.mega-label { transition: color .15s var(--ease-smooth); }
+a.mega-label:hover { color: var(--sj-red); }
 .mega-label--second { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px dashed var(--mega-border); }
 .mega-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0.75rem; border-radius: 8px; transition: background-color .15s var(--ease-smooth), transform .2s var(--ease-mechanical); }
 .mega-item strong { display: block; color: var(--mega-fg); font-size: 0.9375rem; font-weight: 600; letter-spacing: -0.005em; }
