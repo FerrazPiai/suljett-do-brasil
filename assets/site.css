@@ -1,21 +1,22 @@
 /* =============================================================
-   SULJETT DO BRASIL — SITE SYSTEM · "PRECISION INDUSTRIAL"
-   Shared styles for all interior pages. Mirrors the approved
-   homepage visual language (light body · decisive red ·
-   steel ink · intentional dark accent bands).
+   SULJETT — DESIGN TOKENS · FONTE ÚNICA
+   Injetado no topo de AMBOS os bundles pelo build.mjs:
+     • home (inline no index.html)
+     • páginas internas + blog (assets/site.css)
+   NÃO redefinir estes tokens nos demais arquivos de CSS.
    ============================================================= */
 
-/* ─── Fontes (self-hosted) ────────────────────────────────── */
+/* ─── Fonte (self-hosted) — caminho absoluto p/ funcionar em subpastas ─── */
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 300 800;
   font-display: swap;
-  src: url('Manrope/Manrope-VariableFont_wght.ttf') format('truetype-variations');
+  src: url('/assets/Manrope/Manrope-VariableFont_wght.ttf') format('truetype-variations');
 }
 
-/* ─── Tokens ──────────────────────────────────────────────── */
 :root {
+  /* ── Marca ── */
   --sj-red:       #CC1A1A;
   --sj-red-dark:  #A01010;
   --sj-red-glow:  rgba(204, 26, 26, 0.35);
@@ -23,7 +24,11 @@
   --sj-blue-dark:   #0A3A66;
   --sj-blue-light:  #2E6BAA;
   --sj-blue-tint:   rgba(15, 76, 129, 0.08);
+  --sj-blue-tint-2: rgba(15, 76, 129, 0.16);
+  --sj-blue-glow:   rgba(15, 76, 129, 0.28);
   --signal-green:   #00D18F;
+
+  /* ── Escala steel / ink ── */
   --steel-950:    #0A0F1A;
   --steel-900:    #111827;
   --steel-800:    #1A2535;
@@ -41,24 +46,28 @@
   --ink-400:      #6B7483;
   --pure-white:   #FFFFFF;
 
+  /* ── Tipografia ── */
   --font-display: 'Manrope', system-ui, sans-serif;
-
-  --text-hero:  clamp(2.5rem, 6vw, 4.75rem);
-  --text-h1:    clamp(2rem, 4.2vw, 3.5rem);
-  --text-h2:    clamp(1.6rem, 3vw, 2.5rem);
-  --text-h3:    clamp(1.1rem, 1.6vw, 1.375rem);
+  --text-hero:       clamp(2.75rem, 9.5vh, 7rem);   /* .hero-title — hero fullscreen (home) */
+  --text-page-hero:  clamp(2.5rem, 6vw, 4.75rem);   /* .page-hero h1 — hero compacto (internas) */
+  --text-h1:    clamp(2.25rem, 4.4vw, 3.75rem);     /* .h-display (canônico = home) */
+  --text-h2:    clamp(1.75rem, 3vw, 2.5rem);        /* .h-medium  (canônico = home) */
+  --text-h3:    clamp(1.1rem, 1.6vw, 1.375rem);     /* .card h3/h4 */
   --text-body:  1rem;
   --text-mono:  0.8125rem;
 
+  /* ── Layout ── */
   --container:       1280px;
   --gutter-mobile:   20px;
   --gutter-desktop:  48px;
 
+  /* ── Easings ── */
   --ease-mechanical: cubic-bezier(0.76, 0, 0.24, 1);
   --ease-snap:       cubic-bezier(0.87, 0, 0.13, 1);
   --ease-reveal:     cubic-bezier(0.16, 1, 0.3, 1);
   --ease-smooth:     cubic-bezier(0.25, 0.1, 0.25, 1);
 
+  /* ── Tema — Light (default) ── */
   --bg:            #ffffff;
   --bg-alt:        var(--steel-50);
   --bg-elev:       #ffffff;
@@ -67,13 +76,37 @@
   --fg-mute:       var(--ink-400);
   --border:        #E4E8F0;
   --border-strong: #C9D2E0;
+  --header-bg:     rgba(255, 255, 255, 0.0);
   --header-bg-scr: rgba(255, 255, 255, 0.92);
   --header-border: rgba(10, 15, 26, 0.08);
+  --header-fg:     var(--ink-600);
+  --header-fg-h:   var(--ink-950);
+  --logo-text:     var(--ink-950);
   --card-bg:       #ffffff;
   --card-border:   #E4E8F0;
   --card-shadow:   0 1px 2px rgba(10,15,26,.04), 0 12px 32px rgba(10,15,26,.06);
 }
 
+/* ── Tema — Dark (seções .section--dark e toggle, hoje desativado) ── */
+[data-theme="dark"] {
+  --bg:            var(--steel-950);
+  --bg-alt:        var(--steel-900);
+  --bg-elev:       var(--steel-900);
+  --fg:            var(--pure-white);
+  --fg-body:       var(--steel-200);
+  --fg-mute:       var(--steel-400);
+  --border:        var(--steel-800);
+  --border-strong: var(--steel-700);
+  --header-bg:     rgba(10, 15, 26, 0.0);
+  --header-bg-scr: rgba(10, 15, 26, 0.85);
+  --header-border: rgba(255, 255, 255, 0.08);
+  --header-fg:     var(--steel-300);
+  --header-fg-h:   var(--pure-white);
+  --logo-text:     #ffffff;
+  --card-bg:       var(--steel-900);
+  --card-border:   var(--steel-700);
+  --card-shadow:   0 1px 2px rgba(0,0,0,.4), 0 18px 48px rgba(0,0,0,.35);
+}
 /* ─── Reset ───────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; scroll-behavior: smooth; }
@@ -460,7 +493,7 @@ table.tbl td strong { color: var(--fg); }
 .page-hero-inner { padding-block: clamp(3rem, 7vh, 6rem) clamp(3.5rem, 8vh, 6.5rem); }
 .page-hero-grid { display: block; }
 .page-hero-copy { display: flex; flex-direction: column; gap: 1.5rem; max-width: 720px; }
-.page-hero h1 { font-size: var(--text-hero); font-weight: 800; line-height: 1.04; letter-spacing: -0.03em; color: var(--fg); text-wrap: balance; }
+.page-hero h1 { font-size: var(--text-page-hero); font-weight: 800; line-height: 1.04; letter-spacing: -0.03em; color: var(--fg); text-wrap: balance; }
 .page-hero .lead { color: var(--fg-body); }
 .page-hero .accent { position: relative; }
 .page-hero .accent::after { content: ""; position: absolute; left: 0; bottom: 0.04em; height: 3px; width: 0; background: var(--sj-red); transition: width 1s var(--ease-reveal) .6s; }

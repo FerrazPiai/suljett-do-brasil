@@ -18,20 +18,24 @@
 
 <style>
 /* =============================================================
-   SULJETT — HOME · PRECISION INDUSTRIAL
+   SULJETT — DESIGN TOKENS · FONTE ÚNICA
+   Injetado no topo de AMBOS os bundles pelo build.mjs:
+     • home (inline no index.html)
+     • páginas internas + blog (assets/site.css)
+   NÃO redefinir estes tokens nos demais arquivos de CSS.
    ============================================================= */
 
-/* ─── Fontes (self-hosted) ────────────────────────────────── */
+/* ─── Fonte (self-hosted) — caminho absoluto p/ funcionar em subpastas ─── */
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 300 800;
   font-display: swap;
-  src: url('assets/Manrope/Manrope-VariableFont_wght.ttf') format('truetype-variations');
+  src: url('/assets/Manrope/Manrope-VariableFont_wght.ttf') format('truetype-variations');
 }
 
-/* ─── Tokens ──────────────────────────────────────────────── */
 :root {
+  /* ── Marca ── */
   --sj-red:       #CC1A1A;
   --sj-red-dark:  #A01010;
   --sj-red-glow:  rgba(204, 26, 26, 0.35);
@@ -41,6 +45,9 @@
   --sj-blue-tint:   rgba(15, 76, 129, 0.08);
   --sj-blue-tint-2: rgba(15, 76, 129, 0.16);
   --sj-blue-glow:   rgba(15, 76, 129, 0.28);
+  --signal-green:   #00D18F;
+
+  /* ── Escala steel / ink ── */
   --steel-950:    #0A0F1A;
   --steel-900:    #111827;
   --steel-800:    #1A2535;
@@ -58,24 +65,28 @@
   --ink-400:      #6B7483;
   --pure-white:   #FFFFFF;
 
+  /* ── Tipografia ── */
   --font-display: 'Manrope', system-ui, sans-serif;
-
-  --text-hero:  clamp(2.75rem, 9.5vh, 7rem);
-  --text-h1:    clamp(2.25rem, 4.4vw, 3.75rem);
-  --text-h2:    clamp(1.75rem, 3vw, 2.5rem);
+  --text-hero:       clamp(2.75rem, 9.5vh, 7rem);   /* .hero-title — hero fullscreen (home) */
+  --text-page-hero:  clamp(2.5rem, 6vw, 4.75rem);   /* .page-hero h1 — hero compacto (internas) */
+  --text-h1:    clamp(2.25rem, 4.4vw, 3.75rem);     /* .h-display (canônico = home) */
+  --text-h2:    clamp(1.75rem, 3vw, 2.5rem);        /* .h-medium  (canônico = home) */
+  --text-h3:    clamp(1.1rem, 1.6vw, 1.375rem);     /* .card h3/h4 */
   --text-body:  1rem;
   --text-mono:  0.8125rem;
 
+  /* ── Layout ── */
   --container:       1280px;
   --gutter-mobile:   20px;
   --gutter-desktop:  48px;
 
+  /* ── Easings ── */
   --ease-mechanical: cubic-bezier(0.76, 0, 0.24, 1);
   --ease-snap:       cubic-bezier(0.87, 0, 0.13, 1);
   --ease-reveal:     cubic-bezier(0.16, 1, 0.3, 1);
   --ease-smooth:     cubic-bezier(0.25, 0.1, 0.25, 1);
 
-  /* Theme — Light default */
+  /* ── Tema — Light (default) ── */
   --bg:            #ffffff;
   --bg-alt:        var(--steel-50);
   --bg-elev:       #ffffff;
@@ -95,9 +106,7 @@
   --card-shadow:   0 1px 2px rgba(10,15,26,.04), 0 12px 32px rgba(10,15,26,.06);
 }
 
-/* Hero is always dark — it has the video */
-/* When the page is in light mode, only dark-flagged sections stay dark */
-
+/* ── Tema — Dark (seções .section--dark e toggle, hoje desativado) ── */
 [data-theme="dark"] {
   --bg:            var(--steel-950);
   --bg-alt:        var(--steel-900);
@@ -117,7 +126,6 @@
   --card-border:   var(--steel-700);
   --card-shadow:   0 1px 2px rgba(0,0,0,.4), 0 18px 48px rgba(0,0,0,.35);
 }
-
 /* ─── Reset ───────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }

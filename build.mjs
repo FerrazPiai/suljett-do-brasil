@@ -44,10 +44,13 @@ const concatCss = (dir) =>
     .join('');
 
 function build({ banner = true } = {}) {
+  // Tokens de design — FONTE ÚNICA, injetada no topo de AMBOS os bundles
+  // (home inline + assets/site.css). Ver src/tokens/tokens.css.
+  const tokens = readFileSync(join(SRC, 'tokens', 'tokens.css'), 'utf8');
   // ── home: index.html ──
   const layout = readFileSync(join(HOME, 'layout.html'), 'utf8');
   let out = layout
-    .replace(/^[ \t]*<!-- build:css -->\r?\n/m, () => concatCss(join(HOME, 'css')))
+    .replace(/^[ \t]*<!-- build:css -->\r?\n/m, () => tokens + concatCss(join(HOME, 'css')))
     .replace(/^[ \t]*<!-- build:section (\S+) -->\r?\n/gm, (_, name) =>
       readFileSync(join(HOME, 'sections', name), 'utf8')
     )
@@ -62,7 +65,7 @@ function build({ banner = true } = {}) {
   writeFileSync(join(ROOT, 'index.html'), out);
 
   // ── páginas internas: assets/site.css ──
-  const siteCss = concatCss(join(SRC, 'shared', 'css'));
+  const siteCss = tokens + concatCss(join(SRC, 'shared', 'css'));
   writeFileSync(join(ROOT, 'assets', 'site.css'), siteCss);
 
   console.log(
