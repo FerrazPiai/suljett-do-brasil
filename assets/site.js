@@ -175,8 +175,12 @@
   }
 
   /* ─── Inject ────────────────────────────────────────────── */
-  document.body.insertAdjacentHTML('afterbegin', headerHTML);
-  document.body.insertAdjacentHTML('beforeend', footerHTML);
+  // Coexistência (migração p/ Eleventy): se o header já veio renderizado
+  // no build (página migrada), NÃO reinjeta o chrome — só liga comportamentos.
+  if (!document.getElementById('siteHeader')) {
+    document.body.insertAdjacentHTML('afterbegin', headerHTML);
+    document.body.insertAdjacentHTML('beforeend', footerHTML);
+  }
   if (introHTML) document.body.insertAdjacentHTML('afterbegin', introHTML);
 
   /* ─── Intro animation ───────────────────────────────────── */
