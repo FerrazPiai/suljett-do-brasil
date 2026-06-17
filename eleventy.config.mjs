@@ -33,7 +33,7 @@ export default function (eleventyConfig) {
       language: "pt-BR",
       title: "Blog — Suljett do Brasil",
       subtitle: "Codificação e marcação industrial Hitachi: CIJ, TIJ, TTO e insumos.",
-      base: "https://www.suljett.com.br/",
+      base: "https://suljett.com/",
       author: { name: "Suljett do Brasil", email: "contato@suljett.com" },
     },
   });
