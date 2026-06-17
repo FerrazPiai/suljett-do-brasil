@@ -4,3 +4,7 @@
 .playwright-mcp/
 CLAUDE.md
 sitemap.md
+
+# Node / Eleventy
+node_modules/
+_site/
