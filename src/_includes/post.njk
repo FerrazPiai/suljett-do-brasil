@@ -1,0 +1,41 @@
+---
+layout: base.njk
+---
+<article class="post">
+  <div class="container">
+    <nav class="crumb" aria-label="Trilha de navegação">
+      <a href="/index.html">Home</a><span class="sep">›</span><a href="/blog/">Blog</a><span class="sep">›</span><span class="current">{{ title }}</span>
+    </nav>
+    <header class="post-head">
+      <span class="eyebrow">Blog Suljett</span>
+      <h1>{{ title }}</h1>
+      <p class="post-meta mono">{{ date | dateBR }} · por {{ author }}</p>
+    </header>
+    {% if cover %}
+    <figure class="post-cover">
+      <img src="{{ cover }}" alt="{{ coverAlt }}" loading="eager" decoding="async" />
+    </figure>
+    {% endif %}
+    <div class="post-body">
+      {{ content | safe }}
+    </div>
+  </div>
+</article>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ title | dump | safe }},
+  "description": {{ description | dump | safe }},
+  "datePublished": "{{ date | dateISO }}",
+  "dateModified": "{{ date | dateISO }}",
+  "author": { "@type": "Organization", "name": {{ author | dump | safe }} },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.name | dump | safe }},
+    "logo": { "@type": "ImageObject", "url": "{{ site.url }}/assets/logo-suljett.png" }
+  },
+  "mainEntityOfPage": "{{ site.url }}{{ page.url }}"{% if cover %},
+  "image": "{{ site.url }}{{ cover }}"{% endif %}
+}
+</script>

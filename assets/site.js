@@ -13,12 +13,12 @@
   const headerHTML = `
   <header class="site-header" id="siteHeader" role="banner">
     <div class="container header-inner">
-      <a href="index.html" class="logo" aria-label="Suljett do Brasil — Página inicial">
-        <img src="assets/logo-suljett.png" alt="Suljett do Brasil" class="logo-img" />
+      <a href="/index.html" class="logo" aria-label="Suljett do Brasil — Página inicial">
+        <img src="/assets/logo-suljett.png" alt="Suljett do Brasil" class="logo-img" />
       </a>
       <nav class="nav-links" aria-label="Navegação principal">
-        <a class="nav-link${A('home')}" href="index.html">Home</a>
-        <a class="nav-link${A('empresa')}" href="empresa.html">Empresa</a>
+        <a class="nav-link${A('home')}" href="/index.html">Home</a>
+        <a class="nav-link${A('empresa')}" href="/empresa.html">Empresa</a>
         <div class="has-dropdown" id="ddSolucoes">
           <button class="nav-link nav-link--dropdown${onSolucoes ? ' is-active' : ''}" aria-haspopup="true" aria-expanded="false">
             Soluções
@@ -27,26 +27,26 @@
           <div class="mega-menu" role="menu">
             <div class="mega-col mega-col--featured">
               <span class="mega-label">Em destaque</span>
-              <a href="ficha-tecnica-fispq.html" class="mega-item mega-item--featured mega-item--accent">
+              <a href="/ficha-tecnica-fispq.html" class="mega-item mega-item--featured mega-item--accent">
                 <span class="mega-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6z M14 3v6h6 M8 14h8 M8 17h5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
                 <span><strong>★ Ficha Técnica (FISPQ)</strong><em>Baixe FISPQ + part number</em></span>
               </a>
-              <a href="aplicacoes.html" class="mega-item">
+              <a href="/aplicacoes.html" class="mega-item">
                 <span class="mega-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M8 3h8l-1 4 2 3v9a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-9l2-3-1-4z M8 10h8" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
                 <span><strong>Aplicações</strong><em>Por substrato e embalagem</em></span>
               </a>
             </div>
             <div class="mega-col">
-              <a href="produtos.html" class="mega-label">Produtos</a>
-              <a href="produtos-cij-hitachi.html" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg></span><span><strong>CIJ Hitachi</strong></span></a>              <a class="mega-item mega-item--simple is-soon" aria-disabled="true"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V5a2 2 0 0 0-4 0v9.76a4 4 0 1 0 4 0z"/></svg></span><span><strong>TIJ — Jato Termal</strong></span></a>
+              <a href="/produtos.html" class="mega-label">Produtos</a>
+              <a href="/produtos-cij-hitachi.html" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg></span><span><strong>CIJ Hitachi</strong></span></a>              <a class="mega-item mega-item--simple is-soon" aria-disabled="true"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V5a2 2 0 0 0-4 0v9.76a4 4 0 1 0 4 0z"/></svg></span><span><strong>TIJ — Jato Termal</strong></span></a>
               <a class="mega-item mega-item--simple is-soon" aria-disabled="true"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="8" cy="12" r="2.5"/><circle cx="16" cy="12" r="2.5"/></svg></span><span><strong>TTO — Transf. Térmica</strong></span></a>
-              <a href="insumos-hitachi.html" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7S5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2.7 12 2.7z"/></svg></span><span><strong>Insumos Hitachi</strong></span></a>
-              <a href="detectores-fortress.html" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span><span><strong>Detectores Fortress</strong></span></a>
+              <a href="/insumos-hitachi.html" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7S5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2.7 12 2.7z"/></svg></span><span><strong>Insumos Hitachi</strong></span></a>
+              <a href="/detectores-fortress.html" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span><span><strong>Detectores Fortress</strong></span></a>
             </div>
             <div class="mega-col">
-              <a href="industrias.html" class="mega-label">Indústrias</a>
+              <a href="/industrias.html" class="mega-label">Indústrias</a>
               <a class="mega-item mega-item--simple is-soon" aria-disabled="true"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.85-5.4 5.08-6"/></svg></span><span><strong>Alimentícia</strong></span></a>
-              <a href="industrias-bebidas.html" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h11v8a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4z"/><path d="M16 9h2a2 2 0 0 1 0 4h-2"/><path d="M8 3v2M11 3v2"/></svg></span><span><strong>Bebidas</strong></span></a>
+              <a href="/industrias-bebidas.html" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h11v8a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4z"/><path d="M16 9h2a2 2 0 0 1 0 4h-2"/><path d="M8 3v2M11 3v2"/></svg></span><span><strong>Bebidas</strong></span></a>
               <a class="mega-item mega-item--simple is-soon" aria-disabled="true"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 0-6.5 6-6.5 10a6.5 6.5 0 0 0 13 0C18.5 9 16 3 12 3z"/></svg></span><span><strong>Ovos / Avícolas</strong></span></a>
               <a class="mega-item mega-item--simple is-soon" aria-disabled="true"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8M9 2l-1 4v13a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V6l-1-4"/><path d="M8 10h8"/></svg></span><span><strong>Laticínios</strong></span></a>
               <a class="mega-item mega-item--simple is-soon" aria-disabled="true"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 20.5 3.5 13.5a5 5 0 0 1 7-7l7 7a5 5 0 0 1-7 7z"/><path d="m8.5 8.5 7 7"/></svg></span><span><strong>Farmacêutica</strong></span></a>
@@ -57,8 +57,8 @@
               <a class="mega-item mega-item--simple is-soon" aria-disabled="true"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-1a8 8 0 0 1 16 0v1"/><path d="M10 5.4a8 8 0 0 1 4 0M12 4v3.5"/><path d="M2 19a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2H2z"/></svg></span><span><strong>Construção</strong></span></a>
             </div>
             <div class="mega-col">
-              <a href="servicos.html" class="mega-label">Serviços</a>
-              <a href="servicos-assistencia-tecnica.html" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.8-2.8z"/></svg></span><span><strong>Assistência Técnica</strong></span></a>
+              <a href="/servicos.html" class="mega-label">Serviços</a>
+              <a href="/servicos-assistencia-tecnica.html" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.8-2.8z"/></svg></span><span><strong>Assistência Técnica</strong></span></a>
               <a class="mega-item mega-item--simple is-soon" aria-disabled="true"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M22 12h-3M5 12H2M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1M18.4 18.4l-2.1-2.1M7.7 7.7 5.6 5.6"/></svg></span><span><strong>Manutenção</strong></span></a>
               <a class="mega-item mega-item--simple is-soon" aria-disabled="true"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v11M8 10l4 4 4-4"/><path d="M4 18h16"/></svg></span><span><strong>Instalação</strong></span></a>
               <a class="mega-item mega-item--simple is-soon" aria-disabled="true"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 9 12 5 2 9l10 4 10-4z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/></svg></span><span><strong>Treinamento técnico</strong></span></a>
@@ -67,10 +67,10 @@
             </div>
           </div>
         </div>
-        <a class="nav-link${A('contato')}" href="contato.html">Contato</a>
+        <a class="nav-link${A('contato')}" href="/contato.html">Contato</a>
       </nav>
       <div class="nav-actions">
-        <a href="contato.html" class="btn btn--cta">
+        <a href="/contato.html" class="btn btn--cta">
           Falar com Especialista
           <svg class="btn-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -80,19 +80,19 @@
   </header>
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <div class="mobile-menu-inner">
-      <a href="index.html" class="${PAGE==='home'?'is-active':''}">Home</a>
-      <a href="empresa.html" class="${PAGE==='empresa'?'is-active':''}">Empresa</a>
+      <a href="/index.html" class="${PAGE==='home'?'is-active':''}">Home</a>
+      <a href="/empresa.html" class="${PAGE==='empresa'?'is-active':''}">Empresa</a>
       <span class="mobile-label">Soluções</span>
-      <a href="ficha-tecnica-fispq.html" class="mobile-featured">★ Ficha Técnica (FISPQ)</a>
-      <a href="aplicacoes.html">Aplicações</a>
+      <a href="/ficha-tecnica-fispq.html" class="mobile-featured">★ Ficha Técnica (FISPQ)</a>
+      <a href="/aplicacoes.html">Aplicações</a>
       <span class="mobile-sublabel">Produtos</span>
-      <a href="produtos-cij-hitachi.html">CIJ Hitachi</a>      <a class="is-soon" aria-disabled="true">TIJ — Jato Termal</a>
+      <a href="/produtos-cij-hitachi.html">CIJ Hitachi</a>      <a class="is-soon" aria-disabled="true">TIJ — Jato Termal</a>
       <a class="is-soon" aria-disabled="true">TTO — Transf. Térmica</a>
-      <a href="insumos-hitachi.html">Insumos Hitachi</a>
-      <a href="detectores-fortress.html">Detectores Fortress</a>
+      <a href="/insumos-hitachi.html">Insumos Hitachi</a>
+      <a href="/detectores-fortress.html">Detectores Fortress</a>
       <span class="mobile-sublabel">Indústrias</span>
       <a class="is-soon" aria-disabled="true">Alimentícia</a>
-      <a href="industrias-bebidas.html">Bebidas</a>
+      <a href="/industrias-bebidas.html">Bebidas</a>
       <a class="is-soon" aria-disabled="true">Ovos / Avícolas</a>
       <a class="is-soon" aria-disabled="true">Laticínios</a>
       <a class="is-soon" aria-disabled="true">Farmacêutica</a>
@@ -102,14 +102,14 @@
       <a class="is-soon" aria-disabled="true">Fios, Cabos e Dutos</a>
       <a class="is-soon" aria-disabled="true">Construção</a>
       <span class="mobile-sublabel">Serviços</span>
-      <a href="servicos-assistencia-tecnica.html">Assistência Técnica</a>
+      <a href="/servicos-assistencia-tecnica.html">Assistência Técnica</a>
       <a class="is-soon" aria-disabled="true">Manutenção</a>
       <a class="is-soon" aria-disabled="true">Instalação</a>
       <a class="is-soon" aria-disabled="true">Treinamento técnico</a>
       <a class="is-soon" aria-disabled="true">Contratos de serviço</a>
       <a class="is-soon" aria-disabled="true">Help Desk</a>
-      <a href="contato.html" class="${PAGE==='contato'?'is-active':''}">Contato</a>
-      <a href="contato.html" class="btn btn--cta" style="margin-top:1.25rem">Falar com Especialista →</a>
+      <a href="/contato.html" class="${PAGE==='contato'?'is-active':''}">Contato</a>
+      <a href="/contato.html" class="btn btn--cta" style="margin-top:1.25rem">Falar com Especialista →</a>
     </div>
   </div>`;
 
@@ -119,7 +119,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <span class="footer-logo-tile"><img src="assets/logo-suljett.png" alt="Suljett do Brasil" /></span>
+          <span class="footer-logo-tile"><img src="/assets/logo-suljett.png" alt="Suljett do Brasil" /></span>
           <p class="footer-tag">Distribuidora oficial Hitachi Industrial Equipment Systems no Sul e Nordeste do Brasil. Codificação industrial que não para.</p>
           <div class="footer-social">
             <a class="footer-soc" href="https://www.linkedin.com/company/suljett-do-brasil" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.25 8.25h4.5V24H.25zM8.5 8.25H12.8v2.15h.06c.6-1.13 2.06-2.32 4.24-2.32 4.54 0 5.38 2.99 5.38 6.88V24h-4.5v-6.96c0-1.66-.03-3.8-2.32-3.8-2.32 0-2.68 1.81-2.68 3.68V24H8.5z"/></svg></a>
@@ -130,22 +130,22 @@
         <div class="footer-cols">
           <div class="footer-col">
             <span class="footer-label">Soluções</span>
-            <a href="produtos.html">Produtos</a>
-            <a href="produtos-cij-hitachi.html">CIJ Hitachi</a>
-            <a href="industrias.html">Indústrias</a>
-            <a href="aplicacoes.html">Aplicações</a>
-            <a href="servicos.html">Serviços</a>
-            <a href="ficha-tecnica-fispq.html">Ficha técnica (FISPQ)</a>
+            <a href="/produtos.html">Produtos</a>
+            <a href="/produtos-cij-hitachi.html">CIJ Hitachi</a>
+            <a href="/industrias.html">Indústrias</a>
+            <a href="/aplicacoes.html">Aplicações</a>
+            <a href="/servicos.html">Serviços</a>
+            <a href="/ficha-tecnica-fispq.html">Ficha técnica (FISPQ)</a>
           </div>
           <div class="footer-col">
             <span class="footer-label">Institucional</span>
-            <a href="empresa.html">Sobre nós</a>
-            <a href="empresa.html#iso">Política da Qualidade</a>
-            <a href="contato.html#rh">Trabalhe conosco</a>
+            <a href="/empresa.html">Sobre nós</a>
+            <a href="/empresa.html#iso">Política da Qualidade</a>
+            <a href="/contato.html#rh">Trabalhe conosco</a>
           </div>
           <div class="footer-col">
             <span class="footer-label">Contato</span>
-            <a href="contato.html">Fale conosco</a>
+            <a href="/contato.html">Fale conosco</a>
             <a href="https://wa.me/5551980370198" class="footer-phone">(51) 98037-0198</a>
             <a href="mailto:contato@suljett.com">contato@suljett.com</a>
           </div>
@@ -169,7 +169,7 @@
   let introHTML = '';
   if (showIntro) {
     introHTML = `<div class="intro-curtain" id="introCurtain" aria-hidden="true">
-      <div class="intro-logo-wrap" id="introLogo"><img src="assets/logo-suljett.png" alt="Suljett do Brasil" /></div>
+      <div class="intro-logo-wrap" id="introLogo"><img src="/assets/logo-suljett.png" alt="Suljett do Brasil" /></div>
       <span class="intro-bar" id="introBar"></span>
     </div>`;
   }

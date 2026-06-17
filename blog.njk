@@ -1,0 +1,40 @@
+---
+layout: base.njk
+activeNav: ""
+title: "Blog | Codificação industrial Hitachi | Suljett do Brasil"
+description: "Artigos técnicos sobre codificação e marcação industrial Hitachi — CIJ, TIJ, TTO, insumos S10 e boas práticas de linha de produção."
+permalink: "/blog/"
+---
+<section class="section blog-hero">
+  <div class="container">
+    <nav class="crumb" aria-label="Trilha de navegação">
+      <a href="/index.html">Home</a><span class="sep">›</span><span class="current">Blog</span>
+    </nav>
+    <div class="section-head">
+      <span class="eyebrow">Blog Suljett</span>
+      <h1 class="h-display">Codificação industrial, sem mistério.</h1>
+      <p class="lead">Artigos técnicos sobre marcação Hitachi — tecnologias CIJ, TIJ e TTO, insumos originais e boas práticas para a sua linha de produção.</p>
+    </div>
+  </div>
+</section>
+<section class="section section--alt">
+  <div class="container">
+    <div class="grid grid--3 blog-grid">
+    {% for post in collections.post | reverse %}
+      <article class="card blog-card">
+        {% if post.data.cover %}
+        <a href="{{ post.url }}" class="blog-card__media" tabindex="-1" aria-hidden="true">
+          <img src="{{ post.data.cover }}" alt="" loading="lazy" decoding="async" />
+        </a>
+        {% endif %}
+        <span class="card-meta">{{ post.data.date | dateBR }}</span>
+        <h3 class="blog-card__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+        <p>{{ post.data.description }}</p>
+        <a href="{{ post.url }}" class="link-arrow">Ler artigo <span>→</span></a>
+      </article>
+    {% else %}
+      <p class="lead">Em breve, os primeiros artigos.</p>
+    {% endfor %}
+    </div>
+  </div>
+</section>

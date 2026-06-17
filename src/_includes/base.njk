@@ -11,14 +11,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <title>{{ title }}</title>
 <meta name="description" content="{{ description }}" />
-<link rel="preload" href="assets/Manrope/Manrope-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
-<link rel="stylesheet" href="assets/site.css" />
+<link rel="preload" href="/assets/Manrope/Manrope-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="stylesheet" href="/assets/site.css" />
 </head>
 <body data-page="{{ activeNav }}">
 {% include "partials/header.njk" %}
 {{ content | safe }}
 {% include "partials/footer.njk" %}
 {% if extraScripts %}{% for s in extraScripts %}<script src="{{ s }}"></script>
-{% endfor %}{% endif %}<script src="assets/site.js"></script>
+{% endfor %}{% endif %}<script src="/assets/site.js"></script>
 </body>
 </html>
