@@ -14,6 +14,7 @@
 <meta property="og:description" content="Equipamentos Hitachi com 15 anos de durabilidade, insumos originais e suporte técnico 24h. A solução completa para quem não pode parar a produção." />
 
 <link rel="preload" href="assets/Manrope/Manrope-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="preload" href="assets/hero-poster.webp" as="image" type="image/webp" fetchpriority="high" />
 
 <style>
 /* =============================================================
@@ -130,6 +131,8 @@ body {
   transition: background-color .45s var(--ease-smooth), color .45s var(--ease-smooth);
 }
 img, svg, video { display: block; max-width: 100%; }
+/* <picture> é só wrapper de <img> — não deve criar caixa própria (preserva flex/centro/percentuais) */
+picture { display: contents; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
 ul, ol { list-style: none; }
@@ -1885,8 +1888,12 @@ body.no-scroll { overflow: hidden; }
 <!-- ══════════════ HERO ══════════════ -->
 <section class="hero" aria-label="Seção principal">
   <div class="hero-bg" aria-hidden="true">
-    <video class="hero-bg-video" autoplay muted loop playsinline preload="auto">
-      <source src="assets/product.mp4" type="video/mp4" />
+    <video class="hero-bg-video" autoplay muted loop playsinline
+           preload="none" poster="assets/hero-poster.webp"
+           width="1920" height="1080" data-hero-video>
+      <!-- Quando o clipe definitivo for exportado, adicione antes deste um
+           <source data-src-webm="assets/hero.webm" type="video/webm"> e troque o mp4 por assets/hero.mp4 -->
+      <source data-src-mp4="assets/product.mp4" type="video/mp4" />
     </video>
     <div class="hero-bg-overlay"></div>
   </div>
@@ -1988,7 +1995,10 @@ body.no-scroll { overflow: hidden; }
     <div class="hscroll-wrap" data-hscroll>
       <div class="apps-grid hscroll-track" data-hscroll-track>
         <article class="app-card reveal-up" data-parallax-card>
-          <img class="app-card__img" src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=75" alt="Linha de produção alimentícia" loading="lazy" />
+          <picture>
+            <source type="image/webp" srcset="assets/midia/setores/setor-alimenticia.webp">
+            <img class="app-card__img" src="assets/midia/setores/setor-alimenticia.jpg" alt="Linha de produção alimentícia com codificação de lote e validade" width="1024" height="682" loading="lazy" decoding="async" />
+          </picture>
           <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <div class="app-card__body">
             <span class="app-card__num">01 / 06</span>
@@ -2000,7 +2010,10 @@ body.no-scroll { overflow: hidden; }
           </div>
         </article>
         <article class="app-card reveal-up" data-parallax-card>
-          <img class="app-card__img" src="https://images.unsplash.com/photo-1550505095-81378a674395?auto=format&fit=crop&w=1200&q=75" alt="Linha de envase de bebidas" loading="lazy" />
+          <picture>
+            <source type="image/webp" srcset="assets/midia/setores/setor-bebidas.webp">
+            <img class="app-card__img" src="assets/midia/setores/setor-bebidas.jpg" alt="Linha de envase de bebidas em alta velocidade" width="852" height="480" loading="lazy" decoding="async" />
+          </picture>
           <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <div class="app-card__body">
             <span class="app-card__num">02 / 06</span>
@@ -2012,7 +2025,10 @@ body.no-scroll { overflow: hidden; }
           </div>
         </article>
         <article class="app-card reveal-up" data-parallax-card>
-          <img class="app-card__img" src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=1200&q=75" alt="Leites e laticínios em embalagens" loading="lazy" />
+          <picture>
+            <source type="image/webp" srcset="assets/midia/setores/setor-laticinios.webp">
+            <img class="app-card__img" src="assets/midia/setores/setor-laticinios.jpg" alt="Embalagens de leite e laticínios com data de validade impressa" width="1100" height="893" loading="lazy" decoding="async" />
+          </picture>
           <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <div class="app-card__body">
             <span class="app-card__num">03 / 06</span>
@@ -2024,7 +2040,10 @@ body.no-scroll { overflow: hidden; }
           </div>
         </article>
         <article class="app-card reveal-up" data-parallax-card>
-          <img class="app-card__img" src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1200&q=75" alt="Produção farmacêutica" loading="lazy" />
+          <picture>
+            <source type="image/webp" srcset="assets/midia/setores/setor-farmaceutica.webp">
+            <img class="app-card__img" src="assets/midia/setores/setor-farmaceutica.jpg" alt="Linha farmacêutica com marcação de rastreabilidade" width="900" height="601" loading="lazy" decoding="async" />
+          </picture>
           <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <div class="app-card__body">
             <span class="app-card__num">04 / 06</span>
@@ -2036,7 +2055,10 @@ body.no-scroll { overflow: hidden; }
           </div>
         </article>
         <article class="app-card reveal-up" data-parallax-card>
-          <img class="app-card__img" src="https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1200&q=75" alt="Indústria automotiva" loading="lazy" />
+          <picture>
+            <source type="image/webp" srcset="assets/midia/setores/setor-automotiva.webp">
+            <img class="app-card__img" src="assets/midia/setores/setor-automotiva.jpg" alt="Peças automotivas com marcação industrial permanente" width="1200" height="450" loading="lazy" decoding="async" />
+          </picture>
           <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <div class="app-card__body">
             <span class="app-card__num">05 / 06</span>
@@ -2048,7 +2070,10 @@ body.no-scroll { overflow: hidden; }
           </div>
         </article>
         <article class="app-card reveal-up" data-parallax-card>
-          <img class="app-card__img" src="https://images.unsplash.com/photo-1498654200943-1088dd4438ae?auto=format&fit=crop&w=1200&q=75" alt="Ovos em bandeja" loading="lazy" />
+          <picture>
+            <source type="image/webp" srcset="assets/midia/setores/setor-ovos.webp">
+            <img class="app-card__img" src="assets/midia/setores/setor-ovos.jpg" alt="Bandeja de ovos com codificação de validade" width="564" height="384" loading="lazy" decoding="async" />
+          </picture>
           <span class="app-card__mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <div class="app-card__body">
             <span class="app-card__num">06 / 06</span>
@@ -2073,7 +2098,10 @@ body.no-scroll { overflow: hidden; }
 <section class="section section--dark section--cij" id="cij" aria-label="CIJ Showcase">
   <!-- Imagem de fundo (lado direito). Troque o src abaixo pela imagem definitiva. -->
   <div class="cij-bg" aria-hidden="true">
-    <img src="assets/cij-machine-1.png" alt="" loading="lazy" />
+    <picture>
+      <source type="image/webp" srcset="assets/midia/produtos-fotos/ux2-studio-hero.webp">
+      <img src="assets/midia/produtos-fotos/ux2-studio-hero.jpg" alt="" width="1600" height="1523" loading="lazy" decoding="async" />
+    </picture>
   </div>
   <div class="container">
     <div class="cij-head">
@@ -2102,19 +2130,28 @@ body.no-scroll { overflow: hidden; }
         <div class="ms-frame">
           <figure class="ms-slide is-active">
             <div class="model-media">
-              <img class="model-img" src="assets/cij-machine-1.png" alt="Hitachi UX2-D160W" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="assets/midia/produtos-renders/ux2-d160w.webp">
+                <img class="model-img" src="assets/midia/produtos-renders/ux2-d160w.png" alt="Impressora CIJ Hitachi UX2-D160W" width="800" height="817" loading="lazy" decoding="async" />
+              </picture>
               <span class="model-tag mono">MODELO TOPO</span>
             </div>
           </figure>
           <figure class="ms-slide">
             <div class="model-media">
-              <img class="model-img" src="assets/cij-machine-2.png" alt="Hitachi UX-D150W" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="assets/midia/produtos-renders/ux-d150w.webp">
+                <img class="model-img" src="assets/midia/produtos-renders/ux-d150w.png" alt="Impressora CIJ Hitachi UX-D150W" width="800" height="800" loading="lazy" decoding="async" />
+              </picture>
               <span class="model-tag mono">LINHA PADRÃO</span>
             </div>
           </figure>
           <figure class="ms-slide">
             <div class="model-media">
-              <img class="model-img" src="assets/cij-machine-3.png" alt="Hitachi UX-P160WP" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="assets/midia/produtos-renders/ux-p160wp.webp">
+                <img class="model-img" src="assets/midia/produtos-renders/ux-p160wp.png" alt="Impressora CIJ Hitachi UX-P160WP" width="800" height="800" loading="lazy" decoding="async" />
+              </picture>
               <span class="model-tag mono">CONDIÇÕES EXTREMAS</span>
             </div>
           </figure>
@@ -2195,7 +2232,10 @@ body.no-scroll { overflow: hidden; }
     <div class="tech-grid">
       <article class="tech-card reveal-up" id="cij-card">
         <figure class="tech-card-media">
-          <img src="assets/cij-machine-1.png" alt="Impressora CIJ Hitachi" loading="lazy" />
+          <picture>
+            <source type="image/webp" srcset="assets/midia/produtos-renders/ux2-d160w.webp">
+            <img src="assets/midia/produtos-renders/ux2-d160w.png" alt="Impressora de jato contínuo (CIJ) Hitachi" width="800" height="817" loading="lazy" decoding="async" />
+          </picture>
         </figure>
         <span class="tech-card-tag mono">CIJ · Jato Contínuo</span>
         <h3>Marcação em alta velocidade</h3>
@@ -2210,7 +2250,10 @@ body.no-scroll { overflow: hidden; }
 
       <article class="tech-card reveal-up" id="tij">
         <figure class="tech-card-media">
-          <img src="assets/cij-machine-2.png" alt="Impressora TIJ Hitachi" loading="lazy" />
+          <picture>
+            <source type="image/webp" srcset="assets/midia/tecnologias/tij-sj500.webp">
+            <img src="assets/midia/tecnologias/tij-sj500.jpg" alt="Impressora térmica de jato de tinta (TIJ) Hitachi SJ500" width="1200" height="728" loading="lazy" decoding="async" />
+          </picture>
         </figure>
         <span class="tech-card-tag mono">TIJ · Jato Termal</span>
         <h3>Impressão termal em alta resolução</h3>
@@ -2226,7 +2269,10 @@ body.no-scroll { overflow: hidden; }
 
       <article class="tech-card reveal-up" id="tto">
         <figure class="tech-card-media">
-          <img src="assets/cij-machine-3.png" alt="Impressora TTO Hitachi" loading="lazy" />
+          <picture>
+            <source type="image/webp" srcset="assets/midia/tecnologias/tto-sj8300.webp">
+            <img src="assets/midia/tecnologias/tto-sj8300.jpg" alt="Impressora de transferência térmica (TTO) Hitachi SJ8300" width="1200" height="642" loading="lazy" decoding="async" />
+          </picture>
         </figure>
         <span class="tech-card-tag mono">TTO · Transferência Térmica</span>
         <h3>Marcação direta em filme flexível</h3>
@@ -2829,6 +2875,25 @@ body.no-scroll { overflow: hidden; }
     form.classList.add('is-success');
     form.querySelector('button[type=submit]').textContent = 'Download iniciado ✓';
   });
+
+  /* ─── Hero video: só carrega/toca em desktop com boa conexão e
+     sem reduced-motion; caso contrário fica apenas o poster (LCP). ── */
+  (() => {
+    const v = qs('[data-hero-video]');
+    if (!v) return;
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const small = matchMedia('(max-width: 767px)').matches;
+    const c = navigator.connection || {};
+    const slow = c.saveData || /(^|-)2g$/.test(c.effectiveType || '');
+    if (reduced || small || slow) return;
+    qsa('source', v).forEach((s) => {
+      if (s.dataset.srcWebm) s.src = s.dataset.srcWebm;
+      if (s.dataset.srcMp4) s.src = s.dataset.srcMp4;
+    });
+    v.load();
+    const play = () => v.play().catch(() => {});
+    'requestIdleCallback' in window ? requestIdleCallback(play) : setTimeout(play, 300);
+  })();
 
 })();
 

@@ -134,5 +134,24 @@
     form.querySelector('button[type=submit]').textContent = 'Download iniciado ✓';
   });
 
+  /* ─── Hero video: só carrega/toca em desktop com boa conexão e
+     sem reduced-motion; caso contrário fica apenas o poster (LCP). ── */
+  (() => {
+    const v = qs('[data-hero-video]');
+    if (!v) return;
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const small = matchMedia('(max-width: 767px)').matches;
+    const c = navigator.connection || {};
+    const slow = c.saveData || /(^|-)2g$/.test(c.effectiveType || '');
+    if (reduced || small || slow) return;
+    qsa('source', v).forEach((s) => {
+      if (s.dataset.srcWebm) s.src = s.dataset.srcWebm;
+      if (s.dataset.srcMp4) s.src = s.dataset.srcMp4;
+    });
+    v.load();
+    const play = () => v.play().catch(() => {});
+    'requestIdleCallback' in window ? requestIdleCallback(play) : setTimeout(play, 300);
+  })();
+
 })();
 
