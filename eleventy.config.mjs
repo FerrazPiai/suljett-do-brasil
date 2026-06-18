@@ -4,15 +4,18 @@
 // FASE 1: páginas internas migradas para .njk com layout único (chrome).
 // FASE 3: blog em Markdown (src/blog/posts/*.md), coleção "post",
 //         listagem /blog/, feed.xml (RSS) e sitemap.xml.
-// A home (index.html, gerada por build.mjs) segue como passthrough.
+// FASE 4: home migrada para o Eleventy (index.njk → layout home.njk),
+//         reusando o chrome único. build.mjs eliminado: o CSS/JS da home
+//         é injetado inline via src/_data/home.js e o assets/site.css das
+//         internas é gerado por site-css.njk (dados em src/_data/shared.js).
 //
-// Pipeline: `npm run build` → node build.mjs (home) && eleventy (resto)
+// Pipeline: `npm run build` → eleventy (tudo).
 // ============================================================
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 
 export default function (eleventyConfig) {
-  // HTML legado (home) e assets: copiados como estão.
-  eleventyConfig.addPassthroughCopy("index.html");
+  // Assets estáticos (fontes, imagens, vídeos, fichas.js, site.js, vendor):
+  // copiados como estão. index.html e assets/site.css agora são GERADOS.
   eleventyConfig.addPassthroughCopy("assets");
 
   eleventyConfig.addGlobalData("currentYear", new Date().getFullYear());

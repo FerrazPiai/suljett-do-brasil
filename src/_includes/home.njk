@@ -1,0 +1,34 @@
+{#
+  Layout da HOME (Eleventy + Nunjucks).
+  Reusa o chrome ÚNICO (header/footer em partials/) — fim da duplicação
+  de menu. CSS e JS da home seguem INLINE (dados em src/_data/home.js),
+  preservando GSAP/ScrollTrigger/Lenis. A home NÃO carrega assets/site.js
+  (tem o próprio ui.js + animations.js inline).
+#}<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Impressoras CIJ Hitachi | Codificação Industrial | Suljett do Brasil</title>
+<meta name="description" content="Distribuidora oficial Hitachi no Sul e Nordeste do Brasil. Impressoras CIJ, insumos originais e assistência técnica especializada para linhas de produção contínua. Fale com um especialista." />
+<meta property="og:title" content="Suljett do Brasil — Codificação industrial que não para" />
+<meta property="og:description" content="Equipamentos Hitachi com 15 anos de durabilidade, insumos originais e suporte técnico 24h. A solução completa para quem não pode parar a produção." />
+
+<link rel="preload" href="/assets/Manrope/Manrope-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="preload" href="/assets/hero-poster.webp" as="image" type="image/webp" fetchpriority="high" />
+
+<style>{{ home.css | safe }}</style>
+</head>
+<body>
+{{ home.intro | safe }}
+{% include "partials/header.njk" %}
+{{ content | safe }}
+{% include "partials/footer.njk" %}
+<script src="/assets/fichas.js"></script>
+<script src="/assets/vendor/gsap.min.js"></script>
+<script src="/assets/vendor/ScrollTrigger.min.js"></script>
+<script src="/assets/vendor/lenis.min.js"></script>
+<script>{{ home.animJs | safe }}</script>
+<script>{{ home.uiJs | safe }}</script>
+</body>
+</html>

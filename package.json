@@ -4,10 +4,9 @@
   "private": true,
   "description": "Site institucional da Suljett do Brasil — distribuidora oficial Hitachi de codificadoras industriais.",
   "scripts": {
-    "build:home": "node build.mjs",
-    "build": "node build.mjs && eleventy",
-    "dev": "node build.mjs && eleventy --serve",
-    "watch": "node build.mjs --watch"
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "watch": "eleventy --watch"
   },
   "engines": {
     "node": ">=18"
