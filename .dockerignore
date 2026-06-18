@@ -3,10 +3,6 @@
 *.log
 .DS_Store
 node_modules
-src
-uploads
+_site
 .playwright-mcp
-build.mjs
-eleventy.config.mjs
-package.json
-package-lock.json
+uploads
