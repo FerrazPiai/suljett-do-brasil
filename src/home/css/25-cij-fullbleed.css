@@ -5,13 +5,13 @@
 .cij-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
 .cij-bg img {
   position: absolute; right: 0; top: 0;
-  height: 100%; width: clamp(420px, 56%, 60vw);
-  object-fit: cover; object-position: center;
+  height: 100%; width: clamp(480px, 68%, 74vw);
+  object-fit: cover; object-position: 30% center;
 }
-/* fade da cor da seção (esquerda) sobre a imagem → texto sempre legível */
+/* fade da cor da seção (esquerda) sobre a imagem → texto sempre legível, transição longa e suave (sem corte visível) */
 .cij-bg::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(90deg, var(--bg) 0%, var(--bg) 38%, transparent 72%);
+  background: linear-gradient(90deg, var(--bg) 0%, var(--bg) 22%, color-mix(in srgb, var(--bg) 75%, transparent) 42%, color-mix(in srgb, var(--bg) 35%, transparent) 62%, transparent 85%);
 }
 .cij-head {
   display: flex; flex-direction: column;
