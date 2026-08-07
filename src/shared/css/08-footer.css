@@ -10,7 +10,9 @@
 .footer-soc { width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; color: var(--fg-mute); transition: color .15s, border-color .15s, background .15s; }
 .footer-soc:hover { color: var(--sj-red); border-color: var(--sj-red); background: rgba(204,26,26,.06); }
 .footer-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; }
-@media (min-width: 768px) { .footer-cols { grid-template-columns: repeat(4,1fr); } }
+/* 6 colunas em duas linhas de três (Produtos·Aplicações·Indústrias /
+   Serviços·Empresa·Contato) — 6 numa linha só ficaria estreito demais. */
+@media (min-width: 768px) { .footer-cols { grid-template-columns: repeat(3,1fr); gap: 2.5rem 1.5rem; } }
 .footer-col { display: flex; flex-direction: column; gap: 0.5rem; }
 .footer-label { font-size: 0.6875rem; letter-spacing: 0.18em; color: var(--fg-mute); text-transform: uppercase; margin-bottom: 0.5rem; font-weight: 700; }
 .footer-col a, .footer-col span { color: var(--fg-body); font-size: 0.875rem; padding: 0.1rem 0; transition: color .15s; }

@@ -41,7 +41,6 @@
               <a href="/produtos-cij-hitachi.html" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg></span><span><strong>CIJ Hitachi</strong></span></a>              <a class="mega-item mega-item--simple is-soon" aria-disabled="true"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V5a2 2 0 0 0-4 0v9.76a4 4 0 1 0 4 0z"/></svg></span><span><strong>TIJ — Jato Termal</strong></span></a>
               <a class="mega-item mega-item--simple is-soon" aria-disabled="true"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="8" cy="12" r="2.5"/><circle cx="16" cy="12" r="2.5"/></svg></span><span><strong>TTO — Transf. Térmica</strong></span></a>
               <a href="/insumos-hitachi.html" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7S5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2.7 12 2.7z"/></svg></span><span><strong>Insumos Hitachi</strong></span></a>
-              <a href="/detectores-fortress.html" class="mega-item mega-item--simple"><span class="mega-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span><span><strong>Detectores Fortress</strong></span></a>
             </div>
             <div class="mega-col">
               <a href="/industrias.html" class="mega-label">Indústrias</a>
@@ -89,7 +88,6 @@
       <a href="/produtos-cij-hitachi.html">CIJ Hitachi</a>      <a class="is-soon" aria-disabled="true">TIJ — Jato Termal</a>
       <a class="is-soon" aria-disabled="true">TTO — Transf. Térmica</a>
       <a href="/insumos-hitachi.html">Insumos Hitachi</a>
-      <a href="/detectores-fortress.html">Detectores Fortress</a>
       <span class="mobile-sublabel">Indústrias</span>
       <a class="is-soon" aria-disabled="true">Alimentícia</a>
       <a href="/industrias-bebidas.html">Bebidas</a>

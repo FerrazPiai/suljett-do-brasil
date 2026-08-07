@@ -218,7 +218,7 @@
   .footer-top { grid-template-columns: 1fr; gap: 2.5rem; }
   .footer-brand { flex-direction: row; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
   .footer-tag { max-width: 420px; }
-  .footer-cols { grid-template-columns: repeat(4, 1fr); gap: 1.5rem 1rem; }
+  .footer-cols { grid-template-columns: repeat(3, 1fr); gap: 2rem 1rem; }
 }
 
 /* ---------- Hero figure / product max caps ---------- */
