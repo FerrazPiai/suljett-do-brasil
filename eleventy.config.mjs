@@ -20,6 +20,13 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addGlobalData("currentYear", new Date().getFullYear());
 
+  // src/home e src/shared estão no .eleventyignore (não são templates), mas
+  // src/_data/{home,shared}.js lê os CSS/JS de lá em tempo de build. Sem estes
+  // watch targets, editar um .css não dispara rebuild no `--serve`.
+  eleventyConfig.addWatchTarget("src/home/");
+  eleventyConfig.addWatchTarget("src/shared/");
+  eleventyConfig.addWatchTarget("src/tokens/");
+
   // ── Filtros de data (pt-BR) ──
   const toDate = (d) => (d instanceof Date ? d : new Date(d));
   eleventyConfig.addFilter("dateBR", (d) =>

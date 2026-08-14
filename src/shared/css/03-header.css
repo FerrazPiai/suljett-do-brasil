@@ -32,7 +32,7 @@
   position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%) translateY(-4px);
   width: min(1080px, calc(100vw - 40px));
   background: #fff; color: var(--ink-950); border: 1px solid var(--border); border-radius: 12px;
-  padding: 1.5rem; display: grid; grid-template-columns: 1.15fr 1fr 1fr 1fr; gap: 1.5rem;
+  padding: 1rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.875rem 1.25rem;
   opacity: 0; pointer-events: none; transition: opacity .25s var(--ease-smooth), transform .25s var(--ease-mechanical);
   box-shadow: 0 1px 2px rgba(10,15,26,.04), 0 20px 48px rgba(10,15,26,.12);
 }
@@ -41,8 +41,25 @@
    evita mouseleave ao mover o mouse do trigger para o menu */
 .mega-menu::before { content: ""; position: absolute; left: 0; right: 0; top: -14px; height: 14px; }
 .mega-col { display: flex; flex-direction: column; gap: 0.15rem; }
-.mega-col--featured { gap: 0.5rem; }
-.mega-label { font-size: 0.6875rem; letter-spacing: 0.18em; color: var(--ink-400); text-transform: uppercase; padding: 0.25rem 0.625rem 0.625rem; font-weight: 700; }
+.mega-label { font-size: 0.6875rem; letter-spacing: 0.18em; color: var(--ink-400); text-transform: uppercase; padding: 0.25rem 0.55rem 0.4rem; font-weight: 700; }
+
+/* Faixa de destaque (FISPQ) — largura total, acima das 4 colunas */
+.mega-feature {
+  grid-column: 1 / -1;
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.5rem 0.75rem; border-radius: 10px;
+  background: linear-gradient(135deg, rgba(204,26,26,.08), rgba(204,26,26,0));
+  border: 1px solid rgba(204,26,26,.2);
+  transition: background-color .15s var(--ease-smooth), border-color .15s var(--ease-smooth);
+}
+.mega-feature:hover { background: linear-gradient(135deg, rgba(204,26,26,.14), rgba(204,26,26,.02)); border-color: rgba(204,26,26,.4); }
+.mega-feature .mega-ico { width: 32px; height: 32px; background: rgba(204,26,26,.1); color: var(--sj-red); }
+.mega-feature .mega-ico svg { width: 17px; height: 17px; }
+.mega-feature-copy { display: flex; flex-direction: column; }
+.mega-feature-copy strong { color: var(--sj-red); font-size: 0.9375rem; font-weight: 600; letter-spacing: -0.005em; line-height: 1.25; }
+.mega-feature-copy em { font-style: normal; color: var(--ink-400); font-size: 0.75rem; line-height: 1.35; margin-top: 1px; }
+.mega-feature-cta { margin-left: auto; flex-shrink: 0; display: inline-flex; align-items: center; gap: 0.35rem; color: var(--sj-red); font-size: 0.8125rem; font-weight: 600; }
+.mega-feature-cta svg { width: 14px; height: 14px; }
 a.mega-label { transition: color .15s var(--ease-smooth); }
 a.mega-label:hover { color: var(--sj-red); }
 .mega-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 0.625rem; border-radius: 8px; transition: background-color .15s var(--ease-smooth), transform .2s var(--ease-mechanical); }
@@ -59,10 +76,10 @@ a.mega-label:hover { color: var(--sj-red); }
   background: var(--sj-blue-tint); color: var(--sj-blue);
 }
 .mega-item:hover .mega-ico { background: rgba(15, 76, 129, 0.14); }
-.mega-item--simple { padding: 0.45rem 0.625rem; gap: 0.6rem; }
-.mega-item--simple strong { font-size: 0.875rem; font-weight: 500; letter-spacing: -0.003em; }
-.mega-item--simple .mega-ico { width: 30px; height: 30px; border-radius: 7px; }
-.mega-item--simple .mega-ico svg { width: 16px; height: 16px; }
+.mega-item--simple { padding: 0.25rem 0.5rem; gap: 0.5rem; }
+.mega-item--simple strong { font-size: 0.8438rem; font-weight: 500; letter-spacing: -0.003em; line-height: 1.25; }
+.mega-item--simple .mega-ico { width: 24px; height: 24px; border-radius: 6px; }
+.mega-item--simple .mega-ico svg { width: 14px; height: 14px; }
 @media (max-width: 767px) { .mega-menu { width: calc(100vw - 32px); grid-template-columns: 1fr; padding: 1rem; } }
 
 .nav-actions { display: flex; align-items: center; gap: 0.5rem; }
