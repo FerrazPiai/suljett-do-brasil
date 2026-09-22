@@ -8,10 +8,9 @@
 // (index.njk → layout home.njk), reusando o chrome único (header/footer
 // em partials/). O CSS/JS continua INLINE, idêntico ao build anterior:
 //   css  = tokens.css + concat(src/home/css/*.css)   (ordem = prefixo)
-//   animJs / uiJs = scripts inline da home (dois <script>, como antes)
-//   intro = src/home/sections/00-intro-curtain.html
-//   sections = concat das seções de conteúdo (02..10) — header (01) e
-//              footer (11) viram partials.
+//   uiJs     = script inline exclusivo da home (o comum é assets/site.js)
+//   sections = concat das seções de conteúdo (02..10); header e footer
+//              são partials.
 // ============================================================
 const fs = require("node:fs");
 const path = require("node:path");
@@ -34,15 +33,13 @@ const sections = fs
   .readdirSync(sectionsDir)
   .filter((f) => f.endsWith(".html"))
   .sort()
-  // 00 = intro (separado), 01 = header e 11 = footer agora vêm das partials.
-  .filter((f) => !/^(00|01|11)-/.test(f))
+  // 01 = header e 11 = footer vêm das partials.
+  .filter((f) => !/^(01|11)-/.test(f))
   .map((f) => read(path.join(sectionsDir, f)))
   .join("\n");
 
 module.exports = {
   css: read(TOKENS) + concatCss(path.join(HOME, "css")),
-  animJs: read(path.join(HOME, "js", "animations.js")),
   uiJs: read(path.join(HOME, "js", "ui.js")),
-  intro: read(path.join(sectionsDir, "00-intro-curtain.html")),
   sections,
 };

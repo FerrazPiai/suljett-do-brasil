@@ -7,7 +7,7 @@ description: "Solicite análise técnica gratuita, abra chamado, cote insumos Hi
 ---
 
 <!-- ══════════════ PAGE HERO ══════════════ -->
-<section class="page-hero" data-screen-label="Contato — Hero">
+<section class="page-hero" data-screen-label="Contato · Hero">
   <div class="page-hero-bg" aria-hidden="true">
     <picture>
       <source type="image/webp" srcset="assets/midia/servicos-equipe/tecnico-assistencia.webp">
@@ -17,14 +17,14 @@ description: "Solicite análise técnica gratuita, abra chamado, cote insumos Hi
   </div>
   <div class="container">
     <nav class="crumb" aria-label="Trilha de navegação">
-      <a href="index.html">Home</a><span class="sep">›</span><span class="current">Contato</span>
+      <a href="/">Home</a><span class="sep">›</span><span class="current">Contato</span>
     </nav>
     <div class="page-hero-inner">
       <div class="page-hero-grid">
         <div class="page-hero-copy">
           <span class="eyebrow reveal">Fale com a Suljett</span>
           <h1 data-split>Conte o que a sua linha precisa. A gente responde em até <span class="accent">4h úteis.</span></h1>
-          <p class="lead reveal">Não importa o assunto — análise técnica, chamado de assistência, cotação de insumos ou uma vaga na nossa equipe. Escolha o caminho certo abaixo e fale direto com quem resolve. Sem call center, sem ticket perdido, sem proposta genérica de catálogo.</p>
+          <p class="lead reveal">Não importa o assunto: análise técnica, chamado de assistência, cotação de insumos ou uma vaga na nossa equipe. Escolha o caminho certo abaixo e fale direto com quem resolve. Sem call center, sem ticket perdido, sem proposta genérica de catálogo.</p>
           <div class="chips reveal">
             <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Resposta em até 4h úteis</span>
             <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M3 21V7l9-4 9 4v14 M3 21h18 M9 21v-6h6v6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg> 3 unidades · Sul e Nordeste</span>
@@ -36,17 +36,17 @@ description: "Solicite análise técnica gratuita, abra chamado, cote insumos Hi
 </section>
 
 <!-- ══════════════ 01 · SELETOR ══════════════ -->
-<section class="section section--tight" data-screen-label="Contato — Seletor">
+<section class="section section--tight" data-screen-label="Contato · Seletor">
   <div class="container">
     <div class="section-head">
-      <span class="section-num reveal-up">01 — Qual é o seu assunto?</span>
+      <span class="section-num reveal-up">01 · Qual é o seu assunto?</span>
       <h2 class="h-display">Escolha o caminho. Cada um vai direto para a pessoa certa.</h2>
     </div>
     <div class="selector-grid">
       <a href="#form" data-jump class="selector-card reveal-up">
         <span class="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
         <h3>Análise técnica</h3>
-        <p>Quero a recomendação Hitachi certa para a minha linha — equipamento, substrato e velocidade.</p>
+        <p>Quero a recomendação Hitachi certa para a minha linha: equipamento, substrato e velocidade.</p>
         <span class="route">→ Engenharia de aplicação</span>
       </a>
       <a href="servicos-assistencia-tecnica.html#chamado" class="selector-card reveal-up">
@@ -72,27 +72,27 @@ description: "Solicite análise técnica gratuita, abra chamado, cote insumos Hi
 </section>
 
 <!-- ══════════════ 02 · FORM + CONTATO ══════════════ -->
-<section class="section section--alt" id="form" data-screen-label="Contato — Formulário">
+<section class="section section--alt" id="form" data-screen-label="Contato · Formulário">
   <div class="container">
     <div class="split split--sidebar">
       <div class="form-card reveal-up">
-        <form class="form" data-demo="send">
+        <form class="form" data-lead="contato">
           <div class="form-head"><span>Solicitar contato</span><span>Resposta ≤ 4h úteis</span></div>
           <div class="field-row field-row--2">
-            <div class="field"><label>Nome completo *</label><input type="text" required placeholder="Seu nome" /></div>
-            <div class="field"><label>Empresa *</label><input type="text" required placeholder="Razão social" /></div>
-            <div class="field"><label>E-mail corporativo *</label><input type="email" required placeholder="voce@empresa.com.br" /></div>
-            <div class="field"><label>Telefone (WhatsApp) *</label><input type="tel" required placeholder="(00) 00000-0000" /></div>
+            <div class="field"><label for="f-nome">Nome completo *</label><input id="f-nome" name="nome" type="text" required autocomplete="name" placeholder="Seu nome" /></div>
+            <div class="field"><label for="f-empresa">Empresa *</label><input id="f-empresa" name="empresa" type="text" required autocomplete="organization" placeholder="Razão social" /></div>
+            <div class="field"><label for="f-email">E-mail corporativo *</label><input id="f-email" name="email" type="email" required autocomplete="email" placeholder="voce@empresa.com.br" /></div>
+            <div class="field"><label for="f-tel">Telefone (WhatsApp) *</label><input id="f-tel" name="telefone" type="tel" required autocomplete="tel" placeholder="(00) 00000-0000" /></div>
           </div>
           <div class="field-row field-row--2">
-            <div class="field"><label>Assunto *</label><select required><option value="">Selecionar assunto</option><option>Análise técnica gratuita</option><option>Abrir chamado de assistência</option><option>Cotação de insumos (S10)</option><option>Comprar equipamento / trade-in</option><option>Contrato de manutenção</option><option>Outro</option></select></div>
-            <div class="field"><label>Setor da indústria</label><select><option value="">Selecionar setor</option><option>Bebidas</option><option>Alimentos</option><option>Laticínios</option><option>Farmacêutico</option><option>Automotivo</option><option>Ovos / avicultura</option><option>Outro</option></select></div>
+            <div class="field"><label for="f-assunto">Assunto *</label><select id="f-assunto" name="assunto" required><option value="">Selecionar assunto</option><option>Análise técnica gratuita</option><option>Abrir chamado de assistência</option><option>Cotação de insumos (S10)</option><option>Comprar equipamento / trade-in</option><option>Contrato de manutenção</option><option>Outro</option></select></div>
+            <div class="field"><label for="f-setor">Setor da indústria</label><select id="f-setor" name="setor"><option value="">Selecionar setor</option><option>Bebidas</option><option>Alimentos</option><option>Laticínios</option><option>Farmacêutico</option><option>Automotivo</option><option>Ovos / avicultura</option><option>Outro</option></select></div>
           </div>
-          <div class="field"><label>Como podemos ajudar?</label><textarea placeholder="Descreva a sua linha, o substrato, a velocidade do envase ou o problema que está enfrentando."></textarea></div>
-          <label class="form-consent"><input type="checkbox" required /> Autorizo o contato da Suljett e o tratamento dos meus dados conforme a Política de Privacidade (LGPD).</label>
-          <button type="submit" class="btn btn--cta btn--full btn--lg">Enviar e falar com um especialista →</button>
+          <div class="field"><label for="f-msg">Como podemos ajudar?</label><textarea id="f-msg" name="mensagem" placeholder="Descreva a sua linha, o substrato, a velocidade do envase ou o problema que está enfrentando."></textarea></div>
+          <label class="form-consent"><input type="checkbox" name="consentimento_lgpd" value="sim" required /> Autorizo o contato da Suljett e o tratamento dos meus dados conforme a Política de Privacidade (LGPD).</label>
+          <button type="submit" class="btn btn--cta btn--full btn--lg">Enviar para um especialista →</button>
           <p class="form-micro">🔒 Seus dados são tratados conforme a LGPD · Sem spam comercial</p>
-          <div class="form-success">✓ Recebemos a sua mensagem. <strong>Um especialista Suljett responde em até 4h úteis.</strong></div>
+          <div class="form-success"></div>
         </form>
       </div>
       <aside style="display:flex;flex-direction:column;gap:1rem">
@@ -119,10 +119,10 @@ description: "Solicite análise técnica gratuita, abra chamado, cote insumos Hi
 </section>
 
 <!-- ══════════════ 03 · UNIDADES + MAPA ══════════════ -->
-<section class="section" data-screen-label="Contato — Unidades">
+<section class="section" data-screen-label="Contato · Unidades">
   <div class="container">
     <div class="section-head">
-      <span class="section-num reveal-up">02 — Unidades</span>
+      <span class="section-num reveal-up">02 · Unidades</span>
       <h2 class="h-display">Três unidades, cobertura do Sul ao Nordeste.</h2>
     </div>
     <div class="grid grid--3" style="margin-bottom:2rem">
@@ -135,28 +135,26 @@ description: "Solicite análise técnica gratuita, abra chamado, cote insumos Hi
       <article class="card reveal-up">
         <span class="card-meta">SC</span><h3>Joinville</h3>
         <p>R. Dona Francisca, 4808<br/>Santo Antônio · CEP 89218-112</p>
-        <div class="mono-line">📞 (47) — a confirmar</div>
         <div class="mono-line" style="color:var(--sj-red)">Atende corredor catarinense</div>
       </article>
       <article class="card reveal-up">
         <span class="card-meta">AL</span><h3>Marechal Deodoro</h3>
         <p>Rod. Dr. Ib Gatto M. Falcão, 500<br/>Barra Nova · CEP 57160-000</p>
-        <div class="mono-line">📞 (82) — a confirmar</div>
         <div class="mono-line" style="color:var(--sj-red)">Atende AL · PE · BA · SE · RN · PB · CE</div>
       </article>
     </div>
     <div class="map-frame reveal-up">
-      <iframe src="https://www.google.com/maps?q=Brasil&z=4&output=embed" loading="lazy" title="Mapa de cobertura Suljett — Sul e Nordeste do Brasil" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps?q=Brasil&z=4&output=embed" loading="lazy" title="Mapa de cobertura Suljett · Sul e Nordeste do Brasil" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
 
 <!-- ══════════════ 04 · TRABALHE CONOSCO ══════════════ -->
-<section class="section section--alt" id="rh" data-screen-label="Contato — RH">
+<section class="section section--alt" id="rh" data-screen-label="Contato · RH">
   <div class="container">
     <div class="split split--center">
       <div>
-        <span class="section-num reveal-up">03 — Trabalhe conosco</span>
+        <span class="section-num reveal-up">03 · Trabalhe conosco</span>
         <h2 class="h-medium reveal-up" style="margin-top:1rem">Faça parte da equipe que mantém a indústria rodando.</h2>
         <div class="prose reveal-up" style="margin:1rem 0 1.5rem">
           <p>Acreditamos que o crescimento da Suljett está diretamente ligado ao desenvolvimento das pessoas que constroem essa história. Estamos sempre em busca de novos talentos que queiram uma carreira sólida em um ambiente de inovação e tecnologia industrial.</p>
@@ -169,7 +167,7 @@ description: "Solicite análise técnica gratuita, abra chamado, cote insumos Hi
 </section>
 
 <!-- ══════════════ CTA FINAL (red band) ══════════════ -->
-<section class="section section--red" data-screen-label="Contato — CTA final">
+<section class="section section--red" data-screen-label="Contato · CTA final">
   <div class="container text-center">
     <div class="section-head section-head--center">
       <span class="eyebrow reveal-up">Prefere falar agora?</span>

@@ -25,3 +25,7 @@
 .section--services .btn--outline-light { border-color: rgba(255,255,255,.5); color: #fff; }
 .section--services .btn--outline-light:hover { border-color: #fff; background: rgba(255,255,255,.1); }
 
+
+/* Laboratório de amostras em destaque: é o diferencial que mais converte. */
+.serv-card--feature, .serv-card--feature:hover { background: var(--sj-red); }
+.serv-link { margin-top: auto; font-weight: 700; color: #fff; text-decoration: underline; text-underline-offset: 3px; }

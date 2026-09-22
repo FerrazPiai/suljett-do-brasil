@@ -78,7 +78,7 @@
 .hero-title .accent::after {
   content: ""; display: block; height: 3px; width: 0;
   background: var(--sj-red); margin-top: 0.12em;
-  transition: width 1.2s var(--ease-reveal) 1.4s;
+  transition: width .45s var(--ease-out) .5s;
 }
 .hero.is-loaded .hero-title .accent::after { width: 100%; }
 

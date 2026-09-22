@@ -1,9 +1,8 @@
 {#
   Layout base das PÁGINAS INTERNAS (Eleventy + Nunjucks).
-  Chrome (header/footer) renderizado no build — fonte única em partials/.
-  Cada página define no frontmatter: title, description, activeNav.
-  O assets/site.js detecta o chrome já presente e NÃO o reinjeta;
-  segue ligando comportamentos (intro, reveals, dropdown, mobile, forms).
+  Chrome (header/footer) renderizado no build, fonte única em partials/.
+  Frontmatter de cada página: title, description, activeNav e, nas
+  páginas de produto, `product` (vira o evento product_view).
 #}<!doctype html>
 <html lang="pt-BR" data-theme="light">
 <head>
@@ -11,14 +10,17 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <title>{{ title }}</title>
 <meta name="description" content="{{ description }}" />
-<link rel="preload" href="/assets/Manrope/Manrope-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+{% include "partials/head-meta.njk" %}
+<link rel="preload" href="/assets/Manrope/Manrope-Variable.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="/assets/site.css" />
 </head>
-<body data-page="{{ activeNav }}">
+<body data-page="{{ activeNav }}" data-lead-endpoint="{{ site.leadEndpoint }}" data-fichas="{{ fichas | join(',') }}"{% if product %} data-product="{{ product }}"{% endif %}>
 {% include "partials/header.njk" %}
+<main id="conteudo">
 {{ content | safe }}
+</main>
 {% include "partials/footer.njk" %}
-{% if extraScripts %}{% for s in extraScripts %}<script src="{{ s }}"></script>
-{% endfor %}{% endif %}<script src="/assets/site.js"></script>
+<script src="/assets/site.js"></script>
+<script src="/assets/leads.js"></script>
 </body>
 </html>

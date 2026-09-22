@@ -48,37 +48,6 @@
 .lead-copy .h-display { max-width: 24ch; }
 .final-inner .h-display { max-width: 22ch; }
 
-/* ─── Apps section: título acima (scroll normal), cards pinados ─── */
-@media (min-width: 900px) {
-  .section--apps {
-    padding-top: 80px;
-    padding-bottom: 0;
-  }
-  .section--apps .apps-head {
-    margin-bottom: 2.75rem;
-  }
-  /* Pin ocupa a viewport inteira: cards centralizados verticalmente
-     e a régua de progresso fixa na parte inferior da tela durante o pin */
-  .apps-pin-target {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    min-height: 100svh;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  .apps-pin-target .hscroll-wrap {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-top: auto;    /* centraliza os cards no espaço entre o topo e a régua */
-    margin-bottom: auto;
-  }
-  .apps-pin-target .hscroll-meta {
-    padding-top: 1.25rem;
-    padding-bottom: 1.75rem;
-  }
-}
-
 /* ─── Cards levemente acinzentados para contraste com texto vermelho ─── */
 .model-card { background: #F9FAFC; border-color: #E0E5EE; }
 .model-card:hover { background: #F4F6FA; }

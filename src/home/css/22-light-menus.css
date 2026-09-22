@@ -1,18 +1,3 @@
-/* ─── INTRO CURTAIN → fundo branco ─── */
-.intro-curtain { background: #ffffff; }
-.intro-sweep { background: #ffffff; }
-.intro-mark { color: var(--fg); }
-.intro-tag { color: var(--fg-mute); }
-.intro-meta { color: var(--fg-mute); }
-.intro-counter { color: var(--fg-mute); }
-.intro-counter b { color: var(--fg); }
-.intro-logo-wrap {
-  background: #ffffff;
-  box-shadow: 0 1px 2px rgba(10,15,26,.04), 0 12px 32px rgba(10,15,26,.06);
-}
-.intro-bar { background: var(--sj-blue); }
-.intro-dot { color: var(--sj-blue); }
-
 /* ─── MOBILE MENU → claro ─── */
 .mobile-menu { background: var(--bg); }
 .mobile-menu a { color: var(--fg); border-bottom-color: var(--border); }

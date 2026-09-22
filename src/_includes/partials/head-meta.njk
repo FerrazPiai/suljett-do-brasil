@@ -1,0 +1,17 @@
+{# SEO + compartilhamento + medição, comum à home e às internas.
+   canonical sempre no domínio oficial (site.url): o ambiente de testes
+   não concorre com o suljett.com (o nginx também manda noindex lá). #}
+{%- set canonical = site.url + (page.url | replace("index.html", "")) -%}
+<link rel="canonical" href="{{ canonical }}" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content="{{ site.name }}" />
+<meta property="og:url" content="{{ canonical }}" />
+<meta property="og:title" content="{{ ogTitle or title }}" />
+<meta property="og:description" content="{{ description }}" />
+<meta property="og:image" content="{{ site.url }}{{ ogImage or site.ogImage }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="/assets/logo-suljett.png" />
+{%- if site.gtmId %}
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','{{ site.gtmId }}');</script>
+{%- endif %}

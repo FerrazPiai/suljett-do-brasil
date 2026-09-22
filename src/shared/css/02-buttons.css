@@ -26,3 +26,11 @@
 .link-arrow--light { color: #fff; }
 .link-arrow--light:hover { color: #fff; }
 
+
+/* ─── Toque e celular ─────────────────────────────────────── */
+/* Resposta imediata ao toque; hover só onde existe mouse (evita hover preso no celular). */
+.btn { -webkit-tap-highlight-color: transparent; touch-action: manipulation; transition-timing-function: var(--ease-out); }
+@media (hover: none) { .btn:hover, .btn--cta:hover, .btn--outline:hover, .btn--outline-light:hover { transform: none; } }
+.btn:active, .btn--cta:active, .btn--outline:active, .btn--outline-light:active { transform: scale(.97); transition-duration: 90ms; }
+/* Rótulos longos quebram linha em vez de empurrar a página para fora da tela. */
+@media (max-width: 600px) { .btn { white-space: normal; text-align: center; } }

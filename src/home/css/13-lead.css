@@ -1,6 +1,7 @@
 /* ─── Lead Magnet ─────────────────────────────────────────── */
 .section--lead { background: var(--steel-900); }
 .lead-wrap { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
+.lead-wrap > * { min-width: 0; }
 @media (min-width: 900px) { .lead-wrap { grid-template-columns: 1.1fr 1fr; gap: 5rem; } }
 .lead-copy { display: flex; flex-direction: column; gap: 1.25rem; }
 .lead-copy h2 { color: #fff; text-wrap: balance; }

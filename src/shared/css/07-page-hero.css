@@ -23,7 +23,7 @@
 .page-hero h1 { font-size: var(--text-page-hero); font-weight: 800; line-height: 1.04; letter-spacing: -0.03em; color: var(--fg); text-wrap: balance; }
 .page-hero .lead { color: var(--fg-body); }
 .page-hero .accent { position: relative; }
-.page-hero .accent::after { content: ""; position: absolute; left: 0; bottom: 0.04em; height: 3px; width: 0; background: var(--sj-red); transition: width 1s var(--ease-reveal) .6s; }
+.page-hero .accent::after { content: ""; position: absolute; left: 0; bottom: 0.04em; height: 3px; width: 0; background: var(--sj-red); transition: width .45s var(--ease-out) .35s; }
 .page-hero.is-loaded .accent::after { width: 100%; }
 .page-hero-ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; }
 

@@ -2,9 +2,12 @@
   "name": "Suljett do Brasil",
   "url": "https://suljett.com",
   "lang": "pt-BR",
-  "description": "Codificação industrial Hitachi — CIJ, TIJ e TTO. Distribuidora oficial no Sul e Nordeste do Brasil.",
+  "description": "Codificação industrial Hitachi: CIJ, TIJ e TTO. Distribuidora oficial no Sul e Nordeste do Brasil.",
   "author": {
     "name": "Suljett do Brasil",
     "email": "contato@suljett.com"
-  }
+  },
+  "leadEndpoint": "https://formsubmit.co/ajax/contato@suljett.com",
+  "gtmId": "",
+  "ogImage": "/assets/midia/produtos-fotos/ux2-ambientado-linha.jpg"
 }

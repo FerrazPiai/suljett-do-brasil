@@ -17,7 +17,8 @@
 .hero-title .line { padding-bottom: 0; display: block; }
 /* quebras de linha controladas: 2 linhas no desktop, 3 no mobile.
    nowrap impede wraps automáticos — só os <br> abaixo quebram. */
-.hero-title { white-space: nowrap; }
+.hero-title { text-wrap: balance; }
+.hero-title .accent::after { content: none; }
 .hero-title .br-m { display: none; }
 .hero-title .br-d { display: inline; }
 @media (max-width: 767px) {

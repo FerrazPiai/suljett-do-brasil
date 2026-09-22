@@ -74,13 +74,6 @@
   .hero-title { font-size: clamp(3.25rem, 6.8vh, 5rem); }
 }
 
-/* ---------- Intro overlay ---------- */
-@media (max-width: 640px) {
-  .intro-logo-wrap { width: 80vw; padding: 1rem 1.25rem; }
-  .intro-meta { left: 1rem; right: 1rem; bottom: 1.25rem; font-size: 0.625rem; letter-spacing: 0.14em; gap: 0.75rem; flex-wrap: wrap; }
-  .intro-counter { top: 1rem; right: 1rem; font-size: 0.6875rem; letter-spacing: 0.16em; }
-}
-
 /* ---------- Sections spacing ---------- */
 @media (max-width: 639px) {
   .section { padding-block: 56px; }
@@ -131,12 +124,6 @@
   .app-card h4 { font-size: 1.25rem; }
   .app-card p { font-size: 0.8125rem; }
   .app-card__mark { width: 34px; height: 34px; top: 0.75rem; right: 0.75rem; }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .hscroll-wrap { overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; padding-bottom: 2rem; }
-  .hscroll-track { transform: none !important; padding: 0 32px 1rem; }
-  .hscroll-track .app-card { scroll-snap-align: start; flex: 0 0 min(360px, 56vw); }
-  .hscroll-meta { display: none; }
 }
 
 /* ---------- VS ---------- */

@@ -34,17 +34,45 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 700; line-he
 .muted     { color: var(--fg-mute); }
 
 /* ─── Reveal system ───────────────────────────────────────── */
-.reveal, .reveal-up { opacity: 0; will-change: opacity, transform; }
-.reveal-up { transform: translateY(28px); }
-/* word-mask container */
+/* Tudo nasce VISÍVEL. Onde o navegador suporta animação ligada à rolagem,
+   os blocos entram acompanhando a leitura (sem JS, não tem como travar
+   invisível); sem suporte, simplesmente aparecem. Só opacity + transform. */
+@keyframes sj-in { from { opacity: 0; transform: translateY(10px); } }
+.page-hero .reveal, .hero .reveal { animation: sj-in .32s var(--ease-out) .08s both; }
+@supports (animation-timeline: view()) {
+  .section .reveal-up, .section .reveal, .section .h-display, .section .h-medium {
+    animation: sj-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 22%;
+  }
+}
+/* Palavras do H1 da abertura: as máscaras só existem se o JS rodou. */
 .w-mask { display: inline-block; overflow: hidden; vertical-align: baseline; line-height: 1.18; padding-bottom: 0.04em; }
-.w-inner { display: inline-block; will-change: transform; transform: translateY(110%); transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
-.w-mask.is-in .w-inner { transform: translateY(0); }
-/* keep .accent red inside masks */
+.w-inner { display: inline-block; transition: transform .38s var(--ease-out); }
+.w-mask:not(.is-in) .w-inner { transform: translateY(105%); }
 .w-mask .accent, .w-inner .accent { color: var(--sj-red); }
-.reveal.is-in, .reveal-up.is-in {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity .9s var(--ease-reveal), transform .9s var(--ease-reveal);
+@media (prefers-reduced-motion: reduce), print {
+  .reveal, .reveal-up, .h-display, .h-medium { animation: none !important; }
+  .w-inner { transform: none !important; transition: none; }
 }
 
+
+
+/* ─── Formulários no celular ──────────────────────────────── */
+/* Um <select> com opção longa não pode alargar a coluna do grid. */
+input, select, textarea { max-width: 100%; }
+.field { min-width: 0; }
+/* 16px evita o zoom automático do iOS ao focar o campo. */
+@media (max-width: 767px) { .field input, .field select, .field textarea { font-size: 16px; } }
+.form-error { display: none; padding: .875rem 1rem; border-radius: 4px; font-size: .875rem; background: rgba(204,26,26,.08); border: 1px solid rgba(204,26,26,.35); color: var(--sj-red-dark, #a31515); }
+.form-error a { text-decoration: underline; font-weight: 700; }
+.is-error .form-error { display: block; }
+.form-prot { display: block; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: .35rem; }
+.form-file { display: inline-block; margin-top: .35rem; text-decoration: underline; font-weight: 700; }
+
+/* ─── Alvos de toque (mín. ~44px em tela de toque) ─────────── */
+@media (pointer: coarse) {
+  .link-arrow, .crumb a { min-height: 44px; display: inline-flex; align-items: center; }
+  .site-footer .footer-soc { width: 44px; height: 44px; }
+  .form-consent input[type=checkbox] { width: 20px; height: 20px; flex: none; }
+}
