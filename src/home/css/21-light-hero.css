@@ -80,21 +80,17 @@
 .hero-bg-video {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
-  object-fit: cover;
-  filter: brightness(1.08) contrast(0.92) saturate(0.85);
+  object-fit: cover; object-position: 70% center;
+  filter: grayscale(1) contrast(1.05);
 }
+/* Foto com contraste cheio à direita; branco só atrás do texto (mockup aprovado no plano). */
 .hero-bg-overlay {
   position: absolute; inset: 0;
   pointer-events: none;
-  background:
-    linear-gradient(100deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.88) 35%, rgba(255,255,255,0.62) 60%, rgba(255,255,255,0.42) 100%),
-    radial-gradient(ellipse at 90% 40%, var(--sj-blue-tint) 0%, transparent 50%);
+  background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,.96) 36%, rgba(255,255,255,.62) 52%, rgba(255,255,255,0) 70%);
 }
-@media (max-width: 767px) {
-  .hero-bg-overlay {
-    background:
-      linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.78) 50%, rgba(255,255,255,0.6) 100%);
-  }
+@media (max-width: 1023px) {
+  .hero-bg-overlay { background: linear-gradient(180deg, rgba(255,255,255,.94) 0%, rgba(255,255,255,.9) 60%, rgba(255,255,255,.72) 100%); }
 }
 .hero > .container.hero-content {
   display: flex; flex-direction: column; gap: 2rem;

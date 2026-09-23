@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 700; line-he
 @keyframes sj-in { from { opacity: 0; transform: translateY(10px); } }
 .page-hero .reveal, .hero .reveal { animation: sj-in .32s var(--ease-out) .08s both; }
 @supports (animation-timeline: view()) {
-  .section .reveal-up, .section .reveal, .section .h-display, .section .h-medium {
+  .section .reveal-up, .section .reveal {
     animation: sj-in linear both;
     animation-timeline: view();
     animation-range: entry 0% entry 22%;

@@ -40,3 +40,4 @@
 .btn:active, .btn--cta:active, .btn--outline:active, .btn--outline-light:active { transform: scale(.97); transition-duration: 90ms; }
 /* Rótulos longos quebram linha em vez de empurrar a página para fora da tela. */
 @media (max-width: 600px) { .btn { white-space: normal; text-align: center; } }
+.btn--lg { transition: transform 150ms var(--ease-out), translate 300ms var(--ease-out), background-color 150ms ease, box-shadow 150ms ease, color 150ms ease; }

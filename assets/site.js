@@ -1,8 +1,8 @@
 /* =============================================================
    SULJETT DO BRASIL · comportamentos comuns (home e internas)
    Header/footer vêm prontos do build (partials/). Aqui: cortina de
-   abertura (1x por sessão), header, menu, H1 da abertura, FAQ e
-   rolagem para âncoras. Reveals de seção são CSS puro (01-base.css).
+   abertura (1x por sessão), header, menu, títulos palavra a palavra,
+   contadores, FAQ e âncoras. Fade dos blocos é CSS puro (01-base.css).
    Leads e medição ficam em assets/leads.js.
    ============================================================= */
 (() => {
@@ -21,28 +21,64 @@
     setTimeout(() => curtain.remove(), 1100);
   }
 
-  /* ─── H1 da abertura: palavras sobem em sequência ─────────── */
-  document.querySelector('.page-hero, .hero')?.classList.add('is-loaded');
-  if (!reduced) {
-    document.querySelectorAll('[data-split]').forEach((h) => {
-      const walker = document.createTreeWalker(h, NodeFilter.SHOW_TEXT);
-      const nodes = [];
-      while (walker.nextNode()) nodes.push(walker.currentNode);
-      nodes.forEach((node) => {
-        const frag = document.createDocumentFragment();
-        node.textContent.split(/(\s+)/).forEach((w) => {
-          if (!w) return;
-          if (/^\s+$/.test(w)) { frag.append(w); return; }
-          const mask = document.createElement('span');
-          mask.className = 'w-mask';
-          mask.innerHTML = '<span class="w-inner"></span>';
-          mask.firstChild.textContent = w;
-          frag.append(mask);
-        });
-        node.replaceWith(frag);
+  /* ─── Títulos: palavras sobem em sequência ────────────────────
+     H1 da abertura: no carregamento. Títulos de seção: quando entram na
+     tela. As máscaras só existem se o JS rodou, então o texto nunca fica
+     escondido por falha de script. */
+  const splitWords = (h) => {
+    const walker = document.createTreeWalker(h, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach((node) => {
+      const frag = document.createDocumentFragment();
+      node.textContent.split(/(\s+)/).forEach((w) => {
+        if (!w) return;
+        if (/^\s+$/.test(w)) { frag.append(w); return; }
+        const mask = document.createElement('span');
+        mask.className = 'w-mask';
+        mask.innerHTML = '<span class="w-inner"></span>';
+        mask.firstChild.textContent = w;
+        frag.append(mask);
       });
-      const delay = firstVisit ? 600 : 60;
-      h.querySelectorAll('.w-mask').forEach((m, i) => setTimeout(() => m.classList.add('is-in'), delay + i * 30));
+      node.replaceWith(frag);
+    });
+  };
+  const revealWords = (h, delay) => h.querySelectorAll('.w-mask').forEach((m, i) => setTimeout(() => m.classList.add('is-in'), delay + i * 30));
+  const onEnter = (els, fn) => {
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+      if (e.isIntersecting) { io.unobserve(e.target); fn(e.target); }
+    }), { rootMargin: '0px 0px -8% 0px' });
+    els.forEach((el) => io.observe(el));
+  };
+
+  document.querySelector('.page-hero, .hero')?.classList.add('is-loaded');
+  if (!reduced && 'IntersectionObserver' in window) {
+    document.querySelectorAll('[data-split]').forEach((h) => { splitWords(h); revealWords(h, firstVisit ? 600 : 60); });
+    const headings = [...document.querySelectorAll('.section .h-display, .section .h-medium')];
+    headings.forEach(splitWords);
+    onEnter(headings, (h) => revealWords(h, 0));
+
+    /* ─── Contadores: de 0 ao número real quando entram na tela.
+       O HTML já traz o número final (sem JS, ele aparece direto). ── */
+    const counters = [...document.querySelectorAll('[data-count]')];
+    counters.forEach((el) => {
+      const m = el.textContent.match(/^(\D*)([\d.]+)(.*)$/);
+      if (!m) return;
+      el.dataset.count = m[1] + '|' + m[2].replace(/\./g, '') + '|' + m[3];
+      el.style.display = 'inline-block';
+      el.style.minWidth = el.offsetWidth + 'px';
+      if (el.getBoundingClientRect().top > innerHeight) el.textContent = m[1] + '0' + m[3];
+    });
+    onEnter(counters, (el) => {
+      const [pre, n, suf] = el.dataset.count.split('|');
+      if (!n) return;
+      const t0 = performance.now();
+      const tick = (t) => {
+        const p = Math.min(1, (t - t0) / 1200);
+        el.textContent = pre + Math.round(n * (1 - Math.pow(1 - p, 3))).toLocaleString('pt-BR') + suf;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
     });
   }
 

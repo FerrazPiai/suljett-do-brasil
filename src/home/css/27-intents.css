@@ -17,3 +17,11 @@
 }
 @media (min-width: 640px) { .hero-intents { grid-template-columns: 1fr 1fr; } .hero-intents__label { grid-column: 1 / -1; } }
 @media (min-width: 1100px) { .hero-intents { grid-template-columns: repeat(4, 1fr); } }
+
+/* ─── Abertura: prova institucional em números ────────────── */
+.hero-stats { display: grid; grid-template-columns: repeat(2, auto); justify-content: start; gap: 1rem 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border); }
+@media (min-width: 640px) { .hero-stats { grid-template-columns: repeat(4, auto); } }
+.hero-stats li { display: grid; gap: .15rem; }
+.hero-stats strong { font-size: clamp(1.25rem, 1.8vw, 1.5rem); font-weight: 800; letter-spacing: -.02em; color: var(--fg); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.hero-stats span { font-size: .6875rem; letter-spacing: .12em; text-transform: uppercase; color: var(--fg-mute); }
+@media (max-width: 639px) { .hide-m { display: none; } }
