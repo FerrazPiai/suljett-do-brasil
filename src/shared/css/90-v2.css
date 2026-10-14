@@ -394,3 +394,7 @@
 /* confirmação do formulário da ficha sobre o cartão branco */
 .v-form .lead-success { color: #067250; }
 .v-form .lead-success strong { color: var(--ink-950); }
+/* foto da fachada no topo do card de unidade */
+.v-units article { overflow: hidden; }
+.v-units__photo { width: calc(100% + 3.5rem); max-width: none; height: 200px; margin: -1.75rem -1.75rem 0; object-fit: cover; object-position: center 25%; }
+.v-units .v-ico { margin-top: -28px; box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 10px 22px -8px rgba(204,26,26,.6), 0 0 0 4px #fff; }
