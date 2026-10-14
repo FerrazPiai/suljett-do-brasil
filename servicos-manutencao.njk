@@ -2,9 +2,10 @@
 layout: base.njk
 permalink: "/servicos-manutencao.html"
 activeNav: servicos
-title: "Manutenção Preventiva e Corretiva | Codificadoras Hitachi | Suljett do Brasil"
-description: "Manutenção preventiva e corretiva de codificadoras Hitachi: plano por horas de operação, peças originais em estoque e técnicos certificados pela fábrica. Sul e Nordeste do Brasil."
+title: "Manutenção de Codificadoras Hitachi | Suljett"
+description: "Preventiva e corretiva para codificadoras Hitachi: plano por horas de operação, peças originais em estoque e técnicos certificados. Sul e Nordeste."
 ---
+{% from "partials/icons.njk" import i %}
 
 <!-- ══════════════ PAGE HERO ══════════════ -->
 <section class="page-hero" data-screen-label="Manutenção · Hero">
@@ -24,7 +25,7 @@ description: "Manutenção preventiva e corretiva de codificadoras Hitachi: plan
         <div class="page-hero-copy">
           <span class="eyebrow reveal">Serviços · manutenção preventiva e corretiva</span>
           <h1 data-split>Parada programada custa horas. Parada inesperada custa o <span class="accent">turno.</span></h1>
-          <p class="lead reveal">Codificadora que para trava a linha inteira: não há como expedir produto sem lote e validade. A manutenção preventiva existe para que essa parada aconteça na hora que você escolhe, e não na hora que a máquina decide.</p>
+          <p class="lead reveal">Com preventiva, a parada acontece na hora que você escolhe, não na hora da máquina.</p>
           <div class="chips reveal">
             <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v3M12 19v3M22 12h-3M5 12H2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> Plano por horas de operação</span>
             <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2 3 6v6c0 5 3.8 9.2 9 10 5.2-.8 9-5 9-10V6l-9-4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg> Peças originais em estoque</span>
@@ -51,26 +52,22 @@ description: "Manutenção preventiva e corretiva de codificadoras Hitachi: plan
       <article class="card card--accent reveal-up">
         <span class="card-meta">Preventiva</span>
         <h3>Você escolhe a hora</h3>
-        <p>Executada em parada programada, dentro de janela combinada com a produção. Substitui componentes de desgaste antes da falha e recalibra o sistema.</p>
+        <p>Em parada programada. Troca itens de desgaste antes da falha.</p>
         <ul class="tlist">
-          <li>Limpeza e verificação do cabeçote</li>
-          <li>Troca de filtros e itens de desgaste no prazo</li>
-          <li>Verificação do sistema de tinta e viscosidade</li>
-          <li>Ajuste de posicionamento e sincronismo</li>
-          <li>Relatório técnico do estado do equipamento</li>
+          <li>Janela combinada com a produção</li>
+          <li>Sistema recalibrado</li>
+          <li>Relatório do estado do equipamento</li>
         </ul>
         <p class="mono-line">Custo previsível, sem perda de produção.</p>
       </article>
       <article class="card card--static reveal-up">
         <span class="card-meta">Corretiva</span>
         <h3>A máquina escolhe a hora</h3>
-        <p>Acionada quando o equipamento já parou. Além do reparo, entra na conta tudo que a linha deixou de produzir enquanto esperava.</p>
+        <p>Com a máquina já parada. Soma o reparo e a produção perdida.</p>
         <ul class="tlist">
-          <li>Linha parada até a chegada do técnico</li>
+          <li>Linha parada até o técnico chegar</li>
           <li>Produto retido sem codificação</li>
-          <li>Risco de dano em componente vizinho</li>
-          <li>Reprogramação de expedição e entrega</li>
-          <li>Peça pode não estar no estoque local</li>
+          <li>Expedição e entrega reprogramadas</li>
         </ul>
         <p class="mono-line">Custo imprevisível, e sempre maior.</p>
       </article>
@@ -86,12 +83,12 @@ description: "Manutenção preventiva e corretiva de codificadoras Hitachi: plan
       <h2 class="h-display">O que o técnico faz quando vai à sua fábrica.</h2>
     </div>
     <div class="grid grid--3">
-      <article class="card card--accent reveal-up"><span class="card-meta">01</span><h4>Sistema de tinta</h4><p>Verificação de viscosidade, pressão, filtros e circuito de recirculação.</p></article>
-      <article class="card card--accent reveal-up"><span class="card-meta">02</span><h4>Cabeçote</h4><p>Limpeza, verificação do jato, alinhamento e teste de qualidade de impressão.</p></article>
-      <article class="card card--accent reveal-up"><span class="card-meta">03</span><h4>Componentes de desgaste</h4><p>Substituição preventiva de itens que têm vida útil definida em horas.</p></article>
-      <article class="card card--accent reveal-up"><span class="card-meta">04</span><h4>Eletrônica</h4><p>Verificação de fonte, placas, sensores e integridade das conexões.</p></article>
-      <article class="card card--accent reveal-up"><span class="card-meta">05</span><h4>Integração</h4><p>Teste do sincronismo com encoder, sensor e comunicação com o CLP.</p></article>
-      <article class="card card--accent reveal-up"><span class="card-meta">06</span><h4>Relatório</h4><p>Registro do estado do equipamento e recomendações para o próximo ciclo.</p></article>
+      <article class="card card--accent reveal-up"><span class="v-ico">{{ i('drop') | safe }}</span><h4>Sistema de tinta</h4><p>Viscosidade, pressão, filtros e recirculação.</p></article>
+      <article class="card card--accent reveal-up"><span class="v-ico">{{ i('target') | safe }}</span><h4>Cabeçote</h4><p>Limpeza, jato, alinhamento e teste de impressão.</p></article>
+      <article class="card card--accent reveal-up"><span class="v-ico">{{ i('box') | safe }}</span><h4>Componentes de desgaste</h4><p>Troca dos itens com vida útil definida em horas.</p></article>
+      <article class="card card--accent reveal-up"><span class="v-ico">{{ i('cpu') | safe }}</span><h4>Eletrônica</h4><p>Fonte, placas, sensores e conexões.</p></article>
+      <article class="card card--accent reveal-up"><span class="v-ico">{{ i('link') | safe }}</span><h4>Integração</h4><p>Sincronismo com encoder, sensor e CLP.</p></article>
+      <article class="card card--accent reveal-up"><span class="v-ico">{{ i('file') | safe }}</span><h4>Relatório</h4><p>Estado do equipamento e recomendações para o próximo ciclo.</p></article>
     </div>
   </div>
 </section>
@@ -102,22 +99,21 @@ description: "Manutenção preventiva e corretiva de codificadoras Hitachi: plan
     <div class="section-head">
       <span class="section-num reveal-up">03 · Frequência</span>
       <h2 class="h-display">O plano é definido por horas de operação, não por calendário.</h2>
-      <p class="lead reveal-up">A referência Hitachi trabalha em três níveis: verificação diária pelo operador, revisão periódica por técnico autorizado a cada 2.000 a 4.000 horas de operação, e revisão completa anual.</p>
-      <p class="lead reveal-up">Uma máquina que roda três turnos precisa de preventiva mais frequente que uma que roda meio período. Contar por mês ignora essa diferença.</p>
+      <p class="lead reveal-up">Referência Hitachi: verificação diária pelo operador, revisão por técnico a cada 2.000 a 4.000 horas e revisão completa anual.</p>
     </div>
     <div class="split split--media-text split--center">
       <div class="reveal-up">
         <div class="media-frame"><picture><source type="image/webp" srcset="assets/midia/servicos-equipe/tecnico-diagnostico.webp"><img src="assets/midia/servicos-equipe/tecnico-diagnostico.jpg" alt="Técnico Suljett em diagnóstico de codificadora" width="1024" height="683" loading="lazy" decoding="async" /></picture><div class="media-tag"><span class="k">TÉCNICO</span><span class="n">CERTIFICADO HITACHI</span></div></div>
       </div>
       <div>
-        <p class="prose reveal-up" style="margin-bottom:1.25rem">Dimensionamos o intervalo a partir de três fatores, levantados na primeira visita:</p>
+        <p class="prose reveal-up" style="margin-bottom:1.25rem">Definido na primeira visita, por:</p>
         <ul class="tlist reveal-up">
-          <li><strong>Horas de operação:</strong> quantos turnos a máquina roda por dia; a revisão periódica por técnico autorizado fica na faixa de <strong>2.000 a 4.000 horas</strong> de operação</li>
-          <li><strong>Ambiente:</strong> pó, umidade, temperatura e lavagem sanitária</li>
-          <li><strong>Criticidade:</strong> se existe equipamento reserva ou se a linha depende dele</li>
-          <li><strong>Histórico:</strong> ocorrências anteriores e idade do equipamento</li>
+          <li><strong>Horas de operação:</strong> turnos por dia</li>
+          <li><strong>Ambiente:</strong> pó, umidade, temperatura, lavagem</li>
+          <li><strong>Criticidade:</strong> existe equipamento reserva?</li>
+          <li><strong>Histórico:</strong> ocorrências e idade do equipamento</li>
         </ul>
-        <p class="prose reveal-up" style="margin-top:1.25rem">Ambientes agressivos (cimento, farinha, câmara fria) costumam pedir intervalos mais curtos que o padrão de fábrica.</p>
+        <p class="prose reveal-up" style="margin-top:1.25rem">Cimento, farinha ou câmara fria pedem intervalos mais curtos.</p>
         <div style="margin-top:1.5rem" class="reveal-up"><a href="servicos-contratos.html" class="btn btn--outline">Ver contratos de serviço<svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
       </div>
     </div>
@@ -143,8 +139,11 @@ description: "Manutenção preventiva e corretiva de codificadoras Hitachi: plan
       </article>
       <article class="card card--static reveal-up">
         <span class="card-meta">Por que isso importa</span>
-        <p>Peça de terceiro compromete a garantia de fábrica e costuma ter vida útil menor, o que transforma uma economia pontual em manutenção mais frequente.</p>
-        <p>No caso dos insumos, o efeito é direto: o sistema é calibrado para a viscosidade exata da tinta original, e formulação fora de especificação danifica o cabeçote em médio prazo.</p>
+        <ul class="tlist" style="margin-top:.5rem">
+          <li>Peça de terceiro compromete a garantia de fábrica</li>
+          <li>Vida útil menor: mais manutenção</li>
+          <li>Tinta fora de especificação danifica o cabeçote</li>
+        </ul>
         <a href="insumos-hitachi.html" class="link-arrow">Ver insumos originais Hitachi <span>→</span></a>
       </article>
     </div>
@@ -159,12 +158,10 @@ description: "Manutenção preventiva e corretiva de codificadoras Hitachi: plan
       <h2 class="h-display">O que perguntam sobre manutenção.</h2>
     </div>
     <div class="faq reveal-up">
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">De quanto em quanto tempo preciso de preventiva?<span class="faq-icon"></span></button><div class="faq-a"><div class="faq-a-inner">Depende das horas de operação e do ambiente, não do calendário. Uma máquina de três turnos em fábrica de cimento pede intervalo bem mais curto que uma de meio período em sala limpa. Definimos o plano na primeira visita técnica.</div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">A preventiva para a minha linha?<span class="faq-icon"></span></button><div class="faq-a"><div class="faq-a-inner">A intervenção exige a máquina desligada, mas é agendada dentro de janela que você define: troca de turno, parada de setup ou manutenção geral da planta. O objetivo é justamente não usar tempo produtivo.</div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Vocês atendem equipamento que não foi comprado com vocês?<span class="faq-icon"></span></button><div class="faq-a"><div class="faq-a-inner">Atendemos equipamento Hitachi independentemente de quem vendeu. O que avaliamos primeiro é o estado do equipamento e o histórico de insumo usado, porque isso define o que a manutenção precisa recuperar.</div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Usar tinta de outra marca afeta a manutenção?<span class="faq-icon"></span></button><div class="faq-a"><div class="faq-a-inner">Afeta bastante. O sistema é calibrado para a viscosidade da tinta original; formulação fora de especificação acelera o desgaste do cabeçote e anula a garantia de fábrica. É a causa mais comum de manutenção corretiva prematura que encontramos.</div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Quanto tempo leva uma preventiva?<span class="faq-icon"></span></button><div class="faq-a"><div class="faq-a-inner">Uma preventiva típica é concluída dentro de uma janela de parada normal da planta. Intervenções maiores, com substituição de componentes principais, são planejadas com antecedência e informadas no relatório da visita anterior.</div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Vale mais a pena contrato ou chamado avulso?<span class="faq-icon"></span></button><div class="faq-a"><div class="faq-a-inner">Se a linha depende do codificador para expedir, o contrato costuma compensar: prioridade de atendimento, previsibilidade de custo e preventivas já programadas. Para equipamento com reserva ou uso esporádico, o avulso pode bastar.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">A preventiva para a minha linha?<span class="faq-icon"></span></button><div class="faq-a"><div class="faq-a-inner">Só na janela que você define: troca de turno, setup ou parada geral.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Vocês atendem equipamento que não foi comprado com vocês?<span class="faq-icon"></span></button><div class="faq-a"><div class="faq-a-inner">Sim, qualquer Hitachi. Primeiro avaliamos o estado do equipamento e o histórico de insumo usado.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Usar tinta de outra marca afeta a manutenção?<span class="faq-icon"></span></button><div class="faq-a"><div class="faq-a-inner">Sim. O sistema é calibrado para a tinta original. Fora de especificação, desgasta o cabeçote e anula a garantia de fábrica.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Vale mais a pena contrato ou chamado avulso?<span class="faq-icon"></span></button><div class="faq-a"><div class="faq-a-inner">Se a linha depende do codificador para expedir, o contrato costuma compensar. Com reserva ou uso esporádico, o avulso pode bastar.</div></div></div>
     </div>
   </div>
 </section>
@@ -175,7 +172,7 @@ description: "Manutenção preventiva e corretiva de codificadoras Hitachi: plan
     <div class="section-head section-head--center">
       <span class="eyebrow reveal-up">Diagnóstico gratuito</span>
       <h2 class="h-display">Deixe a parada ser sua decisão, não a da máquina.</h2>
-      <p class="lead reveal-up">Avaliamos o estado do seu equipamento e propomos o intervalo de preventiva certo para as suas horas de operação e o seu ambiente.</p>
+      <p class="lead reveal-up">Avaliamos o equipamento e propomos o intervalo certo.</p>
     </div>
     <div class="page-hero-ctas reveal-up" style="justify-content:center">
       <a href="contato.html" class="btn btn--lg" style="background:#fff;color:var(--sj-red)">Solicitar plano de manutenção<svg class="btn-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
