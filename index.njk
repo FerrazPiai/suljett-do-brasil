@@ -3,8 +3,234 @@ layout: home.njk
 permalink: /index.html
 activeNav: home
 eleventyExcludeFromCollections: true
-title: "Codificação industrial Hitachi para linhas que não podem parar | Suljett do Brasil"
-description: "Distribuidora oficial Hitachi no Sul e Nordeste desde 2008. Impressoras CIJ, TIJ e TTO, insumos originais e assistência técnica para linhas de produção contínua. Solicite a análise da sua linha."
-ogTitle: "Suljett do Brasil: codificação industrial para linhas que não podem parar"
+title: "Codificadoras Hitachi para linhas que não podem parar | Suljett do Brasil"
+description: "Distribuidor oficial Hitachi no Sul e Nordeste desde 2008. Codificadoras CIJ, TIJ e TTO, insumos originais e assistência técnica em até 4 horas úteis."
+ogTitle: "Suljett do Brasil: codificadoras Hitachi para linhas que não podem parar"
 ---
-{{ home.sections | safe }}
+{% from "partials/icons.njk" import i %}
+{% set wa = "https://wa.me/5551980370198" %}
+
+<!-- ══════════ HERO ══════════ -->
+<section class="v-hero" aria-label="Seção principal">
+  <div class="v-hero__bg" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="none" poster="/assets/hero-poster.webp" width="1920" height="1080" data-hero-video>
+      <source data-src="/assets/hero.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="container v-hero__grid">
+    <div class="v-hero__copy">
+      <span class="v-eyebrow v-eyebrow--light">Distribuidor oficial Hitachi · desde 2008</span>
+      <h1>Codificadoras <span class="accent">Hitachi.</span> Sua linha não para por falha de codificação.</h1>
+      <p>Equipamento, insumos originais e assistência técnica em até 4 horas úteis, no Sul e no Nordeste.</p>
+      <div class="v-hero__ctas">
+        <a href="/contato.html" class="btn btn--cta btn--lg">Solicitar análise da minha linha {{ i('arrow') | safe }}</a>
+        <a href="{{ wa }}" class="v-btn-glass" target="_blank" rel="noopener">{{ i('chat') | safe }} Falar com um especialista</a>
+      </div>
+    </div>
+
+    <figure class="v-hero__product">
+      <img src="/assets/midia/thumbs/ux2-d160w-hero.webp" alt="Codificadora CIJ Hitachi UX2-D160W" width="896" height="956" fetchpriority="high" />
+    </figure>
+
+    <aside class="v-hero__card" aria-label="Por que Hitachi">
+      <strong class="v-hero__brand">HITACHI</strong>
+      <span class="v-hero__tag">Tecnologia japonesa para linhas que não podem parar.</span>
+      <ul>
+        <li><span class="v-ico v-ico--sm">{{ i('shield') | safe }}</span><span><b>Equipamento original</b>Hitachi de fábrica, com garantia</span></li>
+        <li><span class="v-ico v-ico--sm">{{ i('clock') | safe }}</span><span><b>Até 4h úteis</b>Atendimento remoto e presencial</span></li>
+        <li><span class="v-ico v-ico--sm">{{ i('drop') | safe }}</span><span><b>Insumos originais S10</b>Rastreáveis lote a lote</span></li>
+        <li><span class="v-ico v-ico--sm">{{ i('link') | safe }}</span><span><b>Integração com a sua linha</b>Esteira, CLP e empacotadora</span></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ══════════ BENEFÍCIOS ══════════ -->
+<section class="v-benefits" aria-label="Diferenciais">
+  <div class="container v-benefits__grid">
+    <a href="/servicos-assistencia-tecnica.html"><span class="v-ico">{{ i('wrench') | safe }}</span><span><b>Assistência técnica</b>especializada no Sul e Nordeste</span></a>
+    <a href="/insumos-hitachi.html"><span class="v-ico">{{ i('box') | safe }}</span><span><b>Peças e insumos</b>originais Hitachi em estoque</span></a>
+    <a href="/servicos-instalacao.html"><span class="v-ico">{{ i('link') | safe }}</span><span><b>Instalação e integração</b>na sua linha de produção</span></a>
+    <a href="/servicos-help-desk.html"><span class="v-ico">{{ i('headset') | safe }}</span><span><b>Suporte técnico</b>em até 4 horas úteis</span></a>
+  </div>
+</section>
+
+<!-- ══════════ SEGMENTOS ══════════ -->
+<section class="v-section v-segs" id="aplicacoes" aria-label="Segmentos atendidos">
+  <div class="container v-segs__wrap">
+    <div class="v-segs__head">
+      <span class="v-eyebrow">Indústrias</span>
+      <h2 class="v-h2">Codificação confiável para cada segmento.</h2>
+      <p class="v-lead">Lote, validade e rastreabilidade na norma do seu setor.</p>
+    </div>
+    <div class="v-segs__grid">
+      {% set segs = [
+        ['Alimentícia', 'industrias-alimenticia', 'setor-alimenticia'],
+        ['Bebidas', 'industrias-bebidas', 'setor-bebidas'],
+        ['Laticínios', 'industrias-laticinios', 'setor-laticinios'],
+        ['Farmacêutica', 'industrias-farmaceutica', 'setor-farmaceutica'],
+        ['Automotiva', 'industrias-automotiva', 'setor-automotiva'],
+        ['Ovos e avícolas', 'industrias-ovos-avicolas', 'setor-ovos'],
+        ['Eletrônicos', 'industrias-eletronicos', 'setor-eletronicos']
+      ] %}
+      {% for s in segs %}
+      <a class="v-tile" href="/{{ s[1] }}.html">
+        <img src="/assets/midia/thumbs/{{ s[2] }}.webp" alt="" width="400" height="300" loading="lazy" decoding="async" />
+        <span>{{ s[0] }}</span>
+      </a>
+      {% endfor %}
+      <a class="v-tile v-tile--more" href="/industrias.html">
+        <span class="v-tile__arrow">{{ i('arrow') | safe }}</span>
+        <span>Ver todas as indústrias</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ NÚMEROS TÉCNICOS ══════════ -->
+<section class="v-specs" aria-label="Capacidade técnica">
+  <div class="container v-specs__grid">
+    <div><span class="v-specs__ico">{{ i('gauge') | safe }}</span><span><b>até 3.076 caracteres/s</b>na UX2-D160W</span></div>
+    <div><span class="v-specs__ico">{{ i('code') | safe }}</span><span><b>Lote, validade e 2D</b>DataMatrix e QR Code</span></div>
+    <div><span class="v-specs__ico">{{ i('layers') | safe }}</span><span><b>Diversos materiais</b>plástico, vidro, metal, papelão e flexíveis</span></div>
+    <div><span class="v-specs__ico">{{ i('award') | safe }}</span><span><b>Garantia Hitachi</b>de até 5 anos</span></div>
+    <a href="/produtos-cij-hitachi.html" class="btn btn--cta">Ver modelos Hitachi {{ i('arrow') | safe }}</a>
+  </div>
+</section>
+
+<!-- ══════════ PRODUTOS ══════════ -->
+<section class="v-section v-products" id="cij" aria-label="Produtos">
+  <div class="container">
+    <div class="v-head">
+      <div>
+        <span class="v-eyebrow">Linha CIJ Hitachi</span>
+        <h2 class="v-h2">Escolha pelo que a sua linha precisa.</h2>
+      </div>
+      <a href="/produtos-cij-hitachi.html#comparativo" class="v-link">Comparar os 7 modelos {{ i('arrow') | safe }}</a>
+    </div>
+    <div class="v-products__grid">
+      {% set models = [
+        ['UX2-D160W', 'Topo de linha', 'Alta velocidade para alimentos, bebidas e farma.', 'produtos-ux2-d160w', 'ux2-d160w'],
+        ['UX-D150W', 'Linha padrão', 'Custo equilibrado para laticínios e flexíveis.', 'produtos-ux-d150w', 'ux-d150w'],
+        ['UX-P160W', 'Tinta pigmentada', 'Alto contraste em fios, cabos e peças escuras.', 'produtos-ux-p160w', 'ux-p160w'],
+        ['UX-B160W', 'Food-safe', 'Marcação direta em ovos e alimentos.', 'produtos-ux-b160w', 'ux-b160w']
+      ] %}
+      {% for m in models %}
+      <a class="v-product" href="/{{ m[3] }}.html">
+        <span class="v-product__media"><img src="/assets/midia/thumbs/{{ m[4] }}.webp" alt="Codificadora Hitachi {{ m[0] }}" width="320" height="320" loading="lazy" decoding="async" /></span>
+        <span class="v-product__tag">{{ m[1] }}</span>
+        <b>Hitachi {{ m[0] }}</b>
+        <span class="v-product__txt">{{ m[2] }}</span>
+        <span class="v-link">Ver modelo {{ i('arrow') | safe }}</span>
+      </a>
+      {% endfor %}
+    </div>
+
+    <div class="v-tech">
+      <span class="v-tech__label">Outras tecnologias</span>
+      <a href="/produtos-tij.html"><img src="/assets/midia/thumbs/tij-sj500.webp" alt="" width="96" height="64" loading="lazy" /><span><b>TIJ</b>Alta resolução em caixas</span></a>
+      <a href="/produtos-tto.html"><img src="/assets/midia/thumbs/tto-sj8300.webp" alt="" width="96" height="64" loading="lazy" /><span><b>TTO</b>Filmes e flow-pack</span></a>
+      <a href="/produtos-laser.html"><span class="v-tech__ico">{{ i('target') | safe }}</span><span><b>Laser</b>Marcação sem tinta</span></a>
+      <a href="/insumos-hitachi.html"><img src="/assets/midia/thumbs/insumos-tinta-solvente.webp" alt="" width="96" height="64" loading="lazy" /><span><b>Insumos</b>Tintas e solventes S10</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SERVIÇOS ══════════ -->
+<section class="v-section v-section--dark v-serv" id="servicos" aria-label="Serviços">
+  <div class="container">
+    <div class="v-head">
+      <div>
+        <span class="v-eyebrow v-eyebrow--light">Serviços</span>
+        <h2 class="v-h2">Suporte técnico que mantém a sua linha rodando.</h2>
+      </div>
+      <a href="/servicos.html" class="v-link v-link--light">Ver todos os serviços {{ i('arrow') | safe }}</a>
+    </div>
+    <div class="v-serv__grid">
+      {% set servs = [
+        ['headset', 'Assistência técnica', 'Remoto imediato e presencial em até 4h úteis.', 'servicos-assistencia-tecnica', 'tecnico-assistencia'],
+        ['wrench', 'Manutenção preventiva', 'Visitas programadas para evitar parada.', 'servicos-manutencao', 'tecnicos-manutencao'],
+        ['flask', 'Teste de amostras', 'Testamos no seu produto antes da compra.', 'contato', 'tecnico-diagnostico'],
+        ['cap', 'Treinamento técnico', 'Sua equipe operando sem erro de mensagem.', 'servicos-treinamento-tecnico', 'equipe-suljett']
+      ] %}
+      {% for s in servs %}
+      <a class="v-photo-card" href="/{{ s[3] }}.html">
+        <img src="/assets/midia/thumbs/{{ s[4] }}.webp" alt="" width="480" height="360" loading="lazy" decoding="async" />
+        <span class="v-ico">{{ i(s[0]) | safe }}</span>
+        <b>{{ s[1] }}</b>
+        <span>{{ s[2] }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ QUEM SOMOS ══════════ -->
+<section class="v-section v-about" id="sobre" aria-label="Quem somos">
+  <div class="container v-about__grid">
+    <figure class="v-about__photo">
+      <img src="/assets/midia/thumbs/equipe-suljett.webp" alt="Equipe Suljett com a Hitachi" width="720" height="540" loading="lazy" decoding="async" />
+      <figcaption><span class="v-ico v-ico--sm">{{ i('shield') | safe }}</span> Distribuidor oficial Hitachi</figcaption>
+    </figure>
+    <div>
+      <span class="v-eyebrow">Quem somos</span>
+      <h2 class="v-h2">Desde 2008 codificando a indústria brasileira.</h2>
+      <p class="v-lead">Três unidades para chegar antes da parada: Porto Alegre, Joinville e Marechal Deodoro.</p>
+      <ul class="v-stats">
+        <li><b>+1.700</b>indústrias atendidas</li>
+        <li><b>+9.200</b>manutenções realizadas</li>
+        <li><b>2 mi+</b>insumos originais entregues</li>
+        <li><b>ISO 9001</b>qualidade certificada</li>
+      </ul>
+      <a href="/empresa.html" class="btn btn--cta">Conheça a Suljett {{ i('arrow') | safe }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FICHA TÉCNICA ══════════ -->
+<section class="v-section v-section--dark v-ficha" aria-label="Ficha técnica">
+  <div class="container v-ficha__grid">
+    <div>
+      <span class="v-eyebrow v-eyebrow--light">Ficha técnica · CIJ Hitachi</span>
+      <h2 class="v-h2">Compare os modelos antes de cotar.</h2>
+      <p class="v-lead">Velocidade, resolução, proteção IP e substratos dos 7 modelos em uma tabela.</p>
+    </div>
+    <form class="lead-form v-form" id="leadForm" data-lead="ficha">
+      <div class="field">
+        <label for="f-email">E-mail corporativo</label>
+        <input id="f-email" name="email" type="email" required autocomplete="email" placeholder="seu.nome@empresa.com.br" />
+      </div>
+      <div class="field">
+        <label for="f-model">Modelo</label>
+        <select id="f-model" name="modelo" required data-ficha-key>
+          <option value="">Escolha o modelo…</option>
+          <option value="ux2-d160w">UX2-D160W · Topo de linha</option>
+          <option value="ux-d110w">UX-D110W · Compacta</option>
+          <option value="ux-d140w">UX-D140W · Intermediária</option>
+          <option value="ux-d150w">UX-D150W · Linha padrão</option>
+          <option value="ux-p160w">UX-P160W · Tinta pigmentada</option>
+          <option value="ux-b160w">UX-B160W · Food-safe</option>
+          <option value="ux-b160wg">UX-B160WG · Food-safe, alto contraste</option>
+          <option value="comparativo">Comparativo de toda a linha</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn--cta btn--lg btn--full">Baixar ficha técnica {{ i('download') | safe }}</button>
+      <p class="lead-micro">Só conteúdo técnico. Sem spam.</p>
+      <div class="lead-success"></div>
+    </form>
+  </div>
+</section>
+
+<!-- ══════════ CTA FINAL ══════════ -->
+<section class="v-cta" id="contato" aria-label="Contato">
+  <div class="container v-cta__inner">
+    <div>
+      <h2>Vamos falar sobre a sua linha?</h2>
+      <p>Resposta em até 4 horas úteis.</p>
+    </div>
+    <div class="v-cta__btns">
+      <a href="/contato.html" class="btn v-btn-white btn--lg">Solicitar análise da minha linha {{ i('arrow') | safe }}</a>
+      <a href="tel:+5551980370198" class="v-btn-glass">(51) 98037-0198</a>
+    </div>
+  </div>
+</section>

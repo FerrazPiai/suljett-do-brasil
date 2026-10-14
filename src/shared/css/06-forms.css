@@ -19,14 +19,14 @@
 .form-consent { font-size: 0.75rem; color: var(--fg-mute); display: flex; gap: 0.5rem; align-items: flex-start; line-height: 1.5; }
 .form-consent input { width: auto; margin-top: 3px; accent-color: var(--sj-red); }
 .form-micro { font-size: 0.6875rem; color: var(--fg-mute); letter-spacing: 0.03em; display: flex; align-items: center; gap: 0.4rem; }
-.form-success { display: none; padding: 0.875rem 1rem; background: rgba(0,209,143,.1); border: 1px solid rgba(0,209,143,.3); border-radius: 4px; color: #0a8f63; font-size: 0.875rem; }
+.form-success { display: none; padding: 0.875rem 1rem; background: rgba(0,209,143,.1); border: 1px solid rgba(0,209,143,.3); border-radius: 4px; color: #067250; font-size: 0.875rem; }
 .form-success strong { color: var(--fg); }
 .form.is-success .form-success { display: block; }
 
 /* trust badge list (green check) */
 .checklist { display: flex; flex-direction: column; gap: 0.7rem; }
 .checklist li { display: flex; align-items: flex-start; gap: 0.7rem; color: var(--fg-body); font-size: 0.9375rem; line-height: 1.5; }
-.checklist .ck { flex-shrink: 0; margin-top: 1px; display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: rgba(0,209,143,.15); color: #0a8f63; font-weight: 800; font-size: 0.75rem; border: 1px solid rgba(0,209,143,.3); }
+.checklist .ck { flex-shrink: 0; margin-top: 1px; display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: rgba(0,209,143,.15); color: #067250; font-weight: 800; font-size: 0.75rem; border: 1px solid rgba(0,209,143,.3); }
 .checklist .xk { background: rgba(204,26,26,.1); color: var(--sj-red); border-color: rgba(204,26,26,.3); }
 .section--dark .checklist li { color: var(--steel-200); }
 

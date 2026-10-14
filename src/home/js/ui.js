@@ -3,21 +3,6 @@
    Header, menu, cortina e H1 vêm do assets/site.js (comum).
    ============================================================= */
 (() => {
-  /* ─── CIJ Modelos: setas trocam slide + specs + painel ─────── */
-  document.querySelectorAll('[data-model-carousel]').forEach((root) => {
-    const groups = ['.ms-slide', '.ms-specs', '.ms-panel'].map((s) => [...root.querySelectorAll(s)]);
-    const counter = root.querySelector('.ms-counter b');
-    const total = groups[0].length;
-    let idx = 0;
-    const go = (n) => {
-      idx = (n + total) % total;
-      groups.forEach((g) => g.forEach((el, i) => el.classList.toggle('is-active', i === idx)));
-      if (counter) counter.textContent = String(idx + 1).padStart(2, '0');
-    };
-    root.querySelector('[data-prev]')?.addEventListener('click', () => go(idx - 1));
-    root.querySelector('[data-next]')?.addEventListener('click', () => go(idx + 1));
-  });
-
   /* ─── Botões principais "magnéticos": só com mouse e sem reduced-motion.
      Usa a propriedade `translate`, separada do `transform` do clique. ── */
   if (matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)').matches) {

@@ -75,10 +75,11 @@
   --bg-alt:        var(--steel-50);
   --bg-elev:       #ffffff;
   --fg:            var(--ink-950);
-  --fg-body:       var(--ink-600);
-  --fg-mute:       var(--ink-400);
-  --border:        #E4E8F0;
-  --border-strong: #C9D2E0;
+  /* contraste reforçado (feedback 07/10): corpo 12:1 e apoio 7:1 sobre branco */
+  --fg-body:       #2A3341;
+  --fg-mute:       #4E5869;
+  --border:        #D9DFE8;
+  --border-strong: #B4BFCF;
   --header-bg:     rgba(255, 255, 255, 0.0);
   --header-bg-scr: rgba(255, 255, 255, 0.92);
   --header-border: rgba(10, 15, 26, 0.08);

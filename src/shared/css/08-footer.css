@@ -17,7 +17,7 @@
 .footer-label { font-size: 0.6875rem; letter-spacing: 0.18em; color: var(--fg-mute); text-transform: uppercase; margin-bottom: 0.5rem; font-weight: 700; }
 .footer-col a, .footer-col span { color: var(--fg-body); font-size: 0.875rem; padding: 0.1rem 0; transition: color .15s; }
 .footer-col a:hover { color: var(--fg); }
-.footer-phone { color: var(--sj-red) !important; font-weight: 700; }
+.footer-phone { color: var(--sj-red); font-weight: 700; }
 .footer-addr { color: var(--fg-mute); font-size: 0.8125rem; font-family: var(--font-display); margin-top: 0.25rem; }
 
 .footer-seals { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; padding: 2rem 0; border-bottom: 1px solid var(--border); justify-content: center; }
