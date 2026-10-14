@@ -1,0 +1,8 @@
+/* ─── Cortina de abertura (1x por sessão, ~1s, não bloqueia a rolagem) ── */
+.intro-curtain { position: fixed; inset: 0; z-index: 9999; background: #fff; display: flex; align-items: center; justify-content: center; pointer-events: none; transition: transform .45s var(--ease-in-out); }
+.intro-curtain.is-out { transform: translateY(-100%); }
+.intro-logo-wrap { opacity: 0; transform: translateY(8px) scale(.98); transition: opacity .3s var(--ease-out), transform .3s var(--ease-out); }
+.intro-logo-wrap img { width: clamp(180px, 30vw, 320px); height: auto; display: block; }
+.intro-curtain.is-in .intro-logo-wrap { opacity: 1; transform: none; }
+.intro-bar { position: absolute; bottom: 0; left: 0; height: 3px; width: 100%; background: var(--sj-red); transform: scaleX(0); transform-origin: left; transition: transform .5s var(--ease-out); }
+.intro-curtain.is-in .intro-bar { transform: scaleX(1); }

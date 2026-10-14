@@ -12,5 +12,6 @@ RUN npm run build
 FROM nginx:alpine
 COPY --from=build /app/_site/ /usr/share/nginx/html/
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx-redirects.conf /etc/nginx/conf.d/redirects.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

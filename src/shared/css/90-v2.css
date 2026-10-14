@@ -391,3 +391,6 @@
 .site-footer a.footer-phone { color: var(--v-red-hi); }
 /* faixas vermelhas: texto de apoio mais opaco (AA sobre #CC1A1A) */
 .section--red .eyebrow, .section--red p { color: rgba(255,255,255,.95); }
+/* confirmação do formulário da ficha sobre o cartão branco */
+.v-form .lead-success { color: #067250; }
+.v-form .lead-success strong { color: var(--ink-950); }
