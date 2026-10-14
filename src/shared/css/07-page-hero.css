@@ -59,7 +59,7 @@
 @media (min-width: 1024px) { .rel-grid { grid-template-columns: repeat(3,1fr); } }
 .rel-card { display: flex; flex-direction: column; gap: 0.35rem; padding: 1.4rem 1.5rem; background: #fff; border: 1px solid var(--border); border-radius: 8px; transition: transform .25s var(--ease-mechanical), border-color .25s; }
 .rel-card:hover { transform: translateY(-3px); border-color: var(--sj-red); }
-.rel-card h4 { font-size: 1.0625rem; color: var(--fg); }
+.rel-card h3, .rel-card h4 { font-size: 1.0625rem; color: var(--fg); }
 .rel-card p { font-size: 0.8125rem; color: var(--fg-mute); }
 
 /* map */
