@@ -151,7 +151,11 @@
   background: radial-gradient(closest-side, rgba(0,0,0,.85), rgba(0,0,0,.35) 60%, transparent);
   filter: blur(6px);
 }
-@media (min-width: 1180px) { .v-hero__product img { width: min(125%, 560px); max-width: none; margin-inline: -12%; } }
+@media (min-width: 1180px) {
+  .v-hero__grid { column-gap: 2.5rem; }
+  /* cresce só para a esquerda, sobre o respiro do texto; à direita fica o espaço até o cartão */
+  .v-hero__product img { width: min(112%, 540px); max-width: none; margin-left: -12%; margin-right: 0; }
+}
 @keyframes v-rise { from { opacity: 0; transform: translateY(18px) scale(.97); } }
 .v-hero__card {
   display: none;
