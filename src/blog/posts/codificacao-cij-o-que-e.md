@@ -24,6 +24,6 @@ A versatilidade é o grande trunfo. Uma única codificadora CIJ Hitachi imprime 
 
 ## Por que ela domina
 
-Três motivos sustentam a liderança da CIJ: **velocidade** (milhares de caracteres por segundo, sem frear o envase), **baixo custo por marcação** e **confiabilidade**: equipamentos Hitachi têm vida útil média comprovada de 15 anos em campo. Somados aos insumos originais com código S10 rastreável, formam a base de uma codificação industrial que não para.
+Três motivos sustentam a liderança da CIJ: **velocidade** (milhares de caracteres por segundo, sem frear o envase), **baixo custo por marcação** e **confiabilidade** para operação contínua. Somados aos insumos originais com código S10 rastreável, formam a base de uma codificação industrial que não para.
 
 > Quer saber qual modelo CIJ Hitachi é o ideal para o seu substrato e a sua velocidade de linha? [Fale com um especialista Suljett](/contato.html) e agende uma análise técnica gratuita.
