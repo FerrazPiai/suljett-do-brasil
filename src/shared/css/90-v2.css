@@ -413,3 +413,7 @@
 .v-units .v-ico { margin-top: -28px; box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 10px 22px -8px rgba(204,26,26,.6), 0 0 0 4px #fff; }
 /* separador da trilha legível também nas páginas claras (blog) */
 .crumb .sep { color: var(--fg-mute); }
+
+/* Telas largas: o conteúdo acompanha a tela (92%) até 1600 px, em vez de
+   parar em 1280/1360 px e deixar faixas vazias nas laterais. */
+@media (min-width: 1440px) { :root { --container: min(92vw, 1600px); } }
