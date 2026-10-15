@@ -9,7 +9,7 @@ Copy completo da Home + página-modelo de cada categoria do site Suljett, produz
 
 ## ⚠️ Terminologia obrigatória
 
-**A Suljett não faz etiquetas — faz impressões.** Os equipamentos Hitachi (CIJ, TIJ, TTO, Laser) imprimem **diretamente no substrato** (PET, lata, vidro, papelão, ovo, cabo, peça metálica…), sem aplicar etiqueta adesiva.
+**A Suljett não faz etiquetas: faz impressões.** Os equipamentos Hitachi (CIJ, TIJ, TTO, Laser) imprimem **diretamente no substrato** (PET, lata, vidro, papelão, ovo, cabo, peça metálica…), sem aplicar etiqueta adesiva.
 
 Termos corretos: **impressão · marcação · codificação · imprimir · codificar · marcar**
 Termos a evitar: ~~etiqueta · etiquetar · etiquetagem · rótulo (autoadesivo)~~
@@ -20,14 +20,14 @@ Use sempre que se referir ao que o equipamento produz na linha. Vale para toda a
 
 ## Sumário
 
-1. [Home](#01--home) — adaptada bloco a bloco ao layout do index.html
-2. [Empresa](#02--empresa) — página única · `/sobre-nos`
-3. [Produtos · CIJ Hitachi](#03--produtos--cij-hitachi-páginamodelo) — página-modelo de Produtos
-4. [Indústrias · Bebidas](#04--indústrias--bebidas-páginamodelo) — página-modelo de Indústrias
-5. [Aplicações · Garrafas PET](#05--aplicações--garrafas-pet-páginamodelo) — página-modelo de Aplicações
-6. [Serviços · Assistência Técnica](#06--serviços--assistência-técnica-páginamodelo) — página-modelo de Serviços
-7. [Ficha Técnica de Segurança (FISPQ)](#07--ficha-técnica-de-segurança-fispq) — item destacado do menu Soluções
-8. [Contato](#08--contato) — página única com seletor obrigatório
+1. [Home](#01--home): adaptada bloco a bloco ao layout do index.html
+2. [Empresa](#02--empresa): página única · `/sobre-nos`
+3. [Produtos · CIJ Hitachi](#03--produtos--cij-hitachi-páginamodelo): página-modelo de Produtos
+4. [Indústrias · Bebidas](#04--indústrias--bebidas-páginamodelo): página-modelo de Indústrias
+5. [Aplicações · Garrafas PET](#05--aplicações--garrafas-pet-páginamodelo): página-modelo de Aplicações
+6. [Serviços · Assistência Técnica](#06--serviços--assistência-técnica-páginamodelo): página-modelo de Serviços
+7. [Ficha Técnica de Segurança (FISPQ)](#07--ficha-técnica-de-segurança-fispq): item destacado do menu Soluções
+8. [Contato](#08--contato): página única com seletor obrigatório
 9. [Verificação de coerência entre páginas](#09--verificação-de-coerência-entre-as-páginas)
 
 ---
@@ -37,7 +37,7 @@ Use sempre que se referir ao que o equipamento produz na linha. Vale para toda a
 > **URL:** `suljett.com`
 > **Layout:** index.html anexado (vídeo 3D no hero, scroll animado, dark sections, lead magnet integrado, CTA final).
 >
-> Esta é a página principal. Cada bloco abaixo está mapeado ao bloco correspondente no HTML — basta substituir o texto atual pelo copy desta página.
+> Esta é a página principal. Cada bloco abaixo está mapeado ao bloco correspondente no HTML: basta substituir o texto atual pelo copy desta página.
 
 ---
 
@@ -50,7 +50,7 @@ Distribuidor oficial Hitachi · 17 anos no Brasil
 **Codificação industrial com tecnologia Hitachi original.**
 
 **Subtítulo:**
-Codificamos linhas de produção contínua com a tecnologia CIJ líder mundial — impressão nítida, ininterrupta e à prova das condições mais severas de fábrica. Equipamento Hitachi original, insumos S10 rastreáveis e assistência técnica certificada no Sul e Nordeste do Brasil.
+Codificamos linhas de produção contínua com a tecnologia CIJ líder mundial: impressão nítida, ininterrupta e à prova das condições mais severas de fábrica. Equipamento Hitachi original, insumos S10 rastreáveis e assistência técnica certificada no Sul e Nordeste do Brasil.
 
 **Bullets do hero:**
 
@@ -70,10 +70,10 @@ Codificamos linhas de produção contínua com a tecnologia CIJ líder mundial �
 
 ## Bloco 02 · Social proof (4 contadores)
 
-- **+1.700** — indústrias atendidas no Sul e Nordeste
-- **+17 anos** — de mercado industrial brasileiro desde 2008
-- **+9.200** — manutenções realizadas em equipamentos Hitachi
-- **+2 milhões** — de insumos originais Hitachi entregues
+- **+1.700**: indústrias atendidas no Sul e Nordeste
+- **+17 anos**: de mercado industrial brasileiro desde 2008
+- **+9.200**: manutenções realizadas em equipamentos Hitachi
+- **+2 milhões**: de insumos originais Hitachi entregues
 
 ---
 
@@ -84,7 +84,7 @@ Codificamos linhas de produção contínua com a tecnologia CIJ líder mundial �
 **Título (H2):** **A impressora que a indústria escolhe.**
 
 **Lead:**
-CIJ (Continuous Inkjet) é o padrão global para marcação de alta velocidade em linhas de produção contínua. A Suljett é distribuidora oficial da Hitachi Industrial Equipment Systems no Sul e Nordeste do Brasil — equipamento Hitachi de fábrica, insumos originais com código S10 rastreável e técnicos certificados pela própria Hitachi.
+CIJ (Continuous Inkjet) é o padrão global para marcação de alta velocidade em linhas de produção contínua. A Suljett é distribuidora oficial da Hitachi Industrial Equipment Systems no Sul e Nordeste do Brasil: equipamento Hitachi de fábrica, insumos originais com código S10 rastreável e técnicos certificados pela própria Hitachi.
 
 ### 6 spec cards
 
@@ -116,7 +116,7 @@ Equipe certificada pela Hitachi nas unidades de Porto Alegre, Joinville e Marech
 
 **Escolha o modelo certo para a sua linha.**
 
-Cada equipamento CIJ Hitachi foi projetado para uma aplicação específica. Selecione pelo substrato (PET, vidro, lata, papelão, ovo, cabo), pela velocidade de linha ou pelo ambiente de operação — e fale com um especialista antes de comprar.
+Cada equipamento CIJ Hitachi foi projetado para uma aplicação específica. Selecione pelo substrato (PET, vidro, lata, papelão, ovo, cabo), pela velocidade de linha ou pelo ambiente de operação: e fale com um especialista antes de comprar.
 
 ### Card 01 · Modelo topo de linha
 
@@ -150,12 +150,12 @@ Tinta pigmentada para substratos escuros, fios, cabos, dutos e peças metálicas
 **Título (H2):** **A tecnologia certa para cada linha.**
 
 **Lead:**
-Cada substrato, cada velocidade e cada exigência regulatória pedem uma tecnologia diferente. A Suljett distribui as três famílias que cobrem o portfólio completo da codificação industrial brasileira — todas Hitachi originais.
+Cada substrato, cada velocidade e cada exigência regulatória pedem uma tecnologia diferente. A Suljett distribui as três famílias que cobrem o portfólio completo da codificação industrial brasileira: todas Hitachi originais.
 
-### Card 01 · CIJ — Jato Contínuo
+### Card 01 · CIJ: Jato Contínuo
 
 **Marcação em alta velocidade**
-O padrão global para linhas de produção contínua — imprime data, lote, validade e código de barras em substratos diversos, sem contato com o produto.
+O padrão global para linhas de produção contínua: imprime data, lote, validade e código de barras em substratos diversos, sem contato com o produto.
 
 - Até 3.173 caracteres por segundo
 - Insumos originais S10 rastreáveis
@@ -163,7 +163,7 @@ O padrão global para linhas de produção contínua — imprime data, lote, val
 
 **→ Ver detalhes da linha CIJ**
 
-### Card 02 · TIJ — Jato Termal
+### Card 02 · TIJ: Jato Termal
 
 **Impressão termal em alta resolução**
 Ideal para embalagens cartonadas, secundárias e qualquer marcação onde a prioridade é nitidez gráfica, código de barras 2D e QR Code.
@@ -174,10 +174,10 @@ Ideal para embalagens cartonadas, secundárias e qualquer marcação onde a prio
 
 **→ Ver detalhes da linha TIJ**
 
-### Card 03 · TTO — Transferência Térmica
+### Card 03 · TTO: Transferência Térmica
 
 **Marcação direta em filme flexível**
-A tecnologia certa para empacotadoras horizontais e flow-pack — imprime data, lote e gráficos em filmes plásticos de baixíssima espessura.
+A tecnologia certa para empacotadoras horizontais e flow-pack: imprime data, lote e gráficos em filmes plásticos de baixíssima espessura.
 
 - Integração direta na empacotadora
 - Impressão intermitente ou contínua
@@ -194,7 +194,7 @@ A tecnologia certa para empacotadoras horizontais e flow-pack — imprime data, 
 **Título (H2):** **Onde a Suljett opera.**
 
 **Lead:**
-A codificação correta varia por substrato, velocidade de linha e exigência regulatória. Veja como atendemos cada setor — com modelo Hitachi recomendado, embalagem-alvo e a regra de conformidade que se aplica.
+A codificação correta varia por substrato, velocidade de linha e exigência regulatória. Veja como atendemos cada setor: com modelo Hitachi recomendado, embalagem-alvo e a regra de conformidade que se aplica.
 
 ### Card 01 / 06 · Alimentícia
 
@@ -205,14 +205,14 @@ Marcação de lote, validade e rastreabilidade em embalagens primárias e secund
 
 ### Card 02 / 06 · Bebidas
 
-Codificação em alta velocidade em PET, lata e vidro — resistente a umidade, condensação e ciclos térmicos da linha de envase.
+Codificação em alta velocidade em PET, lata e vidro: resistente a umidade, condensação e ciclos térmicos da linha de envase.
 *Substratos: PET · Lata · Vidro*
 *Modelo sugerido: Hitachi UX2-D160W + TTO SJ-T8500*
 **→ Ver solução**
 
 ### Card 03 / 06 · Laticínios
 
-Impressão confiável em embalagens flexíveis, caixas TetraPak e tampas plásticas — em ambientes refrigerados e com alta variação de umidade.
+Impressão confiável em embalagens flexíveis, caixas TetraPak e tampas plásticas: em ambientes refrigerados e com alta variação de umidade.
 *Substratos: Flexível · TetraPak · PP · PEAD*
 *Modelo sugerido: Hitachi UX-D150W*
 **→ Ver solução**
@@ -226,14 +226,14 @@ Serialização, Datamatrix e rastreabilidade conforme ANVISA em blisters, frasco
 
 ### Card 05 / 06 · Automotiva
 
-Identificação permanente de peças, conjuntos e componentes em metais, borrachas e plásticos técnicos — com forte contraste e leitura por câmera.
+Identificação permanente de peças, conjuntos e componentes em metais, borrachas e plásticos técnicos: com forte contraste e leitura por câmera.
 *Substratos: Metal · Borracha · Polímero técnico*
 *Modelo sugerido: Hitachi UX-P160WP*
 **→ Ver solução**
 
 ### Card 06 / 06 · Ovos · Avícolas
 
-Codificação direta sobre casca, conforme exigências MAPA, com tinta aprovada para contato alimentar — sem danificar o produto.
+Codificação direta sobre casca, conforme exigências MAPA, com tinta aprovada para contato alimentar: sem danificar o produto.
 *Substratos: Casca · Tinta food-safe*
 *Modelo sugerido: Hitachi UX-D110W + UX-B160WG*
 **→ Ver solução**
@@ -249,11 +249,11 @@ Codificação direta sobre casca, conforme exigências MAPA, com tinta aprovada 
 **Título (H2):** **Suporte que acompanha a sua operação.**
 
 **N° 01 · Assistência técnica 24h**
-Atendimento remoto imediato e presencial programado para manutenção corretiva e preventiva em qualquer modelo Hitachi — com peças originais em estoque permanente nas três unidades.
+Atendimento remoto imediato e presencial programado para manutenção corretiva e preventiva em qualquer modelo Hitachi: com peças originais em estoque permanente nas três unidades.
 `REMOTO · PRESENCIAL`
 
 **N° 02 · Laboratório de amostras**
-Testamos a marcação no seu substrato real antes da compra. Você recebe a peça impressa, não foto de catálogo — e enxerga o resultado na sua embalagem.
+Testamos a marcação no seu substrato real antes da compra. Você recebe a peça impressa, não foto de catálogo: e enxerga o resultado na sua embalagem.
 `TESTE IN-LOCO`
 
 **N° 03 · Treinamento técnico**
@@ -275,7 +275,7 @@ Estoque permanente de tintas, solventes, make-up e peças Hitachi originais, com
 **Título (H2):** **Precisa especificar uma codificadora para a sua linha?**
 
 **Lead:**
-Baixe a **Ficha Técnica Comparativa da Linha CIJ Hitachi 2026**. Tabela completa com velocidade, resolução, consumo de tinta, IP, dimensões e compatibilidade por substrato — os dados que você precisa para fazer a escolha certa antes de cotar.
+Baixe a **Ficha Técnica Comparativa da Linha CIJ Hitachi 2026**. Tabela completa com velocidade, resolução, consumo de tinta, IP, dimensões e compatibilidade por substrato: os dados que você precisa para fazer a escolha certa antes de cotar.
 
 **Bullets da prova:**
 
@@ -292,12 +292,12 @@ Baixe a **Ficha Técnica Comparativa da Linha CIJ Hitachi 2026**. Tabela complet
 
 **Opções do select:**
 
-- Hitachi UX2-D160W — Topo de linha
-- Hitachi UX-D110W — Compacta
-- Hitachi UX-D140W — Linha intermediária
-- Hitachi UX-D150W — Linha padrão
-- Hitachi UX-P160WP — Tinta pigmentada (substrato escuro)
-- Hitachi UX-B160W / B160WG — Food-safe
+- Hitachi UX2-D160W: Topo de linha
+- Hitachi UX-D110W: Compacta
+- Hitachi UX-D140W: Linha intermediária
+- Hitachi UX-D150W: Linha padrão
+- Hitachi UX-P160WP: Tinta pigmentada (substrato escuro)
+- Hitachi UX-B160W / B160WG: Food-safe
 - Comparativo de toda a linha CIJ Hitachi
 
 **Botão:** Baixar Ficha Técnica
@@ -306,7 +306,7 @@ Baixe a **Ficha Técnica Comparativa da Linha CIJ Hitachi 2026**. Tabela complet
 🔒 Enviamos apenas conteúdo técnico relevante. Sem spam, sem contato comercial sem solicitação. Você pode descadastrar a qualquer momento.
 
 **Mensagem de sucesso:**
-Download iniciado. Se o arquivo não abrir automaticamente, verifique seu e-mail corporativo em alguns instantes — enviamos uma cópia da ficha técnica para você.
+Download iniciado. Se o arquivo não abrir automaticamente, verifique seu e-mail corporativo em alguns instantes: enviamos uma cópia da ficha técnica para você.
 
 ---
 
@@ -317,7 +317,7 @@ Download iniciado. Se o arquivo não abrir automaticamente, verifique seu e-mail
 **Título (H2):** **Pronto para falar sobre a sua linha de produção?**
 
 **Lead:**
-Nossa equipe técnica analisa a sua aplicação — substrato, velocidade, regulação do setor — e indica a solução correta. Sem pressão comercial, sem proposta genérica de catálogo: você recebe a recomendação que a Suljett daria para a própria fábrica.
+Nossa equipe técnica analisa a sua aplicação: substrato, velocidade, regulação do setor: e indica a solução correta. Sem pressão comercial, sem proposta genérica de catálogo: você recebe a recomendação que a Suljett daria para a própria fábrica.
 
 **CTA primário:** Solicitar análise técnica gratuita →
 **CTA secundário:** Ou ligue: (51) 98037-0198
@@ -336,8 +336,8 @@ Distribuidor oficial Hitachi no Sul e Nordeste do Brasil.
 **Coluna Produtos**
 
 - CIJ Hitachi
-- TIJ — Jato Termal
-- TTO — Transferência Térmica
+- TIJ: Jato Termal
+- TTO: Transferência Térmica
 - Detectores Fortress
 - Insumos originais Hitachi
 - Comparativo de modelos
@@ -394,7 +394,7 @@ Distribuidor oficial Hitachi no Sul e Nordeste do Brasil.
 **Título (H1):** **17 anos codificando a indústria brasileira.**
 
 **Subtítulo:**
-Somos a distribuidora oficial da Hitachi Industrial Equipment Systems no Sul e Nordeste do Brasil. Nossa engenharia, nossos técnicos e nosso estoque de insumos originais existem para manter a sua linha de produção rodando — sem parada, sem código pirata, sem proposta genérica.
+Somos a distribuidora oficial da Hitachi Industrial Equipment Systems no Sul e Nordeste do Brasil. Nossa engenharia, nossos técnicos e nosso estoque de insumos originais existem para manter a sua linha de produção rodando: sem parada, sem código pirata, sem proposta genérica.
 
 **Trust strip:**
 
@@ -408,9 +408,9 @@ Somos a distribuidora oficial da Hitachi Industrial Equipment Systems no Sul e N
 
 **A engenharia que está atrás da impressão de validade da sua linha.**
 
-A Suljett do Brasil nasceu em 2008 com uma decisão clara: trazer para a indústria brasileira o padrão Hitachi de codificação industrial, com equipamento original, insumo original e suporte técnico de gente que conhece a linha de fábrica por dentro. Em quase duas décadas, passamos por mais de mil chãos de fábrica — de avícolas e laticínios no Sul a refinarias de bebidas no Nordeste — e o que aprendemos virou método.
+A Suljett do Brasil nasceu em 2008 com uma decisão clara: trazer para a indústria brasileira o padrão Hitachi de codificação industrial, com equipamento original, insumo original e suporte técnico de gente que conhece a linha de fábrica por dentro. Em quase duas décadas, passamos por mais de mil chãos de fábrica: de avícolas e laticínios no Sul a refinarias de bebidas no Nordeste: e o que aprendemos virou método.
 
-Hoje, atendemos clientes dos quatro grandes setores reguladores do país: alimentos, bebidas, farmacêutico e automotivo. Operamos em três unidades estrategicamente posicionadas — Porto Alegre, Joinville e Marechal Deodoro — para que o técnico chegue à sua fábrica antes que a parada da linha vire prejuízo.
+Hoje, atendemos clientes dos quatro grandes setores reguladores do país: alimentos, bebidas, farmacêutico e automotivo. Operamos em três unidades estrategicamente posicionadas: Porto Alegre, Joinville e Marechal Deodoro: para que o técnico chegue à sua fábrica antes que a parada da linha vire prejuízo.
 
 **Bullets de credibilidade:**
 
@@ -425,7 +425,7 @@ Hoje, atendemos clientes dos quatro grandes setores reguladores do país: alimen
 
 **Quatro pilares, uma só obsessão: manter a sua linha rodando.**
 
-Nossas soluções giram em torno de quatro pilares interligados. Eles existem para que o seu produto saia da linha codificado, inspecionado e dentro da norma — sem retrabalho.
+Nossas soluções giram em torno de quatro pilares interligados. Eles existem para que o seu produto saia da linha codificado, inspecionado e dentro da norma: sem retrabalho.
 
 **01 · RASTREABILIDADE**
 Cada gota de tinta com código S10, cada lote com origem documentada, cada equipamento conectado ao seu ERP. Você sabe exatamente o que saiu da linha, quando saiu e em qual lote.
@@ -434,7 +434,7 @@ Cada gota de tinta com código S10, cada lote com origem documentada, cada equip
 Integração nativa da codificadora com CLP, MES e empacotadora. Mensagem trocada por SKU, código de barras gerado automaticamente, parada zero por erro de operador.
 
 **03 · INSPEÇÃO**
-Detectores de metais Fortress e câmeras de visão integradas à linha. O que não está conforme não passa — antes da paleteira, antes do cliente, antes da recall.
+Detectores de metais Fortress e câmeras de visão integradas à linha. O que não está conforme não passa: antes da paleteira, antes do cliente, antes da recall.
 
 **04 · CODIFICAÇÃO**
 O coração da Suljett. CIJ, TIJ, TTO e laser Hitachi originais para cada substrato, cada velocidade e cada exigência regulatória do seu setor.
@@ -444,7 +444,7 @@ O coração da Suljett. CIJ, TIJ, TTO e laser Hitachi originais para cada substr
 ## Seção 03 · Missão, Visão e Valores
 
 **Missão**
-Implementar soluções no mercado industrial através da qualidade, tecnologia e inovação dos nossos produtos — com foco na agilidade e excelência no atendimento, superando as expectativas dos nossos clientes.
+Implementar soluções no mercado industrial através da qualidade, tecnologia e inovação dos nossos produtos: com foco na agilidade e excelência no atendimento, superando as expectativas dos nossos clientes.
 
 **Visão**
 Expandir nosso plano de negócios para todo o território nacional, transformando a Suljett em sinônimo de excelência no atendimento ao cliente industrial.
@@ -456,12 +456,12 @@ Gratidão · Caráter · Honestidade · Respeito · Ética · Autorresponsabilid
 
 ## Seção 04 · ISO 9001 e Política da Qualidade
 
-**Certificação ISO 9001 — porque qualidade industrial não é discurso.**
+**Certificação ISO 9001: porque qualidade industrial não é discurso.**
 
-A Suljett do Brasil é certificada ISO 9001, com sistema de gestão da qualidade auditado e renovado anualmente. Isso significa que cada chamado técnico, cada lote de insumo entregue e cada equipamento instalado segue um procedimento documentado — auditável pelo seu setor de Qualidade quando você precisar.
+A Suljett do Brasil é certificada ISO 9001, com sistema de gestão da qualidade auditado e renovado anualmente. Isso significa que cada chamado técnico, cada lote de insumo entregue e cada equipamento instalado segue um procedimento documentado: auditável pelo seu setor de Qualidade quando você precisar.
 
 > **Política da Qualidade**
-> A Suljett do Brasil é uma empresa socialmente responsável, que efetua as obrigações aplicáveis, visando fornecer produtos e serviços que atendam às necessidades dos seus clientes — buscando a melhoria contínua e excelência no atendimento.
+> A Suljett do Brasil é uma empresa socialmente responsável, que efetua as obrigações aplicáveis, visando fornecer produtos e serviços que atendam às necessidades dos seus clientes: buscando a melhoria contínua e excelência no atendimento.
 
 **→ Ver Política da Qualidade na íntegra**
 
@@ -471,21 +471,21 @@ A Suljett do Brasil é certificada ISO 9001, com sistema de gestão da qualidade
 
 **Três unidades para chegar antes da parada.**
 
-Nossa malha logística e técnica cobre Sul e Nordeste do Brasil — as duas regiões com maior densidade de indústrias de alimentos, bebidas e laticínios do país. Cada unidade tem estoque permanente de insumos Hitachi originais e técnicos certificados pela própria Hitachi.
+Nossa malha logística e técnica cobre Sul e Nordeste do Brasil: as duas regiões com maior densidade de indústrias de alimentos, bebidas e laticínios do país. Cada unidade tem estoque permanente de insumos Hitachi originais e técnicos certificados pela própria Hitachi.
 
-### Porto Alegre — RS (Matriz)
+### Porto Alegre: RS (Matriz)
 
 - Estr. João Passuelo, 342 · Vila Nova · CEP 91740-550
 - Atende: Rio Grande do Sul, Santa Catarina, Paraná
 - *Estoque de insumos Hitachi · Laboratório de amostras · Centro de treinamento*
 
-### Joinville — SC
+### Joinville: SC
 
 - R. Dona Francisca, 4808 · Santo Antônio · CEP 89218-112
 - Atende: corredor industrial catarinense e norte do Paraná
 - *Equipe técnica dedicada à indústria alimentícia e automotiva*
 
-### Marechal Deodoro — AL
+### Marechal Deodoro: AL
 
 - Rod. Dr. Ib Gatto Marinho Falcão, 500 · Barra Nova · CEP 57160-000
 - Atende: Alagoas, Pernambuco, Bahia, Sergipe, Rio Grande do Norte, Paraíba, Ceará
@@ -493,11 +493,11 @@ Nossa malha logística e técnica cobre Sul e Nordeste do Brasil — as duas reg
 
 ---
 
-## Seção 06 · SDC — Sucesso do Cliente
+## Seção 06 · SDC: Sucesso do Cliente
 
 **Sucesso do Cliente: a equipe que evita o seu próximo chamado.**
 
-O setor de Sucesso do Cliente (SDC) da Suljett existe por uma razão única: garantir que o equipamento que você comprou continue entregando o que prometemos no dia da assinatura — em 1 mês, em 1 ano, em 10 anos.
+O setor de Sucesso do Cliente (SDC) da Suljett existe por uma razão única: garantir que o equipamento que você comprou continue entregando o que prometemos no dia da assinatura: em 1 mês, em 1 ano, em 10 anos.
 
 A equipe SDC monitora ativamente o ciclo de vida de cada codificadora instalada: lembra o vencimento do contrato de manutenção, alerta antes do insumo acabar, programa visita técnica preventiva e abre o canal de comunicação direto com a engenharia da Hitachi quando o caso pede.
 
@@ -515,10 +515,10 @@ A equipe SDC monitora ativamente o ciclo de vida de cada codificadora instalada:
 
 **Marcas que escolhemos representar.**
 
-A Suljett é representante oficial de duas das maiores referências mundiais em codificação industrial e inspeção de qualidade. Não somos revendedora — somos distribuidora autorizada, com técnicos certificados pelos fabricantes.
+A Suljett é representante oficial de duas das maiores referências mundiais em codificação industrial e inspeção de qualidade. Não somos revendedora: somos distribuidora autorizada, com técnicos certificados pelos fabricantes.
 
 **Hitachi Industrial Equipment Systems**
-Líder mundial em codificação CIJ, com 100 anos de engenharia japonesa. Distribuímos toda a linha CIJ, TIJ, TTO e Laser da Hitachi para o Sul e Nordeste do Brasil — equipamento original de fábrica, com insumos rastreáveis código S10.
+Líder mundial em codificação CIJ, com 100 anos de engenharia japonesa. Distribuímos toda a linha CIJ, TIJ, TTO e Laser da Hitachi para o Sul e Nordeste do Brasil: equipamento original de fábrica, com insumos rastreáveis código S10.
 
 **Fortress Technology**
 Líder norte-americana em detecção de metais e inspeção por raio-X para indústria alimentícia e farmacêutica. Distribuímos a linha Fortress no Brasil, garantindo que o que sai da sua linha esteja livre de contaminação metálica e dentro da norma do seu setor.
@@ -539,7 +539,7 @@ Acreditamos que o crescimento da Suljett está diretamente ligado ao desenvolvim
 
 **Quer conhecer a Suljett dentro da sua fábrica?**
 
-Agende uma visita técnica gratuita. Um engenheiro de aplicação Suljett vai até a sua linha, avalia o substrato, a velocidade e a regulação do seu setor, e indica a solução Hitachi correta — sem cotação genérica, sem catálogo de uma vez só.
+Agende uma visita técnica gratuita. Um engenheiro de aplicação Suljett vai até a sua linha, avalia o substrato, a velocidade e a regulação do seu setor, e indica a solução Hitachi correta: sem cotação genérica, sem catálogo de uma vez só.
 
 **CTA primário:** Agendar visita técnica →
 **CTA secundário:** Falar agora pelo WhatsApp · (51) 98037-0198
@@ -562,11 +562,11 @@ Agende uma visita técnica gratuita. Um engenheiro de aplicação Suljett vai at
 **O padrão global de marcação contínua, agora na sua linha.**
 
 **Subtítulo:**
-A tecnologia CIJ (Continuous Inkjet) representa 95% das nossas vendas — e por uma razão simples: é a única que imprime data, lote, validade e código de barras em alta velocidade, sem contato com o produto, em praticamente qualquer substrato. A Suljett é distribuidora oficial da Hitachi Industrial Equipment Systems no Sul e Nordeste do Brasil, com sete modelos em estoque, insumos originais código S10 e técnicos certificados pela própria Hitachi.
+A tecnologia CIJ (Continuous Inkjet) representa 95% das nossas vendas: e por uma razão simples: é a única que imprime data, lote, validade e código de barras em alta velocidade, sem contato com o produto, em praticamente qualquer substrato. A Suljett é distribuidora oficial da Hitachi Industrial Equipment Systems no Sul e Nordeste do Brasil, com sete modelos em estoque, insumos originais código S10 e técnicos certificados pela própria Hitachi.
 
 **Trust strip:**
 
-- 🛡 Hitachi original — fabricado no Japão
+- 🛡 Hitachi original: fabricado no Japão
 - ⚙ 7 modelos CIJ em estoque permanente
 - ⏱ Assistência técnica em até 4h úteis
 
@@ -579,22 +579,22 @@ A tecnologia CIJ (Continuous Inkjet) representa 95% das nossas vendas — e por 
 
 **CIJ é a tecnologia que codifica sem encostar no seu produto.**
 
-As impressoras industriais CIJ (Continuous Inkjet) são equipamentos amplamente utilizados em linhas de produção para codificação e marcação de produtos com alta velocidade e eficiência. O sistema funciona através de um fluxo contínuo de tinta que é ejetado por um bico e, por meio de carga elétrica, direcionado para formar caracteres, números, códigos de barras, datas de validade e marcações diretamente em superfícies diversas — plástico, vidro, metal, papel, alumínio e madeira.
+As impressoras industriais CIJ (Continuous Inkjet) são equipamentos amplamente utilizados em linhas de produção para codificação e marcação de produtos com alta velocidade e eficiência. O sistema funciona através de um fluxo contínuo de tinta que é ejetado por um bico e, por meio de carga elétrica, direcionado para formar caracteres, números, códigos de barras, datas de validade e marcações diretamente em superfícies diversas: plástico, vidro, metal, papel, alumínio e madeira.
 
-O diferencial da CIJ está na capacidade de imprimir em alta velocidade sem interromper o fluxo de produção, operando de forma confiável em ambientes industriais hostis — com poeira, umidade e variações de temperatura. É a tecnologia ideal para indústrias que codificam em grande escala e com alta precisão.
+O diferencial da CIJ está na capacidade de imprimir em alta velocidade sem interromper o fluxo de produção, operando de forma confiável em ambientes industriais hostis: com poeira, umidade e variações de temperatura. É a tecnologia ideal para indústrias que codificam em grande escala e com alta precisão.
 
 ### Como funciona (4 passos)
 
-**01 · Fluxo contínuo** — A tinta é ejetada por um bico em fluxo constante a alta pressão.
-**02 · Carga elétrica** — Cada gota de tinta recebe uma carga elétrica controlada por software.
-**03 · Deflexão** — Placas defletoras direcionam a gota para o substrato em micro-segundos.
-**04 · Recirculação** — A tinta não usada volta para o reservatório — sem desperdício, sem contato físico.
+**01 · Fluxo contínuo**: A tinta é ejetada por um bico em fluxo constante a alta pressão.
+**02 · Carga elétrica**: Cada gota de tinta recebe uma carga elétrica controlada por software.
+**03 · Deflexão**: Placas defletoras direcionam a gota para o substrato em micro-segundos.
+**04 · Recirculação**: A tinta não usada volta para o reservatório: sem desperdício, sem contato físico.
 
 ---
 
 ## Seção 02 · Vantagens técnicas da CIJ Hitachi
 
-**Sete motivos para escolher Hitachi — e não um similar.**
+**Sete motivos para escolher Hitachi: e não um similar.**
 
 **01 · Alta velocidade real**
 Até 3.173 caracteres por segundo (modelo UX2-D160W). Codifica a linha mais rápida do seu envase sem nenhuma redução de velocidade.
@@ -603,7 +603,7 @@ Até 3.173 caracteres por segundo (modelo UX2-D160W). Codifica a linha mais ráp
 Proteção total contra poeira e jatos d'água. Roda em sala fria de laticínios, em refinaria de cana e em linha lavada com hidro alta-pressão sem perder calibragem.
 
 **03 · Insumos S10 rastreáveis**
-Cada tinta, solvente e make-up tem código S10 único. Você compra Hitachi original — não compra "tinta compatível" produzida em galpão.
+Cada tinta, solvente e make-up tem código S10 único. Você compra Hitachi original: não compra "tinta compatível" produzida em galpão.
 
 **04 · Tela 10,1" colorida touch**
 Interface multilíngue, troca de mensagem por SKU em um toque, biblioteca de mensagens local.
@@ -623,7 +623,7 @@ Garantia original Hitachi (não da revenda), com assistência técnica certifica
 
 **Sete modelos CIJ Hitachi. Um para cada linha de produção.**
 
-Cada equipamento foi projetado para uma aplicação específica. Filtre por substrato (PET, vidro, lata, papelão, ovo, cabo, peça metálica), por velocidade de linha ou por tipo de tinta — e fale com um engenheiro de aplicação Suljett antes de cotar.
+Cada equipamento foi projetado para uma aplicação específica. Filtre por substrato (PET, vidro, lata, papelão, ovo, cabo, peça metálica), por velocidade de linha ou por tipo de tinta: e fale com um engenheiro de aplicação Suljett antes de cotar.
 
 ### Hitachi UX2-D160W · `TOPO DE LINHA`
 
@@ -655,7 +655,7 @@ Padrão de mercado em laticínios e embalagens flexíveis brasileiros. Tinta MEK
 
 ### Hitachi UX-P160WP · `TINTA PIGMENTADA`
 
-Pigmento branco para impressão em substratos escuros — fios pretos, cabos, dutos, peças metálicas e borracha.
+Pigmento branco para impressão em substratos escuros: fios pretos, cabos, dutos, peças metálicas e borracha.
 *Aplicação: automotiva, fios/cabos, construção*
 *Velocidade: até 1.148 c/s · Cabeçote: 2 m · Tinta: pigmentada*
 **→ Ver ficha técnica**
@@ -682,13 +682,13 @@ Versão food-safe da linha B com cabeçote de alta resolução. Logos, QR Codes 
 
 **Insumo original Hitachi tem código S10. O resto é pirataria.**
 
-O mercado brasileiro está cheio de "tinta compatível" e "solvente alternativo" para CIJ Hitachi — vendidos por preço atrativo, com aparência idêntica e código falsificado. O problema só aparece depois: cabeçote entupido em 30 dias, garantia perdida, parada de linha não programada e custo de manutenção 4× maior.
+O mercado brasileiro está cheio de "tinta compatível" e "solvente alternativo" para CIJ Hitachi: vendidos por preço atrativo, com aparência idêntica e código falsificado. O problema só aparece depois: cabeçote entupido em 30 dias, garantia perdida, parada de linha não programada e custo de manutenção 4× maior.
 
 Cada insumo Hitachi original tem um código **S10 rastreável** impresso na embalagem. Você consegue conferir a procedência direto no app da Hitachi e a Suljett mantém estoque permanente das três famílias críticas:
 
-- ⚫ **Tintas Hitachi** — preta, branca pigmentada, colorida, food-safe, MEK, álcool
-- ⚪ **Solventes Hitachi** — MEK, etanol, acetona, solvente especial pigmentada
-- 🧪 **Make-up Hitachi** — reposição do fluido de operação do cabeçote
+- ⚫ **Tintas Hitachi**: preta, branca pigmentada, colorida, food-safe, MEK, álcool
+- ⚪ **Solventes Hitachi**: MEK, etanol, acetona, solvente especial pigmentada
+- 🧪 **Make-up Hitachi**: reposição do fluido de operação do cabeçote
 
 ### ⚠ Como identificar tinta pirata para CIJ Hitachi
 
@@ -697,7 +697,7 @@ Cada insumo Hitachi original tem um código **S10 rastreável** impresso na emba
 3. Fornecedor sem nota fiscal de revenda Hitachi
 4. Frasco com tampa diferente do padrão Japão
 
-> Na dúvida, compare com o lote que você comprou da Suljett. Insumo pirata anula a garantia Hitachi de 5 anos e pode danificar o cabeçote do equipamento — peça que custa mais que a tinta falsificada.
+> Na dúvida, compare com o lote que você comprou da Suljett. Insumo pirata anula a garantia Hitachi de 5 anos e pode danificar o cabeçote do equipamento: peça que custa mais que a tinta falsificada.
 
 **→ Solicitar cotação de insumos originais**
 
@@ -707,16 +707,16 @@ Cada insumo Hitachi original tem um código **S10 rastreável** impresso na emba
 
 **Em que tipo de linha a CIJ Hitachi roda hoje?**
 
-A CIJ é a tecnologia mais transversal do nosso portfólio. Ela está presente em praticamente todos os setores que a Suljett atende — sempre que a linha precisa codificar em alta velocidade, sem contato e sobre qualquer substrato.
+A CIJ é a tecnologia mais transversal do nosso portfólio. Ela está presente em praticamente todos os setores que a Suljett atende: sempre que a linha precisa codificar em alta velocidade, sem contato e sobre qualquer substrato.
 
-- 🥤 **Bebidas** — PET, lata, vidro · UX2-D160W
-- 🥚 **Ovos · Avícolas** — casca · UX-B160W
-- 🧀 **Laticínios** — flexível, TetraPak · UX-D150W
-- 💊 **Farmacêutica** — blister, frasco · UX2-D160W
-- 🚗 **Automotiva** — metal, borracha · UX-P160WP
-- ⚡ **Fios e Cabos** — substrato escuro · UX-P160WP
-- 💄 **Cosméticos** — PET, vidro · UX2-D160W
-- 🏗 **Construção** — concreto, madeira · UX-P160WP
+- 🥤 **Bebidas**: PET, lata, vidro · UX2-D160W
+- 🥚 **Ovos · Avícolas**: casca · UX-B160W
+- 🧀 **Laticínios**: flexível, TetraPak · UX-D150W
+- 💊 **Farmacêutica**: blister, frasco · UX2-D160W
+- 🚗 **Automotiva**: metal, borracha · UX-P160WP
+- ⚡ **Fios e Cabos**: substrato escuro · UX-P160WP
+- 💄 **Cosméticos**: PET, vidro · UX2-D160W
+- 🏗 **Construção**: concreto, madeira · UX-P160WP
 
 ---
 
@@ -725,10 +725,10 @@ A CIJ é a tecnologia mais transversal do nosso portfólio. Ela está presente e
 **O que perguntam antes de comprar uma CIJ Hitachi.**
 
 **Qual a diferença entre CIJ e TIJ?**
-CIJ (Continuous Inkjet) usa um fluxo contínuo de tinta com carga elétrica e é a tecnologia ideal para alta velocidade em qualquer substrato — incluindo vidro, metal, plástico e papel. TIJ (Thermal Inkjet) usa cartucho aquecido, tem resolução gráfica superior, mas é melhor em substratos porosos (papelão, cartão) e velocidade média. Em linha de envase de bebidas, refrescos e leite — CIJ. Em codificação de caixa secundária — TIJ.
+CIJ (Continuous Inkjet) usa um fluxo contínuo de tinta com carga elétrica e é a tecnologia ideal para alta velocidade em qualquer substrato: incluindo vidro, metal, plástico e papel. TIJ (Thermal Inkjet) usa cartucho aquecido, tem resolução gráfica superior, mas é melhor em substratos porosos (papelão, cartão) e velocidade média. Em linha de envase de bebidas, refrescos e leite: CIJ. Em codificação de caixa secundária: TIJ.
 
 **A CIJ Hitachi imprime em garrafa PET com condensação?**
-Sim. A Hitachi UX2-D160W tem proteção IP65 e tinta MEK secagem rápida — o jato penetra a condensação superficial e fixa a impressão sem borrar. É o equipamento padrão da AmBev, Coca-Cola e cervejarias premium para PET e lata.
+Sim. A Hitachi UX2-D160W tem proteção IP65 e tinta MEK secagem rápida: o jato penetra a condensação superficial e fixa a impressão sem borrar. É o equipamento padrão da AmBev, Coca-Cola e cervejarias premium para PET e lata.
 
 **Posso usar tinta de outra marca na CIJ Hitachi?**
 Não. Insumo de terceiros anula a garantia Hitachi de 5 anos e danifica o cabeçote em médio prazo. O sistema CIJ Hitachi é calibrado para a viscosidade exata da tinta original (código S10). Tintas "compatíveis" entopem o filtro principal em 30-60 dias.
@@ -737,10 +737,10 @@ Não. Insumo de terceiros anula a garantia Hitachi de 5 anos e danifica o cabeç
 Até 3.173 caracteres por segundo no modelo UX2-D160W. Na prática, isso significa codificar uma linha de envase de até 72.000 garrafas/hora sem reduzir velocidade.
 
 **A Hitachi UX2 tem garantia? Por quanto tempo?**
-Sim. Garantia Hitachi original de até 5 anos para o equipamento — desde que opere com insumos originais Hitachi (código S10) e mantenha contrato de manutenção preventiva com a Suljett.
+Sim. Garantia Hitachi original de até 5 anos para o equipamento: desde que opere com insumos originais Hitachi (código S10) e mantenha contrato de manutenção preventiva com a Suljett.
 
 **Vocês aceitam meu equipamento antigo como parte do pagamento?**
-Aceitamos. Trabalhamos com troca (trade-in) de equipamentos antigos de qualquer marca por uma Hitachi nova — incluindo Videojet, Domino, Linx e Markem-Imaje. Solicite a avaliação técnica gratuita.
+Aceitamos. Trabalhamos com troca (trade-in) de equipamentos antigos de qualquer marca por uma Hitachi nova: incluindo Videojet, Domino, Linx e Markem-Imaje. Solicite a avaliação técnica gratuita.
 
 **A Suljett atende minha região?**
 Atendemos todo o Sul (RS, SC, PR) e Nordeste (AL, PE, BA, SE, RN, PB, CE). Para São Paulo e Sudeste, indicamos o distribuidor Hitachi parceiro da nossa rede.
@@ -752,9 +752,9 @@ Instalação típica leva entre 4 e 8 horas, incluindo integração com o CLP da
 
 ## Seção 07 · Download da Ficha Técnica (Lead Magnet)
 
-**Tabela técnica completa dos 7 modelos CIJ Hitachi — em PDF.**
+**Tabela técnica completa dos 7 modelos CIJ Hitachi: em PDF.**
 
-Velocidade, resolução, IP, consumo de tinta, dimensões, alimentação elétrica e compatibilidade por substrato. Tudo o que você precisa antes de cotar, em uma tabela única — modelo Videojet, mas com dados Hitachi reais.
+Velocidade, resolução, IP, consumo de tinta, dimensões, alimentação elétrica e compatibilidade por substrato. Tudo o que você precisa antes de cotar, em uma tabela única: modelo Videojet, mas com dados Hitachi reais.
 
 **Form (campos):**
 
@@ -793,7 +793,7 @@ Antes de fechar a compra, nossa equipe vai até a sua linha, avalia o substrato,
 **Título (H1):** **Codificação industrial para a sua linha de bebidas.**
 
 **Subtítulo:**
-Cervejarias, refrigerantes, sucos, águas minerais e energéticos brasileiros codificam com Hitachi original. A Suljett é distribuidora oficial Hitachi no Sul e Nordeste — com solução para PET, lata e vidro, em qualquer velocidade de envase, e com a tinta certa para a condensação típica da linha fria.
+Cervejarias, refrigerantes, sucos, águas minerais e energéticos brasileiros codificam com Hitachi original. A Suljett é distribuidora oficial Hitachi no Sul e Nordeste: com solução para PET, lata e vidro, em qualquer velocidade de envase, e com a tinta certa para a condensação típica da linha fria.
 
 **Trust strip:**
 
@@ -810,9 +810,9 @@ Cervejarias, refrigerantes, sucos, águas minerais e energéticos brasileiros co
 
 **A norma da indústria de bebidas mudou. Sua codificação precisa acompanhar.**
 
-Desde a publicação da **RDC ANVISA nº 727/2022** e da **Lei nº 14.063/2020**, toda embalagem primária de bebida vendida no Brasil precisa exibir, de forma legível e indelével, os dados de identificação do lote, a data de fabricação e a data de validade — em todas as condições previstas de armazenamento, transporte e exposição comercial. Isso significa codificação que **resista a condensação**, a câmaras frias, a hidro lavagem da linha e ao manuseio do consumidor.
+Desde a publicação da **RDC ANVISA nº 727/2022** e da **Lei nº 14.063/2020**, toda embalagem primária de bebida vendida no Brasil precisa exibir, de forma legível e indelével, os dados de identificação do lote, a data de fabricação e a data de validade: em todas as condições previstas de armazenamento, transporte e exposição comercial. Isso significa codificação que **resista a condensação**, a câmaras frias, a hidro lavagem da linha e ao manuseio do consumidor.
 
-Para a indústria de bebidas, há ainda exigências específicas: rastreabilidade de lote no caso de recall sanitário, codificação de número de registro no MAPA (sucos e fermentados), e — para exportação — Datamatrix GS1 ou QR Code conforme a regulação do país de destino.
+Para a indústria de bebidas, há ainda exigências específicas: rastreabilidade de lote no caso de recall sanitário, codificação de número de registro no MAPA (sucos e fermentados), e: para exportação: Datamatrix GS1 ou QR Code conforme a regulação do país de destino.
 
 ### Checklist regulatório
 
@@ -828,7 +828,7 @@ Para a indústria de bebidas, há ainda exigências específicas: rastreabilidad
 
 **Três substratos, três soluções Hitachi calibradas.**
 
-A indústria de bebidas trabalha praticamente com três substratos principais — PET, lata de alumínio e vidro. Cada um exige uma tinta diferente, uma velocidade de secagem específica e uma fixação que aguente lavagem industrial. Veja a tecnologia recomendada para cada caso.
+A indústria de bebidas trabalha praticamente com três substratos principais: PET, lata de alumínio e vidro. Cada um exige uma tinta diferente, uma velocidade de secagem específica e uma fixação que aguente lavagem industrial. Veja a tecnologia recomendada para cada caso.
 
 ### 🥤 Garrafas PET
 
@@ -857,7 +857,7 @@ Substrato premium para cervejarias artesanais, vinhos e destilados. Desafio: cod
 
 **A escolha da AmBev, Coca-Cola, Heineken e cervejarias premium do Brasil.**
 
-Quando uma engarrafadora roda 24 horas por dia, 7 dias por semana, codificando 90.000 latas por hora, o equipamento de codificação não pode ser uma variável. Por isso as principais cervejarias e refrigerantes do Brasil operam com Hitachi original — e por isso a Suljett vendeu 95% dos seus equipamentos CIJ exatamente nesse setor.
+Quando uma engarrafadora roda 24 horas por dia, 7 dias por semana, codificando 90.000 latas por hora, o equipamento de codificação não pode ser uma variável. Por isso as principais cervejarias e refrigerantes do Brasil operam com Hitachi original: e por isso a Suljett vendeu 95% dos seus equipamentos CIJ exatamente nesse setor.
 
 **01 · Resistente a condensação**
 A tinta MEK Hitachi penetra a camada de condensação típica da câmara fria e fixa a impressão sem borrar, sem manchar a embalagem.
@@ -866,7 +866,7 @@ A tinta MEK Hitachi penetra a camada de condensação típica da câmara fria e 
 Sistema de troca de mensagem por SKU em um toque na tela 10,1". Você muda o lote sem tirar a linha do ar.
 
 **03 · Tinta certificada food-safe**
-Tintas Hitachi para bebidas têm aprovação para contato indireto com alimentos — atendem RDC ANVISA, FDA e regulação europeia.
+Tintas Hitachi para bebidas têm aprovação para contato indireto com alimentos: atendem RDC ANVISA, FDA e regulação europeia.
 
 **04 · Garantia Hitachi de 5 anos**
 Equipamento Hitachi original com garantia de fábrica de até 5 anos. Insumo S10 rastreável obrigatório.
@@ -880,9 +880,9 @@ Equipamento Hitachi original com garantia de fábrica de até 5 anos. Insumo S10
 A codificadora industrial mais avançada da Hitachi, projetada para envase de alta velocidade em PET, lata, vidro e flexíveis.
 
 - ⚙ **Velocidade:** até 3.173 caracteres/segundo (cobre linhas de 90.000 garrafas/hora)
-- 💧 **Proteção:** IP65 — opera com hidro lavagem da linha
+- 💧 **Proteção:** IP65: opera com hidro lavagem da linha
 - 🖥 **Display:** Tela colorida 10,1" touch, troca de mensagem sem parar
-- 🔗 **Conectividade:** USB, Ethernet, RS-232 — integra com Protheus, SAP, TOTVS
+- 🔗 **Conectividade:** USB, Ethernet, RS-232: integra com Protheus, SAP, TOTVS
 - 🛡 **Garantia:** Hitachi original de até 5 anos
 - 🧴 **Insumo:** Tintas MEK Hitachi com código S10 rastreável
 
@@ -911,13 +911,13 @@ A codificadora industrial mais avançada da Hitachi, projetada para envase de al
 **O que perguntam antes de codificar uma linha de bebidas.**
 
 **Qual codificadora industrial é melhor para garrafa PET?**
-Para PET em alta velocidade (acima de 30.000 garrafas/hora), a tecnologia recomendada é CIJ — especificamente a Hitachi UX2-D160W com tinta MEK secagem rápida. CIJ imprime sem contato, resiste à condensação típica de câmara fria e codifica linhas de até 72.000 PETs/hora.
+Para PET em alta velocidade (acima de 30.000 garrafas/hora), a tecnologia recomendada é CIJ: especificamente a Hitachi UX2-D160W com tinta MEK secagem rápida. CIJ imprime sem contato, resiste à condensação típica de câmara fria e codifica linhas de até 72.000 PETs/hora.
 
 **Como a impressora codifica em condensação?**
 A tinta MEK da Hitachi tem fórmula com solvente que penetra a camada de condensação superficial e fixa a impressão na superfície do PET. Isso evita o "borrão" típico de tintas convencionais aplicadas em garrafa gelada.
 
 **A tinta é segura para contato com alimento?**
-As tintas Hitachi para bebidas têm certificação de contato indireto com alimentos (FDA, ANVISA, Comissão Europeia). A impressão fica na parede externa do PET, lata ou vidro — sem contato direto com o líquido.
+As tintas Hitachi para bebidas têm certificação de contato indireto com alimentos (FDA, ANVISA, Comissão Europeia). A impressão fica na parede externa do PET, lata ou vidro: sem contato direto com o líquido.
 
 **Quanto custa uma codificadora industrial para uma linha de bebidas?**
 O investimento varia conforme a velocidade da linha, o substrato e o tipo de tinta necessário. Para uma análise técnica gratuita com proposta de uma codificadora Hitachi específica para o seu caso, fale com a Suljett.
@@ -937,7 +937,7 @@ Cada litro de tinta Hitachi MEK codifica em média 25 a 35 milhões de caractere
 
 **Pronto para codificar sua linha de bebidas com Hitachi?**
 
-Um engenheiro de aplicação Suljett vai até a sua fábrica, avalia a velocidade real do seu envase, o substrato (PET, lata, vidro) e a regulação que se aplica — e indica a Hitachi correta. Sem proposta genérica de catálogo.
+Um engenheiro de aplicação Suljett vai até a sua fábrica, avalia a velocidade real do seu envase, o substrato (PET, lata, vidro) e a regulação que se aplica: e indica a Hitachi correta. Sem proposta genérica de catálogo.
 
 **CTA primário:** Solicitar análise técnica gratuita →
 **CTA secundário:** Falar pelo WhatsApp · (51) 98037-0198
@@ -970,7 +970,7 @@ Um engenheiro de aplicação Suljett vai até a sua fábrica, avalia a velocidad
 # 05 · APLICAÇÕES · Garrafas PET (página-modelo)
 
 > **URL:** `/aplicacoes/garrafas-pet`
-> **Página-modelo de Aplicações.** PET é o substrato mais universal — cobre bebidas, cosméticos, química, óleo, lubrificantes e farmacêutica líquida.
+> **Página-modelo de Aplicações.** PET é o substrato mais universal: cobre bebidas, cosméticos, química, óleo, lubrificantes e farmacêutica líquida.
 
 ---
 
@@ -981,13 +981,13 @@ Um engenheiro de aplicação Suljett vai até a sua fábrica, avalia a velocidad
 **Título (H1):** **Codificação industrial em garrafas PET.**
 
 **Subtítulo:**
-Refrigerantes, águas, isotônicos, óleos, lubrificantes e cosméticos no Brasil são envasados majoritariamente em PET — e cada um traz um desafio diferente para a codificadora: condensação, curvatura, transparência, hidro lavagem, velocidade extrema. Veja a tecnologia, a tinta e o modelo Hitachi que resolvem o seu caso.
+Refrigerantes, águas, isotônicos, óleos, lubrificantes e cosméticos no Brasil são envasados majoritariamente em PET: e cada um traz um desafio diferente para a codificadora: condensação, curvatura, transparência, hidro lavagem, velocidade extrema. Veja a tecnologia, a tinta e o modelo Hitachi que resolvem o seu caso.
 
 **Trust strip:**
 
 - 💧 Resistente a condensação de câmara fria
 - ⚡ Velocidade até 72.000 garrafas/hora
-- 🛡 Hitachi original — código S10 rastreável
+- 🛡 Hitachi original: código S10 rastreável
 
 **CTA primário:** Testar marcação no meu PET (laboratório de amostras) →
 **CTA secundário:** Solicitar análise técnica gratuita
@@ -998,7 +998,7 @@ Refrigerantes, águas, isotônicos, óleos, lubrificantes e cosméticos no Brasi
 
 **PET não é só "plástico transparente". É um substrato com quatro desafios para a codificação.**
 
-O PET (polietileno tereftalato) parece um substrato simples, mas para uma codificadora industrial é um dos mais exigentes. Veja por quê — e como a Hitachi resolve cada um dos quatro problemas.
+O PET (polietileno tereftalato) parece um substrato simples, mas para uma codificadora industrial é um dos mais exigentes. Veja por quê: e como a Hitachi resolve cada um dos quatro problemas.
 
 **01 · Superfície curva e brilhante**
 O PET é cilíndrico e altamente reflexivo. Sistemas a laser geralmente erram a leitura de retorno e câmeras de inspeção têm dificuldade de validar a impressão.
@@ -1010,11 +1010,11 @@ Garrafas PET saídas de câmara fria recebem uma camada de condensação que faz
 
 **03 · Velocidade extrema do envase**
 Linhas modernas envasam de 30.000 a 90.000 PETs/hora. Tecnologias mais lentas (TIJ, laser de baixa potência) não acompanham.
-*Solução Hitachi:* UX2-D160W com até 3.173 caracteres/segundo — cobre o envase mais rápido do mercado brasileiro.
+*Solução Hitachi:* UX2-D160W com até 3.173 caracteres/segundo: cobre o envase mais rápido do mercado brasileiro.
 
 **04 · Lavagem da linha com hidro alta-pressão**
 A linha de envase é lavada todos os turnos com hidro alta-pressão e detergente alcalino. Eletrônica não-IP65 cozinha.
-*Solução Hitachi:* Toda a linha CIJ Hitachi vem IP65 de fábrica — resistência total a jato d'água direto e poeira.
+*Solução Hitachi:* Toda a linha CIJ Hitachi vem IP65 de fábrica: resistência total a jato d'água direto e poeira.
 
 ---
 
@@ -1022,7 +1022,7 @@ A linha de envase é lavada todos os turnos com hidro alta-pressão e detergente
 
 **Cinco famílias de PET, cinco calibragens diferentes.**
 
-Não existe "PET genérico" para uma codificadora industrial. Cada família de PET reage de forma diferente à tinta — e cada uma exige uma calibragem específica do cabeçote, da viscosidade e da fonte. Veja as cinco famílias que a Suljett codifica no dia a dia.
+Não existe "PET genérico" para uma codificadora industrial. Cada família de PET reage de forma diferente à tinta: e cada uma exige uma calibragem específica do cabeçote, da viscosidade e da fonte. Veja as cinco famílias que a Suljett codifica no dia a dia.
 
 - 🥤 **PET cristal transparente** (águas, refrigerantes claros)
   Tinta: MEK preta com alta opacidade · Modelo: Hitachi UX2-D160W
@@ -1063,11 +1063,11 @@ Em uma única impressão por garrafa PET, a Hitachi codifica de forma indelével
 
 **Por que CIJ é a escolha óbvia para PET.**
 
-Entre as três tecnologias de codificação industrial — CIJ, TIJ e TTO — a CIJ (Continuous Inkjet) é a única que reúne velocidade extrema, fixação em substrato não-poroso, resistência a condensação e operação contínua em ambiente IP65. Por isso, todas as grandes engarrafadoras brasileiras operam com CIJ em PET — e a Suljett vendeu 95% dos seus equipamentos exatamente nesse contexto.
+Entre as três tecnologias de codificação industrial: CIJ, TIJ e TTO: a CIJ (Continuous Inkjet) é a única que reúne velocidade extrema, fixação em substrato não-poroso, resistência a condensação e operação contínua em ambiente IP65. Por isso, todas as grandes engarrafadoras brasileiras operam com CIJ em PET: e a Suljett vendeu 95% dos seus equipamentos exatamente nesse contexto.
 
 | Tecnologia | Velocidade em PET | Aderência | Recomendado? |
 |---|---|---|---|
-| **CIJ Hitachi** | Até 72.000 unid/h | Excelente (MEK) | **Sim — padrão de mercado** |
+| **CIJ Hitachi** | Até 72.000 unid/h | Excelente (MEK) | **Sim: padrão de mercado** |
 | TIJ | Até 25.000 unid/h | Boa, mas marca borra | Apenas linhas lentas |
 | TTO | Não aplicável | Não fixa em PET curvo | Não recomendado |
 | Laser | Até 40.000 unid/h | Marca permanente | Casos especiais (consumo alto) |
@@ -1098,7 +1098,7 @@ Codificadora industrial Hitachi projetada para envase de alta velocidade. Padrã
 
 **Testamos a marcação na sua garrafa real, com a sua tinta de identidade.**
 
-Antes de fechar a compra de uma codificadora industrial, a Suljett oferece teste sem custo no seu próprio PET — na sua marca, com a sua identidade visual e na velocidade da sua linha. Você recebe a garrafa codificada na sua mesa, fotografa, mostra para o seu setor de Qualidade — e só fecha quando o resultado convencer.
+Antes de fechar a compra de uma codificadora industrial, a Suljett oferece teste sem custo no seu próprio PET: na sua marca, com a sua identidade visual e na velocidade da sua linha. Você recebe a garrafa codificada na sua mesa, fotografa, mostra para o seu setor de Qualidade: e só fecha quando o resultado convencer.
 
 - Envio de PET pelo seu setor de Compras (3-5 garrafas amostra)
 - Calibragem do cabeçote para o seu substrato específico
@@ -1115,19 +1115,19 @@ Antes de fechar a compra de uma codificadora industrial, a Suljett oferece teste
 **O que perguntam antes de codificar PET.**
 
 **Como codificar garrafa PET com condensação?**
-Use uma codificadora industrial CIJ com tinta MEK secagem rápida — como a Hitachi UX2-D160W. A tinta MEK penetra a camada de condensação típica de câmara fria e fixa em frações de segundo, sem borrar a impressão.
+Use uma codificadora industrial CIJ com tinta MEK secagem rápida: como a Hitachi UX2-D160W. A tinta MEK penetra a camada de condensação típica de câmara fria e fixa em frações de segundo, sem borrar a impressão.
 
 **Qual a melhor codificadora para garrafa PET?**
 Para PET em alta velocidade (acima de 30.000 garrafas/hora), a recomendação técnica é a Hitachi UX2-D160W com tinta MEK preta. Para linhas menores ou PET fosco, a Hitachi UX-D150W cobre bem o caso.
 
 **A tinta resiste à lavagem da garrafa PET retornável?**
-Sim, com a tinta correta. A Hitachi oferece tinta MEK com aditivo de resistência a lavagem alcalina — usada principalmente em PET retornável de cervejarias e refrigerantes em sistema de retorno.
+Sim, com a tinta correta. A Hitachi oferece tinta MEK com aditivo de resistência a lavagem alcalina: usada principalmente em PET retornável de cervejarias e refrigerantes em sistema de retorno.
 
 **Posso codificar em PET transparente sem borrão?**
-Sim. A combinação CIJ Hitachi + tinta MEK preta de alta opacidade entrega impressão nítida em PET cristal — contraste suficiente para leitura por câmera de visão e para o consumidor final.
+Sim. A combinação CIJ Hitachi + tinta MEK preta de alta opacidade entrega impressão nítida em PET cristal: contraste suficiente para leitura por câmera de visão e para o consumidor final.
 
 **CIJ marca o PET de forma permanente?**
-A impressão é indelével — não sai com manuseio, transporte, condensação ou contato com gelo. Cumpre todas as exigências da RDC ANVISA 727/2022 sobre marcação em embalagem primária.
+A impressão é indelével: não sai com manuseio, transporte, condensação ou contato com gelo. Cumpre todas as exigências da RDC ANVISA 727/2022 sobre marcação em embalagem primária.
 
 **Qual o consumo de tinta para codificar uma garrafa PET?**
 O consumo médio é de 0,06 a 0,12 ml por garrafa, dependendo do tamanho da fonte e do número de linhas impressas. Um litro de tinta Hitachi MEK codifica em média 8 a 16 milhões de garrafas PET.
@@ -1141,7 +1141,7 @@ Não. A tinta MEK Hitachi tem volume desprezível em relação à massa total da
 
 **Pronto para codificar PET com Hitachi?**
 
-Um engenheiro de aplicação Suljett vai até a sua linha, mede a velocidade real do envase, avalia o tipo exato de PET que você usa e indica a Hitachi correta — com teste in-loco no seu laboratório, se necessário. Sem proposta genérica.
+Um engenheiro de aplicação Suljett vai até a sua linha, mede a velocidade real do envase, avalia o tipo exato de PET que você usa e indica a Hitachi correta: com teste in-loco no seu laboratório, se necessário. Sem proposta genérica.
 
 **CTA primário:** Solicitar análise técnica gratuita →
 **CTA secundário:** WhatsApp · (51) 98037-0198
@@ -1182,7 +1182,7 @@ Um engenheiro de aplicação Suljett vai até a sua linha, mede a velocidade rea
 
 **Eyebrow:** SERVIÇO · ASSISTÊNCIA TÉCNICA ESPECIALIZADA
 
-**Título (H1):** **Sua linha não para — porque a gente chega antes da parada.**
+**Título (H1):** **Sua linha não para: porque a gente chega antes da parada.**
 
 **Subtítulo:**
 Assistência técnica certificada Hitachi para todo o portfólio CIJ, TIJ, TTO e Laser instalado pela Suljett no Brasil. Atendimento remoto em minutos, técnico em campo em até 4 horas úteis e peças originais sempre em estoque. Sem subcontratação, sem técnico improvisado, sem proposta de "vamos ver o que dá".
@@ -1191,7 +1191,7 @@ Assistência técnica certificada Hitachi para todo o portfólio CIJ, TIJ, TTO e
 
 - ⏱ Resposta inicial em até 1 hora útil
 - 🛠 Técnico em campo em até 4 horas úteis
-- 🛡 Técnicos certificados pela Hitachi Industrial — Japão
+- 🛡 Técnicos certificados pela Hitachi Industrial: Japão
 
 **CTA primário:** Abrir chamado técnico agora →
 **CTA secundário:** WhatsApp do Help Desk · (51) 98037-0198
@@ -1202,9 +1202,9 @@ Assistência técnica certificada Hitachi para todo o portfólio CIJ, TIJ, TTO e
 
 **Assistência técnica não é vir consertar quando quebra.**
 
-Para a Suljett, assistência técnica é tudo que acontece **antes** da sua linha parar — e quando ela para, é o técnico já no carro a caminho enquanto você descreve o problema pelo telefone. Operamos com modelo de **atendimento em três níveis** que cobre desde o ajuste fino de parametrização (resolvido em minutos por chat) até a troca de cabeçote em campo (resolvida em horas, não em dias).
+Para a Suljett, assistência técnica é tudo que acontece **antes** da sua linha parar: e quando ela para, é o técnico já no carro a caminho enquanto você descreve o problema pelo telefone. Operamos com modelo de **atendimento em três níveis** que cobre desde o ajuste fino de parametrização (resolvido em minutos por chat) até a troca de cabeçote em campo (resolvida em horas, não em dias).
 
-Em 17 anos de operação no Brasil, registramos mais de **9.200 atendimentos técnicos realizados** — um histórico que vira parametrização preventiva: o nosso help desk reconhece um padrão de chamado em segundos porque já viu o mesmo erro mil vezes em outra fábrica.
+Em 17 anos de operação no Brasil, registramos mais de **9.200 atendimentos técnicos realizados**: um histórico que vira parametrização preventiva: o nosso help desk reconhece um padrão de chamado em segundos porque já viu o mesmo erro mil vezes em outra fábrica.
 
 ---
 
@@ -1230,7 +1230,7 @@ Técnico Suljett em campo, com peças e ferramentas certificadas Hitachi.
 
 Técnico Suljett em deslocamento imediato, peças críticas em mãos.
 *Casos cobertos:* linha parada, cabeçote travado, falha eletrônica, sinistro de qualquer natureza que tire o equipamento de produção.
-**⏱ Técnico em campo: até 4 horas úteis · 📊 Resolve 5% dos chamados — os que mais doem**
+**⏱ Técnico em campo: até 4 horas úteis · 📊 Resolve 5% dos chamados: os que mais doem**
 
 ---
 
@@ -1240,16 +1240,16 @@ Técnico Suljett em deslocamento imediato, peças críticas em mãos.
 
 ### ✓ O que está incluso
 
-- **Diagnóstico técnico remoto** — Conexão direta com sua codificadora para identificar a causa raiz em minutos.
-- **Manutenção corretiva em campo** — Visita técnica para resolver falhas pontuais — com peças originais Hitachi em mãos.
-- **Manutenção preventiva programada** — Cronograma anual de visitas para evitar a parada antes que ela aconteça.
-- **Substituição de peças críticas** — Cabeçote, bomba de pressão, sensor de carga, módulo de placa principal — todas Hitachi originais.
-- **Atualização de firmware** — Updates oficiais da Hitachi aplicados pela Suljett sem custo adicional.
-- **Treinamento de reciclagem** — Sempre que sua equipe de operação troca, oferecemos reciclagem rápida sem custo.
+- **Diagnóstico técnico remoto**: Conexão direta com sua codificadora para identificar a causa raiz em minutos.
+- **Manutenção corretiva em campo**: Visita técnica para resolver falhas pontuais: com peças originais Hitachi em mãos.
+- **Manutenção preventiva programada**: Cronograma anual de visitas para evitar a parada antes que ela aconteça.
+- **Substituição de peças críticas**: Cabeçote, bomba de pressão, sensor de carga, módulo de placa principal: todas Hitachi originais.
+- **Atualização de firmware**: Updates oficiais da Hitachi aplicados pela Suljett sem custo adicional.
+- **Treinamento de reciclagem**: Sempre que sua equipe de operação troca, oferecemos reciclagem rápida sem custo.
 
 ### ✗ O que NÃO está incluso
 
-- Insumos consumíveis (tintas, solventes, make-up) — comprados separadamente
+- Insumos consumíveis (tintas, solventes, make-up): comprados separadamente
 - Equipamentos de outras marcas (Videojet, Domino, Linx, Markem-Imaje)
 - Equipamentos Hitachi instalados por terceiros não-certificados
 - Falhas decorrentes do uso de insumo pirata (anula garantia)
@@ -1262,7 +1262,7 @@ Técnico Suljett em deslocamento imediato, peças críticas em mãos.
 
 O cabeçote de uma CIJ Hitachi opera com tinta sob pressão controlada em níveis de micro-segundos, com deflexão eletrostática calibrada para uma viscosidade exata. Mexer nele exige **certificação oficial da Hitachi Industrial Equipment Systems**, com treinamento periódico na fábrica e atualização anual da licença.
 
-A Suljett mantém uma equipe de técnicos com certificação Hitachi ativa em todas as três unidades — Porto Alegre, Joinville e Marechal Deodoro. Não terceirizamos atendimento técnico. Quem chega na sua fábrica é Suljett, certificado Hitachi e com peças originais em mãos. Não é "técnico de coligada", não é "parceiro da nossa rede".
+A Suljett mantém uma equipe de técnicos com certificação Hitachi ativa em todas as três unidades: Porto Alegre, Joinville e Marechal Deodoro. Não terceirizamos atendimento técnico. Quem chega na sua fábrica é Suljett, certificado Hitachi e com peças originais em mãos. Não é "técnico de coligada", não é "parceiro da nossa rede".
 
 - Garantia Hitachi de 5 anos preservada (terceirização anula garantia)
 - Diagnóstico correto na primeira visita (não "vamos tentando")
@@ -1275,13 +1275,13 @@ A Suljett mantém uma equipe de técnicos com certificação Hitachi ativa em to
 
 **Cobertura técnica certificada no Sul e Nordeste do Brasil.**
 
-Cada uma das três unidades Suljett mantém equipe técnica residente e estoque permanente de peças críticas — para que o técnico saia de carro em minutos depois da abertura do chamado.
+Cada uma das três unidades Suljett mantém equipe técnica residente e estoque permanente de peças críticas: para que o técnico saia de carro em minutos depois da abertura do chamado.
 
-- 📍 **Porto Alegre · RS · Matriz** — Atende: RS, SC, PR — Estoque permanente · Laboratório · Centro de treinamento
-- 📍 **Joinville · SC** — Atende: corredor industrial catarinense + norte do PR — Equipe dedicada a alimentícia e automotiva
-- 📍 **Marechal Deodoro · AL** — Atende: AL, PE, BA, SE, RN, PB, CE — Cobertura para indústrias de bebidas, sucroenergético e alimentos
+- 📍 **Porto Alegre · RS · Matriz**: Atende: RS, SC, PR: Estoque permanente · Laboratório · Centro de treinamento
+- 📍 **Joinville · SC**: Atende: corredor industrial catarinense + norte do PR: Equipe dedicada a alimentícia e automotiva
+- 📍 **Marechal Deodoro · AL**: Atende: AL, PE, BA, SE, RN, PB, CE: Cobertura para indústrias de bebidas, sucroenergético e alimentos
 
-> ⚠ Para **São Paulo, Sudeste e Centro-Oeste**, a Suljett encaminha o chamado para o distribuidor Hitachi parceiro da nossa rede — sem perda de garantia, com o mesmo padrão de atendimento.
+> ⚠ Para **São Paulo, Sudeste e Centro-Oeste**, a Suljett encaminha o chamado para o distribuidor Hitachi parceiro da nossa rede: sem perda de garantia, com o mesmo padrão de atendimento.
 
 ---
 
@@ -1296,7 +1296,7 @@ Pelo WhatsApp do Help Desk, pelo formulário do site ou pelo telefone direto da 
 O Help Desk Suljett identifica o nível do chamado (N1, N2 ou N3) e responde em até 1 hora útil.
 
 **03 · Resolução**
-80% resolve remoto. Se for caso de campo, técnico em deslocamento — em até 4h para emergência.
+80% resolve remoto. Se for caso de campo, técnico em deslocamento: em até 4h para emergência.
 
 **04 · Fechamento e relatório**
 Você recebe relatório técnico com causa raiz, peças usadas, recomendação preventiva e check-in agendado em 7 dias.
@@ -1340,16 +1340,16 @@ Para chamados de emergência (linha parada), técnico Suljett certificado Hitach
 Sim, com condições. A Suljett atende equipamentos Hitachi originais comprados de outro distribuidor autorizado, desde que a garantia esteja ativa e o equipamento opere com insumos S10 originais.
 
 **Vocês atendem equipamentos de outras marcas (Videojet, Domino)?**
-Não fazemos assistência técnica em equipamentos de outras marcas. Mas oferecemos programa de troca (trade-in) — você troca seu equipamento Videojet, Domino, Linx ou Markem-Imaje por uma Hitachi nova com até 30% de desconto.
+Não fazemos assistência técnica em equipamentos de outras marcas. Mas oferecemos programa de troca (trade-in): você troca seu equipamento Videojet, Domino, Linx ou Markem-Imaje por uma Hitachi nova com até 30% de desconto.
 
 **Quanto custa um chamado avulso?**
 Chamados avulsos são cotados conforme o nível de atendimento (N1 remoto, N2 visita programada, N3 emergência) e a distância da unidade Suljett mais próxima. Para clientes com contrato anual, a maioria dos chamados está inclusa.
 
 **A Suljett mantém estoque de peças Hitachi no Brasil?**
-Sim, em todas as três unidades. Cabeçote, bomba, filtros, sensores e placas principais ficam em estoque permanente — para evitar a importação direta do Japão que levaria 45 dias.
+Sim, em todas as três unidades. Cabeçote, bomba, filtros, sensores e placas principais ficam em estoque permanente: para evitar a importação direta do Japão que levaria 45 dias.
 
 **Se a linha parar à noite ou final de semana, vocês atendem?**
-Para clientes com contrato de assistência ativa, sim — atendimento 24h via WhatsApp do Help Desk para diagnóstico remoto imediato. Visita técnica em campo é programada para a primeira hora útil seguinte.
+Para clientes com contrato de assistência ativa, sim: atendimento 24h via WhatsApp do Help Desk para diagnóstico remoto imediato. Visita técnica em campo é programada para a primeira hora útil seguinte.
 
 **Posso ter um técnico residente na minha fábrica?**
 Para fábricas com múltiplas linhas Hitachi (acima de 4 codificadoras), oferecemos plano de técnico residente com presença fixa semanal. Solicite proposta.
@@ -1360,9 +1360,9 @@ Para fábricas com múltiplas linhas Hitachi (acima de 4 codificadoras), oferece
 
 **Vai abrir um chamado, contratar ou conhecer melhor?**
 
-**🔧 Abrir chamado técnico agora** — para clientes Suljett ou Hitachi com problema ativo.
-**📋 Solicitar proposta de contrato** — para fábricas com 1+ codificadora Hitachi instalada.
-**💬 Falar com o Help Desk** — para dúvida técnica geral, sem chamado aberto ainda.
+**🔧 Abrir chamado técnico agora**: para clientes Suljett ou Hitachi com problema ativo.
+**📋 Solicitar proposta de contrato**: para fábricas com 1+ codificadora Hitachi instalada.
+**💬 Falar com o Help Desk**: para dúvida técnica geral, sem chamado aberto ainda.
 
 **→ WhatsApp · (51) 98037-0198**
 
@@ -1384,7 +1384,7 @@ Para fábricas com múltiplas linhas Hitachi (acima de 4 codificadoras), oferece
 # 07 · FICHA TÉCNICA DE SEGURANÇA (FISPQ)
 
 > **URL:** `/recursos/ficha-tecnica-seguranca`
-> **Item destacado no menu Soluções (selo ⭐).** Modelo Videojet — captura de e-mail antes do download.
+> **Item destacado no menu Soluções (selo ⭐).** Modelo Videojet: captura de e-mail antes do download.
 
 ---
 
@@ -1395,7 +1395,7 @@ Para fábricas com múltiplas linhas Hitachi (acima de 4 codificadoras), oferece
 **Título (H1):** **Ficha de Informação de Segurança de Produtos Químicos (FISPQ).**
 
 **Subtítulo:**
-Toda tinta, solvente, make-up e solução de limpeza Hitachi original distribuída pela Suljett vem acompanhada de FISPQ — o documento técnico obrigatório pela **ABNT NBR 14725** que descreve composição, manuseio seguro, armazenamento, riscos físico-químicos e procedimentos de emergência. Aqui você baixa a FISPQ de qualquer insumo do nosso portfólio, em PDF, na hora.
+Toda tinta, solvente, make-up e solução de limpeza Hitachi original distribuída pela Suljett vem acompanhada de FISPQ: o documento técnico obrigatório pela **ABNT NBR 14725** que descreve composição, manuseio seguro, armazenamento, riscos físico-químicos e procedimentos de emergência. Aqui você baixa a FISPQ de qualquer insumo do nosso portfólio, em PDF, na hora.
 
 **Trust strip:**
 
@@ -1411,9 +1411,9 @@ Toda tinta, solvente, make-up e solução de limpeza Hitachi original distribuí
 
 **A FISPQ não é "boa prática". É obrigação legal.**
 
-A **Ficha de Informação de Segurança de Produtos Químicos** é exigida pela norma ABNT NBR 14725 e fiscalizada pelo Ministério do Trabalho (NR-26), pela ANVISA e pelo IBAMA. Toda empresa que armazena, manipula ou descarta produtos químicos industriais — incluindo tintas e solventes para codificação — precisa manter a FISPQ atualizada e acessível à equipe de SESMT, à brigada de incêndio e à equipe de operação.
+A **Ficha de Informação de Segurança de Produtos Químicos** é exigida pela norma ABNT NBR 14725 e fiscalizada pelo Ministério do Trabalho (NR-26), pela ANVISA e pelo IBAMA. Toda empresa que armazena, manipula ou descarta produtos químicos industriais: incluindo tintas e solventes para codificação: precisa manter a FISPQ atualizada e acessível à equipe de SESMT, à brigada de incêndio e à equipe de operação.
 
-Não ter a FISPQ disponível na sua fábrica configura **infração legal autônoma**, com multa e responsabilização do empregador em caso de acidente. Por isso a Suljett mantém o repositório atualizado e acessível 24/7 — sem login, sem ligar para a vendedora pedindo o PDF.
+Não ter a FISPQ disponível na sua fábrica configura **infração legal autônoma**, com multa e responsabilização do empregador em caso de acidente. Por isso a Suljett mantém o repositório atualizado e acessível 24/7: sem login, sem ligar para a vendedora pedindo o PDF.
 
 ### Quem usa a FISPQ na sua fábrica
 
@@ -1430,7 +1430,7 @@ Não ter a FISPQ disponível na sua fábrica configura **infração legal autôn
 
 **Encontre a FISPQ do seu insumo Hitachi em três cliques.**
 
-Selecione o tipo de insumo, o part number e o idioma. Insira seu e-mail corporativo — o PDF é enviado na hora e fica também disponível para download direto na tela seguinte.
+Selecione o tipo de insumo, o part number e o idioma. Insira seu e-mail corporativo: o PDF é enviado na hora e fica também disponível para download direto na tela seguinte.
 
 ### Etapa 01 · Tipo de insumo
 
@@ -1443,7 +1443,7 @@ Não sei o part number → **Buscar por modelo do equipamento**
 
 ### Etapa 03 · Idioma do documento
 
-- 🇧🇷 Português (Brasil) — padrão
+- 🇧🇷 Português (Brasil): padrão
 - 🇺🇸 English (international)
 - 🇪🇸 Español (Latam)
 
@@ -1488,7 +1488,7 @@ Não sei o part number → **Buscar por modelo do equipamento**
 
 **O que você encontra dentro de uma FISPQ Hitachi.**
 
-Toda FISPQ Hitachi segue a estrutura de **16 seções obrigatórias** da norma ABNT NBR 14725-4. Veja o que cada uma cobre — para identificar rapidamente a informação que você precisa.
+Toda FISPQ Hitachi segue a estrutura de **16 seções obrigatórias** da norma ABNT NBR 14725-4. Veja o que cada uma cobre: para identificar rapidamente a informação que você precisa.
 
 | # | Seção | Cobertura |
 |---|---|---|
@@ -1515,13 +1515,13 @@ Toda FISPQ Hitachi segue a estrutura de **16 seções obrigatórias** da norma A
 
 **Catálogo completo de FISPQs Hitachi disponíveis.**
 
-Não tem o part number à mão? Navegue pela biblioteca por tipo de insumo — todas as FISPQs Hitachi distribuídas pela Suljett no Brasil estão listadas abaixo. Clique no insumo para iniciar o download (e-mail obrigatório).
+Não tem o part number à mão? Navegue pela biblioteca por tipo de insumo: todas as FISPQs Hitachi distribuídas pela Suljett no Brasil estão listadas abaixo. Clique no insumo para iniciar o download (e-mail obrigatório).
 
-- 🖋 **Tintas** (12 part numbers — preta, branca, food-safe, MEK, álcool, pigmentada)
-- 💧 **Solventes** (8 part numbers — MEK, etanol, acetona, especiais)
-- 🧪 **Make-up** (6 part numbers — reposição de fluido de operação)
-- 🧼 **Soluções de limpeza** (4 part numbers — limpeza de cabeçote e filtros)
-- ➕ **Aditivos** (3 part numbers — aceleradores, estabilizantes)
+- 🖋 **Tintas** (12 part numbers: preta, branca, food-safe, MEK, álcool, pigmentada)
+- 💧 **Solventes** (8 part numbers: MEK, etanol, acetona, especiais)
+- 🧪 **Make-up** (6 part numbers: reposição de fluido de operação)
+- 🧼 **Soluções de limpeza** (4 part numbers: limpeza de cabeçote e filtros)
+- ➕ **Aditivos** (3 part numbers: aceleradores, estabilizantes)
 
 ---
 
@@ -1530,7 +1530,7 @@ Não tem o part number à mão? Navegue pela biblioteca por tipo de insumo — t
 **O que perguntam sobre a FISPQ Hitachi.**
 
 **O que é FISPQ?**
-FISPQ é a sigla para Ficha de Informação de Segurança de Produtos Químicos — documento técnico obrigatório pela norma ABNT NBR 14725-4 que descreve composição, manuseio seguro, armazenamento, riscos e procedimentos de emergência para produtos químicos industriais, incluindo tintas e solventes Hitachi.
+FISPQ é a sigla para Ficha de Informação de Segurança de Produtos Químicos: documento técnico obrigatório pela norma ABNT NBR 14725-4 que descreve composição, manuseio seguro, armazenamento, riscos e procedimentos de emergência para produtos químicos industriais, incluindo tintas e solventes Hitachi.
 
 **A FISPQ é obrigatória na minha fábrica?**
 Sim. A FISPQ é exigida pela NR-26 (Ministério do Trabalho) para toda empresa que manipula, armazena ou descarta produtos químicos. Sua ausência configura infração trabalhista autônoma.
@@ -1542,7 +1542,7 @@ Em local de fácil acesso à equipe de SESMT, brigada de incêndio e operadores.
 A FISPQ deve ser revisada a cada 5 anos ou imediatamente após qualquer alteração na composição do produto, classificação de perigo ou regulamentação aplicável. A Suljett envia a versão atualizada automaticamente para todos os clientes que baixaram a FISPQ anterior.
 
 **Posso usar a FISPQ Hitachi como prova de conformidade em auditoria?**
-Sim. A FISPQ Hitachi distribuída pela Suljett é documento oficial, com nome do fabricante, nº CAS de cada componente e classificação GHS — válida para auditorias ISO 9001, FSSC 22000, BRC e auditoria do MTE.
+Sim. A FISPQ Hitachi distribuída pela Suljett é documento oficial, com nome do fabricante, nº CAS de cada componente e classificação GHS: válida para auditorias ISO 9001, FSSC 22000, BRC e auditoria do MTE.
 
 **Preciso de FISPQ para insumo de outra marca (Videojet, Domino)?**
 Sim, mas você precisa solicitar diretamente ao fabricante daquele insumo. A Suljett distribui FISPQ apenas dos insumos Hitachi originais que comercializa.
@@ -1551,7 +1551,7 @@ Sim, mas você precisa solicitar diretamente ao fabricante daquele insumo. A Sul
 Sim, todas as FISPQs Hitachi estão disponíveis em **português (Brasil)**, **inglês** e **espanhol**. Selecione o idioma no formulário de download.
 
 **Por que precisa do meu e-mail para baixar a FISPQ?**
-O e-mail garante que você receberá automaticamente qualquer atualização futura da FISPQ — exigência da norma ABNT NBR 14725 sobre rastreabilidade de divulgação. Não usamos seu e-mail para contato comercial sem autorização.
+O e-mail garante que você receberá automaticamente qualquer atualização futura da FISPQ: exigência da norma ABNT NBR 14725 sobre rastreabilidade de divulgação. Não usamos seu e-mail para contato comercial sem autorização.
 
 ---
 
@@ -1559,7 +1559,7 @@ O e-mail garante que você receberá automaticamente qualquer atualização futu
 
 **Não encontrou a FISPQ que precisava?**
 
-Se o insumo que você usa não aparece na lista — ou se o part number está em uma embalagem antiga e você não consegue identificar o produto correto — fale com o nosso Help Desk técnico. Identificamos o seu insumo a partir da foto da embalagem e enviamos a FISPQ correta por e-mail.
+Se o insumo que você usa não aparece na lista: ou se o part number está em uma embalagem antiga e você não consegue identificar o produto correto: fale com o nosso Help Desk técnico. Identificamos o seu insumo a partir da foto da embalagem e enviamos a FISPQ correta por e-mail.
 
 **CTA primário:** Falar com o Help Desk técnico →
 **CTA secundário:** WhatsApp · (51) 98037-0198
@@ -1578,7 +1578,7 @@ Se o insumo que você usa não aparece na lista — ou se o part number está em
 # 08 · CONTATO
 
 > **URL:** `/contato`
-> **Página única, sem subpáginas no menu.** Aqui está o **seletor obrigatório de tipo de contato** — peça central da estratégia para cortar 97% de lead frio do RD Station.
+> **Página única, sem subpáginas no menu.** Aqui está o **seletor obrigatório de tipo de contato**: peça central da estratégia para cortar 97% de lead frio do RD Station.
 
 ---
 
@@ -1589,13 +1589,13 @@ Se o insumo que você usa não aparece na lista — ou se o part number está em
 **Título (H1):** **Como podemos te ajudar hoje?**
 
 **Subtítulo:**
-A Suljett atende três tipos de público por canais diferentes: clientes ativos com chamado em curso, indústrias interessadas em codificação Hitachi e profissionais procurando vaga ou parceria. Selecione abaixo o motivo do seu contato — assim conseguimos te encaminhar para a pessoa certa em minutos, não em dias.
+A Suljett atende três tipos de público por canais diferentes: clientes ativos com chamado em curso, indústrias interessadas em codificação Hitachi e profissionais procurando vaga ou parceria. Selecione abaixo o motivo do seu contato: assim conseguimos te encaminhar para a pessoa certa em minutos, não em dias.
 
 **Trust strip:**
 
 - ⏱ Respondemos em até 4 horas úteis
 - 🇧🇷 Atendimento Sul + Nordeste do Brasil
-- 🛡 Equipe Suljett — sem call center terceirizado
+- 🛡 Equipe Suljett: sem call center terceirizado
 
 ---
 
@@ -1603,7 +1603,7 @@ A Suljett atende três tipos de público por canais diferentes: clientes ativos 
 
 **Selecione o motivo do contato.**
 
-Cada caminho leva ao formulário certo — e à equipe certa. O preenchimento leva menos de 1 minuto.
+Cada caminho leva ao formulário certo: e à equipe certa. O preenchimento leva menos de 1 minuto.
 
 ### 🟦 Card 01 · NOVO LEAD · QUERO COTAR
 
@@ -1639,7 +1639,7 @@ Para empresas que querem fornecer produtos/serviços à Suljett ou propor parcer
 
 **Análise técnica gratuita da sua linha.**
 
-Conta um pouco sobre o seu caso. Um engenheiro de aplicação Suljett vai até a sua fábrica avaliar o substrato, a velocidade do envase e a regulação do seu setor — e indicar a Hitachi correta. Sem proposta genérica de catálogo, sem cotação de uma vez só.
+Conta um pouco sobre o seu caso. Um engenheiro de aplicação Suljett vai até a sua fábrica avaliar o substrato, a velocidade do envase e a regulação do seu setor: e indicar a Hitachi correta. Sem proposta genérica de catálogo, sem cotação de uma vez só.
 
 **Campos:**
 
@@ -1672,12 +1672,12 @@ Conta um pouco sobre o seu caso. Um engenheiro de aplicação Suljett vai até a
 
 Selecione o tipo de solicitação para encaminhar direto para a equipe responsável.
 
-- 🛠 **Abrir chamado técnico (Help Desk)** — para falhas, parametrização, dúvida técnica do equipamento, troca de mensagem.
-- 📋 **Solicitar documentação (FISPQ, certificado, NF)** — para FISPQ, certificado de origem Hitachi, segunda via de nota fiscal, ficha técnica.
-- 📦 **Pedido de insumo / reposição** — para tinta, solvente, make-up, peça de reposição original Hitachi.
-- 💼 **Faturamento / Financeiro** — para boleto, segunda via, ajuste de NF, dúvida sobre cobrança.
-- 🚚 **Logística / Entrega** — para acompanhamento de entrega, agendamento de visita técnica, troca de endereço.
-- 👥 **Sucesso do Cliente (SDC)** — para acompanhamento de contrato, sugestão, ouvidoria, gestão de relacionamento.
+- 🛠 **Abrir chamado técnico (Help Desk)**: para falhas, parametrização, dúvida técnica do equipamento, troca de mensagem.
+- 📋 **Solicitar documentação (FISPQ, certificado, NF)**: para FISPQ, certificado de origem Hitachi, segunda via de nota fiscal, ficha técnica.
+- 📦 **Pedido de insumo / reposição**: para tinta, solvente, make-up, peça de reposição original Hitachi.
+- 💼 **Faturamento / Financeiro**: para boleto, segunda via, ajuste de NF, dúvida sobre cobrança.
+- 🚚 **Logística / Entrega**: para acompanhamento de entrega, agendamento de visita técnica, troca de endereço.
+- 👥 **Sucesso do Cliente (SDC)**: para acompanhamento de contrato, sugestão, ouvidoria, gestão de relacionamento.
 
 **Campos comuns:**
 
@@ -1697,7 +1697,7 @@ Selecione o tipo de solicitação para encaminhar direto para a equipe responsá
 
 **Carreira na Suljett.**
 
-Acreditamos que o crescimento da Suljett está diretamente ligado ao desenvolvimento das pessoas que constroem essa história junto com a gente. Estamos sempre em busca de talentos para nossas três unidades — Porto Alegre (RS), Joinville (SC) e Marechal Deodoro (AL) — em vagas técnicas (assistência técnica certificada Hitachi), comerciais, de engenharia e administrativas.
+Acreditamos que o crescimento da Suljett está diretamente ligado ao desenvolvimento das pessoas que constroem essa história junto com a gente. Estamos sempre em busca de talentos para nossas três unidades: Porto Alegre (RS), Joinville (SC) e Marechal Deodoro (AL): em vagas técnicas (assistência técnica certificada Hitachi), comerciais, de engenharia e administrativas.
 
 **→ Ver vagas abertas no portal de carreiras Suljett (TOTVS)**
 *(link externo: https://atracaodetalentos.totvs.app/suljett)*
@@ -1707,7 +1707,7 @@ Acreditamos que o crescimento da Suljett está diretamente ligado ao desenvolvim
 Cadastre seu currículo no banco de talentos pelo mesmo portal. Avaliamos perfis novos toda semana e te chamamos quando abrir uma vaga compatível.
 
 **Microcopy:**
-⚠ A Suljett **não recebe currículos por e-mail nem pelo formulário do site.** Use apenas o portal oficial — assim seu CV entra na base do RH e fica vinculado às vagas abertas e futuras.
+⚠ A Suljett **não recebe currículos por e-mail nem pelo formulário do site.** Use apenas o portal oficial: assim seu CV entra na base do RH e fica vinculado às vagas abertas e futuras.
 
 ---
 
@@ -1715,7 +1715,7 @@ Cadastre seu currículo no banco de talentos pelo mesmo portal. Avaliamos perfis
 
 **Quer fornecer produto ou serviço para a Suljett?**
 
-A Suljett mantém uma rede de fornecedores estratégicos nas três unidades. Aceitamos propostas de fornecimento, prestação de serviço técnico, parceria comercial B2B e cooperação com canais industriais. Preencha o formulário abaixo — nossa equipe de Compras avalia e responde em até 10 dias úteis.
+A Suljett mantém uma rede de fornecedores estratégicos nas três unidades. Aceitamos propostas de fornecimento, prestação de serviço técnico, parceria comercial B2B e cooperação com canais industriais. Preencha o formulário abaixo: nossa equipe de Compras avalia e responde em até 10 dias úteis.
 
 **Campos:**
 
@@ -1742,28 +1742,28 @@ A Suljett mantém uma rede de fornecedores estratégicos nas três unidades. Ace
 
 Cada unidade tem equipe técnica certificada Hitachi residente, estoque permanente de insumos S10 originais e laboratório de amostras. Para chamado emergencial, técnico em campo em até 4 horas úteis a partir da unidade mais próxima.
 
-### 📍 Porto Alegre — RS · Matriz
+### 📍 Porto Alegre: RS · Matriz
 
 - Estr. João Passuelo, 342 · Vila Nova · CEP 91740-550
 - 📞 (51) 98037-0198
 - ✉ poa@suljett.com
-- 🕗 Seg–Sex, 8h–18h
+- 🕗 Seg: Sex, 8h: 18h
 - Cobertura: RS · SC · PR
 
-### 📍 Joinville — SC
+### 📍 Joinville: SC
 
 - R. Dona Francisca, 4808 · Santo Antônio · CEP 89218-112
 - 📞 [telefone a confirmar]
 - ✉ joinville@suljett.com
-- 🕗 Seg–Sex, 8h–18h
+- 🕗 Seg: Sex, 8h: 18h
 - Cobertura: corredor industrial catarinense + norte do PR
 
-### 📍 Marechal Deodoro — AL
+### 📍 Marechal Deodoro: AL
 
 - Rod. Dr. Ib Gatto Marinho Falcão, 500 · Barra Nova · CEP 57160-000
 - 📞 [telefone a confirmar]
 - ✉ nordeste@suljett.com
-- 🕗 Seg–Sex, 8h–18h
+- 🕗 Seg: Sex, 8h: 18h
 - Cobertura: AL · PE · BA · SE · RN · PB · CE
 
 *[Mapa interativo com os 3 pinos das unidades + raio de cobertura técnica]*
@@ -1776,12 +1776,12 @@ Cada unidade tem equipe técnica certificada Hitachi residente, estoque permanen
 
 Se você já sabe com qual área precisa falar e prefere ir direto, segue o atalho:
 
-- 🟦 **Vendas** · vendas@suljett.com · (51) 98037-0198 — Cotação de equipamento, proposta comercial, demonstração técnica.
-- 🛠 **Help Desk Técnico** · helpdesk@suljett.com · (51) 98037-0198 — Chamado de assistência, suporte remoto, parametrização, FISPQ.
-- 💼 **Faturamento** · financeiro@suljett.com — Boleto, segunda via, ajuste de NF, dúvida sobre cobrança.
-- 🚚 **Logística** · logistica@suljett.com — Acompanhamento de entrega, agendamento, troca de endereço.
-- 💰 **Financeiro** · financeiro@suljett.com — Negociação, pagamento, cobrança, conciliação bancária.
-- 👥 **RH / Carreiras** · rh@suljett.com — Vagas, recrutamento, parceria com instituições de ensino.
+- 🟦 **Vendas** · vendas@suljett.com · (51) 98037-0198: Cotação de equipamento, proposta comercial, demonstração técnica.
+- 🛠 **Help Desk Técnico** · helpdesk@suljett.com · (51) 98037-0198: Chamado de assistência, suporte remoto, parametrização, FISPQ.
+- 💼 **Faturamento** · financeiro@suljett.com: Boleto, segunda via, ajuste de NF, dúvida sobre cobrança.
+- 🚚 **Logística** · logistica@suljett.com: Acompanhamento de entrega, agendamento, troca de endereço.
+- 💰 **Financeiro** · financeiro@suljett.com: Negociação, pagamento, cobrança, conciliação bancária.
+- 👥 **RH / Carreiras** · rh@suljett.com: Vagas, recrutamento, parceria com instituições de ensino.
 
 ---
 
@@ -1789,10 +1789,10 @@ Se você já sabe com qual área precisa falar e prefere ir direto, segue o atal
 
 **Nas redes sociais.**
 
-- 💼 **LinkedIn** — Conteúdo técnico, vagas e cases de cliente · linkedin.com/company/suljett-do-brasil
-- 📸 **Instagram** — Bastidores das unidades e equipamentos em produção · @suljettdobrasil
-- 📺 **YouTube** — Vídeos técnicos, tutoriais de operação e demonstrações · youtube.com/user/suljett
-- 📘 **Facebook** — Comunicados gerais e atualizações da empresa · facebook.com/suljettdobrasil
+- 💼 **LinkedIn**: Conteúdo técnico, vagas e cases de cliente · linkedin.com/company/suljett-do-brasil
+- 📸 **Instagram**: Bastidores das unidades e equipamentos em produção · @suljettdobrasil
+- 📺 **YouTube**: Vídeos técnicos, tutoriais de operação e demonstrações · youtube.com/user/suljett
+- 📘 **Facebook**: Comunicados gerais e atualizações da empresa · facebook.com/suljettdobrasil
 
 ---
 
@@ -1807,16 +1807,16 @@ Respondemos em até 4 horas úteis para todos os tipos de contato. Para chamados
 Atendemos todo o Sul (RS, SC, PR) e Nordeste (AL, PE, BA, SE, RN, PB, CE) com técnico em campo. Para São Paulo, Sudeste e Centro-Oeste, encaminhamos via distribuidor Hitachi parceiro.
 
 **Como envio meu currículo?**
-Apenas pelo portal oficial de carreiras (TOTVS). Não recebemos currículos por e-mail nem pelo formulário do site — assim seu CV entra na base do RH corretamente.
+Apenas pelo portal oficial de carreiras (TOTVS). Não recebemos currículos por e-mail nem pelo formulário do site: assim seu CV entra na base do RH corretamente.
 
 **Posso visitar uma unidade Suljett?**
 Sim. Agendamos visita técnica nas três unidades (Porto Alegre, Joinville e Marechal Deodoro) para indústrias interessadas em conhecer o laboratório de amostras e ver as Hitachis em funcionamento. Solicite pelo formulário de novo lead.
 
 **A Suljett vende para pessoa física?**
-Não. A Suljett comercializa exclusivamente para indústrias (B2B) com CNPJ ativo. Tintas e equipamentos Hitachi são uso industrial — não temos versões residenciais.
+Não. A Suljett comercializa exclusivamente para indústrias (B2B) com CNPJ ativo. Tintas e equipamentos Hitachi são uso industrial: não temos versões residenciais.
 
 **Tem horário de plantão / 24h?**
-Sim, para clientes com contrato de assistência técnica ativo — Help Desk 24h via WhatsApp para diagnóstico remoto imediato. Visita técnica em campo é programada para a primeira hora útil seguinte.
+Sim, para clientes com contrato de assistência técnica ativo: Help Desk 24h via WhatsApp para diagnóstico remoto imediato. Visita técnica em campo é programada para a primeira hora útil seguinte.
 
 ---
 
@@ -1824,7 +1824,7 @@ Sim, para clientes com contrato de assistência técnica ativo — Help Desk 24h
 
 **Prefere falar direto pelo WhatsApp?**
 
-Se você não quer preencher formulário e prefere conversar agora mesmo, manda mensagem para o nosso WhatsApp comercial. Atendimento em horário comercial, com a equipe Suljett — não call center terceirizado.
+Se você não quer preencher formulário e prefere conversar agora mesmo, manda mensagem para o nosso WhatsApp comercial. Atendimento em horário comercial, com a equipe Suljett: não call center terceirizado.
 
 **→ Abrir WhatsApp · (51) 98037-0198**
 
@@ -1844,7 +1844,7 @@ A jornada do leigo proposta pelo Alex em 13/05 (*"sou bebida → clico em bebida
 
 ### ✅ Disciplina "Hitachi original / S10"
 
-Aparece em Home, Empresa, CIJ, Bebidas, PET, Assistência e FISPQ — consistente, sem virar repetição cansativa. Cada página tem um ângulo diferente: garantia, certificação, pirataria, contrato.
+Aparece em Home, Empresa, CIJ, Bebidas, PET, Assistência e FISPQ: consistente, sem virar repetição cansativa. Cada página tem um ângulo diferente: garantia, certificação, pirataria, contrato.
 
 ---
 
@@ -1852,7 +1852,7 @@ Aparece em Home, Empresa, CIJ, Bebidas, PET, Assistência e FISPQ — consistent
 
 ### 1. Sobreposição mínima entre Bebidas e PET (resolvida na escrita)
 
-A página de Bebidas fala da regulação (RDC 727), da empacotadora, do envase e usa PET como **um** dos três substratos. A página de PET fala do substrato em si, dos 4 desafios físicos, dos 5 subtipos e cruza com vários setores (bebidas, cosméticos, química). **Sem redundância — ângulos complementares.**
+A página de Bebidas fala da regulação (RDC 727), da empacotadora, do envase e usa PET como **um** dos três substratos. A página de PET fala do substrato em si, dos 4 desafios físicos, dos 5 subtipos e cruza com vários setores (bebidas, cosméticos, química). **Sem redundância: ângulos complementares.**
 
 ### 2. CTAs convergindo demais para o mesmo formulário
 
@@ -1872,11 +1872,11 @@ A página CIJ tem a **Seção de Insumos Hitachi S10** (insumo como produto) e a
 
 ### 4. Trade-in apareceu em 3 lugares
 
-Home (lead magnet), CIJ (FAQ) e FISPQ (banner lateral upsell). É **intencional** — gatilho de upsell em todos os pontos de captura de lead, conforme estratégia do item 3.3 do relatório.
+Home (lead magnet), CIJ (FAQ) e FISPQ (banner lateral upsell). É **intencional**: gatilho de upsell em todos os pontos de captura de lead, conforme estratégia do item 3.3 do relatório.
 
 ### 5. Cobertura regional (Sul + Nordeste) aparece em 4 páginas
 
-Home, Empresa, Assistência e Contato. **Mantido** — é informação crítica para qualificar lead, conforme o gargalo apontado pela Mônica em 01/04 (leads de São Paulo e Sudeste fora da região).
+Home, Empresa, Assistência e Contato. **Mantido**: é informação crítica para qualificar lead, conforme o gargalo apontado pela Mônica em 01/04 (leads de São Paulo e Sudeste fora da região).
 
 ---
 

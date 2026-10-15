@@ -1,11 +1,11 @@
 {#
-  Chrome ÚNICO — header + mega-menu + mobile-menu (fonte única).
+  Chrome ÚNICO: header + mega-menu + mobile-menu (fonte única).
   Renderizado no build pelo layout base.njk. Estado ativo via `activeNav`
   (definido no frontmatter de cada página). O assets/site.js NÃO reinjeta
   este markup quando ele já existe no HTML (coexistência durante a migração).
 
   Mega-menu: faixa de destaque (FISPQ) + 4 colunas com capa em foto na ordem definida com o
-  cliente em 04/08/2026 — Produtos · Aplicações · Indústrias · Serviços.
+  cliente em 04/08/2026: Produtos · Aplicações · Indústrias · Serviços.
 #}
 {% set onSolucoes = activeNav in ['produtos','industrias','aplicacoes','servicos','ficha'] %}
 <header class="site-header" id="siteHeader" role="banner">

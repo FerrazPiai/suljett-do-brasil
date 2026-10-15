@@ -1,5 +1,5 @@
 // ============================================================
-// SULJETT — configuração do Eleventy (11ty)
+// SULJETT: configuração do Eleventy (11ty)
 //
 // FASE 1: páginas internas migradas para .njk com layout único (chrome).
 // FASE 3: blog em Markdown (src/blog/posts/*.md), coleção "post",

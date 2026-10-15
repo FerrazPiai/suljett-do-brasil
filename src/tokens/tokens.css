@@ -1,12 +1,12 @@
 /* =============================================================
-   SULJETT — DESIGN TOKENS · FONTE ÚNICA
+   SULJETT: DESIGN TOKENS · FONTE ÚNICA
    Injetado no topo de AMBOS os bundles pelo build.mjs:
      • home (inline no index.html)
      • páginas internas + blog (assets/site.css)
    NÃO redefinir estes tokens nos demais arquivos de CSS.
    ============================================================= */
 
-/* ─── Fonte (self-hosted) — caminho absoluto p/ funcionar em subpastas ─── */
+/* ─── Fonte (self-hosted): caminho absoluto p/ funcionar em subpastas ─── */
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
@@ -49,8 +49,8 @@
 
   /* ── Tipografia ── */
   --font-display: 'Manrope', system-ui, sans-serif;
-  --text-hero:       clamp(2.75rem, 9.5vh, 7rem);   /* .hero-title — hero fullscreen (home) */
-  --text-page-hero:  clamp(2.5rem, 6vw, 4.75rem);   /* .page-hero h1 — hero compacto (internas) */
+  --text-hero:       clamp(2.75rem, 9.5vh, 7rem);   /* .hero-title: hero fullscreen (home) */
+  --text-page-hero:  clamp(2.5rem, 6vw, 4.75rem);   /* .page-hero h1: hero compacto (internas) */
   --text-h1:    clamp(2.25rem, 4.4vw, 3.75rem);     /* .h-display (canônico = home) */
   --text-h2:    clamp(1.75rem, 3vw, 2.5rem);        /* .h-medium  (canônico = home) */
   --text-h3:    clamp(1.1rem, 1.6vw, 1.375rem);     /* .card h3/h4 */
@@ -70,7 +70,7 @@
   --ease-in-out:     cubic-bezier(0.77, 0, 0.175, 1);
   --ease-smooth:     cubic-bezier(0.25, 0.1, 0.25, 1);
 
-  /* ── Tema — Light (default) ── */
+  /* ── Tema: Light (default) ── */
   --bg:            #ffffff;
   --bg-alt:        var(--steel-50);
   --bg-elev:       #ffffff;
@@ -91,7 +91,7 @@
   --card-shadow:   0 1px 2px rgba(10,15,26,.04), 0 12px 32px rgba(10,15,26,.06);
 }
 
-/* ── Tema — Dark (seções .section--dark e toggle, hoje desativado) ── */
+/* ── Tema: Dark (seções .section--dark e toggle, hoje desativado) ── */
 [data-theme="dark"] {
   --bg:            var(--steel-950);
   --bg-alt:        var(--steel-900);

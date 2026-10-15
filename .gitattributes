@@ -1,4 +1,4 @@
-# binários — nunca converter line endings
+# binários: nunca converter line endings
 *.pdf  binary
 *.png  binary
 *.jpg  binary

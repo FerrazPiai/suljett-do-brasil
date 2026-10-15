@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   LIGHT THEME OVERRIDE — 60/30/10 (white / blue / red)
+   LIGHT THEME OVERRIDE: 60/30/10 (white / blue / red)
    - Background dominante: branco (--bg, var(--steel-50))
    - Cor secundária (texto, ícones, micro-elementos): --sj-blue
    - Acento (CTAs e destaques pontuais): --sj-red
@@ -100,7 +100,7 @@
 .how-callout { border-left-color: var(--sj-blue); background: var(--bg-elev); }
 .how-callout svg { color: var(--sj-blue); }
 
-/* ─── SECTION--SERVICES: era fundo vermelho — vira AZUL ─── */
+/* ─── SECTION--SERVICES: era fundo vermelho: vira AZUL ─── */
 .section--services {
   background: var(--sj-blue);
 }
@@ -193,10 +193,10 @@
 .seal-dot { background: var(--sj-red); }
 .footer-bottom { color: rgba(255,255,255,.5); }
 
-/* ─── PROOF — border-left azul, mantém número escuro ─── */
+/* ─── PROOF: border-left azul, mantém número escuro ─── */
 .proof-item { border-left-color: var(--sj-blue); }
 
-/* ─── VS — col-bad e col-good seguem semântica (vermelho/verde) mas em fundo claro ─── */
+/* ─── VS: col-bad e col-good seguem semântica (vermelho/verde) mas em fundo claro ─── */
 .vs-col {
   background: var(--bg-elev);
   border-color: var(--border);
@@ -209,7 +209,7 @@
 .vs-list .mono { color: var(--fg); }
 .vs-divider span { background: var(--bg); color: var(--fg-mute); }
 
-/* ─── MEGA-MENU — featured item agora em azul ─── */
+/* ─── MEGA-MENU: featured item agora em azul ─── */
 .mega-item--featured {
   background: linear-gradient(135deg, var(--sj-blue-tint), transparent);
   border-color: var(--sj-blue-tint-2);

@@ -2,7 +2,7 @@
   "name": "suljett-do-brasil",
   "version": "1.0.0",
   "private": true,
-  "description": "Site institucional da Suljett do Brasil — distribuidora oficial Hitachi de codificadoras industriais.",
+  "description": "Site institucional da Suljett do Brasil: distribuidora oficial Hitachi de codificadoras industriais.",
   "scripts": {
     "build": "eleventy",
     "dev": "eleventy --serve",

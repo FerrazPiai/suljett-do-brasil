@@ -9,7 +9,7 @@
    Inventário das pendências em CLAUDE.md › "Botões inativos".
 
    OBS: o header/footer das páginas internas são injetados por
-   assets/site.js — as entradas TIJ/TTO já recebem `is-soon` lá. */
+   assets/site.js: as entradas TIJ/TTO já recebem `is-soon` lá. */
 .is-soon {
   color: var(--fg-mute) !important;
   opacity: 0.6;
