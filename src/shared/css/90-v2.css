@@ -417,3 +417,14 @@
 /* Telas largas: o conteúdo acompanha a tela (92%) até 1600 px, em vez de
    parar em 1280/1360 px e deixar faixas vazias nas laterais. */
 @media (min-width: 1440px) { :root { --container: min(92vw, 1600px); } }
+
+/* Fotos dentro de .media-frame (não recortadas) ocupam o quadro inteiro, sem
+   sombra nem círculo: antes a foto aparecia como um quadrado branco solto. */
+.media-frame img:not([src*="produtos-renders"]) { width: 100%; height: 100%; object-fit: cover; filter: none; }
+.media-frame:has(img:not([src*="produtos-renders"]))::after { display: none; }
+/* Foto em coluna de texto: 4:3 em vez de 3:4. As fotos são horizontais e, em
+   retrato, saíam ampliadas e cortadas, deixando a coluna de texto solta. */
+.photo--tall { aspect-ratio: 4/3; }
+/* Card sem foto real disponível (laser): fundo escuro com ícone grande. */
+.sc-photo--ico { display: grid; place-items: center; background: radial-gradient(ellipse at 50% 60%, #2a1416 0%, var(--steel-900) 75%); color: #ff4d4d; }
+.sc-photo--ico svg { width: 72px; height: 72px; }
