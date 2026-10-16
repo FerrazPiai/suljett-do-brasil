@@ -13,7 +13,7 @@
 .blog-card__title a:hover { color: var(--sj-red); }
 
 /* ─── Blog: post individual ───────────────────────────────── */
-.post { padding: 2.5rem 0 4rem; }
+.post { padding: calc(84px + 2.5rem) 0 4rem; }
 .post .crumb { margin-bottom: 1.5rem; }
 .post-head { max-width: 72ch; margin: 0 auto 1.5rem; }
 .post-head h1 { font-size: clamp(1.8rem, 4vw, 2.75rem); line-height: 1.12; margin: 0.5rem 0; letter-spacing: -0.02em; }

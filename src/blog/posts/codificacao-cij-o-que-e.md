@@ -3,8 +3,8 @@ title: "O que é codificação CIJ e por que ela domina as linhas de produção"
 description: "Entenda o jato de tinta contínuo (Continuous Inkjet): como funciona, onde se aplica e por que é o padrão global de marcação industrial em alta velocidade."
 date: 2026-06-17
 author: "Equipe Suljett"
-cover: "/assets/midia/tecnologias/cabecote-cij-jato.jpg"
-coverAlt: "Cabeçote de impressão CIJ Hitachi em funcionamento"
+cover: "/assets/midia/hitachi/vidro-condensacao.jpg"
+coverAlt: "Validade e lote impressos por CIJ Hitachi em garrafa de vidro com condensação"
 ---
 
 A **codificação CIJ** (do inglês *Continuous Inkjet*, jato de tinta contínuo) é a tecnologia que imprime data de fabricação, validade, lote e códigos diretamente no produto ou na embalagem, **sem contato e sem parar a linha**. É o padrão dominante em linhas de produção contínua de alta velocidade no Brasil e no mundo.
