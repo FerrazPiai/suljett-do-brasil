@@ -443,9 +443,9 @@
   .tbl .row-feat td:first-child { box-shadow: none; }
 }
 
-/* Quadro de modelo com foto de produto em fundo branco (TTO/TIJ): inteira, sem corte. */
-.media-frame:has(img[src*="/tto-"], img[src*="/tij-"]) { background: #fff; }
-.media-frame img[src*="/tto-"], .media-frame img[src*="/tij-"] { object-fit: contain; padding: 6%; }
+/* Quadro de modelo com foto de produto em fundo branco (TTO): inteira, sem corte. */
+.media-frame:has(img[src*="/tto-"]) { background: #fff; }
+.media-frame img[src*="/tto-"] { object-fit: contain; padding: 6%; }
 
 /* Ícones de card (Help Desk e afins) no mesmo padrão dos blocos vermelhos do site. */
 .card-ico {
@@ -461,3 +461,9 @@
 .footer-soc { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 10px; background: rgba(255,255,255,.1); color: #fff; transition: background .2s ease; }
 .footer-soc:hover { background: var(--sj-red); }
 .footer-soc svg { width: 20px; height: 20px; }
+/* Páginas relacionadas: última linha incompleta fica centralizada. */
+@media (min-width: 640px) {
+  .rel-grid { display: flex; flex-wrap: wrap; justify-content: center; }
+  .rel-grid > * { flex: 0 0 calc((100% - 1rem) / 2); }
+}
+@media (min-width: 1024px) { .rel-grid > * { flex-basis: calc((100% - 2rem) / 3); } }
