@@ -249,9 +249,7 @@
 .v-tech a { display: flex; align-items: center; gap: .8rem; padding: .5rem; background: #fff; border: 1px solid var(--border); border-radius: 10px; font-size: .85rem; color: var(--fg-body); transition: border-color .2s ease; }
 .v-tech a:hover { border-color: var(--sj-red); }
 .v-tech b { display: block; font-size: .975rem; color: var(--ink-950); }
-.v-tech img, .v-tech__ico { flex-shrink: 0; width: 64px; height: 48px; border-radius: 6px; object-fit: cover; }
-.v-tech__ico { display: grid; place-items: center; background: var(--steel-900); color: #fff; }
-.v-tech__ico svg { width: 24px; height: 24px; }
+.v-tech img { flex-shrink: 0; width: 64px; height: 48px; border-radius: 6px; object-fit: cover; }
 
 /* ══════════ CARDS COM FOTO (serviços) ══════════ */
 .v-serv__grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); }
@@ -425,6 +423,3 @@
 /* Foto em coluna de texto: 4:3 em vez de 3:4. As fotos são horizontais e, em
    retrato, saíam ampliadas e cortadas, deixando a coluna de texto solta. */
 .photo--tall { aspect-ratio: 4/3; }
-/* Card sem foto real disponível (laser): fundo escuro com ícone grande. */
-.sc-photo--ico { display: grid; place-items: center; background: radial-gradient(ellipse at 50% 60%, #2a1416 0%, var(--steel-900) 75%); color: #ff4d4d; }
-.sc-photo--ico svg { width: 72px; height: 72px; }

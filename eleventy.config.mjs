@@ -17,6 +17,7 @@ export default function (eleventyConfig) {
   // Assets estáticos (fontes, imagens, vídeos, fichas.js, site.js, vendor):
   // copiados como estão. index.html e assets/site.css agora são GERADOS.
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("favicon.ico");
 
   eleventyConfig.addGlobalData("currentYear", new Date().getFullYear());
 
