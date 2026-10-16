@@ -15,15 +15,4 @@
     });
   }
 
-  /* ─── Vídeo da abertura: só em computador com boa conexão e sem
-     reduced-motion. Nos demais casos fica o poster (que é o LCP). ── */
-  const v = document.querySelector('[data-hero-video]');
-  const c = navigator.connection || {};
-  const skip = matchMedia('(prefers-reduced-motion: reduce), (max-width: 1023px)').matches
-    || c.saveData || /(^|-)[23]g$/.test(c.effectiveType || '');
-  if (v && !skip) {
-    v.querySelectorAll('source').forEach((s) => { s.src = s.dataset.src; });
-    v.load();
-    addEventListener('load', () => v.play().catch(() => {}), { once: true });
-  }
 })();
