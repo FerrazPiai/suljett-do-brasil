@@ -39,15 +39,15 @@ export default function (eleventyConfig) {
   // 1. Tabelas .tbl: cada <td> recebe data-label com o título da coluna, para
   //    no celular a tabela comparativa virar cards empilhados (sem corte).
   // 2. Nome de modelo (UX-D110W, SJ-T8300, LM-C301...) não quebra no hífen.
-  const MODEL = /\b((?:UX2?|SJ|LM)-[A-Z]?\d{2,4}[A-Z]{0,3})\b/g;
+  const MODEL = /\b((?:UX2?|SJ|LM)-[A-Z]?\d{2,4}[A-Z]{0,3}\b[.,;:!?)]?)/g;
   eleventyConfig.addTransform("html-ajustes", function (html) {
     if (!(this.page.outputPath || "").endsWith(".html")) return html;
     html = html.replace(/<table class="tbl">([\s\S]*?)<\/table>/g, (all, inner) => {
-      const labels = [...(inner.match(/<thead>[\s\S]*?<\/thead>/) || [""])[0].matchAll(/<th>([\s\S]*?)<\/th>/g)]
+      const labels = [...(inner.match(/<thead>[\s\S]*?<\/thead>/) || [""])[0].matchAll(/<th[^>]*>([\s\S]*?)<\/th>/g)]
         .map((m) => m[1].replace(/<[^>]+>/g, "").replace(/"/g, "&quot;"));
       const body = inner.replace(/<tr([^>]*)>([\s\S]*?)<\/tr>/g, (row, attrs, cells) => {
         let i = 0;
-        return `<tr${attrs}>` + cells.replace(/<td>/g, () => `<td data-label="${labels[i++] || ""}">`) + "</tr>";
+        return `<tr${attrs}>` + cells.replace(/<td(?=[\s>])([^>]*)>/g, (m, a) => `<td${a} data-label="${labels[i++] || ""}">`) + "</tr>";
       });
       return `<table class="tbl${labels.length <= 2 ? " tbl--2" : ""}">${body}</table>`;
     });
