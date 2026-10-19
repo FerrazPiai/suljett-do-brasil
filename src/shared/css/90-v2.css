@@ -316,7 +316,7 @@
 
 .v-numbers { background: #121826; border-top: 3px solid var(--sj-red); color: #fff; padding: 2rem 0; }
 .v-numbers__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-@media (min-width: 900px) { .v-numbers__grid { grid-template-columns: repeat(5, 1fr); } }
+@media (min-width: 900px) { .v-numbers__grid { grid-template-columns: repeat(4, 1fr); } }
 .v-numbers b { display: block; font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; letter-spacing: -.02em; line-height: 1.1; color: #fff; }
 .v-numbers span { font-size: .9rem; color: rgba(255,255,255,.78); }
 
