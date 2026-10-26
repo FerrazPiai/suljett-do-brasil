@@ -1,7 +1,11 @@
-Fichas técnicas oficiais Hitachi (PDF). O nome do arquivo é a chave do modelo:
+Fichas técnicas (PDF). O nome do arquivo é a chave do modelo:
 
   ux2-d160w.pdf  ux-d110w.pdf  ux-d140w.pdf  ux-d150w.pdf
   ux-p160w.pdf   ux-b160w.pdf  ux-b160wg.pdf comparativo.pdf
+
+Origem: catálogos publicados em suljett.com (wp-content/uploads/2024/08).
+ux-b160w.pdf = folheto da série UX (Básica x Dinâmica), que traz a UX-B160W.
+comparativo.pdf = tabela dos 7 modelos montada com as especificações das páginas.
 
 Arquivo presente aqui = download liberado no site após o cadastro.
 Arquivo ausente = o pedido vira lead e a equipe envia a ficha por e-mail.
